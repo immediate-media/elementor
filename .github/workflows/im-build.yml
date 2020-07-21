@@ -31,7 +31,7 @@ jobs:
       - name: Commit Assets
         uses: EndBug/add-and-commit@v4
         with:
-          message: 'Updating to latest version'
+          message: "Updating to latest version"
           ref: "update/latest"
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }} # Leave this line unchanged
@@ -40,4 +40,5 @@ jobs:
         with:
           base: "dist"
           head: "update/latest"
+          title: "Updating to latest version"
           github_token: ${{ secrets.TOKEN }}
