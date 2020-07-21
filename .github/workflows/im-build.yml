@@ -40,4 +40,4 @@ jobs:
         with:
           base: "dist"
           head: "update/latest"
-          github-token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
