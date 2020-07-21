@@ -36,7 +36,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }} # Leave this line unchanged
       - name: Create PR
-        uses: peter-evans/create-pull-request@master
+        uses: thomaseizinger/create-pull-request@master
         with:
           base: "dist"
-          token: ${{ secrets.TOKEN }}
+          head: "update/latest"
+          github-token: ${{ secrets.TOKEN }}
