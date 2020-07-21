@@ -10,7 +10,7 @@ local-site/
 # assets/css/
 # assets/js/
 *.log
-*.map
+# *.map
 
 # build tools lock
 composer.lock
