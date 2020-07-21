@@ -10,11 +10,11 @@ local-site/
 # assets/css/
 # assets/js/
 *.log
-*.map
+# *.map
 
 # build tools lock
 composer.lock
-package-lock.json
+# package-lock.json
 yarn.lock
 
 # IDE's
