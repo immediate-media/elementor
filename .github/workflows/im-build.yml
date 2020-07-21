@@ -38,6 +38,5 @@ jobs:
       - name: Create PR
         uses: peter-evans/create-pull-request@master
         with:
-          branch: "update/latest"
           base: "dist"
           token: ${{ secrets.TOKEN }}
