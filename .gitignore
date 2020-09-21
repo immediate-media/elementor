@@ -14,7 +14,7 @@ local-site/
 
 # build tools lock
 composer.lock
-# package-lock.json
+# package.lock
 yarn.lock
 
 # IDE's
