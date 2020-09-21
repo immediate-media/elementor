@@ -1,0 +1,1 @@
+{"version":3,"sources":["../dev/scss/editor/preview/legacy.scss","editor-preview-legacy.css"],"names":[],"mappings":"AAKA,sCAAA;ACJA;EACE,iBAAiB,EAAE;;AAErB;EACE,iBAAiB,EAAE;;AAErB;ED2BI,iBAAA,EAAA;ECzBF;IACE;MACE,aAAa,EAAE,EAAE;;AAEvB;EACE,cAAc,EAAE;;AAElB;;;;;EAKE,yCD+B8B;UC9BtB,iCAAiC,EAAE","file":"editor-preview-legacy.css"}
