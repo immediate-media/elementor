@@ -75,9 +75,16 @@ class Frontend extends elementorModules.ViewModule {
 	}
 
 	getGeneralSettings( settingName ) {
-		const settingsObject = this.isEditMode() ? elementor.settings.general.model.attributes : this.config.settings.general;
+		if ( this.isEditMode() ) {
+			parent.elementorCommon.helpers.softDeprecated( 'getGeneralSettings', '3.0.0', 'getKitSettings and remove the `elementor_` prefix' );
+		}
 
-		return this.getItems( settingsObject, settingName );
+		return this.getKitSettings( `elementor_${ settingName }` );
+	}
+
+	getKitSettings( settingName ) {
+		// TODO: use Data API.
+		return this.getItems( this.config.kit, settingName );
 	}
 
 	getCurrentDeviceMode() {

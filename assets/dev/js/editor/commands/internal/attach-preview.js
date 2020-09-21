@@ -4,7 +4,12 @@ export class AttachPreview extends CommandInternalBaseBase {
 	apply() {
 		const document = elementor.documents.getCurrent();
 
-		return this.attachDocumentToPreview( document )
+		return $e.data.get( 'globals/index' )
+			.then( () => {
+				elementor.trigger( 'globals:loaded' );
+
+				return this.attachDocumentToPreview( document );
+			} )
 			.then( () => {
 				elementor.toggleDocumentCssFiles( document, false );
 
@@ -48,18 +53,7 @@ export class AttachPreview extends CommandInternalBaseBase {
 
 			elementor.initElements();
 
-			const iframeRegion = new Marionette.Region( {
-				// Make sure you get the DOM object out of the jQuery object
-				el: document.$element[ 0 ],
-			} );
-
-			elementor.addRegions( {
-				sections: iframeRegion,
-			} );
-
-			const Preview = require( 'elementor-views/preview' );
-
-			elementor.sections.show( new Preview( { model: elementor.elementsModel } ) );
+			elementor.initPreviewView( document );
 
 			document.container.view = elementor.getPreviewView();
 			document.container.model.attributes.elements = elementor.elements;
@@ -68,7 +62,7 @@ export class AttachPreview extends CommandInternalBaseBase {
 
 			document.$element
 				.addClass( 'elementor-edit-area-active' )
-				.removeClass( 'elementor-edit-area-preview elementor-editor-preview' );
+				.removeClass( 'elementor-editor-preview' );
 
 			resolve();
 		} );
