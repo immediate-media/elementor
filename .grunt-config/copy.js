@@ -34,12 +34,14 @@ const getBuildFiles = [
 	'!package-lock.json',
 	'!package.json',
 	'!phpunit.xml',
+	'!CHANGELOG.md',
 	'!README.md',
 	'!ruleset.xml',
 	'!tests/**',
 	'!vendor/**',
 	'!yarn.lock',
 	'!*~',
+	'!commitlint.config.js',
 
 	// Conflict with above rule.
 	'core/files/assets/**',
