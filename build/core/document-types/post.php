@@ -11,14 +11,22 @@ class Post extends PageBase {
 		$properties = parent::get_properties();
 
 		$properties['support_kit'] = true;
+<<<<<<< HEAD
+		$properties['cpt'] = [ 'post' ];
+=======
+>>>>>>> dist
 
 		return $properties;
 	}
 
+<<<<<<< HEAD
+	public static function get_type() {
+=======
 	/**
 	 * @access public
 	 */
 	public function get_name() {
+>>>>>>> dist
 		return 'wp-post';
 	}
 
@@ -27,6 +35,14 @@ class Post extends PageBase {
 	 * @static
 	 */
 	public static function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Post', 'elementor' );
+	}
+
+	public static function get_plural_title() {
+		return __( 'Posts', 'elementor' );
+=======
 		return __( 'Post', 'elementor' );
+>>>>>>> dist
 	}
 }

@@ -42,7 +42,11 @@ class Widget_Alert extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Alert', 'elementor' );
+=======
 		return __( 'Alert', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -85,13 +89,27 @@ class Widget_Alert extends Widget_Base {
 		$this->start_controls_section(
 			'section_alert',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Alert', 'elementor' ),
+=======
 				'label' => __( 'Alert', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'alert_type',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Type', 'elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'info',
+				'options' => [
+					'info' => esc_html__( 'Info', 'elementor' ),
+					'success' => esc_html__( 'Success', 'elementor' ),
+					'warning' => esc_html__( 'Warning', 'elementor' ),
+					'danger' => esc_html__( 'Danger', 'elementor' ),
+=======
 				'label' => __( 'Type', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'info',
@@ -100,6 +118,7 @@ class Widget_Alert extends Widget_Base {
 					'success' => __( 'Success', 'elementor' ),
 					'warning' => __( 'Warning', 'elementor' ),
 					'danger' => __( 'Danger', 'elementor' ),
+>>>>>>> dist
 				],
 				'style_transfer' => true,
 			]
@@ -108,10 +127,17 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'alert_title',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Title & Description', 'elementor' ),
+				'type' => Controls_Manager::TEXT,
+				'placeholder' => esc_html__( 'Enter your title', 'elementor' ),
+				'default' => esc_html__( 'This is an Alert', 'elementor' ),
+=======
 				'label' => __( 'Title & Description', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'placeholder' => __( 'Enter your title', 'elementor' ),
 				'default' => __( 'This is an Alert', 'elementor' ),
+>>>>>>> dist
 				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
@@ -122,10 +148,17 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'alert_description',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Content', 'elementor' ),
+				'type' => Controls_Manager::TEXTAREA,
+				'placeholder' => esc_html__( 'Enter your description', 'elementor' ),
+				'default' => esc_html__( 'I am a description. Click the edit button to change this text.', 'elementor' ),
+=======
 				'label' => __( 'Content', 'elementor' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'placeholder' => __( 'Enter your description', 'elementor' ),
 				'default' => __( 'I am a description. Click the edit button to change this text.', 'elementor' ),
+>>>>>>> dist
 				'separator' => 'none',
 				'show_label' => false,
 				'dynamic' => [
@@ -137,12 +170,21 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'show_dismiss',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Dismiss Button', 'elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'show',
+				'options' => [
+					'show' => esc_html__( 'Show', 'elementor' ),
+					'hide' => esc_html__( 'Hide', 'elementor' ),
+=======
 				'label' => __( 'Dismiss Button', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'show',
 				'options' => [
 					'show' => __( 'Show', 'elementor' ),
 					'hide' => __( 'Hide', 'elementor' ),
+>>>>>>> dist
 				],
 			]
 		);
@@ -150,7 +192,11 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'View', 'elementor' ),
+=======
 				'label' => __( 'View', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -161,7 +207,11 @@ class Widget_Alert extends Widget_Base {
 		$this->start_controls_section(
 			'section_type',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Alert', 'elementor' ),
+=======
 				'label' => __( 'Alert', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -169,7 +219,11 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'background',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Background Color', 'elementor' ),
+=======
 				'label' => __( 'Background Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-alert' => 'background-color: {{VALUE}};',
@@ -180,7 +234,11 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'border_color',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Border Color', 'elementor' ),
+=======
 				'label' => __( 'Border Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-alert' => 'border-color: {{VALUE}};',
@@ -191,7 +249,11 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'border_left-width',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Left Border Width', 'elementor' ),
+=======
 				'label' => __( 'Left Border Width', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -210,7 +272,11 @@ class Widget_Alert extends Widget_Base {
 		$this->start_controls_section(
 			'section_title',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Title', 'elementor' ),
+=======
 				'label' => __( 'Title', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -218,7 +284,11 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Text Color', 'elementor' ),
+=======
 				'label' => __( 'Text Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-alert-title' => 'color: {{VALUE}};',
@@ -250,7 +320,11 @@ class Widget_Alert extends Widget_Base {
 		$this->start_controls_section(
 			'section_description',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Description', 'elementor' ),
+=======
 				'label' => __( 'Description', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -258,7 +332,11 @@ class Widget_Alert extends Widget_Base {
 		$this->add_control(
 			'description_color',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Text Color', 'elementor' ),
+=======
 				'label' => __( 'Text Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-alert-description' => 'color: {{VALUE}};',
@@ -314,20 +392,33 @@ class Widget_Alert extends Widget_Base {
 
 		$this->add_inline_editing_attributes( 'alert_title', 'none' );
 		?>
+<<<<<<< HEAD
+		<div <?php $this->print_render_attribute_string( 'wrapper' ); ?>>
+			<span <?php $this->print_render_attribute_string( 'alert_title' ); ?>><?php $this->print_unescaped_setting( 'alert_title' ); ?></span>
+=======
 		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
 			<span <?php echo $this->get_render_attribute_string( 'alert_title' ); ?>><?php echo $settings['alert_title']; ?></span>
+>>>>>>> dist
 			<?php
 			if ( ! Utils::is_empty( $settings['alert_description'] ) ) :
 				$this->add_render_attribute( 'alert_description', 'class', 'elementor-alert-description' );
 
 				$this->add_inline_editing_attributes( 'alert_description' );
 				?>
+<<<<<<< HEAD
+				<span <?php $this->print_render_attribute_string( 'alert_description' ); ?>><?php $this->print_unescaped_setting( 'alert_description' ); ?></span>
+=======
 				<span <?php echo $this->get_render_attribute_string( 'alert_description' ); ?>><?php echo $settings['alert_description']; ?></span>
+>>>>>>> dist
 			<?php endif; ?>
 			<?php if ( 'show' === $settings['show_dismiss'] ) : ?>
 				<button type="button" class="elementor-alert-dismiss">
 					<span aria-hidden="true">&times;</span>
+<<<<<<< HEAD
+					<span class="elementor-screen-only"><?php echo esc_html__( 'Dismiss alert', 'elementor' ); ?></span>
+=======
 					<span class="elementor-screen-only"><?php echo __( 'Dismiss alert', 'elementor' ); ?></span>
+>>>>>>> dist
 				</button>
 			<?php endif; ?>
 		</div>
@@ -359,7 +450,11 @@ class Widget_Alert extends Widget_Base {
 				<# if ( 'show' === settings.show_dismiss ) { #>
 					<button type="button" class="elementor-alert-dismiss">
 						<span aria-hidden="true">&times;</span>
+<<<<<<< HEAD
+						<span class="elementor-screen-only"><?php echo esc_html__( 'Dismiss alert', 'elementor' ); ?></span>
+=======
 						<span class="elementor-screen-only"><?php echo __( 'Dismiss alert', 'elementor' ); ?></span>
+>>>>>>> dist
 					</button>
 				<# } #>
 			</div>

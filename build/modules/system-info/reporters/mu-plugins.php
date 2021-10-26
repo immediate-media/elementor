@@ -13,7 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
+<<<<<<< HEAD
+class MU_Plugins extends Base_Plugin {
+=======
 class MU_Plugins extends Base {
+>>>>>>> dist
 
 	/**
 	 * Must-Use plugins.

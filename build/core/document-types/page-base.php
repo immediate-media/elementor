@@ -38,7 +38,11 @@ abstract class PageBase extends Document {
 			'theme-elements',
 			[
 				'theme-elements-single' => [
+<<<<<<< HEAD
+					'title' => esc_html__( 'Single', 'elementor' ),
+=======
 					'title' => __( 'Single', 'elementor' ),
+>>>>>>> dist
 					'active' => false,
 				],
 			]
@@ -84,9 +88,15 @@ abstract class PageBase extends Document {
 		$document->add_control(
 			'hide_title',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Hide Title', 'elementor' ),
+				'type' => Controls_Manager::SWITCHER,
+				'description' => esc_html__( 'Not working? You can set a different selector for the title in Site Settings > Layout', 'elementor' ),
+=======
 				'label' => __( 'Hide Title', 'elementor' ),
 				'type' => Controls_Manager::SWITCHER,
 				'description' => __( 'Not working? You can set a different selector for the title in Site Settings > Layout', 'elementor' ),
+>>>>>>> dist
 				'selectors' => [
 					':root' => '--page-title-display: none',
 				],
@@ -106,7 +116,11 @@ abstract class PageBase extends Document {
 		$document->start_controls_section(
 			'section_page_style',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Body Style', 'elementor' ),
+=======
 				'label' => __( 'Body Style', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -129,7 +143,11 @@ abstract class PageBase extends Document {
 		$document->add_responsive_control(
 			'padding',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Padding', 'elementor' ),
+=======
 				'label' => __( 'Padding', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [
@@ -161,7 +179,11 @@ abstract class PageBase extends Document {
 			$document->add_control(
 				'post_excerpt',
 				[
+<<<<<<< HEAD
+					'label' => esc_html__( 'Excerpt', 'elementor' ),
+=======
 					'label' => __( 'Excerpt', 'elementor' ),
+>>>>>>> dist
 					'type' => Controls_Manager::TEXTAREA,
 					'default' => $document->post->post_excerpt,
 				]
@@ -172,7 +194,11 @@ abstract class PageBase extends Document {
 			$document->add_control(
 				'post_featured_image',
 				[
+<<<<<<< HEAD
+					'label' => esc_html__( 'Featured Image', 'elementor' ),
+=======
 					'label' => __( 'Featured Image', 'elementor' ),
+>>>>>>> dist
 					'type' => Controls_Manager::MEDIA,
 					'default' => [
 						'id' => get_post_thumbnail_id(),

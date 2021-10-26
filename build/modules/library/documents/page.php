@@ -33,10 +33,17 @@ class Page extends Library_Document {
 
 		$properties['support_wp_page_templates'] = true;
 		$properties['support_kit'] = true;
+<<<<<<< HEAD
+		$properties['show_in_finder'] = true;
+=======
+>>>>>>> dist
 
 		return $properties;
 	}
 
+<<<<<<< HEAD
+	public static function get_type() {
+=======
 	/**
 	 * Get document name.
 	 *
@@ -48,6 +55,7 @@ class Page extends Library_Document {
 	 * @return string Document name.
 	 */
 	public function get_name() {
+>>>>>>> dist
 		return 'page';
 	}
 
@@ -63,7 +71,19 @@ class Page extends Library_Document {
 	 * @return string Document title.
 	 */
 	public static function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Page', 'elementor' );
+	}
+
+	public static function get_plural_title() {
+		return esc_html__( 'Pages', 'elementor' );
+	}
+
+	public static function get_add_new_title() {
+		return esc_html__( 'Add New Library Page', 'elementor' );
+=======
 		return __( 'Page', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**

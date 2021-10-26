@@ -11,13 +11,20 @@ foreach ( $reports as $report_name => $report ) : ?>
 		<table class="widefat">
 			<thead>
 			<tr>
+<<<<<<< HEAD
+				<th><?php $report['report']->print_html_label( ( $report['label'] ) ); ?></th>
+=======
 				<th><?php echo $report['label']; ?></th>
+>>>>>>> dist
 				<th></th>
 				<th></th>
 			</tr>
 			</thead>
 			<tbody>
 			<?php
+<<<<<<< HEAD
+				$report['report']->print_html();
+=======
 			foreach ( $report['report'] as $field_name => $field ) :
 				if ( in_array( $report_name, [ 'plugins', 'network_plugins', 'mu_plugins' ], true ) ) {
 					foreach ( $field['value'] as $plugin_info ) :
@@ -67,6 +74,7 @@ foreach ( $reports as $report_name => $report ) : ?>
 					<?php
 				}
 			endforeach;
+>>>>>>> dist
 			?>
 			</tbody>
 		</table>

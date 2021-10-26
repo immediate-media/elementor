@@ -120,7 +120,11 @@ class Compatibility {
 					return;
 				}
 
+<<<<<<< HEAD
+				var url = '<?php echo esc_url( Plugin::$instance->documents->get_create_new_post_url( $typenow ) ); ?>';
+=======
 				var url = '<?php echo esc_url( Utils::get_create_new_post_url( $typenow ) ); ?>';
+>>>>>>> dist
 
 				dropdown.insertAdjacentHTML( 'afterbegin', '<a href="' + url + '">Elementor</a>' );
 			} );
@@ -173,7 +177,11 @@ class Compatibility {
 				$post = get_post();
 				if ( empty( $post->post_content ) ) {
 					$tabs['description'] = [
+<<<<<<< HEAD
+						'title' => esc_html__( 'Description', 'elementor' ),
+=======
 						'title' => __( 'Description', 'elementor' ),
+>>>>>>> dist
 						'priority' => 10,
 						'callback' => 'woocommerce_product_description_tab',
 					];

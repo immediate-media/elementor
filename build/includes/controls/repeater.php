@@ -169,7 +169,11 @@ class Control_Repeater extends Base_Data_Control {
 		<# if ( itemActions.add ) { #>
 			<div class="elementor-button-wrapper">
 				<button class="elementor-button elementor-button-default elementor-repeater-add" type="button">
+<<<<<<< HEAD
+					<i class="eicon-plus" aria-hidden="true"></i><?php echo esc_html__( 'Add Item', 'elementor' ); ?>
+=======
 					<i class="eicon-plus" aria-hidden="true"></i><?php echo __( 'Add Item', 'elementor' ); ?>
+>>>>>>> dist
 				</button>
 			</div>
 		<# } #>

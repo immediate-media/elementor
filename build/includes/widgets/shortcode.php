@@ -39,7 +39,11 @@ class Widget_Shortcode extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Shortcode', 'elementor' );
+=======
 		return __( 'Shortcode', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -96,14 +100,22 @@ class Widget_Shortcode extends Widget_Base {
 		$this->start_controls_section(
 			'section_shortcode',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Shortcode', 'elementor' ),
+=======
 				'label' => __( 'Shortcode', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'shortcode',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Enter your shortcode', 'elementor' ),
+=======
 				'label' => __( 'Enter your shortcode', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::TEXTAREA,
 				'dynamic' => [
 					'active' => true,
@@ -129,7 +141,11 @@ class Widget_Shortcode extends Widget_Base {
 
 		$shortcode = do_shortcode( shortcode_unautop( $shortcode ) );
 		?>
+<<<<<<< HEAD
+		<div class="elementor-shortcode"><?php echo $shortcode; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+=======
 		<div class="elementor-shortcode"><?php echo $shortcode; ?></div>
+>>>>>>> dist
 		<?php
 	}
 
@@ -143,7 +159,11 @@ class Widget_Shortcode extends Widget_Base {
 	 */
 	public function render_plain_content() {
 		// In plain mode, render without shortcode
+<<<<<<< HEAD
+		$this->print_unescaped_setting( 'shortcode' );
+=======
 		echo $this->get_settings( 'shortcode' );
+>>>>>>> dist
 	}
 
 	/**

@@ -18,11 +18,63 @@ class Manager extends Module {
 	const BREAKPOINT_KEY_TABLET = 'tablet';
 	const BREAKPOINT_KEY_TABLET_EXTRA = 'tablet_extra';
 	const BREAKPOINT_KEY_LAPTOP = 'laptop';
+<<<<<<< HEAD
+	const BREAKPOINT_KEY_DESKTOP = 'desktop';
+	const BREAKPOINT_KEY_WIDESCREEN = 'widescreen';
+
+	/**
+	 * Breakpoints
+	 *
+	 * An array containing instances of the all of the system's available breakpoints.
+	 *
+	 * @since 3.2.0
+	 * @access private
+	 *
+	 * @var Breakpoint[]
+	 */
+	private $breakpoints;
+
+	/**
+	 * Active Breakpoints
+	 *
+	 * An array containing instances of the enabled breakpoints.
+	 *
+	 * @since 3.2.0
+	 * @access private
+	 *
+	 * @var Breakpoint[]
+	 */
+	private $active_breakpoints;
+
+	/**
+	 * Responsive Control Duplication Mode.
+	 *
+	 * Determines the current responsive control generation mode.
+	 * Options are:
+	 * -- 'on': Responsive controls are duplicated in `add_responsive_control()`.
+	 * -- 'off': Responsive controls are NOT duplicated in `add_responsive_control()`.
+	 * -- 'dynamic': Responsive controls are only duplicated if their config contains `'dynamic' => 'active' => true`.
+	 *
+	 * When generating Post CSS, the mode is set to 'on'. When generating Dynamic CSS, the mode is set to 'dynamic'.
+	 *
+	 * default value is 'off'.
+	 *
+	 * @since 3.4.0
+	 * @access private
+	 *
+	 * @var string
+	 */
+	private $responsive_control_duplication_mode = 'off';
+
+	private $icons_map;
+
+=======
 	const BREAKPOINT_KEY_WIDESCREEN = 'widescreen';
 
 	private $breakpoints;
 	private $active_breakpoints;
 
+>>>>>>> dist
 	public function get_name() {
 		return 'breakpoints';
 	}
@@ -63,19 +115,82 @@ class Manager extends Module {
 		return self::get_items( $this->active_breakpoints, $breakpoint_name );
 	}
 
+<<<<<<< HEAD
+	/**
+	 * Get Active Devices List
+	 *
+	 * Retrieve an array containing the keys of all active devices, including 'desktop'.
+	 *
+	 * @since 3.2.0
+	 *
+	 * @param array $args
+	 * @return array
+	 */
+	public function get_active_devices_list( $args = [] ) {
+		$default_args = [
+			'add_desktop' => true,
+			'reverse' => false,
+		];
+
+		$args = array_merge( $default_args, $args );
+
+		$active_devices = array_keys( Plugin::$instance->breakpoints->get_active_breakpoints() );
+
+		if ( $args['add_desktop'] ) {
+			// Insert the 'desktop' device in the correct position.
+			if ( in_array( 'widescreen', $active_devices, true ) ) {
+				$widescreen_index = array_search( 'widescreen', $active_devices, true );
+
+				array_splice( $active_devices, $widescreen_index, 0, [ 'desktop' ] );
+			} else {
+				$active_devices[] = 'desktop';
+			}
+		}
+
+		if ( $args['reverse'] ) {
+			$active_devices = array_reverse( $active_devices );
+		}
+
+		return $active_devices;
+	}
+
+=======
+>>>>>>> dist
 	/** Has Custom Breakpoints
 	 *
 	 * Checks whether there are currently custom breakpoints saved in the database.
 	 * Returns true if there are breakpoint values saved in the active kit.
+<<<<<<< HEAD
+	 * If the user has activated any additional custom breakpoints (mobile extra, tablet extra, laptop, widescreen) -
+	 * that is considered as having custom breakpoints.
+=======
+>>>>>>> dist
 	 *
 	 * @since 3.2.0
 	 *
 	 * @return boolean
 	 */
 	public function has_custom_breakpoints() {
+<<<<<<< HEAD
+		$breakpoints = $this->get_active_breakpoints();
+
+		$additional_breakpoints = [
+			self::BREAKPOINT_KEY_MOBILE_EXTRA,
+			self::BREAKPOINT_KEY_TABLET_EXTRA,
+			self::BREAKPOINT_KEY_LAPTOP,
+			self::BREAKPOINT_KEY_WIDESCREEN,
+		];
+
+		foreach ( $breakpoints as $breakpoint_name => $breakpoint ) {
+			if ( in_array( $breakpoint_name, $additional_breakpoints, true ) ) {
+				return true;
+			}
+
+=======
 		$breakpoints = $this->get_breakpoints();
 
 		foreach ( $breakpoints as $breakpoint ) {
+>>>>>>> dist
 			/** @var Breakpoint $breakpoint */
 			if ( $breakpoint->is_custom() ) {
 				return true;
@@ -91,9 +206,16 @@ class Manager extends Module {
 	 * For a given device, return the minimum possible breakpoint. Except for the cases of mobile and widescreen
 	 * devices, A device's min breakpoint is determined by the previous device's max breakpoint + 1px.
 	 *
+<<<<<<< HEAD
+	 * @since 3.2.0
+	 *
+	 * @param string $device_name
+	 * @return int the min breakpoint of the passed device
+=======
 	 * @param string $device_name
 	 * @return int the min breakpoint of the passed device
 	 *@since 3.2.0
+>>>>>>> dist
 	 */
 	public function get_device_min_breakpoint( $device_name ) {
 		if ( 'desktop' === $device_name ) {
@@ -128,6 +250,18 @@ class Manager extends Module {
 		return $min_breakpoint;
 	}
 
+<<<<<<< HEAD
+	/**
+	 * Get Desktop Min Breakpoint
+	 *
+	 * Returns the minimum possible breakpoint for the default (desktop) device.
+	 *
+	 * @since 3.2.0
+	 *
+	 * @return int the min breakpoint of the passed device
+	 */
+=======
+>>>>>>> dist
 	public function get_desktop_min_point() {
 		$active_breakpoints = $this->get_active_breakpoints();
 		$desktop_previous_device = $this->get_desktop_previous_device_key();
@@ -141,6 +275,38 @@ class Manager extends Module {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * Get Responsive Icons Classes Map
+	 *
+	 * If a $device parameter is passed, this method retrieves the device's icon class list (the ones attached to the `<i>`
+	 * element). If no parameter is passed, it returns an array of devices containing each device's icon class list.
+	 *
+	 * This method was created because 'mobile_extra' and 'tablet_extra' breakpoint icons need to be tilted by 90
+	 * degrees, and this tilt is achieved in CSS via the class `eicon-tilted`.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @return array|string
+	 */
+	public function get_responsive_icons_classes_map( $device = null ) {
+		if ( ! $this->icons_map ) {
+			$this->icons_map = [
+				'mobile' => 'eicon-device-mobile',
+				'mobile_extra' => 'eicon-device-mobile eicon-tilted',
+				'tablet' => 'eicon-device-tablet',
+				'tablet_extra' => 'eicon-device-tablet eicon-tilted',
+				'laptop' => 'eicon-device-laptop',
+				'desktop' => 'eicon-device-desktop',
+				'widescreen' => 'eicon-device-wide',
+			];
+		}
+
+		return self::get_items( $this->icons_map, $device );
+	}
+
+	/**
+=======
+>>>>>>> dist
 	 * Get Default Config
 	 *
 	 * Retrieve the default breakpoints config array. The 'selector' property is used for CSS generation (the
@@ -151,21 +317,46 @@ class Manager extends Module {
 	public static function get_default_config() {
 		return [
 			self::BREAKPOINT_KEY_MOBILE => [
+<<<<<<< HEAD
+				'label' => esc_html__( 'Mobile', 'elementor' ),
+=======
 				'label' => __( 'Mobile', 'elementor' ),
+>>>>>>> dist
 				'default_value' => 767,
 				'direction' => 'max',
 			],
 			self::BREAKPOINT_KEY_MOBILE_EXTRA => [
+<<<<<<< HEAD
+				'label' => esc_html__( 'Mobile Extra', 'elementor' ),
+=======
 				'label' => __( 'Mobile Extra', 'elementor' ),
+>>>>>>> dist
 				'default_value' => 880,
 				'direction' => 'max',
 			],
 			self::BREAKPOINT_KEY_TABLET => [
+<<<<<<< HEAD
+				'label' => esc_html__( 'Tablet', 'elementor' ),
+=======
 				'label' => __( 'Tablet', 'elementor' ),
+>>>>>>> dist
 				'default_value' => 1024,
 				'direction' => 'max',
 			],
 			self::BREAKPOINT_KEY_TABLET_EXTRA => [
+<<<<<<< HEAD
+				'label' => esc_html__( 'Tablet Extra', 'elementor' ),
+				'default_value' => 1200,
+				'direction' => 'max',
+			],
+			self::BREAKPOINT_KEY_LAPTOP => [
+				'label' => esc_html__( 'Laptop', 'elementor' ),
+				'default_value' => 1366,
+				'direction' => 'max',
+			],
+			self::BREAKPOINT_KEY_WIDESCREEN => [
+				'label' => esc_html__( 'Widescreen', 'elementor' ),
+=======
 				'label' => __( 'Tablet Extra', 'elementor' ),
 				'default_value' => 1365,
 				'direction' => 'max',
@@ -177,6 +368,7 @@ class Manager extends Module {
 			],
 			self::BREAKPOINT_KEY_WIDESCREEN => [
 				'label' => __( 'Widescreen', 'elementor' ),
+>>>>>>> dist
 				'default_value' => 2400,
 				'direction' => 'min',
 			],
@@ -184,6 +376,64 @@ class Manager extends Module {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * Get Breakpoints Config
+	 *
+	 * Iterates over an array of all of the system's breakpoints (both active and inactive), queries each breakpoint's
+	 * class instance, and generates an array containing data on each breakpoint: its label, current value, direction
+	 * ('min'/'max') and whether it is enabled or not.
+	 *
+	 * @return array
+	 */
+	public function get_breakpoints_config() {
+		$breakpoints = $this->get_breakpoints();
+
+		$config = [];
+
+		foreach ( $breakpoints as $breakpoint_name => $breakpoint ) {
+			$config[ $breakpoint_name ] = [
+				'label' => $breakpoint->get_label(),
+				'value' => $breakpoint->get_value(),
+				'default_value' => $breakpoint->get_default_value(),
+				'direction' => $breakpoint->get_direction(),
+				'is_enabled' => $breakpoint->is_enabled(),
+			];
+		}
+
+		return $config;
+	}
+
+	/**
+	 * Get Responsive Control Duplication Mode
+	 *
+	 * Retrieve the value of the $responsive_control_duplication_mode private class variable.
+	 * See the variable's PHPDoc for details.
+	 *
+	 * @since 3.4.0
+	 * @access public
+	 */
+	public function get_responsive_control_duplication_mode() {
+		return $this->responsive_control_duplication_mode;
+	}
+
+	/**
+	 * Set Responsive Control Duplication Mode
+	 *
+	 * Sets  the value of the $responsive_control_duplication_mode private class variable.
+	 * See the variable's PHPDoc for details.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @access public
+	 * @param string $mode
+	 */
+	public function set_responsive_control_duplication_mode( $mode ) {
+		$this->responsive_control_duplication_mode = $mode;
+	}
+
+	/**
+=======
+>>>>>>> dist
 	 * Get Stylesheet Templates Path
 	 *
 	 * @since 3.2.0
@@ -219,10 +469,33 @@ class Manager extends Module {
 	 */
 	private function init_breakpoints() {
 		$breakpoints = [];
+<<<<<<< HEAD
+
+		$setting_prefix = self::BREAKPOINT_SETTING_PREFIX;
+
+		$active_breakpoint_keys = [
+			$setting_prefix . self::BREAKPOINT_KEY_MOBILE,
+			$setting_prefix . self::BREAKPOINT_KEY_TABLET,
+		];
+
+		if ( Plugin::$instance->experiments->is_feature_active( 'additional_custom_breakpoints' ) ) {
+			$kit_active_id = Plugin::$instance->kits_manager->get_active_id();
+			// Get the breakpoint settings saved in the kit directly from the DB to avoid initializing the kit too early.
+			$raw_kit_settings = get_post_meta( $kit_active_id, '_elementor_page_settings', true );
+
+			// If there is an existing kit with an active breakpoints value saved, use it.
+			if ( isset( $raw_kit_settings[ Settings_Layout::ACTIVE_BREAKPOINTS_CONTROL_ID ] ) ) {
+				$active_breakpoint_keys = $raw_kit_settings[ Settings_Layout::ACTIVE_BREAKPOINTS_CONTROL_ID ];
+			}
+		}
+
+		$default_config = self::get_default_config();
+=======
 		$kit = Plugin::$instance->kits_manager->get_active_kit_for_frontend();
 		$active_breakpoint_keys = $kit->get_settings( Settings_Layout::ACTIVE_BREAKPOINTS_CONTROL_ID );
 		$default_config = self::get_default_config();
 		$prefix = self::BREAKPOINT_SETTING_PREFIX;
+>>>>>>> dist
 
 		foreach ( $default_config as $breakpoint_name => $breakpoint_config ) {
 			$args = [ 'name' => $breakpoint_name ] + $breakpoint_config;
@@ -233,7 +506,11 @@ class Manager extends Module {
 				$args['is_enabled'] = true;
 			} else {
 				// If the breakpoint is in the active breakpoints array, make sure it's instantiated as enabled.
+<<<<<<< HEAD
+				$args['is_enabled'] = in_array( $setting_prefix . $breakpoint_name, $active_breakpoint_keys, true );
+=======
 				$args['is_enabled'] = in_array( $prefix . $breakpoint_name, $active_breakpoint_keys, true );
+>>>>>>> dist
 			}
 
 			$breakpoints[ $breakpoint_name ] = new Breakpoint( $args );

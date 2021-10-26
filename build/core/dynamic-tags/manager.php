@@ -246,38 +246,131 @@ class Manager {
 			 * Fires when Elementor registers dynamic tags.
 			 *
 			 * @since 2.0.9
+<<<<<<< HEAD
+			 * @deprecated 3.5.0 Use `elementor/dynamic_tags/register` hook instead.
+			 *
+			 * @param Manager $this Dynamic tags manager.
+			 */
+			// TODO: Uncomment when Pro uses the new hook.
+			//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->do_deprecated_action(
+			//	'elementor/dynamic_tags/register_tags',
+			//	[ $this ],
+			//	'3.5.0',
+			//	'elementor/dynamic_tags/register'
+			//);
+
+			do_action( 'elementor/dynamic_tags/register_tags', $this );
+		}
+
+		if ( ! did_action( 'elementor/dynamic_tags/register' ) ) {
+			/**
+			 * Register dynamic tags.
+			 *
+			 * Fires when Elementor registers dynamic tags.
+			 *
+			 * @since 3.5.0
+			 *
+			 * @param Manager $this Dynamic tags manager.
+			 */
+			do_action( 'elementor/dynamic_tags/register', $this );
+		}
+
+=======
 			 *
 			 * @param Manager $this Dynamic tags manager.
 			 */
 			do_action( 'elementor/dynamic_tags/register_tags', $this );
 		}
 
+>>>>>>> dist
 		return $this->tags_info;
 	}
 
 	/**
 	 * @since 2.0.0
 	 * @access public
+<<<<<<< HEAD
+	 * @deprecated 3.5.0 Use `$this->register()` instead.
+=======
+>>>>>>> dist
 	 *
 	 * @param string $class
 	 */
 	public function register_tag( $class ) {
+<<<<<<< HEAD
+		// TODO: Uncomment when Pro uses the new hook.
+		//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function(
+		//	__METHOD__,
+		//	'3.5.0',
+		//	'register'
+		//);
+
+		/** @var Base_Tag $tag */
+		$instance = new $class();
+
+		$this->register( $instance );
+	}
+
+	/**
+	 * Register a new Dynamic Tag.
+	 *
+	 * @param Base_Tag $dynamic_tag_instance
+	 *
+	 * @return void
+	 * @since  3.5.0
+	 * @access public
+	 *
+	 */
+	public function register( Base_Tag $dynamic_tag_instance ) {
+		$this->tags_info[ $dynamic_tag_instance->get_name() ] = [
+			'class' => get_class( $dynamic_tag_instance ),
+			'instance' => $dynamic_tag_instance,
+=======
 		/** @var Tag $tag */
 		$tag = new $class();
 
 		$this->tags_info[ $tag->get_name() ] = [
 			'class' => $class,
 			'instance' => $tag,
+>>>>>>> dist
 		];
 	}
 
 	/**
 	 * @since 2.0.9
 	 * @access public
+<<<<<<< HEAD
+	 * @deprecated 3.5.0 Use `$this->unregister()` instead.
+=======
+>>>>>>> dist
 	 *
 	 * @param string $tag_name
 	 */
 	public function unregister_tag( $tag_name ) {
+<<<<<<< HEAD
+		// TODO: Uncomment when Pro uses the new hook.
+		//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function(
+		//	__METHOD__,
+		//	'3.5.0',
+		//	'unregister'
+		//);
+
+		$this->unregister( $tag_name );
+	}
+
+	/**
+	 * Unregister a dynamic tag.
+	 *
+	 * @since 3.5.0
+	 * @access public
+	 *
+	 * @param string $tag_name Dynamic Tag name to unregister.
+	 *
+	 * @return void
+	 */
+	public function unregister( $tag_name ) {
+=======
+>>>>>>> dist
 		unset( $this->tags_info[ $tag_name ] );
 	}
 

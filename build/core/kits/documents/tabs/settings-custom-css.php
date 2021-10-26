@@ -14,7 +14,11 @@ class Settings_Custom_CSS extends Tab_Base {
 	}
 
 	public function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Custom CSS', 'elementor' );
+=======
 		return __( 'Custom CSS', 'elementor' );
+>>>>>>> dist
 	}
 
 	public function get_group() {

@@ -85,28 +85,44 @@ abstract class Tag extends Base_Tag {
 		$this->start_controls_section(
 			'advanced',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Advanced', 'elementor' ),
+=======
 				'label' => __( 'Advanced', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'before',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Before', 'elementor' ),
+=======
 				'label' => __( 'Before', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'after',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'After', 'elementor' ),
+=======
 				'label' => __( 'After', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'fallback',
 			[
+<<<<<<< HEAD
+				'label' => esc_html__( 'Fallback', 'elementor' ),
+=======
 				'label' => __( 'Fallback', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 

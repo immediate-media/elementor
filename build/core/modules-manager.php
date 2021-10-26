@@ -90,7 +90,13 @@ class Modules_Manager {
 			'dev-tools',
 			'landing-pages',
 			'compatibility-tag',
+<<<<<<< HEAD
+			'elements-color-picker',
 			'shapes',
+			'admin-top-bar',
+=======
+			'shapes',
+>>>>>>> dist
 		];
 	}
 

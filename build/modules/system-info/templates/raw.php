@@ -5,6 +5,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * @var array $reports
+<<<<<<< HEAD
+ * @var int   $tabs_count
+ */
+$tabs_count++;
+
+foreach ( $reports as $report_name => $report ) :
+	$report['report']->print_raw( $tabs_count );
+=======
  * @var array $required_plugins_properties
  * @var int   $tabs_count
  */
@@ -56,6 +64,7 @@ foreach ( $reports as $report_name => $report ) :
 			echo "{$sub_indent}{$label}{$field['value']}" . PHP_EOL;
 		}
 	endforeach;
+>>>>>>> dist
 
 	if ( ! empty( $report['sub'] ) ) :
 		$this->print_report( $report['sub'], $template, true );

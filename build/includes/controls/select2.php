@@ -64,6 +64,16 @@ class Control_Select2 extends Base_Data_Control {
 	 * @access public
 	 */
 	public function content_template() {
+<<<<<<< HEAD
+		?>
+		<div class="elementor-control-field">
+			<# if ( data.label ) {#>
+				<label for="<?php $this->print_control_uid(); ?>" class="elementor-control-title">{{{ data.label }}}</label>
+			<# } #>
+			<div class="elementor-control-input-wrapper elementor-control-unit-5">
+				<# var multiple = ( data.multiple ) ? 'multiple' : ''; #>
+				<select id="<?php $this->print_control_uid(); ?>" class="elementor-select2" type="select2" {{ multiple }} data-setting="{{ data.name }}">
+=======
 		$control_uid = $this->get_control_uid();
 		?>
 		<div class="elementor-control-field">
@@ -73,6 +83,7 @@ class Control_Select2 extends Base_Data_Control {
 			<div class="elementor-control-input-wrapper elementor-control-unit-5">
 				<# var multiple = ( data.multiple ) ? 'multiple' : ''; #>
 				<select id="<?php echo $control_uid; ?>" class="elementor-select2" type="select2" {{ multiple }} data-setting="{{ data.name }}">
+>>>>>>> dist
 					<# _.each( data.options, function( option_title, option_value ) {
 						var value = data.controlValue;
 						if ( typeof value == 'string' ) {

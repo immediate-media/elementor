@@ -27,7 +27,15 @@ class Edit extends Base_Category {
 	 * @return string
 	 */
 	public function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Edit', 'elementor' );
+	}
+
+	public function get_id() {
+		return 'edit';
+=======
 		return __( 'Edit', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -67,6 +75,10 @@ class Edit extends Base_Category {
 		] );
 
 		$recently_edited_query_args = [
+<<<<<<< HEAD
+			'no_found_rows' => true,
+=======
+>>>>>>> dist
 			'post_type' => $post_types,
 			'post_status' => [ 'publish', 'draft', 'private', 'pending', 'future' ],
 			'posts_per_page' => '10',
@@ -110,7 +122,11 @@ class Edit extends Base_Category {
 			$icon = 'document-file';
 
 			if ( $is_template ) {
+<<<<<<< HEAD
+				$description = esc_html__( 'Template', 'elementor' ) . ' / ' . $description;
+=======
 				$description = __( 'Template', 'elementor' ) . ' / ' . $description;
+>>>>>>> dist
 
 				$icon = 'post-title';
 			}

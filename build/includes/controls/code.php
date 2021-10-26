@@ -64,12 +64,20 @@ class Control_Code extends Base_Data_Control {
 	 * @access public
 	 */
 	public function content_template() {
+<<<<<<< HEAD
+		?>
+		<div class="elementor-control-field">
+			<label for="<?php $this->print_control_uid(); ?>" class="elementor-control-title">{{{ data.label }}}</label>
+			<div class="elementor-control-input-wrapper elementor-control-dynamic-switcher-wrapper">
+				<textarea id="<?php $this->print_control_uid(); ?>" rows="{{ data.rows }}" class="elementor-input-style elementor-code-editor" data-setting="{{ data.name }}"></textarea>
+=======
 		$control_uid = $this->get_control_uid();
 		?>
 		<div class="elementor-control-field">
 			<label for="<?php echo $control_uid; ?>" class="elementor-control-title">{{{ data.label }}}</label>
 			<div class="elementor-control-input-wrapper elementor-control-dynamic-switcher-wrapper">
 				<textarea id="<?php echo $control_uid; ?>" rows="{{ data.rows }}" class="elementor-input-style elementor-code-editor elementor-control-tag-area" data-setting="{{ data.name }}"></textarea>
+>>>>>>> dist
 			</div>
 		</div>
 		<# if ( data.description ) { #>

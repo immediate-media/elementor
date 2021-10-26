@@ -136,4 +136,11 @@ abstract class Base_Control extends Base_Object {
 	protected function get_default_settings() {
 		return [];
 	}
+<<<<<<< HEAD
+
+	public static function get_assets( $setting ) {
+		return [];
+	}
+=======
+>>>>>>> dist
 }

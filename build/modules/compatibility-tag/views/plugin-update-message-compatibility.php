@@ -25,6 +25,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div>
 		<div class="e-major-update-warning__message">
 			<strong>
+<<<<<<< HEAD
+				<?php echo esc_html__( 'Compatibility Alert', 'elementor' ); ?>
+			</strong> -
+			<?php
+			/* translators: 1: Plugin name, 2: Plugin version. */
+			echo sprintf(
+				esc_html__( 'Some of the plugins you’re using have not been tested with the latest version of %1$s (%2$s). To avoid issues, make sure they are all up to date and compatible before updating %1$s.', 'elementor' ),
+				esc_html( $this->get_plugin_label() ),
+				$new_version->__toString() // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
 				<?php echo __( 'Compatibility Alert', 'elementor' ); ?>
 			</strong> -
 			<?php
@@ -33,16 +43,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 				__( 'Some of the plugins you’re using have not been tested with the latest version of %1$s (%2$s). To avoid issues, make sure they are all up to date and compatible before updating %1$s.', 'elementor' ),
 				$this->get_plugin_label(),
 				$new_version->__toString()
+>>>>>>> dist
 			);
 			?>
 		</div>
 		<br />
 		<table class="e-compatibility-update-table">
 			<tr>
+<<<<<<< HEAD
+				<th><?php echo esc_html__( 'Plugin', 'elementor' ); ?></th>
+				<th><?php
+					/* translators: %s: Elementor plugin name. */
+					echo sprintf( esc_html__( 'Tested up to %s version', 'elementor' ), esc_html( $this->get_plugin_label() ) );
+=======
 				<th><?php echo __( 'Plugin', 'elementor' ); ?></th>
 				<th><?php
 					/* translators: %s - Elementor plugin name */
 					echo sprintf( __( 'Tested up to %s version', 'elementor' ), $this->get_plugin_label() );
+>>>>>>> dist
 				?></th>
 			</tr>
 			<?php foreach ( $plugins as $plugin_name => $plugin_data ) : ?>
@@ -54,13 +72,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 					Compatibility_Tag::INVALID_VERSION,
 				], true )
 				) {
+<<<<<<< HEAD
+					$plugin_data[ $this->get_plugin_header() ] = esc_html__( 'Unknown', 'elementor' );
+=======
 					$plugin_data[ $this->get_plugin_header() ] = __( 'Unknown', 'elementor' );
+>>>>>>> dist
 				}
 				?>
 
 				<tr>
+<<<<<<< HEAD
+					<td><?php echo esc_html( $plugin_data['Name'] ); ?></td>
+					<td><?php echo esc_html( $plugin_data[ $this->get_plugin_header() ] ); ?></td>
+=======
 					<td><?php echo $plugin_data['Name']; ?></td>
 					<td><?php echo $plugin_data[ $this->get_plugin_header() ]; ?></td>
+>>>>>>> dist
 				</tr>
 			<?php endforeach ?>
 		</table>

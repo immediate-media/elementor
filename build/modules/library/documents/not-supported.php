@@ -2,6 +2,10 @@
 namespace Elementor\Modules\Library\Documents;
 
 use Elementor\TemplateLibrary\Source_Local;
+<<<<<<< HEAD
+use Elementor\Utils;
+=======
+>>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -33,6 +37,10 @@ class Not_Supported extends Library_Document {
 		$properties['register_type'] = false;
 		$properties['is_editable'] = false;
 		$properties['show_in_library'] = false;
+<<<<<<< HEAD
+		$properties['show_in_finder'] = false;
+=======
+>>>>>>> dist
 
 		$properties['cpt'] = [
 			Source_Local::CPT,
@@ -41,6 +49,9 @@ class Not_Supported extends Library_Document {
 		return $properties;
 	}
 
+<<<<<<< HEAD
+	public static function get_type() {
+=======
 	/**
 	 * Get document name.
 	 *
@@ -51,6 +62,7 @@ class Not_Supported extends Library_Document {
 	 * @return string Document name.
 	 */
 	public function get_name() {
+>>>>>>> dist
 		return 'not-supported';
 	}
 
@@ -65,7 +77,11 @@ class Not_Supported extends Library_Document {
 	 * @return string Document title.
 	 */
 	public static function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Not Supported', 'elementor' );
+=======
 		return __( 'Not Supported', 'elementor' );
+>>>>>>> dist
 	}
 
 	public function save_template_type() {
@@ -73,7 +89,11 @@ class Not_Supported extends Library_Document {
 	}
 
 	public function print_admin_column_type() {
+<<<<<<< HEAD
+		Utils::print_unescaped_internal_string( self::get_title() );
+=======
 		echo self::get_title();
+>>>>>>> dist
 	}
 
 	public function filter_admin_row_actions( $actions ) {

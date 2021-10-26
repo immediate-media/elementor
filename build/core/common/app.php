@@ -121,7 +121,11 @@ class App extends BaseApp {
 			[
 				'jquery-ui-position',
 			],
+<<<<<<< HEAD
+			'4.9.0',
+=======
 			'4.8.1',
+>>>>>>> dist
 			true
 		);
 
@@ -162,7 +166,11 @@ class App extends BaseApp {
 			'elementor-icons',
 			$this->get_css_assets_url( 'elementor-icons', 'assets/lib/eicons/css/' ),
 			[],
+<<<<<<< HEAD
+			'5.13.0'
+=======
 			'5.11.0'
+>>>>>>> dist
 		);
 
 		wp_enqueue_style(
@@ -208,7 +216,11 @@ class App extends BaseApp {
 	 */
 	public function print_templates() {
 		foreach ( $this->templates as $template ) {
+<<<<<<< HEAD
+			echo $template; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
 			echo $template;
+>>>>>>> dist
 		}
 	}
 

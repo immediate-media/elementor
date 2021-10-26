@@ -30,6 +30,8 @@ abstract class Element_Base extends Controls_Stack {
 	private $children;
 
 	/**
+<<<<<<< HEAD
+=======
 	 * Element render attributes.
 	 *
 	 * Holds all the render attributes of the element. Used to store data like
@@ -42,6 +44,7 @@ abstract class Element_Base extends Controls_Stack {
 	private $render_attributes = [];
 
 	/**
+>>>>>>> dist
 	 * Element default arguments.
 	 *
 	 * Holds all the default arguments of the element. Used to store additional
@@ -366,6 +369,8 @@ abstract class Element_Base extends Controls_Stack {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
 	 * Add render attribute.
 	 *
 	 * Used to add attributes to a specific HTML element.
@@ -424,6 +429,7 @@ abstract class Element_Base extends Controls_Stack {
 	}
 
 	/**
+>>>>>>> dist
 	 * Add link render attributes.
 	 *
 	 * Used to add link tag attributes to a specific HTML element.
@@ -476,6 +482,8 @@ abstract class Element_Base extends Controls_Stack {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
 	 * Get Render Attributes
 	 *
 	 * Used to retrieve render attribute.
@@ -606,6 +614,7 @@ abstract class Element_Base extends Controls_Stack {
 	}
 
 	/**
+>>>>>>> dist
 	 * Print element.
 	 *
 	 * Used to generate the element final HTML on the frontend and the editor.
@@ -676,7 +685,12 @@ abstract class Element_Base extends Controls_Stack {
 			}
 
 			$this->before_render();
+<<<<<<< HEAD
+			// PHPCS - The content has already been escaped by the `render` method.
+			echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
 			echo $content;
+>>>>>>> dist
 			$this->after_render();
 
 			$this->enqueue_scripts();
@@ -864,6 +878,41 @@ abstract class Element_Base extends Controls_Stack {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * Add Hidden Device Controls
+	 *
+	 * Adds controls for hiding elements within certain devices' viewport widths. Adds a control for each active device.
+	 *
+	 * @since 3.4.0
+	 * @access protected
+	 */
+	protected function add_hidden_device_controls() {
+		// The 'Hide On X' controls are displayed from largest to smallest, while the method returns smallest to largest.
+		$active_devices = Plugin::$instance->breakpoints->get_active_devices_list( [ 'reverse' => true ] );
+		$active_breakpoints = Plugin::$instance->breakpoints->get_active_breakpoints();
+
+		foreach ( $active_devices as $breakpoint_key ) {
+			$label = 'desktop' === $breakpoint_key ? __( 'Desktop', 'elementor' ) : $active_breakpoints[ $breakpoint_key ]->get_label();
+
+			$this->add_control(
+				'hide_' . $breakpoint_key,
+				[
+					/* translators: %s: Device name. */
+					'label' => sprintf( __( 'Hide On %s', 'elementor' ), $label ),
+					'type' => Controls_Manager::SWITCHER,
+					'default' => '',
+					'prefix_class' => 'elementor-',
+					'label_on' => 'Hide',
+					'label_off' => 'Show',
+					'return_value' => 'hidden-' . $breakpoint_key,
+				]
+			);
+		}
+	}
+
+	/**
+=======
+>>>>>>> dist
 	 * Get default data.
 	 *
 	 * Retrieve the default element data. Used to reset the data on initialization.

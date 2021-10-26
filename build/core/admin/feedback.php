@@ -93,6 +93,31 @@ class Feedback extends Module {
 	public function print_deactivate_feedback_dialog() {
 		$deactivate_reasons = [
 			'no_longer_needed' => [
+<<<<<<< HEAD
+				'title' => esc_html__( 'I no longer need the plugin', 'elementor' ),
+				'input_placeholder' => '',
+			],
+			'found_a_better_plugin' => [
+				'title' => esc_html__( 'I found a better plugin', 'elementor' ),
+				'input_placeholder' => esc_html__( 'Please share which plugin', 'elementor' ),
+			],
+			'couldnt_get_the_plugin_to_work' => [
+				'title' => esc_html__( 'I couldn\'t get the plugin to work', 'elementor' ),
+				'input_placeholder' => '',
+			],
+			'temporary_deactivation' => [
+				'title' => esc_html__( 'It\'s a temporary deactivation', 'elementor' ),
+				'input_placeholder' => '',
+			],
+			'elementor_pro' => [
+				'title' => esc_html__( 'I have Elementor Pro', 'elementor' ),
+				'input_placeholder' => '',
+				'alert' => esc_html__( 'Wait! Don\'t deactivate Elementor. You have to activate both Elementor and Elementor Pro in order for the plugin to work.', 'elementor' ),
+			],
+			'other' => [
+				'title' => esc_html__( 'Other', 'elementor' ),
+				'input_placeholder' => esc_html__( 'Please share the reason', 'elementor' ),
+=======
 				'title' => __( 'I no longer need the plugin', 'elementor' ),
 				'input_placeholder' => '',
 			],
@@ -116,6 +141,7 @@ class Feedback extends Module {
 			'other' => [
 				'title' => __( 'Other', 'elementor' ),
 				'input_placeholder' => __( 'Please share the reason', 'elementor' ),
+>>>>>>> dist
 			],
 		];
 
@@ -123,7 +149,11 @@ class Feedback extends Module {
 		<div id="elementor-deactivate-feedback-dialog-wrapper">
 			<div id="elementor-deactivate-feedback-dialog-header">
 				<i class="eicon-elementor-square" aria-hidden="true"></i>
+<<<<<<< HEAD
+				<span id="elementor-deactivate-feedback-dialog-header-title"><?php echo esc_html__( 'Quick Feedback', 'elementor' ); ?></span>
+=======
 				<span id="elementor-deactivate-feedback-dialog-header-title"><?php echo __( 'Quick Feedback', 'elementor' ); ?></span>
+>>>>>>> dist
 			</div>
 			<form id="elementor-deactivate-feedback-dialog-form" method="post">
 				<?php
@@ -131,7 +161,11 @@ class Feedback extends Module {
 				?>
 				<input type="hidden" name="action" value="elementor_deactivate_feedback" />
 
+<<<<<<< HEAD
+				<div id="elementor-deactivate-feedback-dialog-form-caption"><?php echo esc_html__( 'If you have a moment, please share why you are deactivating Elementor:', 'elementor' ); ?></div>
+=======
 				<div id="elementor-deactivate-feedback-dialog-form-caption"><?php echo __( 'If you have a moment, please share why you are deactivating Elementor:', 'elementor' ); ?></div>
+>>>>>>> dist
 				<div id="elementor-deactivate-feedback-dialog-form-body">
 					<?php foreach ( $deactivate_reasons as $reason_key => $reason ) : ?>
 						<div class="elementor-deactivate-feedback-dialog-input-wrapper">

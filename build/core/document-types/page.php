@@ -23,12 +23,16 @@ class Page extends PageBase {
 		return $properties;
 	}
 
+<<<<<<< HEAD
+	public static function get_type() {
+=======
 	/**
 	 * Get Name
 	 *
 	 * @access public
 	 */
 	public function get_name() {
+>>>>>>> dist
 		return 'wp-page';
 	}
 
@@ -39,6 +43,14 @@ class Page extends PageBase {
 	 * @static
 	 */
 	public static function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Page', 'elementor' );
+	}
+
+	public static function get_plural_title() {
+		return __( 'Pages', 'elementor' );
+=======
 		return __( 'Page', 'elementor' );
+>>>>>>> dist
 	}
 }

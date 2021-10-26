@@ -202,7 +202,11 @@ class Editor {
 		$document = Plugin::$instance->documents->get( get_the_ID() );
 
 		if ( ! $document ) {
+<<<<<<< HEAD
+			wp_die( esc_html__( 'Document not found.', 'elementor' ) );
+=======
 			wp_die( __( 'Document not found.', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		if ( ! $document->is_editable_by_current_user() || ! $document->is_built_with_elementor() ) {
@@ -529,6 +533,10 @@ class Editor {
 			'version' => ELEMENTOR_VERSION,
 			'home_url' => home_url(),
 			'admin_settings_url' => admin_url( 'admin.php?page=' . Settings::PAGE_ID ),
+<<<<<<< HEAD
+			'admin_tools_url' => admin_url( 'admin.php?page=' . Tools::PAGE_ID ),
+=======
+>>>>>>> dist
 			'autosave_interval' => AUTOSAVE_INTERVAL,
 			'tabs' => $plugin->controls_manager->get_tabs(),
 			'controls' => $plugin->controls_manager->get_controls_data(),
@@ -587,6 +595,14 @@ class Editor {
 			],
 			// Empty array for BC to avoid errors.
 			'i18n' => [],
+<<<<<<< HEAD
+			// 'responsive' contains the custom breakpoints config introduced in Elementor v3.2.0
+			'responsive' => [
+				'breakpoints' => Plugin::$instance->breakpoints->get_breakpoints_config(),
+				'icons_map' => Plugin::$instance->breakpoints->get_responsive_icons_classes_map(),
+			],
+=======
+>>>>>>> dist
 		];
 
 		if ( ! Utils::has_pro() && current_user_can( 'manage_options' ) ) {
@@ -807,6 +823,8 @@ class Editor {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
 	 * Add editor template.
 	 *
 	 * Registers new editor templates.
@@ -831,6 +849,7 @@ class Editor {
 	}
 
 	/**
+>>>>>>> dist
 	 * WP footer.
 	 *
 	 * Prints Elementor editor with all the editor templates, and render controls,
@@ -890,7 +909,11 @@ class Editor {
 	 * @access public
 	 */
 	public function __construct() {
+<<<<<<< HEAD
+		Plugin::$instance->data_manager_v2->register_controller( new Data\Globals\Controller() );
+=======
 		Plugin::$instance->data_manager->register_controller( Data\Globals\Controller::class );
+>>>>>>> dist
 
 		$this->notice_bar = new Notice_Bar();
 
@@ -920,7 +943,13 @@ class Editor {
 	 * @access public
 	 */
 	public function filter_wp_link_query( $results ) {
+<<<<<<< HEAD
+
+		// PHPCS - The user data is not used.
+		if ( isset( $_POST['editor'] ) && 'elementor' === $_POST['editor'] ) {  // phpcs:ignore WordPress.Security.NonceVerification.Missing
+=======
 		if ( isset( $_POST['editor'] ) && 'elementor' === $_POST['editor'] ) {
+>>>>>>> dist
 			$post_type_object = get_post_type_object( 'post' );
 			$post_label = $post_type_object->labels->singular_name;
 
@@ -935,6 +964,8 @@ class Editor {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
 	 * Create nonce.
 	 *
 	 * If the user has edit capabilities, it creates a cryptographic token to
@@ -1025,6 +1056,7 @@ class Editor {
 	}
 
 	/**
+>>>>>>> dist
 	 * Init editor templates.
 	 *
 	 * Initialize default elementor templates used in the editor panel.

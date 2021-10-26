@@ -336,7 +336,26 @@ class Svg_Handler extends Files_Upload_Handler {
 			'textlength',
 		];
 
+<<<<<<< HEAD
+		/**
+		 * Allowed attributes in SVG file.
+		 *
+		 * Filters the list of allowed attributes in SVG files.
+		 *
+		 * Since SVG files can run JS code that may inject malicious code, all attributes
+		 * are removed except the allowed attributes.
+		 *
+		 * This hook can be used to manage allowed SVG attributes. To either add new
+		 * attributes or delete existing attributes. To strengthen or weaken site security.
+		 *
+		 * @param array $allowed_attributes A list of allowed attributes.
+		 */
+		$allowed_attributes = apply_filters( 'elementor/files/svg/allowed_attributes', $allowed_attributes );
+
+		return $allowed_attributes;
+=======
 		return apply_filters( 'elementor/files/svg/allowed_attributes', $allowed_attributes );
+>>>>>>> dist
 	}
 
 	/**
@@ -378,7 +397,27 @@ class Svg_Handler extends Files_Upload_Handler {
 			'tspan',
 			'use',
 		];
+<<<<<<< HEAD
+
+		/**
+		 * Allowed elements in SVG file.
+		 *
+		 * Filters the list of allowed elements in SVG files.
+		 *
+		 * Since SVG files can run JS code that may inject malicious code, all elements
+		 * are removed except the allowed elements.
+		 *
+		 * This hook can be used to manage SVG elements. To either add new elements or
+		 * delete existing elements. To strengthen or weaken site security.
+		 *
+		 * @param array $allowed_elements A list of allowed elements.
+		 */
+		$allowed_elements = apply_filters( 'elementor/files/svg/allowed_elements', $allowed_elements );
+
+		return $allowed_elements;
+=======
 		return apply_filters( 'elementor/files/svg/allowed_elements', $allowed_elements );
+>>>>>>> dist
 	}
 
 	/**
@@ -497,6 +536,10 @@ class Svg_Handler extends Files_Upload_Handler {
 		// Strip php tags
 		$content = $this->strip_comments( $content );
 		$content = $this->strip_php_tags( $content );
+<<<<<<< HEAD
+		$content = $this->strip_line_breaks( $content );
+=======
+>>>>>>> dist
 
 		// Find the start and end tags so we can cut out miscellaneous garbage.
 		$start = strpos( $content, '<svg' );
@@ -577,6 +620,20 @@ class Svg_Handler extends Files_Upload_Handler {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * strip_line_breaks
+	 * @param $string
+	 *
+	 * @return string
+	 */
+	private function strip_line_breaks( $string ) {
+		// Remove line breaks.
+		return preg_replace( '/\r|\n/', '', $string );
+	}
+
+	/**
+=======
+>>>>>>> dist
 	 * wp_prepare_attachment_for_js
 	 * @param $attachment_data
 	 * @param $attachment
@@ -639,6 +696,33 @@ class Svg_Handler extends Files_Upload_Handler {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * set_svg_meta_data
+	 * @return mixed
+	 */
+	public function set_svg_meta_data( $data, $id ) {
+		$attachment = get_post( $id ); // Filter makes sure that the post is an attachment.
+		$mime_type = $attachment->post_mime_type;
+
+		// If the attachment is an svg
+		if ( 'image/svg+xml' === $mime_type ) {
+			// If the svg metadata are empty or the width is empty or the height is empty.
+			// then get the attributes from xml.
+			if ( empty( $data ) || empty( $data['width'] ) || empty( $data['height'] ) ) {
+				$xml = simplexml_load_file( get_attached_file( $id ) );
+				$attr = $xml->attributes();
+				$view_box = explode( ' ', $attr->viewBox );// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+				$data['width'] = isset( $attr->width ) && preg_match( '/\d+/', $attr->width, $value ) ? (int) $value[0] : ( 4 === count( $view_box ) ? (int) $view_box[2] : null );
+				$data['height'] = isset( $attr->height ) && preg_match( '/\d+/', $attr->height, $value ) ? (int) $value[0] : ( 4 === count( $view_box ) ? (int) $view_box[3] : null );
+			}
+		}
+
+		return $data;
+	}
+
+	/**
+=======
+>>>>>>> dist
 	 * handle_upload_prefilter
 	 * @param $file
 	 *
@@ -654,7 +738,12 @@ class Svg_Handler extends Files_Upload_Handler {
 		if ( ! $file['error'] && self::file_sanitizer_can_run() && ! $this->sanitize_svg( $file['tmp_name'] ) ) {
 			$display_type = strtoupper( $this->get_file_type() );
 
+<<<<<<< HEAD
+			/* translators: %s: File type. */
+			$file['error'] = sprintf( esc_html__( 'Invalid %1$s Format, file not uploaded for security reasons', 'elementor' ), $display_type );
+=======
 			$file['error'] = sprintf( __( 'Invalid %1$s Format, file not uploaded for security reasons', 'elementor' ), $display_type );
+>>>>>>> dist
 		}
 
 		return $file;
@@ -703,6 +792,10 @@ class Svg_Handler extends Files_Upload_Handler {
 	public function __construct() {
 		parent::__construct();
 
+<<<<<<< HEAD
+		add_filter( 'wp_update_attachment_metadata', [ $this, 'set_svg_meta_data' ], 10, 2 );
+=======
+>>>>>>> dist
 		add_filter( 'wp_prepare_attachment_for_js', [ $this, 'wp_prepare_attachment_for_js' ], 10, 3 );
 		add_action( 'elementor/core/files/clear_cache', [ $this, 'delete_meta_cache' ] );
 	}

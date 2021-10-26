@@ -21,9 +21,18 @@ use Elementor\Core\Upgrade\Elementor_3_Re_Migrate_Globals;
 use Elementor\Modules\History\Revisions_Manager;
 use Elementor\Core\DynamicTags\Manager as Dynamic_Tags_Manager;
 use Elementor\Core\Logger\Manager as Log_Manager;
+<<<<<<< HEAD
+use Elementor\Core\Page_Assets\Loader as Assets_Loader;
+use Elementor\Modules\System_Info\Module as System_Info_Module;
+use Elementor\Data\Manager as Data_Manager;
+use Elementor\Data\V2\Manager as Data_Manager_V2;
+use Elementor\Core\Common\Modules\DevTools\Module as Dev_Tools;
+use Elementor\Core\Files\Uploads_Manager as Uploads_Manager;
+=======
 use Elementor\Modules\System_Info\Module as System_Info_Module;
 use Elementor\Data\Manager as Data_Manager;
 use Elementor\Core\Common\Modules\DevTools\Module as Dev_Tools;
+>>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -38,6 +47,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 class Plugin {
+<<<<<<< HEAD
+	const ELEMENTOR_DEFAULT_POST_TYPES = [ 'page', 'post' ];
+=======
+>>>>>>> dist
 
 	/**
 	 * Instance.
@@ -55,7 +68,12 @@ class Plugin {
 	/**
 	 * Database.
 	 *
+<<<<<<< HEAD
+	 * Holds the plugin database handler which is responsible for communicating
+	 * with the database.
+=======
 	 * Holds the plugin database.
+>>>>>>> dist
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -65,6 +83,12 @@ class Plugin {
 	public $db;
 
 	/**
+<<<<<<< HEAD
+	 * Controls manager.
+	 *
+	 * Holds the plugin controls manager handler is responsible for registering
+	 * and initializing controls.
+=======
 	 * Ajax Manager.
 	 *
 	 * Holds the plugin ajax manager.
@@ -81,6 +105,7 @@ class Plugin {
 	 * Controls manager.
 	 *
 	 * Holds the plugin controls manager.
+>>>>>>> dist
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -128,7 +153,12 @@ class Plugin {
 	/**
 	 * Widgets manager.
 	 *
+<<<<<<< HEAD
+	 * Holds the plugin widgets manager which is responsible for registering and
+	 * initializing widgets.
+=======
 	 * Holds the plugin widgets manager.
+>>>>>>> dist
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -140,7 +170,12 @@ class Plugin {
 	/**
 	 * Revisions manager.
 	 *
+<<<<<<< HEAD
+	 * Holds the plugin revisions manager which handles history and revisions
+	 * functionality.
+=======
 	 * Holds the plugin revisions manager.
+>>>>>>> dist
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -152,7 +187,12 @@ class Plugin {
 	/**
 	 * Images manager.
 	 *
+<<<<<<< HEAD
+	 * Holds the plugin images manager which is responsible for retrieving image
+	 * details.
+=======
 	 * Holds the plugin images manager.
+>>>>>>> dist
 	 *
 	 * @since 2.9.0
 	 * @access public
@@ -164,7 +204,12 @@ class Plugin {
 	/**
 	 * Maintenance mode.
 	 *
+<<<<<<< HEAD
+	 * Holds the maintenance mode manager responsible for the "Maintenance Mode"
+	 * and the "Coming Soon" features.
+=======
 	 * Holds the plugin maintenance mode.
+>>>>>>> dist
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -212,12 +257,20 @@ class Plugin {
 	/**
 	 * Role Manager.
 	 *
+<<<<<<< HEAD
+	 * Holds the plugin role manager.
+=======
 	 * Holds the plugin Role Manager
+>>>>>>> dist
 	 *
 	 * @since 2.0.0
 	 * @access public
 	 *
+<<<<<<< HEAD
+	 * @var Core\RoleManager\Role_Manager
+=======
 	 * @var \Elementor\Core\RoleManager\Role_Manager
+>>>>>>> dist
 	 */
 	public $role_manager;
 
@@ -301,7 +354,11 @@ class Plugin {
 	 * @since 1.0.0
 	 * @access public
 	 *
+<<<<<<< HEAD
+	 * @var System_Info_Module
+=======
 	 * @var System_Info\Main
+>>>>>>> dist
 	 */
 	public $system_info;
 
@@ -330,9 +387,15 @@ class Plugin {
 	public $skins_manager;
 
 	/**
+<<<<<<< HEAD
+	 * Files manager.
+	 *
+	 * Holds the plugin files manager.
+=======
 	 * Files Manager.
 	 *
 	 * Holds the files manager.
+>>>>>>> dist
 	 *
 	 * @since 2.1.0
 	 * @access public
@@ -342,9 +405,15 @@ class Plugin {
 	public $files_manager;
 
 	/**
+<<<<<<< HEAD
+	 * Assets manager.
+	 *
+	 * Holds the plugin assets manager.
+=======
 	 * Assets Manager.
 	 *
 	 * Holds the Assets manager.
+>>>>>>> dist
 	 *
 	 * @since 2.6.0
 	 * @access public
@@ -354,6 +423,17 @@ class Plugin {
 	public $assets_manager;
 
 	/**
+<<<<<<< HEAD
+	 * Icons Manager.
+	 *
+	 * Holds the plugin icons manager.
+	 *
+	 * @access public
+	 *
+	 * @var Icons_Manager
+	 */
+	public $icons_manager;
+=======
 	 * Files Manager.
 	 *
 	 * Holds the files manager.
@@ -365,6 +445,7 @@ class Plugin {
 	 * @var Files_Manager
 	 */
 	private $posts_css_manager;
+>>>>>>> dist
 
 	/**
 	 * WordPress widgets manager.
@@ -381,7 +462,11 @@ class Plugin {
 	/**
 	 * Modules manager.
 	 *
+<<<<<<< HEAD
+	 * Holds the plugin modules manager.
+=======
 	 * Holds the modules manager.
+>>>>>>> dist
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -403,42 +488,132 @@ class Plugin {
 	public $beta_testers;
 
 	/**
+<<<<<<< HEAD
+	 * Inspector.
+	 *
+	 * Holds the plugin inspector data.
+	 *
+	 * @since 2.1.2
+	 * @access public
+	 *
+=======
 	 * @var Inspector
 	 * @deprecated 2.1.2 Use $inspector.
 	 */
 	public $debugger;
 
 	/**
+>>>>>>> dist
 	 * @var Inspector
 	 */
 	public $inspector;
 
 	/**
+<<<<<<< HEAD
+	 * Common functionality.
+	 *
+	 * Holds the plugin common functionality.
+	 *
+	 * @since 2.3.0
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var CommonApp
 	 */
 	public $common;
 
 	/**
+<<<<<<< HEAD
+	 * Log manager.
+	 *
+	 * Holds the plugin log manager.
+	 *
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var Log_Manager
 	 */
 	public $logger;
 
 	/**
+<<<<<<< HEAD
+	 * Dev tools.
+	 *
+	 * Holds the plugin dev tools.
+	 *
+	 * @access private
+	 *
+=======
+>>>>>>> dist
 	 * @var Dev_Tools
 	 */
 	private $dev_tools;
 
 	/**
+<<<<<<< HEAD
+	 * Upgrade manager.
+	 *
+	 * Holds the plugin upgrade manager.
+	 *
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var Core\Upgrade\Manager
 	 */
 	public $upgrade;
 
 	/**
+<<<<<<< HEAD
+	 * Tasks manager.
+	 *
+	 * Holds the plugin tasks manager.
+	 *
+	 * @var Core\Upgrade\Custom_Tasks_Manager
+	 */
+	public $custom_tasks;
+
+	/**
+	 * Kits manager.
+	 *
+	 * Holds the plugin kits manager.
+	 *
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var Core\Kits\Manager
 	 */
 	public $kits_manager;
 
 	/**
+<<<<<<< HEAD
+	 * @var \Elementor\Data\V2\Manager
+	 */
+	public $data_manager_v2;
+
+	/**
+	 * Legacy mode.
+	 *
+	 * Holds the plugin legacy mode data.
+	 *
+	 * @access public
+	 *
+	 * @var array
+	 */
+	public $legacy_mode;
+
+	/**
+	 * App.
+	 *
+	 * Holds the plugin app data.
+	 *
+	 * @since 3.0.0
+	 * @access public
+	 *
+=======
 	 * @var \Core\Data\Manager
 	 */
 	public $data_manager;
@@ -446,26 +621,86 @@ class Plugin {
 	public $legacy_mode;
 
 	/**
+>>>>>>> dist
 	 * @var Core\App\App
 	 */
 	public $app;
 
 	/**
+<<<<<<< HEAD
+	 * WordPress API.
+	 *
+	 * Holds the methods that interact with WordPress Core API.
+	 *
+	 * @since 3.0.0
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var Wp_Api
 	 */
 	public $wp;
 
 	/**
+<<<<<<< HEAD
+	 * Experiments manager.
+	 *
+	 * Holds the plugin experiments manager.
+	 *
+	 * @since 3.1.0
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var Experiments_Manager
 	 */
 	public $experiments;
 
 	/**
+<<<<<<< HEAD
+	 * Uploads manager.
+	 *
+	 * Holds the plugin uploads manager responsible for handling file uploads
+	 * that are not done with WordPress Media.
+	 *
+	 * @since 3.3.0
+	 * @access public
+	 *
+	 * @var Uploads_Manager
+	 */
+	public $uploads_manager;
+
+	/**
+	 * Breakpoints manager.
+	 *
+	 * Holds the plugin breakpoints manager.
+	 *
+	 * @since 3.2.0
+	 * @access public
+	 *
+=======
+>>>>>>> dist
 	 * @var Breakpoints_Manager
 	 */
 	public $breakpoints;
 
 	/**
+<<<<<<< HEAD
+	 * Assets loader.
+	 *
+	 * Holds the plugin assets loader responsible for conditionally enqueuing
+	 * styles and script assets that were pre-enabled.
+	 *
+	 * @since 3.3.0
+	 * @access public
+	 *
+	 * @var Assets_Loader
+	 */
+	public $assets_loader;
+
+	/**
+=======
+>>>>>>> dist
 	 * Clone.
 	 *
 	 * Disable class cloning and throw an error on object clone.
@@ -539,8 +774,14 @@ class Plugin {
 		/**
 		 * Elementor init.
 		 *
+<<<<<<< HEAD
+		 * Fires when Elementor components are initialized.
+		 *
+		 * After Elementor finished loading but before any headers are sent.
+=======
 		 * Fires on Elementor init, after Elementor has finished loading but
 		 * before any headers are sent.
+>>>>>>> dist
 		 *
 		 * @since 1.0.0
 		 */
@@ -595,7 +836,10 @@ class Plugin {
 		$this->experiments = new Experiments_Manager();
 		$this->breakpoints = new Breakpoints_Manager();
 		$this->inspector = new Inspector();
+<<<<<<< HEAD
+=======
 		$this->debugger = $this->inspector;
+>>>>>>> dist
 
 		Settings_Manager::run();
 
@@ -624,12 +868,21 @@ class Plugin {
 		$this->revisions_manager = new Revisions_Manager();
 		$this->images_manager = new Images_Manager();
 		$this->wp = new Wp_Api();
+<<<<<<< HEAD
+		$this->assets_loader = new Assets_Loader();
+		$this->uploads_manager = new Uploads_Manager();
+=======
+>>>>>>> dist
 
 		User::init();
 		Api::init();
 		Tracker::init();
 
 		$this->upgrade = new Core\Upgrade\Manager();
+<<<<<<< HEAD
+		$this->custom_tasks = new Core\Upgrade\Custom_Tasks_Manager();
+=======
+>>>>>>> dist
 
 		$this->app = new Core\App\App();
 
@@ -650,8 +903,11 @@ class Plugin {
 		$this->common = new CommonApp();
 
 		$this->common->init_components();
+<<<<<<< HEAD
+=======
 
 		$this->ajax = $this->common->get_component( 'ajax' );
+>>>>>>> dist
 	}
 
 	/**
@@ -698,7 +954,11 @@ class Plugin {
 	 * @access private
 	 */
 	private function add_cpt_support() {
+<<<<<<< HEAD
+		$cpt_support = get_option( 'elementor_cpt_support', self::ELEMENTOR_DEFAULT_POST_TYPES );
+=======
 		$cpt_support = get_option( 'elementor_cpt_support', [ 'page', 'post' ] );
+>>>>>>> dist
 
 		foreach ( $cpt_support as $cpt_slug ) {
 			add_post_type_support( $cpt_slug, 'elementor' );
@@ -736,6 +996,13 @@ class Plugin {
 			return $this->files_manager;
 		}
 
+<<<<<<< HEAD
+		if ( 'data_manager' === $property ) {
+			return Data_Manager::instance();
+		}
+
+=======
+>>>>>>> dist
 		if ( property_exists( $this, $property ) ) {
 			throw new \Exception( 'Cannot access private property' );
 		}
@@ -755,7 +1022,11 @@ class Plugin {
 		$this->register_autoloader();
 
 		$this->logger = Log_Manager::instance();
+<<<<<<< HEAD
+		$this->data_manager_v2 = Data_Manager_V2::instance();
+=======
 		$this->data_manager = Data_Manager::instance();
+>>>>>>> dist
 
 		Maintenance::init();
 		Compatibility::register_actions();
@@ -765,7 +1036,11 @@ class Plugin {
 	}
 
 	final public static function get_title() {
+<<<<<<< HEAD
+		return esc_html__( 'Elementor', 'elementor' );
+=======
 		return __( 'Elementor', 'elementor' );
+>>>>>>> dist
 	}
 }
 

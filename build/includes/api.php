@@ -27,6 +27,12 @@ class Api {
 	 */
 	const FEED_OPTION_KEY = 'elementor_remote_info_feed_data';
 
+<<<<<<< HEAD
+	const TRANSIENT_KEY_PREFIX = 'elementor_remote_info_api_data_';
+
+
+=======
+>>>>>>> dist
 	/**
 	 * API info URL.
 	 *
@@ -66,7 +72,11 @@ class Api {
 	 * @return array|false Info data, or false.
 	 */
 	private static function get_info_data( $force_update = false ) {
+<<<<<<< HEAD
+		$cache_key = self::TRANSIENT_KEY_PREFIX . ELEMENTOR_VERSION;
+=======
 		$cache_key = 'elementor_remote_info_api_data_' . ELEMENTOR_VERSION;
+>>>>>>> dist
 
 		$info_data = get_transient( $cache_key );
 
@@ -157,6 +167,13 @@ class Api {
 	public static function get_promotion_widgets() {
 		$data = self::get_info_data();
 
+<<<<<<< HEAD
+		if ( ! isset( $data['pro_widgets'] ) ) {
+			$data['pro_widgets'] = [];
+		}
+
+=======
+>>>>>>> dist
 		return $data['pro_widgets'];
 	}
 

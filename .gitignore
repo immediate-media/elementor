@@ -4,6 +4,7 @@ node_modules/
 log/
 vendor/
 local-site/
+tmp/
 
 # build outputs
 # build/
@@ -14,6 +15,7 @@ local-site/
 
 # build tools lock
 composer.lock
+
 # package.lock
 yarn.lock
 
@@ -26,3 +28,7 @@ yarn.lock
 Thumbs.db
 *.DS_Store
 coverage/
+
+# playwright
+test-results/
+tests/playwright/config/storageState.json

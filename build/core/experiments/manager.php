@@ -1,4 +1,16 @@
 <?php
+<<<<<<< HEAD
+namespace Elementor\Core\Experiments;
+
+use Elementor\Core\Base\Base_Object;
+use Elementor\Core\Experiments\Manager as Experiments_Manager;
+use Elementor\Core\Upgrade\Manager as Upgrade_Manager;
+use Elementor\Modules\System_Info\Module as System_Info;
+use Elementor\Plugin;
+use Elementor\Settings;
+use Elementor\Tracker;
+use Elementor\Modules\SafeMode\Module as Safe_Mode;
+=======
 
 namespace Elementor\Core\Experiments;
 
@@ -7,6 +19,7 @@ use Elementor\Core\Upgrade\Manager as Upgrade_Manager;
 use Elementor\Plugin;
 use Elementor\Settings;
 use Elementor\Tracker;
+>>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -216,11 +229,19 @@ class Manager extends Base_Object {
 	private function add_default_features() {
 		$this->add_feature( [
 			'name' => 'e_dom_optimization',
+<<<<<<< HEAD
+			'title' => esc_html__( 'Optimized DOM Output', 'elementor' ),
+			'description' => esc_html__( 'Developers, Please Note! This experiment includes some markup changes. If you\'ve used custom code in Elementor, you might have experienced a snippet of code not running. Turning this experiment off allows you to keep prior Elementor markup output settings, and have that lovely code running again.', 'elementor' )
+				. ' <a href="https://go.elementor.com/wp-dash-legacy-optimized-dom" target="_blank">'
+				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
+			'release_status' => self::RELEASE_STATUS_STABLE,
+=======
 			'title' => __( 'Optimized DOM Output', 'elementor' ),
 			'description' => __( 'Developers, Please Note! This experiment includes some markup changes. If you\'ve used custom code in Elementor, you might have experienced a snippet of code not running. Turning this experiment off allows you to keep prior Elementor markup output settings, and have that lovely code running again.', 'elementor' )
 				. ' <a href="https://go.elementor.com/wp-dash-legacy-optimized-dom" target="_blank">'
 				. __( 'Learn More', 'elementor' ) . '</a>',
 			'release_status' => self::RELEASE_STATUS_BETA,
+>>>>>>> dist
 			'new_site' => [
 				'default_active' => true,
 				'minimum_installation_version' => '3.1.0-beta',
@@ -229,21 +250,63 @@ class Manager extends Base_Object {
 
 		$this->add_feature( [
 			'name' => 'e_optimized_assets_loading',
+<<<<<<< HEAD
+			'title' => esc_html__( 'Improved Asset Loading', 'elementor' ),
+			'description' => esc_html__( 'Please Note! The "Improved Asset Loading" mode reduces the amount of code that is loaded on the page by default. When activated, parts of the infrastructure code will be loaded dynamically, only when needed. Keep in mind that activating this experiment may cause conflicts with incompatible plugins.', 'elementor' )
+				. ' <a href="https://go.elementor.com/wp-dash-improved-asset-loading/" target="_blank">'
+				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
+			'release_status' => self::RELEASE_STATUS_ALPHA,
+			'new_site' => [
+				'default_active' => true,
+				'minimum_installation_version' => '3.2.0-beta',
+			],
+		] );
+
+		$this->add_feature( [
+			'name' => 'e_optimized_css_loading',
+			'title' => esc_html__( 'Improved CSS Loading', 'elementor' ),
+			'description' => esc_html__( 'Please Note! The “Improved CSS Loading” mode reduces the amount of CSS code that is loaded on the page by default. When activated, the CSS code will be loaded, rather inline or in a dedicated file, only when needed. Activating this experiment may cause conflicts with incompatible plugins.', 'elementor' )
+				. ' <a href="https://go.elementor.com/wp-dash-improved-css-loading/" target="_blank">'
+				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
+			'release_status' => self::RELEASE_STATUS_ALPHA,
+			'new_site' => [
+				'default_active' => true,
+				'minimum_installation_version' => '3.3.0-beta',
+			],
+		] );
+
+		$this->add_feature( [
+			'name' => 'e_font_icon_svg',
+			'title' => esc_html__( 'Font-Awesome Inline', 'elementor' ),
+			'description' => esc_html__( 'The "Font-Awesome Inline" will render the Font-Awesome icons as inline SVG without loading the Font-Awesome library and its related CSS files and fonts.', 'elementor' )
+				. ' <a href="https://go.elementor.com/wp-dash-inline-font-awesome/" target="_blank">'
+				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
+=======
 			'title' => __( 'Improved Asset Loading', 'elementor' ),
 			'description' => __( 'Please Note! The "Improved Asset Loading" mode reduces the amount of code that is loaded on the page by default. When activated, parts of the infrastructure code will be loaded dynamically, only when needed. Keep in mind that activating this experiment may cause conflicts with incompatible plugins.', 'elementor' )
 				. ' <a href="https://go.elementor.com/wp-dash-improved-asset-loading/" target="_blank">'
 				. __( 'Learn More', 'elementor' ) . '</a>',
+>>>>>>> dist
 			'release_status' => self::RELEASE_STATUS_ALPHA,
 		] );
 
 		$this->add_feature( [
 			'name' => 'a11y_improvements',
+<<<<<<< HEAD
+			'title' => esc_html__( 'Accessibility Improvements', 'elementor' ),
+			'description' => esc_html__( 'An array of accessibility enhancements in Elementor pages.', 'elementor' )
+				. '<br><strong>' . esc_html__( 'Please note!', 'elementor' ) . '</strong> ' . esc_html__( 'These enhancements may include some markup changes to existing elementor widgets', 'elementor' )
+				. ' <a href="https://go.elementor.com/wp-dash-a11y-improvements" target="_blank">'
+				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
+			'release_status' => self::RELEASE_STATUS_STABLE,
+=======
 			'title' => __( 'Accessibility Improvements', 'elementor' ),
 			'description' => __( 'An array of accessibility enhancements in Elementor pages.', 'elementor' )
 				. '<br><strong>' . __( 'Please note!', 'elementor' ) . '</strong> ' . __( 'These enhancements may include some markup changes to existing elementor widgets', 'elementor' )
 				. ' <a href="https://go.elementor.com/wp-dash-a11y-improvements" target="_blank">'
 				. __( 'Learn More', 'elementor' ) . '</a>',
 			'release_status' => self::RELEASE_STATUS_BETA,
+>>>>>>> dist
 			'new_site' => [
 				'default_active' => true,
 				'minimum_installation_version' => '3.1.0-beta',
@@ -252,11 +315,49 @@ class Manager extends Base_Object {
 
 		$this->add_feature( [
 			'name' => 'e_import_export',
+<<<<<<< HEAD
+			'title' => esc_html__( 'Import Export Template Kit', 'elementor' ),
+			'description' => esc_html__( 'Design sites faster with a template kit that contains some or all components of a complete site, like templates, content & site settings.', 'elementor' )
+				. '<br>'
+				. esc_html__( 'You can import a kit and apply it to your site, or export the elements from this site to be used anywhere else.', 'elementor' ),
+			'release_status' => self::RELEASE_STATUS_BETA,
+			'default' => self::STATE_ACTIVE,
+			'new_site' => [
+				'default_active' => true,
+				'minimum_installation_version' => '3.2.0-beta',
+			],
+		] );
+
+		$this->add_feature( [
+			'name' => 'additional_custom_breakpoints',
+			'title' => esc_html__( 'Additional Custom Breakpoints', 'elementor' ),
+			'description' => esc_html__( 'Get pixel-perfect design for every screen size. You can now add up to 6 customizable breakpoints beyond the default desktop setting: mobile, mobile extra, tablet, tablet extra, laptop, and widescreen.', 'elementor' )
+							. '<br /><strong>' . esc_html__( 'Please note! Conditioning controls on values of responsive controls is not supported when this mode is active.', 'elementor' ) . '</strong>'
+				. ' <a href="https://go.elementor.com/wp-dash-additional-custom-breakpoints/" target="_blank">'
+				. esc_html__( 'Learn More', 'elementor' ) . '</a>',
+			'release_status' => self::RELEASE_STATUS_BETA,
+			'new_site' => [
+				'default_active' => true,
+				'minimum_installation_version' => '3.4.0-beta',
+			],
+		] );
+
+		$this->add_feature( [
+			'name' => 'e_hidden_wordpress_widgets',
+			'title' => esc_html__( 'Hide native WordPress widgets from search results', 'elementor' ),
+			'description' => esc_html__( 'WordPress widgets will not be shown when searching in the editor panel. Instead, these widgets can be found in the “WordPress” dropdown at the bottom of the panel.', 'elementor' ),
+			'release_status' => self::RELEASE_STATUS_STABLE,
+			'new_site' => [
+				'default_active' => true,
+				'minimum_installation_version' => '3.5.0',
+			],
+=======
 			'title' => __( 'Import Export Template Kit', 'elementor' ),
 			'description' => __( 'Design sites faster with a template kit that contains some or all components of a complete site, like templates, content & site settings.', 'elementor' )
 				. '<br>'
 				. __( 'You can import a kit and apply it to your site, or export the elements from this site to be used anywhere else.', 'elementor' ),
 			'release_status' => self::RELEASE_STATUS_ALPHA,
+>>>>>>> dist
 		] );
 	}
 
@@ -268,9 +369,15 @@ class Manager extends Base_Object {
 	 */
 	private function init_states() {
 		$this->states = [
+<<<<<<< HEAD
+			self::STATE_DEFAULT => esc_html__( 'Default', 'elementor' ),
+			self::STATE_ACTIVE => esc_html__( 'Active', 'elementor' ),
+			self::STATE_INACTIVE => esc_html__( 'Inactive', 'elementor' ),
+=======
 			self::STATE_DEFAULT => __( 'Default', 'elementor' ),
 			self::STATE_ACTIVE => __( 'Active', 'elementor' ),
 			self::STATE_INACTIVE => __( 'Inactive', 'elementor' ),
+>>>>>>> dist
 		];
 	}
 
@@ -282,11 +389,19 @@ class Manager extends Base_Object {
 	 */
 	private function init_release_statuses() {
 		$this->release_statuses = [
+<<<<<<< HEAD
+			self::RELEASE_STATUS_DEV => esc_html__( 'Development', 'elementor' ),
+			self::RELEASE_STATUS_ALPHA => esc_html__( 'Alpha', 'elementor' ),
+			self::RELEASE_STATUS_BETA => esc_html__( 'Beta', 'elementor' ),
+			self::RELEASE_STATUS_RC => esc_html__( 'Release Candidate', 'elementor' ),
+			self::RELEASE_STATUS_STABLE => esc_html__( 'Stable', 'elementor' ),
+=======
 			self::RELEASE_STATUS_DEV => __( 'Development', 'elementor' ),
 			self::RELEASE_STATUS_ALPHA => __( 'Alpha', 'elementor' ),
 			self::RELEASE_STATUS_BETA => __( 'Beta', 'elementor' ),
 			self::RELEASE_STATUS_RC => __( 'Release Candidate', 'elementor' ),
 			self::RELEASE_STATUS_STABLE => __( 'Stable', 'elementor' ),
+>>>>>>> dist
 		];
 	}
 
@@ -327,15 +442,41 @@ class Manager extends Base_Object {
 
 			$feature_key = 'experiment-' . $feature_name;
 
+<<<<<<< HEAD
+			$section = 'stable' === $feature['release_status'] ? 'stable' : 'ongoing';
+
+			$fields[ $section ][ $feature_key ]['label'] = $this->get_feature_settings_label_html( $feature );
+
+			$fields[ $section ][ $feature_key ]['field_args'] = $feature;
+
+			$fields[ $section ][ $feature_key ]['render'] = function( $feature ) {
+=======
 			$fields[ $feature_key ]['label'] = $this->get_feature_settings_label_html( $feature );
 
 			$fields[ $feature_key ]['field_args'] = $feature;
 
 			$fields[ $feature_key ]['render'] = function( $feature ) {
+>>>>>>> dist
 				$this->render_feature_settings_field( $feature );
 			};
 		}
 
+<<<<<<< HEAD
+		foreach ( [ 'stable', 'ongoing' ] as $section ) {
+			if ( ! isset( $fields[ $section ] ) ) {
+				$fields[ $section ]['no_features'] = [
+					'label' => esc_html__( 'No available experiments', 'elementor' ),
+					'field_args' => [
+						'type' => 'raw_html',
+						'html' => esc_html__( 'The current version of Elementor doesn\'t have any experimental features . if you\'re feeling curious make sure to come back in future versions.', 'elementor' ),
+					],
+				];
+			}
+
+			if ( ! Tracker::is_allow_track() ) {
+				$fields[ $section ] += $settings->get_usage_fields();
+			}
+=======
 		if ( ! $features ) {
 			$fields['no_features'] = [
 				'label' => __( 'No available experiments', 'elementor' ),
@@ -348,10 +489,26 @@ class Manager extends Base_Object {
 
 		if ( ! Tracker::is_allow_track() ) {
 			$fields += $settings->get_usage_fields();
+>>>>>>> dist
 		}
 
 		$settings->add_tab(
 			'experiments', [
+<<<<<<< HEAD
+				'label' => esc_html__( 'Experiments', 'elementor' ),
+				'sections' => [
+					'ongoing_experiments' => [
+						'callback' => function() {
+							$this->render_settings_intro();
+						},
+						'fields' => $fields['ongoing'],
+					],
+					'stable_experiments' => [
+						'callback' => function() {
+							$this->render_stable_section_title();
+						},
+						'fields' => $fields['stable'],
+=======
 				'label' => __( 'Experiments', 'elementor' ),
 				'sections' => [
 					'experiments' => [
@@ -359,12 +516,25 @@ class Manager extends Base_Object {
 							$this->render_settings_intro();
 						},
 						'fields' => $fields,
+>>>>>>> dist
 					],
 				],
 			]
 		);
 	}
 
+<<<<<<< HEAD
+	private function render_stable_section_title() {
+		?>
+		<hr>
+		<h2>
+			<?php echo esc_html__( 'Stable Features', 'elementor' ); ?>
+		</h2>
+		<?php
+	}
+
+=======
+>>>>>>> dist
 	/**
 	 * Render Settings Intro
 	 *
@@ -373,10 +543,47 @@ class Manager extends Base_Object {
 	 */
 	private function render_settings_intro() {
 		?>
+<<<<<<< HEAD
+		<h2>
+			<?php echo esc_html__( 'Elementor Experiments', 'elementor' ); ?>
+		</h2>
+		<p class="e-experiment__description">
+			<?php
+				printf(
+					/* translators: %1$s Link open tag, %2$s: Link close tag. */
+					esc_html__( 'Access new and experimental features from Elementor before they\'re officially released. As these features are still in development, they are likely to change, evolve or even be removed  altogether. %1$sLearn More.%2$s', 'elementor' ),
+					'<a href="https://go.elementor.com/wp-dash-experiments/" target="_blank">',
+					'</a>'
+				);
+			?>
+		</p>
+		<p class="e-experiment__description">
+			<?php echo esc_html__( 'To use an experiment on your site, simply click on the dropdown next to it and switch to Active. You can always deactivate them at any time.', 'elementor' ); ?>
+		</p>
+		<p class="e-experiment__description">
+			<?php
+				printf(
+					/* translators: %1$s Link open tag, %2$s: Link close tag. */
+					esc_html__( 'Your feedback is important - %1$shelp us%2$s improve these features by sharing your thoughts and inputs.', 'elementor' ),
+					'<a href="https://go.elementor.com/wp-dash-experiments-report-an-issue/" target="_blank">',
+					'</a>'
+				);
+			?>
+		</p>
+		<?php if ( $this->get_features() ) { ?>
+		<button type="submit" class="button e-experiment__button" value="active">Activate All Experiments</button>
+		<button type="submit" class="button e-experiment__button" value="inactive">Deactivate All Experiments</button>
+		<?php } ?>
+		<hr>
+		<h2>
+			<?php echo esc_html__( 'Ongoing Experiments', 'elementor' ); ?>
+		</h2>
+=======
 		<h2><?php echo __( 'Experiments', 'elementor' ); ?></h2>
 		<p><?php echo sprintf( __( 'Access new and experimental features from Elementor before they\'re officially released. As these features are still in development, they are likely to change, evolve or even be removed altogether. <a href="%s" target="_blank">Learn More.</a>', 'elementor' ), 'https://go.elementor.com/wp-dash-experiments/' ); ?></p>
 		<p><?php echo __( 'To use an experiment on your site, simply click on the dropdown next to it and switch to Active. You can always deactivate them at any time.', 'elementor' ); ?></p>
 		<p><?php echo sprintf( __( 'Your feedback is important - <a href="%s" target="_blank">help us</a> improve these features by sharing your thoughts and inputs.', 'elementor' ), 'https://go.elementor.com/wp-dash-experiments-report-an-issue/' ); ?></p>
+>>>>>>> dist
 		<?php
 	}
 
@@ -391,6 +598,17 @@ class Manager extends Base_Object {
 	private function render_feature_settings_field( array $feature ) {
 		?>
 		<div class="e-experiment__content">
+<<<<<<< HEAD
+			<select id="e-experiment-<?php echo $feature['name']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" class="e-experiment__select" name="<?php echo $this->get_feature_option_key( $feature['name'] ); ?>">
+				<?php foreach ( $this->states as $state_key => $state_title ) { ?>
+					<option value="<?php echo $state_key; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" <?php selected( $state_key, $feature['state'] ); ?>><?php echo $state_title; ?></option>
+				<?php } ?>
+			</select>
+			<p class="description"><?php echo $feature['description']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php if ( 'stable' !== $feature['release_status'] ) { ?>
+				<div class="e-experiment__status"><?php echo sprintf( esc_html__( 'Status: %s', 'elementor' ), $this->release_statuses[ $feature['release_status'] ] );  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+			<?php } ?>
+=======
 			<select id="e-experiment-<?php echo $feature['name']; ?>" class="e-experiment__select" name="<?php echo $this->get_feature_option_key( $feature['name'] ); ?>">
 				<?php foreach ( $this->states as $state_key => $state_title ) { ?>
 					<option value="<?php echo $state_key; ?>" <?php selected( $state_key, $feature['state'] ); ?>><?php echo $state_title; ?></option>
@@ -398,6 +616,7 @@ class Manager extends Base_Object {
 			</select>
 			<p class="description"><?php echo $feature['description']; ?></p>
 			<div class="e-experiment__status"><?php echo sprintf( __( 'Status: %s', 'elementor' ), $this->release_statuses[ $feature['release_status'] ] ); ?></div>
+>>>>>>> dist
 		</div>
 		<?php
 	}
@@ -423,6 +642,14 @@ class Manager extends Base_Object {
 			$indicator_classes .= ' e-experiment__title__indicator--active';
 		}
 
+<<<<<<< HEAD
+		$indicator_tooltip = $this->get_feature_state_label( $feature );
+
+		?>
+		<div class="e-experiment__title">
+			<div class="<?php echo $indicator_classes; ?>" data-tooltip="<?php echo $indicator_tooltip; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>"></div>
+			<label class="e-experiment__title__label" for="e-experiment-<?php echo $feature['name']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>"><?php echo $feature['title']; ?></label>
+=======
 		if ( self::STATE_DEFAULT === $feature['state'] ) {
 			$indicator_tooltip = $is_feature_active ? __( 'Active by default', 'elementor' ) : __( 'Inactive by default', 'elementor' );
 		} else {
@@ -432,6 +659,7 @@ class Manager extends Base_Object {
 		<div class="e-experiment__title">
 			<div class="<?php echo $indicator_classes; ?>" data-tooltip="<?php echo $indicator_tooltip; ?>"></div>
 			<label class="e-experiment__title__label" for="e-experiment-<?php echo $feature['name']; ?>"><?php echo $feature['title']; ?></label>
+>>>>>>> dist
 		</div>
 		<?php
 
@@ -439,6 +667,30 @@ class Manager extends Base_Object {
 	}
 
 	/**
+<<<<<<< HEAD
+	 * Get Feature State Label
+	 *
+	 * @param array $feature
+	 *
+	 * @return string
+	 */
+	public function get_feature_state_label( array $feature ) {
+		$is_feature_active = $this->is_feature_active( $feature['name'] );
+
+		if ( self::STATE_DEFAULT === $feature['state'] ) {
+			$label = $is_feature_active ? esc_html__( 'Active by default', 'elementor' ) :
+				esc_html__( 'Inactive by default', 'elementor' );
+		} else {
+			$label = self::STATE_ACTIVE === $feature['state'] ? esc_html__( 'Active', 'elementor' ) :
+				esc_html__( 'Inactive', 'elementor' );
+		}
+
+		return $label;
+	}
+
+	/**
+=======
+>>>>>>> dist
 	 * Get Feature Settings Label HTML
 	 *
 	 * @since 3.1.0
@@ -463,6 +715,13 @@ class Manager extends Base_Object {
 	 * @return string
 	 */
 	private function get_feature_actual_state( array $feature ) {
+<<<<<<< HEAD
+		if ( get_option( Safe_Mode::OPTION_ENABLED, '' ) ) {
+			return self::STATE_INACTIVE;
+		}
+
+=======
+>>>>>>> dist
 		if ( self::STATE_DEFAULT !== $feature['state'] ) {
 			return $feature['state'];
 		}
@@ -506,6 +765,18 @@ class Manager extends Base_Object {
 
 		$this->init_features();
 
+<<<<<<< HEAD
+		add_action( 'admin_init', function () {
+			System_Info::add_report(
+				'experiments', [
+					'file_name' => __DIR__ . '/experiments-reporter.php',
+					'class_name' => __NAMESPACE__ . '\Experiments_Reporter',
+				]
+			);
+		}, 79 /* Before log */ );
+
+=======
+>>>>>>> dist
 		if ( is_admin() ) {
 			$page_id = Settings::PAGE_ID;
 

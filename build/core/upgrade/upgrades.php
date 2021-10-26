@@ -1,15 +1,26 @@
 <?php
 namespace Elementor\Core\Upgrade;
 
+<<<<<<< HEAD
+use Elementor\Api;
+use Elementor\Core\Breakpoints\Manager as Breakpoints_Manager;
+use Elementor\Core\Experiments\Manager as Experiments_Manager;
+use Elementor\Core\Schemes\Base;
+=======
 use Elementor\Core\Breakpoints\Manager as Breakpoints_Manager;
 use Elementor\Core\Experiments\Manager as Experiments_Manager;
 use Elementor\Core\Kits\Documents\Tabs\Settings_Layout;
 use Elementor\Core\Responsive\Responsive;
+>>>>>>> dist
 use Elementor\Core\Settings\Manager as SettingsManager;
 use Elementor\Core\Settings\Page\Manager as SettingsPageManager;
 use Elementor\Icons_Manager;
 use Elementor\Modules\Usage\Module;
 use Elementor\Plugin;
+<<<<<<< HEAD
+use Elementor\Tracker;
+=======
+>>>>>>> dist
 use Elementor\Utils;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,6 +37,22 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class Upgrades {
 
+<<<<<<< HEAD
+	public static function _on_each_version( $updater ) {
+		self::recalc_usage_data( $updater );
+		self::remove_remote_info_api_data();
+
+		$uploads_manager = Plugin::$instance->uploads_manager;
+
+		$temp_dir = $uploads_manager->get_temp_dir();
+
+		if ( file_exists( $temp_dir ) ) {
+			$uploads_manager->remove_file_or_dir( $temp_dir );
+		}
+	}
+
+=======
+>>>>>>> dist
 	/**
 	 * Upgrade Elementor 0.3.2
 	 *
@@ -630,6 +657,13 @@ class Upgrades {
 	 * @return bool
 	 */
 	public static function recalc_usage_data( $updater ) {
+<<<<<<< HEAD
+		if ( ! Tracker::is_allow_track() ) {
+			return false;
+		}
+
+=======
+>>>>>>> dist
 		/** @var Module $module */
 		$module = Plugin::$instance->modules_manager->get_modules( 'usage' );
 
@@ -809,7 +843,11 @@ class Upgrades {
 			foreach ( $colors_to_save as $index => $color ) {
 				$kit->add_repeater_row( 'custom_colors', [
 					'_id' => Utils::generate_random_string(),
+<<<<<<< HEAD
+					'title' => esc_html__( 'Saved Color', 'elementor' ) . ' #' . ( $index + 1 ),
+=======
 					'title' => __( 'Saved Color', 'elementor' ) . ' #' . ( $index + 1 ),
+>>>>>>> dist
 					'color' => $color,
 				] );
 			}
@@ -918,6 +956,25 @@ class Upgrades {
 		return self::move_settings_to_kit( $callback, $updater, $include_revisions );
 	}
 
+<<<<<<< HEAD
+	public static function _v_3_5_0_remove_old_elementor_scheme() {
+		global $wpdb;
+
+		$key = Base::SCHEME_OPTION_PREFIX;
+
+		$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '{$key}%';" ); // phpcs:ignore
+	}
+
+	public static function remove_remote_info_api_data() {
+		global $wpdb;
+
+		$key = Api::TRANSIENT_KEY_PREFIX;
+
+		return $wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '{$key}%';" ); // phpcs:ignore
+	}
+
+=======
+>>>>>>> dist
 	/**
 	 * @param callback $callback
 	 * @param Updater  $updater
