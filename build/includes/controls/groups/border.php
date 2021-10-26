@@ -60,7 +60,11 @@ class Group_Control_Border extends Group_Control_Base {
 			'label' => _x( 'Border Type', 'Border Control', 'elementor' ),
 			'type' => Controls_Manager::SELECT,
 			'options' => [
+<<<<<<< HEAD
 				'' => esc_html__( 'None', 'elementor' ),
+=======
+				'' => __( 'None', 'elementor' ),
+>>>>>>> dist
 				'solid' => _x( 'Solid', 'Border Control', 'elementor' ),
 				'double' => _x( 'Double', 'Border Control', 'elementor' ),
 				'dotted' => _x( 'Dotted', 'Border Control', 'elementor' ),

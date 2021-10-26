@@ -2,8 +2,13 @@
 namespace Elementor\Modules\DynamicTags;
 
 use Elementor\Core\Base\Module as BaseModule;
+<<<<<<< HEAD
 use Elementor\Core\DynamicTags\Base_Tag;
 use Elementor\Core\DynamicTags\Manager;
+=======
+use Elementor\Core\DynamicTags\Manager;
+use Elementor\Core\DynamicTags\Tag;
+>>>>>>> dist
 use Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -76,7 +81,11 @@ class Module extends BaseModule {
 	public function __construct() {
 		$this->register_groups();
 
+<<<<<<< HEAD
 		add_action( 'elementor/dynamic_tags/register', [ $this, 'register_tags' ] );
+=======
+		add_action( 'elementor/dynamic_tags/register_tags', [ $this, 'register_tags' ] );
+>>>>>>> dist
 	}
 
 	/**
@@ -151,10 +160,17 @@ class Module extends BaseModule {
 	 */
 	public function register_tags( $dynamic_tags ) {
 		foreach ( $this->get_tag_classes_names() as $tag_class ) {
+<<<<<<< HEAD
 			/** @var Base_Tag $class_name */
 			$class_name = $this->get_reflection()->getNamespaceName() . '\Tags\\' . $tag_class;
 
 			$dynamic_tags->register( new $class_name() );
+=======
+			/** @var Tag $class_name */
+			$class_name = $this->get_reflection()->getNamespaceName() . '\Tags\\' . $tag_class;
+
+			$dynamic_tags->register_tag( $class_name );
+>>>>>>> dist
 		}
 	}
 }

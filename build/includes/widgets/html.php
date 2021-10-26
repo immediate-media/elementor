@@ -39,7 +39,11 @@ class Widget_Html extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'HTML', 'elementor' );
+=======
+		return __( 'HTML', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -82,7 +86,11 @@ class Widget_Html extends Widget_Base {
 		$this->start_controls_section(
 			'section_title',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'HTML Code', 'elementor' ),
+=======
+				'label' => __( 'HTML Code', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
@@ -92,7 +100,11 @@ class Widget_Html extends Widget_Base {
 				'label' => '',
 				'type' => Controls_Manager::CODE,
 				'default' => '',
+<<<<<<< HEAD
 				'placeholder' => esc_html__( 'Enter your code', 'elementor' ),
+=======
+				'placeholder' => __( 'Enter your code', 'elementor' ),
+>>>>>>> dist
 				'show_label' => false,
 			]
 		);
@@ -109,7 +121,11 @@ class Widget_Html extends Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
+<<<<<<< HEAD
 		$this->print_unescaped_setting( 'html' );
+=======
+		 echo $this->get_settings_for_display( 'html' );
+>>>>>>> dist
 	}
 
 	/**

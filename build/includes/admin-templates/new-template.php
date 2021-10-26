@@ -38,6 +38,7 @@ $types = apply_filters( 'elementor/template-library/create_new_dialog_types', $t
 ?>
 <script type="text/template" id="tmpl-elementor-new-template">
 	<div id="elementor-new-template__description">
+<<<<<<< HEAD
 		<div id="elementor-new-template__description__title"><?php
 			printf(
 				/* translators: %1$s Span open tag, %2$s: Span close tag. */
@@ -47,11 +48,19 @@ $types = apply_filters( 'elementor/template-library/create_new_dialog_types', $t
 			);
 			?></div>
 		<div id="elementor-new-template__description__content"><?php echo esc_html__( 'Use templates to create the different pieces of your site, and reuse them with one click whenever needed.', 'elementor' ); ?></div>
+=======
+		<div id="elementor-new-template__description__title"><?php echo __( 'Templates Help You <span>Work Efficiently</span>', 'elementor' ); ?></div>
+		<div id="elementor-new-template__description__content"><?php echo __( 'Use templates to create the different pieces of your site, and reuse them with one click whenever needed.', 'elementor' ); ?></div>
+>>>>>>> dist
 		<?php
 		/*
 		<div id="elementor-new-template__take_a_tour">
 			<i class="eicon-play-o"></i>
+<<<<<<< HEAD
 			<a href="#"><?php echo esc_html__( 'Take The Video Tour', 'elementor\' ); ?></a>
+=======
+			<a href="#"><?php echo __( 'Take The Video Tour', 'elementor' ); ?></a>
+>>>>>>> dist
 		</div>
 		*/
 		?>
@@ -59,6 +68,7 @@ $types = apply_filters( 'elementor/template-library/create_new_dialog_types', $t
 	<form id="elementor-new-template__form" action="<?php esc_url( admin_url( '/edit.php' ) ); ?>">
 		<input type="hidden" name="post_type" value="elementor_library">
 		<input type="hidden" name="action" value="elementor_new_post">
+<<<<<<< HEAD
 		<?php // PHPCS - a nonce doesn't have to be escaped. ?>
 		<input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce( 'elementor_action_new_post' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>">
 		<div id="elementor-new-template__form__title"><?php echo esc_html__( 'Choose Template Type', 'elementor' ); ?></div>
@@ -70,6 +80,18 @@ $types = apply_filters( 'elementor/template-library/create_new_dialog_types', $t
 					<?php
 					foreach ( $types as $value => $type_title ) {
 						printf( '<option value="%1$s" %2$s>%3$s</option>', esc_attr( $value ), selected( $selected, $value, false ), esc_html( $type_title ) );
+=======
+		<input type="hidden" name="_wpnonce" value="<?php echo wp_create_nonce( 'elementor_action_new_post' ); ?>">
+		<div id="elementor-new-template__form__title"><?php echo __( 'Choose Template Type', 'elementor' ); ?></div>
+		<div id="elementor-new-template__form__template-type__wrapper" class="elementor-form-field">
+			<label for="elementor-new-template__form__template-type" class="elementor-form-field__label"><?php echo __( 'Select the type of template you want to work on', 'elementor' ); ?></label>
+			<div class="elementor-form-field__select__wrapper">
+				<select id="elementor-new-template__form__template-type" class="elementor-form-field__select" name="template_type" required>
+					<option value=""><?php echo __( 'Select', 'elementor' ); ?>...</option>
+					<?php
+					foreach ( $types as $value => $type_title ) {
+						printf( '<option value="%1$s" %2$s>%3$s</option>', $value, selected( $selected, $value, false ), $type_title );
+>>>>>>> dist
 					}
 					?>
 				</select>
@@ -88,12 +110,20 @@ $types = apply_filters( 'elementor/template-library/create_new_dialog_types', $t
 
 		<div id="elementor-new-template__form__post-title__wrapper" class="elementor-form-field">
 			<label for="elementor-new-template__form__post-title" class="elementor-form-field__label">
+<<<<<<< HEAD
 				<?php echo esc_html__( 'Name your template', 'elementor' ); ?>
+=======
+				<?php echo __( 'Name your template', 'elementor' ); ?>
+>>>>>>> dist
 			</label>
 			<div class="elementor-form-field__text__wrapper">
 				<input type="text" placeholder="<?php echo esc_attr__( 'Enter template name (optional)', 'elementor' ); ?>" id="elementor-new-template__form__post-title" class="elementor-form-field__text" name="post_data[post_title]">
 			</div>
 		</div>
+<<<<<<< HEAD
 		<button id="elementor-new-template__form__submit" class="elementor-button elementor-button-success"><?php echo esc_html__( 'Create Template', 'elementor' ); ?></button>
+=======
+		<button id="elementor-new-template__form__submit" class="elementor-button elementor-button-success"><?php echo __( 'Create Template', 'elementor' ); ?></button>
+>>>>>>> dist
 	</form>
 </script>

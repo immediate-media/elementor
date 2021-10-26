@@ -18,7 +18,27 @@ class Usage_Reporter extends Base {
 	const RECALC_ACTION = 'elementor_usage_recalc';
 
 	public function get_title() {
+<<<<<<< HEAD
 		return __( 'Elements Usage', 'elementor' );
+=======
+		$title = 'Elements Usage';
+
+		if ( 'html' === $this->_properties['format'] ) {
+			if ( empty( $_GET[ self::RECALC_ACTION ] ) ) { // phpcs:ignore -- nonce validation is not required here.
+				$nonce = wp_create_nonce( self::RECALC_ACTION );
+				$url = add_query_arg( [
+					self::RECALC_ACTION => 1,
+					'_wpnonce' => $nonce,
+				] );
+
+				$title .= '<a id="elementor-usage-recalc" href="' . esc_url( $url ) . '#elementor-usage-recalc" class="box-title-tool">Recalculate</a>';
+			} else {
+				$title .= $this->get_remove_recalc_query_string_script();
+			}
+		}
+
+		return $title;
+>>>>>>> dist
 	}
 
 	public function get_fields() {
@@ -27,6 +47,7 @@ class Usage_Reporter extends Base {
 		];
 	}
 
+<<<<<<< HEAD
 	public function print_html_label( $label ) {
 		$title = $this->get_title();
 
@@ -45,6 +66,8 @@ class Usage_Reporter extends Base {
 		parent::print_html_label( $title );
 	}
 
+=======
+>>>>>>> dist
 	public function get_usage() {
 		/** @var Module $module */
 		$module = Module::instance();

@@ -255,7 +255,11 @@ class Elements_Manager {
 		 *
 		 * @since 1.0.0
 		 */
+<<<<<<< HEAD
 		do_action( 'elementor/elements/elements_registered', $this );
+=======
+		do_action( 'elementor/elements/elements_registered' );
+>>>>>>> dist
 	}
 
 	/**
@@ -269,6 +273,7 @@ class Elements_Manager {
 	private function init_categories() {
 		$this->categories = [
 			'basic' => [
+<<<<<<< HEAD
 				'title' => esc_html__( 'Basic', 'elementor' ),
 				'icon' => 'eicon-font',
 			],
@@ -285,6 +290,24 @@ class Elements_Manager {
 			],
 			'woocommerce-elements' => [
 				'title' => esc_html__( 'WooCommerce', 'elementor' ),
+=======
+				'title' => __( 'Basic', 'elementor' ),
+				'icon' => 'eicon-font',
+			],
+			'pro-elements' => [
+				'title' => __( 'Pro', 'elementor' ),
+			],
+			'general' => [
+				'title' => __( 'General', 'elementor' ),
+				'icon' => 'eicon-font',
+			],
+			'theme-elements' => [
+				'title' => __( 'Site', 'elementor' ),
+				'active' => false,
+			],
+			'woocommerce-elements' => [
+				'title' => __( 'WooCommerce', 'elementor' ),
+>>>>>>> dist
 				'active' => false,
 			],
 		];
@@ -305,12 +328,20 @@ class Elements_Manager {
 		do_action( 'elementor/elements/categories_registered', $this );
 
 		$this->categories['pojo'] = [
+<<<<<<< HEAD
 			'title' => esc_html__( 'Pojo Themes', 'elementor' ),
+=======
+			'title' => __( 'Pojo Themes', 'elementor' ),
+>>>>>>> dist
 			'icon' => 'eicon-pojome',
 		];
 
 		$this->categories['wordpress'] = [
+<<<<<<< HEAD
 			'title' => esc_html__( 'WordPress', 'elementor' ),
+=======
+			'title' => __( 'WordPress', 'elementor' ),
+>>>>>>> dist
 			'icon' => 'eicon-wordpress',
 			'active' => false,
 		];

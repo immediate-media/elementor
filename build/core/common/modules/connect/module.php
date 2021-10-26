@@ -1,6 +1,7 @@
 <?php
 namespace Elementor\Core\Common\Modules\Connect;
 
+<<<<<<< HEAD
 use Elementor\Core\Base\Module as BaseModule;
 use Elementor\Core\Common\Modules\Connect\Apps\Base_App;
 use Elementor\Core\Common\Modules\Connect\Apps\Common_App;
@@ -9,6 +10,14 @@ use Elementor\Core\Common\Modules\Connect\Apps\Library;
 use Elementor\Plugin;
 use Elementor\Utils;
 use WP_User_Query;
+=======
+use Elementor\Utils;
+use Elementor\Core\Base\Module as BaseModule;
+use Elementor\Core\Common\Modules\Connect\Apps\Base_App;
+use Elementor\Core\Common\Modules\Connect\Apps\Connect;
+use Elementor\Core\Common\Modules\Connect\Apps\Library;
+use Elementor\Plugin;
+>>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -68,6 +77,7 @@ class Module extends BaseModule {
 			'library' => Library::get_class_name(),
 		];
 
+<<<<<<< HEAD
 		// When using REST API the parent module is construct after the action 'elementor/init'
 		// so this part of code make sure to register the module "apps".
 		if ( did_action( 'elementor/init' ) ) {
@@ -80,6 +90,10 @@ class Module extends BaseModule {
 		add_filter( 'elementor/tracker/send_tracking_data_params', function ( $params ) {
 			return $this->add_tracking_data( $params );
 		} );
+=======
+		// Note: The priority 11 is for allowing plugins to add their register callback on elementor init.
+		add_action( 'elementor/init', [ $this, 'init' ], 11 );
+>>>>>>> dist
 	}
 
 	/**
@@ -186,11 +200,19 @@ class Module extends BaseModule {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * @param string $context Where this subscription plan should be shown.
 	 *
 	 * @return array
 	 */
 	public function get_subscription_plans( $context = '' ) {
+=======
+	 * @param $context
+	 *
+	 * @return array
+	 */
+	public function get_subscription_plans( $context ) {
+>>>>>>> dist
 		return [
 			static::ACCESS_LEVEL_CORE => [
 				'label' => null,
@@ -210,6 +232,7 @@ class Module extends BaseModule {
 		];
 	}
 
+<<<<<<< HEAD
 	private function add_tracking_data( $params ) {
 		$users = [];
 
@@ -241,4 +264,6 @@ class Module extends BaseModule {
 
 		return $params;
 	}
+=======
+>>>>>>> dist
 }

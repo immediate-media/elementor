@@ -44,10 +44,13 @@ abstract class Library_Document extends Document {
 		$properties['admin_tab_group'] = 'library';
 		$properties['show_in_library'] = true;
 		$properties['register_type'] = true;
+<<<<<<< HEAD
 		$properties['cpt'] = [ Source_Local::CPT ];
 
 		// TODO: Remove - Backwards compatibility, since 'Theme_Document' does not support 'static::get_type'.
 		$properties['show_in_finder'] = false;
+=======
+>>>>>>> dist
 
 		return $properties;
 	}

@@ -296,12 +296,21 @@ class Controls_Manager {
 	 */
 	private static function init_tabs() {
 		self::$tabs = [
+<<<<<<< HEAD
 			self::TAB_CONTENT => esc_html__( 'Content', 'elementor' ),
 			self::TAB_STYLE => esc_html__( 'Style', 'elementor' ),
 			self::TAB_ADVANCED => esc_html__( 'Advanced', 'elementor' ),
 			self::TAB_RESPONSIVE => esc_html__( 'Responsive', 'elementor' ),
 			self::TAB_LAYOUT => esc_html__( 'Layout', 'elementor' ),
 			self::TAB_SETTINGS => esc_html__( 'Settings', 'elementor' ),
+=======
+			self::TAB_CONTENT => __( 'Content', 'elementor' ),
+			self::TAB_STYLE => __( 'Style', 'elementor' ),
+			self::TAB_ADVANCED => __( 'Advanced', 'elementor' ),
+			self::TAB_RESPONSIVE => __( 'Responsive', 'elementor' ),
+			self::TAB_LAYOUT => __( 'Layout', 'elementor' ),
+			self::TAB_SETTINGS => __( 'Settings', 'elementor' ),
+>>>>>>> dist
 		];
 	}
 
@@ -358,7 +367,10 @@ class Controls_Manager {
 			'box-shadow',
 			'css-filter',
 			'text-shadow',
+<<<<<<< HEAD
 			'text-stroke',
+=======
+>>>>>>> dist
 		];
 	}
 
@@ -431,7 +443,11 @@ class Controls_Manager {
 			$control_class_id = str_replace( ' ', '_', ucwords( str_replace( '_', ' ', $control_id ) ) );
 			$class_name = __NAMESPACE__ . '\Control_' . $control_class_id;
 
+<<<<<<< HEAD
 			$this->register( new $class_name() );
+=======
+			$this->register_control( $control_id, new $class_name() );
+>>>>>>> dist
 		}
 
 		// Group Controls
@@ -448,6 +464,7 @@ class Controls_Manager {
 		 * Fires after Elementor controls are registered.
 		 *
 		 * @since 1.0.0
+<<<<<<< HEAD
 		 * @deprecated 3.5.0 Use `elementor/controls/register` hook instead.
 		 *
 		 * @param Controls_Manager $this The controls manager.
@@ -472,6 +489,12 @@ class Controls_Manager {
 		 * @param Controls_Manager $this The controls manager.
 		 */
 		do_action( 'elementor/controls/register', $this );
+=======
+		 *
+		 * @param Controls_Manager $this The controls manager.
+		 */
+		do_action( 'elementor/controls/controls_registered', $this );
+>>>>>>> dist
 	}
 
 	/**
@@ -482,13 +505,17 @@ class Controls_Manager {
 	 *
 	 * @since 1.0.0
 	 * @access public
+<<<<<<< HEAD
 	 * @deprecated 3.5.0 Use `$this->register()` instead.
+=======
+>>>>>>> dist
 	 *
 	 * @param string       $control_id       Control ID.
 	 * @param Base_Control $control_instance Control instance, usually the
 	 *                                       current instance.
 	 */
 	public function register_control( $control_id, Base_Control $control_instance ) {
+<<<<<<< HEAD
 		// TODO: Uncomment when Pro uses the new hook.
 		//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function(
 		//	__METHOD__,
@@ -526,6 +553,8 @@ class Controls_Manager {
 
 		$control_id = $control_instance->get_type();
 
+=======
+>>>>>>> dist
 		$this->controls[ $control_id ] = $control_instance;
 	}
 
@@ -536,13 +565,17 @@ class Controls_Manager {
 	 *
 	 * @since 1.0.0
 	 * @access public
+<<<<<<< HEAD
 	 * @deprecated 3.5.0 Use `$this->unregister()` instead.
+=======
+>>>>>>> dist
 	 *
 	 * @param string $control_id Control ID.
 	 *
 	 * @return bool True if the control was removed, False otherwise.
 	 */
 	public function unregister_control( $control_id ) {
+<<<<<<< HEAD
 		// TODO: Uncomment when Pro uses the new hook.
 		//Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function(
 		//	__METHOD__,
@@ -566,6 +599,8 @@ class Controls_Manager {
 	 * @return bool Whether the controls has been unregistered.
 	 */
 	public function unregister( $control_id ) {
+=======
+>>>>>>> dist
 		if ( ! isset( $this->controls[ $control_id ] ) ) {
 			return false;
 		}
@@ -766,7 +801,11 @@ class Controls_Manager {
 		$control_type_instance = $this->get_control( $control_data['type'] );
 
 		if ( ! $control_type_instance ) {
+<<<<<<< HEAD
 			_doing_it_wrong( sprintf( '%1$s::%2$s', __CLASS__, __FUNCTION__ ), sprintf( 'Control type "%s" not found.', esc_html( $control_data['type'] ) ), '1.0.0' );
+=======
+			_doing_it_wrong( sprintf( '%1$s::%2$s', __CLASS__, __FUNCTION__ ), sprintf( 'Control type "%s" not found.', $control_data['type'] ), '1.0.0' );
+>>>>>>> dist
 			return false;
 		}
 
@@ -783,7 +822,11 @@ class Controls_Manager {
 		$stack_id = $element->get_unique_name();
 
 		if ( ! $options['overwrite'] && isset( $this->stacks[ $stack_id ]['controls'][ $control_id ] ) ) {
+<<<<<<< HEAD
 			_doing_it_wrong( sprintf( '%1$s::%2$s', __CLASS__, __FUNCTION__ ), sprintf( 'Cannot redeclare control with same name "%s".', esc_html( $control_id ) ), '1.0.0' );
+=======
+			_doing_it_wrong( sprintf( '%1$s::%2$s', __CLASS__, __FUNCTION__ ), sprintf( 'Cannot redeclare control with same name "%s".', $control_id ), '1.0.0' );
+>>>>>>> dist
 
 			return false;
 		}
@@ -970,13 +1013,21 @@ class Controls_Manager {
 		$controls_stack->start_controls_section(
 			'section_custom_css_pro',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Custom CSS', 'elementor' ),
+=======
+				'label' => __( 'Custom CSS', 'elementor' ),
+>>>>>>> dist
 				'tab' => $tab,
 			]
 		);
 
 		$messages = [
+<<<<<<< HEAD
 			esc_html__( 'Custom CSS lets you add CSS code to any widget, and see it render live right in the editor.', 'elementor' ),
+=======
+			__( 'Custom CSS lets you add CSS code to any widget, and see it render live right in the editor.', 'elementor' ),
+>>>>>>> dist
 		];
 
 		if ( $additional_messages ) {
@@ -988,7 +1039,11 @@ class Controls_Manager {
 			[
 				'type' => self::RAW_HTML,
 				'raw' => $this->get_teaser_template( [
+<<<<<<< HEAD
 					'title' => esc_html__( 'Meet Our Custom CSS', 'elementor' ),
+=======
+					'title' => __( 'Meet Our Custom CSS', 'elementor' ),
+>>>>>>> dist
 					'messages' => $messages,
 					'link' => 'https://elementor.com/pro/?utm_source=panel-custom-css&utm_campaign=gopro&utm_medium=wp-dash',
 				] ),
@@ -998,6 +1053,7 @@ class Controls_Manager {
 		$controls_stack->end_controls_section();
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Add Page Transitions controls.
 	 *
@@ -1043,10 +1099,13 @@ class Controls_Manager {
 		$controls_stack->end_controls_section();
 	}
 
+=======
+>>>>>>> dist
 	public function get_teaser_template( $texts ) {
 		ob_start();
 		?>
 		<div class="elementor-nerd-box">
+<<<<<<< HEAD
 			<img class="elementor-nerd-box-icon" src="<?php echo esc_url( ELEMENTOR_ASSETS_URL . 'images/go-pro.svg' ); ?>" />
 			<div class="elementor-nerd-box-title"><?php Utils::print_unescaped_internal_string( $texts['title'] ); ?></div>
 			<?php foreach ( $texts['messages'] as $message ) { ?>
@@ -1057,6 +1116,17 @@ class Controls_Manager {
 			if ( $texts['link'] && ! Utils::has_pro() ) { ?>
 				<a class="elementor-nerd-box-link elementor-button elementor-button-default elementor-button-go-pro" href="<?php echo esc_url( Utils::get_pro_link( $texts['link'] ) ); ?>" target="_blank">
 					<?php echo esc_html__( 'Go Pro', 'elementor' ); ?>
+=======
+			<img class="elementor-nerd-box-icon" src="<?php echo ELEMENTOR_ASSETS_URL . 'images/go-pro.svg'; ?>" />
+			<div class="elementor-nerd-box-title"><?php echo $texts['title']; ?></div>
+			<?php foreach ( $texts['messages'] as $message ) { ?>
+				<div class="elementor-nerd-box-message"><?php echo $message; ?></div>
+			<?php }
+
+			if ( $texts['link'] ) { ?>
+				<a class="elementor-nerd-box-link elementor-button elementor-button-default elementor-button-go-pro" href="<?php echo Utils::get_pro_link( $texts['link'] ); ?>" target="_blank">
+					<?php echo __( 'Go Pro', 'elementor' ); ?>
+>>>>>>> dist
 				</a>
 			<?php } ?>
 		</div>
@@ -1081,7 +1151,11 @@ class Controls_Manager {
 		$controls_stack->start_controls_section(
 			'section_custom_attributes_pro',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Attributes', 'elementor' ),
+=======
+				'label' => __( 'Attributes', 'elementor' ),
+>>>>>>> dist
 				'tab' => self::TAB_ADVANCED,
 			]
 		);
@@ -1091,9 +1165,15 @@ class Controls_Manager {
 			[
 				'type' => self::RAW_HTML,
 				'raw' => $this->get_teaser_template( [
+<<<<<<< HEAD
 					'title' => esc_html__( 'Meet Our Attributes', 'elementor' ),
 					'messages' => [
 						esc_html__( 'Attributes lets you add custom HTML attributes to any element.', 'elementor' ),
+=======
+					'title' => __( 'Meet Our Attributes', 'elementor' ),
+					'messages' => [
+						__( 'Attributes lets you add custom HTML attributes to any element.', 'elementor' ),
+>>>>>>> dist
 					],
 					'link' => 'https://elementor.com/pro/?utm_source=panel-custom-attributes&utm_campaign=gopro&utm_medium=wp-dash',
 				] ),

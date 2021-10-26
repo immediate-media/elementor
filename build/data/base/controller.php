@@ -2,7 +2,10 @@
 namespace Elementor\Data\Base;
 
 use Elementor\Data\Manager;
+<<<<<<< HEAD
 use Elementor\Plugin;
+=======
+>>>>>>> dist
 use WP_REST_Controller;
 use WP_REST_Server;
 
@@ -30,9 +33,12 @@ abstract class Controller extends WP_REST_Controller {
 	public function __construct() {
 		// TODO: Controllers and endpoints can have common interface.
 
+<<<<<<< HEAD
 		// TODO: Uncomment when native 3rd plugins uses V2.
 		//$this->deprecated();
 
+=======
+>>>>>>> dist
 		$this->namespace = Manager::ROOT_NAMESPACE . '/v' . Manager::VERSION;
 		$this->rest_base = Manager::REST_BASE . $this->get_name();
 
@@ -325,6 +331,7 @@ abstract class Controller extends WP_REST_Controller {
 
 		return false;
 	}
+<<<<<<< HEAD
 
 	private static $notify_deprecated = true;
 
@@ -343,4 +350,6 @@ abstract class Controller extends WP_REST_Controller {
 			self::$notify_deprecated = false;
 		} );
 	}
+=======
+>>>>>>> dist
 }

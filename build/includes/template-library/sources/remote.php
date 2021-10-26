@@ -43,7 +43,11 @@ class Source_Remote extends Source_Base {
 	 * @return string The remote template title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Remote', 'elementor' );
+=======
+		return __( 'Remote', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**

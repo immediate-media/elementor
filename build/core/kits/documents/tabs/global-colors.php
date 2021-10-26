@@ -21,7 +21,11 @@ class Global_Colors extends Tab_Base {
 	}
 
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Global Colors', 'elementor' );
+=======
+		return __( 'Global Colors', 'elementor' );
+>>>>>>> dist
 	}
 
 	public function get_group() {
@@ -40,7 +44,11 @@ class Global_Colors extends Tab_Base {
 		$this->start_controls_section(
 			'section_global_colors',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Global Colors', 'elementor' ),
+=======
+				'label' => __( 'Global Colors', 'elementor' ),
+>>>>>>> dist
 				'tab' => $this->get_id(),
 			]
 		);
@@ -75,22 +83,38 @@ class Global_Colors extends Tab_Base {
 		$default_colors = [
 			[
 				'_id' => 'primary',
+<<<<<<< HEAD
 				'title' => esc_html__( 'Primary', 'elementor' ),
+=======
+				'title' => __( 'Primary', 'elementor' ),
+>>>>>>> dist
 				'color' => '#6EC1E4',
 			],
 			[
 				'_id' => 'secondary',
+<<<<<<< HEAD
 				'title' => esc_html__( 'Secondary', 'elementor' ),
+=======
+				'title' => __( 'Secondary', 'elementor' ),
+>>>>>>> dist
 				'color' => '#54595F',
 			],
 			[
 				'_id' => 'text',
+<<<<<<< HEAD
 				'title' => esc_html__( 'Text', 'elementor' ),
+=======
+				'title' => __( 'Text', 'elementor' ),
+>>>>>>> dist
 				'color' => '#7A7A7A',
 			],
 			[
 				'_id' => 'accent',
+<<<<<<< HEAD
 				'title' => esc_html__( 'Accent', 'elementor' ),
+=======
+				'title' => __( 'Accent', 'elementor' ),
+>>>>>>> dist
 				'color' => '#61CE70',
 			],
 		];

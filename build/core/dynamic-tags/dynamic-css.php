@@ -67,6 +67,7 @@ class Dynamic_CSS extends Post_Local_Cache {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get Responsive Control Duplication Mode
 	 *
 	 * @since 3.4.0
@@ -78,6 +79,8 @@ class Dynamic_CSS extends Post_Local_Cache {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * @since 2.0.13
 	 * @access protected
 	 */

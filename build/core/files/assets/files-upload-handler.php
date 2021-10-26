@@ -24,7 +24,11 @@ abstract class Files_Upload_Handler {
 	 * @return bool
 	 */
 	private function is_elementor_media_upload() {
+<<<<<<< HEAD
 		return isset( $_POST['uploadTypeCaller'] ) && 'elementor-wp-media-upload' === $_POST['uploadTypeCaller']; // phpcs:ignore
+=======
+		return isset( $_POST['uploadTypeCaller'] ) && 'elementor-editor-upload' === $_POST['uploadTypeCaller']; // phpcs:ignore
+>>>>>>> dist
 	}
 
 	/**
@@ -76,14 +80,22 @@ abstract class Files_Upload_Handler {
 		$display_type = strtoupper( $file_type );
 
 		if ( $file_type !== $ext ) {
+<<<<<<< HEAD
 			/* translators: 1: File extension, 2: File type. */
 			$file['error'] = sprintf( esc_html__( 'The uploaded %1$s file is not supported. Please upload a valid %2$s file', 'elementor' ), $ext, $display_type );
+=======
+			$file['error'] = sprintf( __( 'The uploaded %1$s file is not supported. Please upload a valid %2$s file', 'elementor' ), $ext, $display_type );
+>>>>>>> dist
 			return $file;
 		}
 
 		if ( ! self::is_enabled() ) {
+<<<<<<< HEAD
 			/* translators: %s: File type. */
 			$file['error'] = sprintf( esc_html__( '%1$s file is not allowed for security reasons', 'elementor' ), $display_type );
+=======
+			$file['error'] = sprintf( __( '%1$s file is not allowed for security reasons', 'elementor' ), $display_type );
+>>>>>>> dist
 			return $file;
 		}
 

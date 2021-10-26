@@ -1,8 +1,11 @@
 <?php
 namespace Elementor;
 
+<<<<<<< HEAD
 use Elementor\Core\Page_Assets\Data_Managers\Widgets_Css as Widgets_Css_Data_Manager;
 
+=======
+>>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -19,6 +22,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @abstract
  */
 abstract class Widget_Base extends Element_Base {
+<<<<<<< HEAD
+=======
+
+>>>>>>> dist
 	/**
 	 * Whether the widget has content.
 	 *
@@ -34,6 +41,7 @@ abstract class Widget_Base extends Element_Base {
 	protected $_has_template_content = true;
 
 	/**
+<<<<<<< HEAD
 	 * Registered Runtime Widgets.
 	 *
 	 * Registering in runtime all widgets that are being used on the page.
@@ -51,6 +59,8 @@ abstract class Widget_Base extends Element_Base {
 	private static $widgets_css_data_manager;
 
 	/**
+=======
+>>>>>>> dist
 	 * Get element type.
 	 *
 	 * Retrieve the element type, in this case `widget`.
@@ -262,7 +272,11 @@ abstract class Widget_Base extends Element_Base {
 			$skin_options = [];
 
 			if ( $this->_has_template_content ) {
+<<<<<<< HEAD
 				$skin_options[''] = esc_html__( 'Default', 'elementor' );
+=======
+				$skin_options[''] = __( 'Default', 'elementor' );
+>>>>>>> dist
 			}
 
 			foreach ( $skins as $skin_id => $skin ) {
@@ -277,7 +291,11 @@ abstract class Widget_Base extends Element_Base {
 				$this->add_control(
 					'_skin',
 					[
+<<<<<<< HEAD
 						'label' => esc_html__( 'Skin', 'elementor' ),
+=======
+						'label' => __( 'Skin', 'elementor' ),
+>>>>>>> dist
 						'type' => Controls_Manager::HIDDEN,
 						'default' => $default_value,
 					]
@@ -286,7 +304,11 @@ abstract class Widget_Base extends Element_Base {
 				$this->add_control(
 					'_skin',
 					[
+<<<<<<< HEAD
 						'label' => esc_html__( 'Skin', 'elementor' ),
+=======
+						'label' => __( 'Skin', 'elementor' ),
+>>>>>>> dist
 						'type' => Controls_Manager::SELECT,
 						'default' => $default_value,
 						'options' => $skin_options,
@@ -417,6 +439,7 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Safe print parsed text editor.
 	 *
 	 * @uses static::parse_text_editor.
@@ -431,6 +454,8 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * Get HTML wrapper class.
 	 *
 	 * Retrieve the widget container class. Can be used to override the
@@ -589,6 +614,7 @@ abstract class Widget_Base extends Element_Base {
 		?>
 		<div class="elementor-widget-container">
 			<?php
+<<<<<<< HEAD
 			if ( $this->is_widget_first_render( $this->get_group_name() ) ) {
 				$this->register_runtime_widget( $this->get_group_name() );
 			}
@@ -596,6 +622,8 @@ abstract class Widget_Base extends Element_Base {
 			$this->print_widget_css();
 
 			// get_name
+=======
+>>>>>>> dist
 
 			/**
 			 * Render widget content.
@@ -615,10 +643,13 @@ abstract class Widget_Base extends Element_Base {
 		<?php
 	}
 
+<<<<<<< HEAD
 	protected function is_widget_first_render( $widget_name ) {
 		return ! in_array( $widget_name, self::$registered_runtime_widgets, true );
 	}
 
+=======
+>>>>>>> dist
 	/**
 	 * Render widget plain content.
 	 *
@@ -723,6 +754,7 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Print a setting content without escaping.
 	 *
 	 * Script tags are allowed on frontend according to the WP theme securing policy.
@@ -743,6 +775,8 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * Get default data.
 	 *
 	 * Retrieve the default widget data. Used to reset the data on initialization.
@@ -940,6 +974,7 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get group name.
 	 *
 	 * Some widgets need to use group names, this method allows you to create them.
@@ -969,16 +1004,24 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * @param string $plugin_title  Plugin's title
 	 * @param string $since         Plugin version widget was deprecated
 	 * @param string $last          Plugin version in which the widget will be removed
 	 * @param string $replacement   Widget replacement
 	 */
 	protected function deprecated_notice( $plugin_title, $since, $last = '', $replacement = '' ) {
+<<<<<<< HEAD
 		$this->start_controls_section(
 			'Deprecated',
 			[
 				'label' => esc_html__( 'Deprecated', 'elementor' ),
+=======
+		$this->start_controls_section( 'Deprecated',
+			[
+				'label' => __( 'Deprecated', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
@@ -997,6 +1040,7 @@ abstract class Widget_Base extends Element_Base {
 		$this->end_controls_section();
 
 	}
+<<<<<<< HEAD
 
 	public function register_runtime_widget( $widget_name ) {
 		self::$registered_runtime_widgets[] = $widget_name;
@@ -1085,4 +1129,6 @@ abstract class Widget_Base extends Element_Base {
 
 		return self::$widgets_css_data_manager;
 	}
+=======
+>>>>>>> dist
 }

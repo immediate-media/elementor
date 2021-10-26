@@ -7,7 +7,10 @@ use Elementor\Core\Files\Assets\Json\Json_Handler;
 use Elementor\Core\Files\Assets\Svg\Svg_Handler;
 use Elementor\Core\Files\CSS\Global_CSS;
 use Elementor\Core\Files\CSS\Post as Post_CSS;
+<<<<<<< HEAD
 use Elementor\Core\Page_Assets\Data_Managers\Base as Page_Assets_Data_Manager;
+=======
+>>>>>>> dist
 use Elementor\Core\Responsive\Files\Frontend;
 use Elementor\Utils;
 
@@ -121,8 +124,11 @@ class Manager {
 		delete_option( Global_CSS::META_KEY );
 		delete_option( Frontend::META_KEY );
 
+<<<<<<< HEAD
 		$this->reset_assets_data();
 
+=======
+>>>>>>> dist
 		/**
 		 * Elementor clear files.
 		 *
@@ -161,6 +167,7 @@ class Manager {
 
 		add_filter( 'wxr_export_skip_postmeta', [ $this, 'on_export_post_meta' ], 10, 2 );
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Reset Assets Data.
@@ -173,4 +180,6 @@ class Manager {
 	private function reset_assets_data() {
 		delete_option( Page_Assets_Data_Manager::ASSETS_DATA_KEY );
 	}
+=======
+>>>>>>> dist
 }

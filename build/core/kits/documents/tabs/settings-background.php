@@ -15,7 +15,11 @@ class Settings_Background extends Tab_Base {
 	}
 
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Background', 'elementor' );
+=======
+		return __( 'Background', 'elementor' );
+>>>>>>> dist
 	}
 
 	public function get_group() {
@@ -62,9 +66,15 @@ class Settings_Background extends Tab_Base {
 		$this->add_control(
 			'mobile_browser_background',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Mobile Browser Background', 'elementor' ),
 				'type' => Controls_Manager::COLOR,
 				'description' => esc_html__( 'The `theme-color` meta tag will only be available in supported browsers and devices.', 'elementor' ),
+=======
+				'label' => __( 'Mobile Browser Background', 'elementor' ),
+				'type' => Controls_Manager::COLOR,
+				'description' => __( 'The `theme-color` meta tag will only be available in supported browsers and devices.', 'elementor' ),
+>>>>>>> dist
 				'separator' => 'before',
 			]
 		);

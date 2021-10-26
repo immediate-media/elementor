@@ -26,8 +26,12 @@ class Images_Manager {
 	 * @access public
 	 */
 	public function get_images_details() {
+<<<<<<< HEAD
 		// PHPCS - Already validated by wp_ajax.
 		$items = $_POST['items']; // phpcs:ignore WordPress.Security.NonceVerification.Missing
+=======
+		$items = $_POST['items'];
+>>>>>>> dist
 		$urls  = [];
 
 		foreach ( $items as $item ) {

@@ -182,6 +182,7 @@ class Documents_Manager {
 			return false;
 		}
 
+<<<<<<< HEAD
 		/**
 		 * Retrieve document post ID.
 		 *
@@ -191,6 +192,8 @@ class Documents_Manager {
 		 *
 		 * @param int $post_id The post ID of the document.
 		 */
+=======
+>>>>>>> dist
 		$post_id = apply_filters( 'elementor/documents/get/post_id', $post_id );
 
 		if ( ! $from_cache || ! isset( $this->documents[ $post_id ] ) ) {
@@ -360,10 +363,17 @@ class Documents_Manager {
 		}
 
 		if ( empty( $post_data['post_title'] ) ) {
+<<<<<<< HEAD
 			$post_data['post_title'] = esc_html__( 'Elementor', 'elementor' );
 			if ( 'post' !== $type ) {
 				$post_data['post_title'] = sprintf(
 					/* translators: %s: Document title. */
+=======
+			$post_data['post_title'] = __( 'Elementor', 'elementor' );
+			if ( 'post' !== $type ) {
+				$post_data['post_title'] = sprintf(
+					/* translators: %s: Document title */
+>>>>>>> dist
 					__( 'Elementor %s', 'elementor' ),
 					call_user_func( [ $class, 'get_title' ] )
 				);
@@ -662,6 +672,24 @@ class Documents_Manager {
 		return $this->current_doc;
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Get groups.
+	 *
+	 * @since 2.0.0
+	 * @deprecated 2.4.0
+	 * @access public
+	 *
+	 * @return array
+	 */
+	public function get_groups() {
+		_deprecated_function( __METHOD__, '2.4.0' );
+
+		return [];
+	}
+
+>>>>>>> dist
 	public function localize_settings( $settings ) {
 		$translations = [];
 
@@ -686,6 +714,7 @@ class Documents_Manager {
 			do_action( 'elementor/documents/register', $this );
 		}
 	}
+<<<<<<< HEAD
 
 	/**
 	 * Get create new post URL.
@@ -713,4 +742,6 @@ class Documents_Manager {
 
 		return $new_post_url;
 	}
+=======
+>>>>>>> dist
 }

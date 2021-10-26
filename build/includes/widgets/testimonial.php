@@ -42,7 +42,11 @@ class Widget_Testimonial extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Testimonial', 'elementor' );
+=======
+		return __( 'Testimonial', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -85,27 +89,43 @@ class Widget_Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'section_testimonial',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Testimonial', 'elementor' ),
+=======
+				'label' => __( 'Testimonial', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'testimonial_content',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Content', 'elementor' ),
+=======
+				'label' => __( 'Content', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::TEXTAREA,
 				'dynamic' => [
 					'active' => true,
 				],
 				'rows' => '10',
+<<<<<<< HEAD
 				'default' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'elementor' ),
+=======
+				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'testimonial_image',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Choose Image', 'elementor' ),
+=======
+				'label' => __( 'Choose Image', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::MEDIA,
 				'dynamic' => [
 					'active' => true,
@@ -128,7 +148,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'testimonial_name',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Name', 'elementor' ),
+=======
+				'label' => __( 'Name', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
@@ -140,7 +164,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'testimonial_job',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Title', 'elementor' ),
+=======
+				'label' => __( 'Title', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::TEXT,
 				'dynamic' => [
 					'active' => true,
@@ -152,24 +180,41 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'link',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Link', 'elementor' ),
+=======
+				'label' => __( 'Link', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::URL,
 				'dynamic' => [
 					'active' => true,
 				],
+<<<<<<< HEAD
 				'placeholder' => esc_html__( 'https://your-link.com', 'elementor' ),
+=======
+				'placeholder' => __( 'https://your-link.com', 'elementor' ),
+>>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'testimonial_image_position',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Image Position', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'aside',
 				'options' => [
 					'aside' => esc_html__( 'Aside', 'elementor' ),
 					'top' => esc_html__( 'Top', 'elementor' ),
+=======
+				'label' => __( 'Image Position', 'elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'aside',
+				'options' => [
+					'aside' => __( 'Aside', 'elementor' ),
+					'top' => __( 'Top', 'elementor' ),
+>>>>>>> dist
 				],
 				'condition' => [
 					'testimonial_image[url]!' => '',
@@ -179,14 +224,22 @@ class Widget_Testimonial extends Widget_Base {
 			]
 		);
 
+<<<<<<< HEAD
 		$this->add_responsive_control(
 			'testimonial_alignment',
 			[
 				'label' => esc_html__( 'Alignment', 'elementor' ),
+=======
+		$this->add_control(
+			'testimonial_alignment',
+			[
+				'label' => __( 'Alignment', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
+<<<<<<< HEAD
 						'title' => esc_html__( 'Left', 'elementor' ),
 						'icon' => 'eicon-text-align-left',
 					],
@@ -202,6 +255,20 @@ class Widget_Testimonial extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-testimonial-wrapper' => 'text-align: {{VALUE}}',
 				],
+=======
+						'title' => __( 'Left', 'elementor' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'center' => [
+						'title' => __( 'Center', 'elementor' ),
+						'icon' => 'eicon-text-align-center',
+					],
+					'right' => [
+						'title' => __( 'Right', 'elementor' ),
+						'icon' => 'eicon-text-align-right',
+					],
+				],
+>>>>>>> dist
 				'style_transfer' => true,
 			]
 		);
@@ -209,7 +276,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'View', 'elementor' ),
+=======
+				'label' => __( 'View', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -221,7 +292,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_testimonial_content',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Content', 'elementor' ),
+=======
+				'label' => __( 'Content', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -229,7 +304,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'content_content_color',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Text Color', 'elementor' ),
+=======
+				'label' => __( 'Text Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => Global_Colors::COLOR_TEXT,
@@ -266,7 +345,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_testimonial_image',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Image', 'elementor' ),
+=======
+				'label' => __( 'Image', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'testimonial_image[url]!' => '',
@@ -277,7 +360,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'image_size',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Image Size', 'elementor' ),
+=======
+				'label' => __( 'Image Size', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -304,7 +391,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'image_border_radius',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Border Radius', 'elementor' ),
+=======
+				'label' => __( 'Border Radius', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -319,7 +410,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_testimonial_name',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Name', 'elementor' ),
+=======
+				'label' => __( 'Name', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -327,7 +422,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'name_text_color',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Text Color', 'elementor' ),
+=======
+				'label' => __( 'Text Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => Global_Colors::COLOR_PRIMARY,
@@ -364,7 +463,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_testimonial_job',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Title', 'elementor' ),
+=======
+				'label' => __( 'Title', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -372,7 +475,11 @@ class Widget_Testimonial extends Widget_Base {
 		$this->add_control(
 			'job_text_color',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Text Color', 'elementor' ),
+=======
+				'label' => __( 'Text Color', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => Global_Colors::COLOR_SECONDARY,
@@ -419,6 +526,13 @@ class Widget_Testimonial extends Widget_Base {
 
 		$this->add_render_attribute( 'wrapper', 'class', 'elementor-testimonial-wrapper' );
 
+<<<<<<< HEAD
+=======
+		if ( $settings['testimonial_alignment'] ) {
+			$this->add_render_attribute( 'wrapper', 'class', 'elementor-testimonial-text-align-' . $settings['testimonial_alignment'] );
+		}
+
+>>>>>>> dist
 		$this->add_render_attribute( 'meta', 'class', 'elementor-testimonial-meta' );
 
 		if ( $settings['testimonial_image']['url'] ) {
@@ -442,17 +556,29 @@ class Widget_Testimonial extends Widget_Base {
 			$this->add_link_attributes( 'link', $settings['link'] );
 		}
 		?>
+<<<<<<< HEAD
 		<div <?php $this->print_render_attribute_string( 'wrapper' ); ?>>
+=======
+		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
+>>>>>>> dist
 			<?php
 			if ( $has_content ) :
 				$this->add_render_attribute( 'testimonial_content', 'class', 'elementor-testimonial-content' );
 				$this->add_inline_editing_attributes( 'testimonial_content' );
 				?>
+<<<<<<< HEAD
 				<div <?php $this->print_render_attribute_string( 'testimonial_content' ); ?>><?php $this->print_unescaped_setting( 'testimonial_content' ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( $has_image || $has_name || $has_job ) : ?>
 			<div <?php $this->print_render_attribute_string( 'meta' ); ?>>
+=======
+				<div <?php echo $this->get_render_attribute_string( 'testimonial_content' ); ?>><?php echo $settings['testimonial_content']; ?></div>
+			<?php endif; ?>
+
+			<?php if ( $has_image || $has_name || $has_job ) : ?>
+			<div <?php echo $this->get_render_attribute_string( 'meta' ); ?>>
+>>>>>>> dist
 				<div class="elementor-testimonial-meta-inner">
 					<?php if ( $has_image ) : ?>
 						<div class="elementor-testimonial-image">
@@ -461,7 +587,11 @@ class Widget_Testimonial extends Widget_Base {
 							if ( ! empty( $settings['link']['url'] ) ) :
 								$image_html = '<a ' . $this->get_render_attribute_string( 'link' ) . '>' . $image_html . '</a>';
 							endif;
+<<<<<<< HEAD
 							echo wp_kses_post( $image_html );
+=======
+							echo $image_html;
+>>>>>>> dist
 							?>
 						</div>
 					<?php endif; ?>
@@ -473,6 +603,7 @@ class Widget_Testimonial extends Widget_Base {
 							$this->add_render_attribute( 'testimonial_name', 'class', 'elementor-testimonial-name' );
 							$this->add_inline_editing_attributes( 'testimonial_name', 'none' );
 
+<<<<<<< HEAD
 							if ( ! empty( $settings['link']['url'] ) ) :
 								?>
 								<a <?php $this->print_render_attribute_string( 'testimonial_name' ); ?> <?php $this->print_render_attribute_string( 'link' ); ?>><?php $this->print_unescaped_setting( 'testimonial_name' ); ?></a>
@@ -480,6 +611,17 @@ class Widget_Testimonial extends Widget_Base {
 							else :
 								?>
 								<div <?php $this->print_render_attribute_string( 'testimonial_name' ); ?>><?php $this->print_unescaped_setting( 'testimonial_name' ); ?></div>
+=======
+							$testimonial_name_html = $settings['testimonial_name'];
+
+							if ( ! empty( $settings['link']['url'] ) ) :
+								?>
+								<a <?php echo $this->get_render_attribute_string( 'testimonial_name' ) . ' ' . $this->get_render_attribute_string( 'link' ); ?>><?php echo $testimonial_name_html; ?></a>
+								<?php
+							else :
+								?>
+								<div <?php echo $this->get_render_attribute_string( 'testimonial_name' ); ?>><?php echo $testimonial_name_html; ?></div>
+>>>>>>> dist
 								<?php
 							endif;
 						endif; ?>
@@ -489,6 +631,7 @@ class Widget_Testimonial extends Widget_Base {
 
 							$this->add_inline_editing_attributes( 'testimonial_job', 'none' );
 
+<<<<<<< HEAD
 							if ( ! empty( $settings['link']['url'] ) ) :
 								?>
 								<a <?php $this->print_render_attribute_string( 'testimonial_job' ); ?> <?php $this->print_render_attribute_string( 'link' ); ?>><?php $this->print_unescaped_setting( 'testimonial_job' ); ?></a>
@@ -496,6 +639,17 @@ class Widget_Testimonial extends Widget_Base {
 							else :
 								?>
 								<div <?php $this->print_render_attribute_string( 'testimonial_job' ); ?>><?php $this->print_unescaped_setting( 'testimonial_job' ); ?></div>
+=======
+							$testimonial_job_html = $settings['testimonial_job'];
+
+							if ( ! empty( $settings['link']['url'] ) ) :
+								?>
+								<a <?php echo $this->get_render_attribute_string( 'testimonial_job' ) . ' ' . $this->get_render_attribute_string( 'link' ); ?>><?php echo $testimonial_job_html; ?></a>
+								<?php
+							else :
+								?>
+								<div <?php echo $this->get_render_attribute_string( 'testimonial_job' ); ?>><?php echo $testimonial_job_html; ?></div>
+>>>>>>> dist
 								<?php
 							endif;
 						endif; ?>
@@ -538,9 +692,16 @@ class Widget_Testimonial extends Widget_Base {
 			}
 		}
 
+<<<<<<< HEAD
 		var testimonial_image_position = settings.testimonial_image_position ? ' elementor-testimonial-image-position-' + settings.testimonial_image_position : '';
 		#>
 		<div class="elementor-testimonial-wrapper">
+=======
+		var testimonial_alignment = settings.testimonial_alignment ? ' elementor-testimonial-text-align-' + settings.testimonial_alignment : '';
+		var testimonial_image_position = settings.testimonial_image_position ? ' elementor-testimonial-image-position-' + settings.testimonial_image_position : '';
+		#>
+		<div class="elementor-testimonial-wrapper{{ testimonial_alignment }}">
+>>>>>>> dist
 			<# if ( '' !== settings.testimonial_content ) {
 				view.addRenderAttribute( 'testimonial_content', 'class', 'elementor-testimonial-content' );
 

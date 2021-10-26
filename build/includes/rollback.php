@@ -162,7 +162,11 @@ class Rollback {
 			'url' => 'update.php?action=upgrade-plugin&plugin=' . rawurlencode( $this->plugin_name ),
 			'plugin' => $this->plugin_name,
 			'nonce' => 'upgrade-plugin_' . $this->plugin_name,
+<<<<<<< HEAD
 			'title' => '<img src="' . $logo_url . '" alt="Elementor">' . esc_html__( 'Rollback to Previous Version', 'elementor' ),
+=======
+			'title' => '<img src="' . $logo_url . '" alt="Elementor">' . __( 'Rollback to Previous Version', 'elementor' ),
+>>>>>>> dist
 		];
 
 		$this->print_inline_style();

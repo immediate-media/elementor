@@ -16,6 +16,13 @@ class Post_Type extends Base {
 
 	private $page_on_front_id;
 
+<<<<<<< HEAD
+=======
+	protected function get_name() {
+		return $this->post_type;
+	}
+
+>>>>>>> dist
 	public function __construct( Iterator $iterator, Base $parent, $post_type ) {
 		parent::__construct( $iterator, $parent );
 
@@ -30,7 +37,11 @@ class Post_Type extends Base {
 		$query_args = [
 			'post_type' => $this->post_type,
 			'post_status' => 'publish',
+<<<<<<< HEAD
 			'posts_per_page' => -1,
+=======
+			'posts_per_page' => 20,
+>>>>>>> dist
 			'meta_query' => [
 				[
 					'key' => '_elementor_data',
@@ -53,7 +64,10 @@ class Post_Type extends Base {
 
 			$post_manifest_data = [
 				'title' => $post->post_title,
+<<<<<<< HEAD
 				'excerpt' => $post->post_excerpt,
+=======
+>>>>>>> dist
 				'doc_type' => $document->get_name(),
 				'thumbnail' => get_the_post_thumbnail_url( $post ),
 				'url' => get_permalink( $post ),
@@ -71,6 +85,7 @@ class Post_Type extends Base {
 		return $manifest_data;
 	}
 
+<<<<<<< HEAD
 	public function import_post( $id, array $post_settings ) {
 		$post_data = $this->importer->read_json_file( $id );
 
@@ -117,6 +132,11 @@ class Post_Type extends Base {
 	protected function import( array $import_settings ) {
 		$result = [
 			'succeed' => [],
+=======
+	protected function import( array $import_settings ) {
+		$result = [
+			'success' => [],
+>>>>>>> dist
 			'failed' => [],
 		];
 
@@ -130,7 +150,11 @@ class Post_Type extends Base {
 					continue;
 				}
 
+<<<<<<< HEAD
 				$result['succeed'][ $id ] = $import;
+=======
+				$result['success'][] = $import;
+>>>>>>> dist
 			} catch ( \Error $error ) {
 				$result['failed'][ $id ] = $error->getMessage();
 			}
@@ -139,6 +163,42 @@ class Post_Type extends Base {
 		return $result;
 	}
 
+<<<<<<< HEAD
+=======
+	public function import_post( $id, array $post_settings ) {
+		$post_data = $this->importer->read_json_file( $id );
+
+		$new_document = Plugin::$instance->documents->create(
+			$post_settings['doc_type'],
+			[
+				'post_title' => $post_settings['title'],
+				'post_type' => $this->post_type,
+				'post_status' => 'publish',
+			]
+		);
+
+		if ( is_wp_error( $new_document ) ) {
+			return $new_document;
+		}
+
+		$new_document->import( $post_data );
+
+		if ( $post_settings['thumbnail'] ) {
+			$attachment = Plugin::$instance->templates_manager->get_import_images_instance()->import( [ 'url' => $post_settings['thumbnail'] ] );
+
+			set_post_thumbnail( $new_document->get_main_post(), $attachment['id'] );
+		}
+
+		$new_id = $new_document->get_main_id();
+
+		if ( $this->show_page_on_front && ! empty( $post_settings['show_on_front'] ) ) {
+			update_option( 'page_on_front', $new_id );
+		}
+
+		return $new_id;
+	}
+
+>>>>>>> dist
 	private function init_page_on_front_data() {
 		$this->show_page_on_front = 'page' === get_option( 'show_on_front' );
 

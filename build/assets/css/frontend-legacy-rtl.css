@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! elementor - v3.4.6 - 26-10-2021 */
+=======
+/*! elementor - v3.2.4 - 10-06-2021 */
+>>>>>>> dist
 .elementor-bc-flex-widget .elementor-section-content-top > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -29,6 +33,7 @@
 .elementor-column-gap-wider > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 30px; }
 
+<<<<<<< HEAD
 @media (min-width: -1px) {
   .elementor-reverse-widescreen > .elementor-container > .elementor-row > :nth-child(1) {
     -webkit-box-ordinal-group: 11;
@@ -156,6 +161,9 @@
             order: 1; } }
 
 @media (min-width: -1px) and (max-width: 1024px) {
+=======
+@media (min-width: 768px) and (max-width: 1024px) {
+>>>>>>> dist
   .elementor-reverse-tablet > .elementor-container > .elementor-row > :nth-child(1) {
     -webkit-box-ordinal-group: 11;
         -ms-flex-order: 10;
@@ -197,6 +205,7 @@
         -ms-flex-order: 1;
             order: 1; } }
 
+<<<<<<< HEAD
 @media (min-width: 768px) and (max-width: -1px) {
   .elementor-reverse-mobile_extra > .elementor-container > .elementor-row > :nth-child(1) {
     -webkit-box-ordinal-group: 11;
@@ -239,6 +248,8 @@
         -ms-flex-order: 1;
             order: 1; } }
 
+=======
+>>>>>>> dist
 @media (max-width: 767px) {
   .elementor-reverse-mobile > .elementor-container > .elementor-row > :nth-child(1) {
     -webkit-box-ordinal-group: 11;

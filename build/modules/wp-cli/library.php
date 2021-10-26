@@ -132,8 +132,11 @@ class Library extends \WP_CLI_Command {
 
 		$app = $this->get_library_app();
 
+<<<<<<< HEAD
 		$app->set_auth_mode( 'cli' );
 
+=======
+>>>>>>> dist
 		$app->action_authorize();
 
 		$app->action_get_token();

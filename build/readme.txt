@@ -2,9 +2,15 @@
 Contributors: elemntor, KingYes, ariel.k, jzaltzberg, mati1000, pojosh, bainternet
 Tags: page builder, editor, landing page, drag-and-drop, elementor, visual editor, wysiwyg, design, maintenance mode, coming soon, under construction, website builder, landing page builder, front-end builder
 Requires at least: 5.0
+<<<<<<< HEAD
 Tested up to: 5.8
 Requires PHP: 5.6
 Stable tag: 3.4.6
+=======
+Tested up to: 5.7
+Requires PHP: 5.6
+Stable tag: 3.2.3
+>>>>>>> dist
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +18,11 @@ The Elementor Website Builder has it all: drag and drop page builder, pixel perf
 
 == Description ==
 
+<<<<<<< HEAD
 https://www.youtube.com/watch?v=lBu9TKg7dFM
+=======
+https://www.youtube.com/watch?v=kB4U67tiQLA
+>>>>>>> dist
 
 Introducing a WordPress website builder, with no limits of design. A website builder that delivers high-end page designs and advanced capabilities, never before seen on WordPress.
 
@@ -96,22 +106,68 @@ There are many other [features](https://elementor.com/features/?utm_source=wp-re
 
 Join the elite web professionals who enjoy [Elementor Pro](https://elementor.com/pro/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme)!
 
+<<<<<<< HEAD
 = Translated to 59+ Languages & RTL supported. =
 We’ve integrated RTL and multi language support within the framework of Elementor, so you get a [translated panel (59+ languages)](https://translate.wordpress.org/projects/wp-plugins/elementor/) out of the box, as well as RTL typography support, and developer options to add even more languages.
+=======
+= Translated to 56+ Languages & RTL supported. =
+We’ve integrated RTL and multi language support within the framework of Elementor, so you get a [translated panel (56+ languages)](https://translate.wordpress.org/projects/wp-plugins/elementor/) out of the box, as well as RTL typography support, and developer options to add even more languages.
+>>>>>>> dist
 
 = Developer API. =
 Elementor website builder is free and open source. It’s the perfect plugin to be extended and integrated further. It was created and developed with the developer in mind, and we have already seen some truly remarkable addons being developed.
 
 To help you get started and learn just how to integrate with Elementor, we have created the [Official Elementor Developer Resources](https://developers.elementor.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme) and the [Code Reference](https://code.elementor.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme).
 
+<<<<<<< HEAD
+=======
+= Translations =
+- [English (Australia)](https://translate.wordpress.org/locale/en-au/default/wp-plugins/elementor) - (en_AU)
+- [English (UK)](https://translate.wordpress.org/locale/en-gb/default/wp-plugins/elementor) - (en_GB)
+- [English (Canada)](https://translate.wordpress.org/locale/en-ca/default/wp-plugins/elementor) - (en_CA)
+- [French](https://translate.wordpress.org/locale/fr/default/wp-plugins/elementor) - (fr_FR)
+- [French (Belgium)](https://translate.wordpress.org/locale/fr-be/default/wp-plugins/elementor) - (fr_BE)
+- [German](https://translate.wordpress.org/locale/de/default/wp-plugins/elementor) - (de_DE)
+- [Italian](https://translate.wordpress.org/locale/it/default/wp-plugins/elementor) - (it_IT)
+- [Spanish (Spain)](https://translate.wordpress.org/locale/es/default/wp-plugins/elementor) - (es_ES)
+- [Spanish (Mexico)](https://translate.wordpress.org/locale/es-mx/default/wp-plugins/elementor) - (es_MX)
+- [Japanese](https://translate.wordpress.org/locale/ja/default/wp-plugins/elementor) - (ja)
+- [Portuguese (Portugal)](https://translate.wordpress.org/locale/pt/default/wp-plugins/elementor) - (pt_PT)
+- [Portuguese (Brazil)](https://translate.wordpress.org/locale/pt-br/default/wp-plugins/elementor) - (pt_BR)
+- [Swedish](https://translate.wordpress.org/locale/sv/default/wp-plugins/elementor) - (sv_SE)
+- [Dutch](https://translate.wordpress.org/locale/nl/default/wp-plugins/elementor) - (nl_NL)
+- [Danish](https://translate.wordpress.org/locale/da/default/wp-plugins/elementor) - (da_DK)
+- [Polish](https://translate.wordpress.org/locale/pl/default/wp-plugins/elementor) - (pl_PL)
+- [Italian](https://translate.wordpress.org/locale/it/default/wp-plugins/elementor) - (it_IT)
+- [Chinese (China)](https://translate.wordpress.org/locale/zh-cn/default/wp-plugins/elementor) - (zh_CN)
+- [Chinese (Taiwan)](https://translate.wordpress.org/locale/zh-tw/default/wp-plugins/elementor) - (zh_TW)
+- [Persian](https://translate.wordpress.org/locale/fa/default/wp-plugins/elementor) - (fa_IR)
+- [Hebrew](https://translate.wordpress.org/locale/he/default/wp-plugins/elementor) - (he_IL)
+- [Russian](https://translate.wordpress.org/locale/ru/default/wp-plugins/elementor) - (ru_RU)
+- [Romanian](https://translate.wordpress.org/locale/ro/default/wp-plugins/elementor) - (ro_RO)
+- [Bulgarian](https://translate.wordpress.org/locale/bg/default/wp-plugins/elementor) - (bg_BG)
+- [Greek](https://translate.wordpress.org/locale/el/default/wp-plugins/elementor) - (el)
+- [Catalan](https://translate.wordpress.org/locale/ca/default/wp-plugins/elementor) - (ca)
+- [Czech](https://translate.wordpress.org/locale/cs/default/wp-plugins/elementor) - (cs_CZ)
+- [Hungarian](https://translate.wordpress.org/locale/hu/default/wp-plugins/elementor) - (hu_HU)
+- [Croatian](https://translate.wordpress.org/locale/hr/default/wp-plugins/elementor) - (hr)
+- [Finnish](https://translate.wordpress.org/locale/fi/default/wp-plugins/elementor) - (fi)
+- [Arabic](https://translate.wordpress.org/locale/ar/default/wp-plugins/elementor) - (ar)
+- [Afrikaans](https://translate.wordpress.org/locale/af/default/wp-plugins/elementor) - (af)
+- [Ukrainian](https://translate.wordpress.org/locale/uk/default/wp-plugins/elementor) - (uk)
+
+>>>>>>> dist
 = Be a contributor =
 If you want to contribute, go to our [Elementor GitHub Repository](https://github.com/elementor/elementor) and see where you can help.
 
 You can also add a new language via [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/elementor). We've built a short guide explaining [how to translate and localize the plugin](https://go.elementor.com/translate/).
 
+<<<<<<< HEAD
 = Security Report =
 We run a [managed security Bug Bounty program](https://bugcrowd.com/elementor), utilizing the community power by enabling 24/7/365 crowdsourced vulnerability detection. 
 
+=======
+>>>>>>> dist
 = Documentation and Support =
 - For documentation and tutorials go to our [Documentation](https://docs.elementor.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme).
 - If you have any more questions, visit our support on the [Plugin's Forum](https://wordpress.org/support/plugin/elementor).
@@ -186,6 +242,7 @@ No. Elementor supports WordPress 5.0 or greater, and is compatible with PHP 5.6 
 
 == Changelog ==
 
+<<<<<<< HEAD
 See Elementor Developer Edition versions changelog [here](https://go.elementor.com/dev-changelog/)
 
 = 3.4.6 - 2021-10-19 =
@@ -385,6 +442,15 @@ See Elementor Developer Edition versions changelog [here](https://go.elementor.c
 * Fix: Google Maps widget is not loading due to API deprecation ([#15090](https://github.com/elementor/elementor/issues/15090))
 * Fix: Disable Lightbox user preference does not affect the Basic Gallery widget ([#12913](https://github.com/elementor/elementor/issues/12913))
 * Fix: Hardened Lightbox capabilities to enforce better security policies
+=======
+= 3.2.4 - 2021-05-26 =
+* Tweak: Changed Google Maps widget to use API v3 instead of deprecated v2 (#15090)
+* Tweak: Updated Google Fonts list to 05/2021 (#14732, #14536, #13595)
+* Tweak: Changed "Missing Header" text for Compatibility tags in System info screen
+* Fix: Google Maps widget is not loading due to API deprecation (#15090)
+* Fix: Disable Lightbox user preference does not affect the Basic Gallery widget (#12913)
+* Fix: Hardened Lightbox capabilities to enforce better security policies 
+>>>>>>> dist
 
 = 3.2.3 - 2021-05-05 =
 * Fix: `eicons` file couldn't be found when using Custom Breakpoints ([#14718](https://github.com/elementor/elementor/issues/14718), [#14712](https://github.com/elementor/elementor/issues/14712))

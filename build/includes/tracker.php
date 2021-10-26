@@ -1,9 +1,12 @@
 <?php
 namespace Elementor;
 
+<<<<<<< HEAD
 use Elementor\Core\Experiments\Experiments_Reporter;
 use Elementor\Modules\System_Info\Module as System_Info_Module;
 
+=======
+>>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -62,16 +65,23 @@ class Tracker {
 	public static function check_for_settings_optin( $new_value ) {
 		$old_value = get_option( 'elementor_allow_tracking', 'no' );
 		if ( $old_value !== $new_value && 'yes' === $new_value ) {
+<<<<<<< HEAD
 			Plugin::$instance->custom_tasks->add_tasks_requested_to_run( [
 				'opt_in_recalculate_usage',
 				'opt_in_send_tracking_data',
 			] );
+=======
+			self::send_tracking_data( true );
+>>>>>>> dist
 		}
 
 		if ( empty( $new_value ) ) {
 			$new_value = 'no';
 		}
+<<<<<<< HEAD
 
+=======
+>>>>>>> dist
 		return $new_value;
 	}
 
@@ -230,12 +240,20 @@ class Tracker {
 	 * @return array The data from system reports.
 	 */
 	private static function get_system_reports_data() {
+<<<<<<< HEAD
 		$reports = Plugin::$instance->system_info->load_reports( System_Info_Module::get_allowed_reports() );
+=======
+		$reports = Plugin::$instance->system_info->load_reports( System_Info\Main::get_allowed_reports() );
+>>>>>>> dist
 
 		$system_reports = [];
 		foreach ( $reports as $report_key => $report_details ) {
 			$system_reports[ $report_key ] = [];
+<<<<<<< HEAD
 			foreach ( $report_details['report']->get_report() as $sub_report_key => $sub_report_details ) {
+=======
+			foreach ( $report_details['report'] as $sub_report_key => $sub_report_details ) {
+>>>>>>> dist
 				$system_reports[ $report_key ][ $sub_report_key ] = $sub_report_details['value'];
 			}
 		}
@@ -273,6 +291,7 @@ class Tracker {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get non elementor post usages.
 	 *
 	 * Retrieve the number of posts that not using elementor.
@@ -303,6 +322,8 @@ class Tracker {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * Get posts usage.
 	 *
 	 * Retrieve the number of posts using Elementor.
@@ -330,11 +351,19 @@ class Tracker {
 
 		if ( $results ) {
 			foreach ( $results as $result ) {
+<<<<<<< HEAD
 				$usage[ $result->post_type ][ $result->post_status ] = (int) $result->hits;
+=======
+				$usage[ $result->post_type ][ $result->post_status ] = $result->hits;
+>>>>>>> dist
 			}
 		}
 
 		return $usage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dist
 	}
 
 	/**
@@ -374,6 +403,7 @@ class Tracker {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Get usage of general settings.
 	 * 'Elementor->Settings->General'.
 	 *
@@ -484,6 +514,8 @@ class Tracker {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * Get the tracking data
 	 *
 	 * Retrieve tracking data and apply filter
@@ -502,6 +534,7 @@ class Tracker {
 			'email' => get_option( 'admin_email' ),
 			'usages' => [
 				'posts' => self::get_posts_usage(),
+<<<<<<< HEAD
 				'non-elementor-posts' => self::get_non_elementor_posts_usage(),
 				'library' => self::get_library_usage(),
 				'settings' => [
@@ -518,6 +551,11 @@ class Tracker {
 			],
 			'is_first_time' => $is_first_time,
 			'install_time' => Plugin::instance()->get_install_time(),
+=======
+				'library' => self::get_library_usage(),
+			],
+			'is_first_time' => $is_first_time,
+>>>>>>> dist
 		];
 
 		/**
@@ -534,6 +572,7 @@ class Tracker {
 
 		return $params;
 	}
+<<<<<<< HEAD
 
 	/**
 	 * @param string $tab_name
@@ -603,4 +642,6 @@ class Tracker {
 
 		return $result;
 	}
+=======
+>>>>>>> dist
 }

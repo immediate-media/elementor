@@ -154,6 +154,7 @@ class Revisions_Manager {
 
 			if ( $revision->ID === $post->ID ) {
 				$type = 'current';
+<<<<<<< HEAD
 				$type_label = esc_html__( 'Current Version', 'elementor' );
 			} elseif ( false !== strpos( $revision->post_name, 'autosave' ) ) {
 				$type = 'autosave';
@@ -161,6 +162,15 @@ class Revisions_Manager {
 			} else {
 				$type = 'revision';
 				$type_label = esc_html__( 'Revision', 'elementor' );
+=======
+				$type_label = __( 'Current Version', 'elementor' );
+			} elseif ( false !== strpos( $revision->post_name, 'autosave' ) ) {
+				$type = 'autosave';
+				$type_label = __( 'Autosave', 'elementor' );
+			} else {
+				$type = 'revision';
+				$type_label = __( 'Revision', 'elementor' );
+>>>>>>> dist
 			}
 
 			if ( ! isset( self::$authors[ $revision->post_author ] ) ) {
@@ -175,7 +185,11 @@ class Revisions_Manager {
 				'author' => self::$authors[ $revision->post_author ]['display_name'],
 				'timestamp' => strtotime( $revision->post_modified ),
 				'date' => sprintf(
+<<<<<<< HEAD
 					/* translators: 1: Human readable time difference, 2: Date. */
+=======
+					/* translators: 1: Human readable time difference, 2: Date */
+>>>>>>> dist
 					__( '%1$s ago (%2$s)', 'elementor' ),
 					$human_time,
 					$date
@@ -261,7 +275,11 @@ class Revisions_Manager {
 		}
 
 		if ( ! current_user_can( 'edit_post', $revision->get_id() ) ) {
+<<<<<<< HEAD
 			throw new \Exception( esc_html__( 'Access denied.', 'elementor' ) );
+=======
+			throw new \Exception( __( 'Access denied.', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		$revision_data = [

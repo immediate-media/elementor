@@ -1,15 +1,21 @@
 <?php
 namespace Elementor\Core\Base;
 
+<<<<<<< HEAD
 use Elementor\Core\Base\Elements_Iteration_Actions\Assets as Assets_Iteration_Action;
 use Elementor\Core\Base\Elements_Iteration_Actions\Base as Elements_Iteration_Action;
+=======
+>>>>>>> dist
 use Elementor\Core\Files\CSS\Post as Post_CSS;
 use Elementor\Core\Settings\Page\Model as Page_Model;
 use Elementor\Core\Utils\Exceptions;
 use Elementor\Plugin;
 use Elementor\Controls_Manager;
 use Elementor\Controls_Stack;
+<<<<<<< HEAD
 use Elementor\TemplateLibrary\Source_Local;
+=======
+>>>>>>> dist
 use Elementor\User;
 use Elementor\Core\Settings\Manager as SettingsManager;
 use Elementor\Utils;
@@ -75,11 +81,14 @@ abstract class Document extends Controls_Stack {
 	private static $properties = [];
 
 	/**
+<<<<<<< HEAD
 	 * @var Elements_Iteration_Action[]
 	 */
 	private $elements_iteration_actions = [];
 
 	/**
+=======
+>>>>>>> dist
 	 * Document post data.
 	 *
 	 * Holds the document post data.
@@ -142,8 +151,13 @@ abstract class Document extends Controls_Stack {
 			'has_elements' => static::get_property( 'has_elements' ),
 			'support_kit' => static::get_property( 'support_kit' ),
 			'messages' => [
+<<<<<<< HEAD
 				/* translators: %s: Document title. */
 				'publish_notification' => sprintf( esc_html__( 'Hurray! Your %s is live.', 'elementor' ), static::get_title() ),
+=======
+				/* translators: %s: the document title. */
+				'publish_notification' => sprintf( __( 'Hurray! Your %s is live.', 'elementor' ), static::get_title() ),
+>>>>>>> dist
 			],
 		];
 	}
@@ -160,6 +174,7 @@ abstract class Document extends Controls_Stack {
 	 * @return string Element title.
 	 */
 	public static function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Document', 'elementor' );
 	}
 
@@ -169,6 +184,9 @@ abstract class Document extends Controls_Stack {
 
 	public static function get_add_new_title() {
 		return sprintf( esc_html__( 'Add New %s', 'elementor' ), static::get_title() );
+=======
+		return __( 'Document', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -203,6 +221,7 @@ abstract class Document extends Controls_Stack {
 		return get_called_class();
 	}
 
+<<<<<<< HEAD
 	public static function get_create_url() {
 		$properties = static::get_properties();
 
@@ -213,12 +232,18 @@ abstract class Document extends Controls_Stack {
 		return static::get_type();
 	}
 
+=======
+>>>>>>> dist
 	/**
 	 * @since 2.0.0
 	 * @access public
 	 */
 	public function get_unique_name() {
+<<<<<<< HEAD
 		return static::get_type() . '-' . $this->post->ID;
+=======
+		return $this->get_name() . '-' . $this->post->ID;
+>>>>>>> dist
 	}
 
 	/**
@@ -232,6 +257,18 @@ abstract class Document extends Controls_Stack {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * @since 2.0.12
+	 * @deprecated 2.4.0 Use `Document::get_remote_library_config()` instead
+	 * @access public
+	 */
+	public function get_remote_library_type() {
+		_deprecated_function( __METHOD__, '2.4.0', __CLASS__ . '::get_remote_library_config()' );
+	}
+
+	/**
+>>>>>>> dist
 	 * @since 2.0.0
 	 * @access public
 	 */
@@ -287,6 +324,20 @@ abstract class Document extends Controls_Stack {
 		return get_post( $this->get_main_id() );
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * @since 2.0.6
+	 * @deprecated 2.4.0 Use `Document::get_container_attributes()` instead
+	 * @access public
+	 */
+	public function get_container_classes() {
+		_deprecated_function( __METHOD__, '2.4.0', __CLASS__ . '::get_container_attributes()' );
+
+		return '';
+	}
+
+>>>>>>> dist
 	public function get_container_attributes() {
 		$id = $this->get_main_id();
 
@@ -320,10 +371,15 @@ abstract class Document extends Controls_Stack {
 		$document = $this;
 
 		// Ajax request from editor.
+<<<<<<< HEAD
 		// PHPCS - only reading the value from $_POST['initial_document_id'].
 		if ( ! empty( $_POST['initial_document_id'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
 			// PHPCS - only reading the value from $_POST['initial_document_id'].
 			$document = Plugin::$instance->documents->get( $_POST['initial_document_id'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+=======
+		if ( ! empty( $_POST['initial_document_id'] ) ) {
+			$document = Plugin::$instance->documents->get( $_POST['initial_document_id'] );
+>>>>>>> dist
 		}
 
 		$url = get_preview_post_link(
@@ -545,6 +601,7 @@ abstract class Document extends Controls_Stack {
 			$config['widgets'] = Plugin::$instance->widgets_manager->get_widget_types_config();
 		}
 
+<<<<<<< HEAD
 		$additional_config = [];
 
 		/**
@@ -560,6 +617,9 @@ abstract class Document extends Controls_Stack {
 		 * @param int   $post_id           The post ID of the document.
 		 */
 		$additional_config = apply_filters( 'elementor/document/config', $additional_config, $this->get_main_id() );
+=======
+		$additional_config = apply_filters( 'elementor/document/config', [], $this->get_main_id() );
+>>>>>>> dist
 
 		if ( ! empty( $additional_config ) ) {
 			$config = array_replace_recursive( $config, $additional_config );
@@ -574,14 +634,20 @@ abstract class Document extends Controls_Stack {
 	 */
 	protected function register_controls() {
 		$this->register_document_controls();
+<<<<<<< HEAD
 
+=======
+>>>>>>> dist
 		/**
 		 * Register document controls.
 		 *
 		 * Fires after Elementor registers the document controls.
 		 *
+<<<<<<< HEAD
 		 * External developers can use this hook to add new controls to the document.
 		 *
+=======
+>>>>>>> dist
 		 * @since 2.0.0
 		 *
 		 * @param Document $this The document instance.
@@ -598,6 +664,7 @@ abstract class Document extends Controls_Stack {
 	 * @return bool
 	 */
 	public function save( $data ) {
+<<<<<<< HEAD
 		/**
 		 * Document save data.
 		 *
@@ -613,6 +680,8 @@ abstract class Document extends Controls_Stack {
 		 */
 		$data = apply_filters( 'elementor/document/save/data', $data, $this );
 
+=======
+>>>>>>> dist
 		$this->add_handle_revisions_changed_filter();
 
 		if ( ! $this->is_editable_by_current_user() ) {
@@ -646,7 +715,12 @@ abstract class Document extends Controls_Stack {
 
 			$this->save_settings( $data['settings'] );
 
+<<<<<<< HEAD
 			$this->refresh_post();
+=======
+			// Refresh post after save settings.
+			$this->post = get_post( $this->post->ID );
+>>>>>>> dist
 		}
 
 		// Don't check is_empty, because an empty array should be saved.
@@ -682,10 +756,13 @@ abstract class Document extends Controls_Stack {
 		return true;
 	}
 
+<<<<<<< HEAD
 	public function refresh_post() {
 		$this->post = get_post( $this->post->ID );
 	}
 
+=======
+>>>>>>> dist
 	/**
 	 * @param array $new_settings
 	 *
@@ -851,6 +928,7 @@ abstract class Document extends Controls_Stack {
 		$editor_data = [];
 
 		foreach ( $data as $element_data ) {
+<<<<<<< HEAD
 			if ( ! is_array( $element_data ) ) {
 				throw new \Exception( 'Invalid data: ' . wp_json_encode( [
 					'data' => $data,
@@ -858,6 +936,8 @@ abstract class Document extends Controls_Stack {
 				] ) );
 			}
 
+=======
+>>>>>>> dist
 			$element = Plugin::$instance->elements_manager->create_element_instance( $element_data );
 
 			if ( ! $element ) {
@@ -985,7 +1065,11 @@ abstract class Document extends Controls_Stack {
 
 		$is_dom_optimization_active = Plugin::$instance->experiments->is_feature_active( 'e_dom_optimization' );
 		?>
+<<<<<<< HEAD
 		<div <?php Utils::print_html_attributes( $this->get_container_attributes() ); ?>>
+=======
+		<div <?php echo Utils::render_html_attributes( $this->get_container_attributes() ); ?>>
+>>>>>>> dist
 			<?php if ( ! $is_dom_optimization_active ) { ?>
 			<div class="elementor-inner">
 			<?php } ?>
@@ -1013,8 +1097,13 @@ abstract class Document extends Controls_Stack {
 	 */
 	public function get_panel_page_settings() {
 		return [
+<<<<<<< HEAD
 			/* translators: %s: Document title. */
 			'title' => sprintf( esc_html__( '%s Settings', 'elementor' ), static::get_title() ),
+=======
+			/* translators: %s: Document title */
+			'title' => sprintf( __( '%s Settings', 'elementor' ), static::get_title() ),
+>>>>>>> dist
 		];
 	}
 
@@ -1089,12 +1178,15 @@ abstract class Document extends Controls_Stack {
 
 		Plugin::$instance->db->save_plain_text( $this->post->ID );
 
+<<<<<<< HEAD
 		$elements_iteration_actions = $this->get_elements_iteration_actions();
 
 		if ( $elements_iteration_actions ) {
 			$this->iterate_elements( $elements, $elements_iteration_actions, 'save' );
 		}
 
+=======
+>>>>>>> dist
 		/**
 		 * After saving data.
 		 *
@@ -1259,11 +1351,19 @@ abstract class Document extends Controls_Stack {
 		$display_name = get_the_author_meta( 'display_name', $post->post_author );
 
 		if ( $autosave_post || 'revision' === $post->post_type ) {
+<<<<<<< HEAD
 			/* translators: 1: Saving date, 2: Author display name. */
 			$last_edited = sprintf( esc_html__( 'Draft saved on %1$s by %2$s', 'elementor' ), '<time>' . $date . '</time>', $display_name );
 		} else {
 			/* translators: 1: Editing date, 2: Author display name. */
 			$last_edited = sprintf( esc_html__( 'Last edited on %1$s by %2$s', 'elementor' ), '<time>' . $date . '</time>', $display_name );
+=======
+			/* translators: 1: Saving date, 2: Author display name */
+			$last_edited = sprintf( __( 'Draft saved on %1$s by %2$s', 'elementor' ), '<time>' . $date . '</time>', $display_name );
+		} else {
+			/* translators: 1: Editing date, 2: Author display name */
+			$last_edited = sprintf( __( 'Last edited on %1$s by %2$s', 'elementor' ), '<time>' . $date . '</time>', $display_name );
+>>>>>>> dist
 		}
 
 		return $last_edited;
@@ -1351,6 +1451,7 @@ abstract class Document extends Controls_Stack {
 		return [
 			'content' => $content,
 			'settings' => $this->get_data( 'settings' ),
+<<<<<<< HEAD
 			'metadata' => $this->get_export_metadata(),
 		];
 	}
@@ -1360,6 +1461,8 @@ abstract class Document extends Controls_Stack {
 			'title' => $this->post->post_title,
 			'doc_type' => $this->get_name(),
 			'thumbnail' => get_the_post_thumbnail_url( $this->post ),
+=======
+>>>>>>> dist
 		];
 	}
 
@@ -1416,6 +1519,7 @@ abstract class Document extends Controls_Stack {
 			'elements' => $data['content'],
 			'settings' => $data['settings'],
 		] );
+<<<<<<< HEAD
 
 		if ( $data['import_settings']['thumbnail'] ) {
 			$attachment = Plugin::$instance->templates_manager->get_import_images_instance()->import( [ 'url' => $data['import_settings']['thumbnail'] ] );
@@ -1428,6 +1532,8 @@ abstract class Document extends Controls_Stack {
 				$this->update_meta( $key, $value );
 			}
 		}
+=======
+>>>>>>> dist
 	}
 
 	private function process_element_import_export( Controls_Stack $element, $method ) {
@@ -1459,6 +1565,7 @@ abstract class Document extends Controls_Stack {
 		return $element_data;
 	}
 
+<<<<<<< HEAD
 	protected function get_export_metadata() {
 		$metadata = get_post_meta( $this->get_main_id() );
 
@@ -1475,6 +1582,8 @@ abstract class Document extends Controls_Stack {
 		return $metadata;
 	}
 
+=======
+>>>>>>> dist
 	protected function get_remote_library_config() {
 		$config = [
 			'type' => 'block',
@@ -1503,6 +1612,7 @@ abstract class Document extends Controls_Stack {
 	 * @access protected
 	 */
 	protected function print_elements( $elements_data ) {
+<<<<<<< HEAD
 		// Collect all data updaters that should be updated on runtime.
 		$runtime_elements_iteration_actions = $this->get_runtime_elements_iteration_actions();
 
@@ -1510,6 +1620,8 @@ abstract class Document extends Controls_Stack {
 			$this->iterate_elements( $elements_data, $runtime_elements_iteration_actions, 'render' );
 		}
 
+=======
+>>>>>>> dist
 		foreach ( $elements_data as $element_data ) {
 			$element = Plugin::$instance->elements_manager->create_element_instance( $element_data );
 
@@ -1525,7 +1637,11 @@ abstract class Document extends Controls_Stack {
 		$this->start_controls_section(
 			'document_settings',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'General Settings', 'elementor' ),
+=======
+				'label' => __( 'General Settings', 'elementor' ),
+>>>>>>> dist
 				'tab' => Controls_Manager::TAB_SETTINGS,
 			]
 		);
@@ -1533,7 +1649,11 @@ abstract class Document extends Controls_Stack {
 		$this->add_control(
 			'post_title',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Title', 'elementor' ),
+=======
+				'label' => __( 'Title', 'elementor' ),
+>>>>>>> dist
 				'type' => Controls_Manager::TEXT,
 				'default' => $this->post->post_title,
 				'label_block' => true,
@@ -1550,13 +1670,21 @@ abstract class Document extends Controls_Stack {
 
 			$statuses = $this->get_post_statuses();
 			if ( 'future' === $this->get_main_post()->post_status ) {
+<<<<<<< HEAD
 				$statuses['future'] = esc_html__( 'Future', 'elementor' );
+=======
+				$statuses['future'] = __( 'Future', 'elementor' );
+>>>>>>> dist
 			}
 
 			$this->add_control(
 				'post_status',
 				[
+<<<<<<< HEAD
 					'label' => esc_html__( 'Status', 'elementor' ),
+=======
+					'label' => __( 'Status', 'elementor' ),
+>>>>>>> dist
 					'type' => Controls_Manager::SELECT,
 					'default' => $this->get_main_post()->post_status,
 					'options' => $statuses,
@@ -1599,6 +1727,7 @@ abstract class Document extends Controls_Stack {
 	private function remove_handle_revisions_changed_filter() {
 		remove_filter( 'wp_save_post_revision_post_has_changed', [ $this, 'handle_revisions_changed' ] );
 	}
+<<<<<<< HEAD
 
 	private function get_runtime_elements_iteration_actions() {
 		$runtime_elements_iteration_actions = [];
@@ -1655,4 +1784,6 @@ abstract class Document extends Controls_Stack {
 
 		return $this->elements_iteration_actions;
 	}
+=======
+>>>>>>> dist
 }

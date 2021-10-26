@@ -4,7 +4,10 @@ namespace Elementor\TemplateLibrary;
 use Elementor\Api;
 use Elementor\Core\Common\Modules\Ajax\Module as Ajax;
 use Elementor\Core\Settings\Manager as SettingsManager;
+<<<<<<< HEAD
 use Elementor\Includes\TemplateLibrary\Data\Controller;
+=======
+>>>>>>> dist
 use Elementor\TemplateLibrary\Classes\Import_Images;
 use Elementor\Plugin;
 use Elementor\User;
@@ -55,8 +58,11 @@ class Manager {
 	 * @access public
 	 */
 	public function __construct() {
+<<<<<<< HEAD
 		Plugin::$instance->data_manager_v2->register_controller( new Controller() );
 
+=======
+>>>>>>> dist
 		$this->register_default_sources();
 
 		$this->add_actions();
@@ -69,6 +75,26 @@ class Manager {
 	public function add_actions() {
 		add_action( 'elementor/ajax/register_actions', [ $this, 'register_ajax_actions' ] );
 		add_action( 'wp_ajax_elementor_library_direct_actions', [ $this, 'handle_direct_actions' ] );
+<<<<<<< HEAD
+=======
+
+		// TODO: bc since 2.3.0
+		add_action( 'wp_ajax_elementor_update_templates', function() {
+			if ( ! isset( $_POST['templates'] ) ) {
+				return;
+			}
+
+			foreach ( $_POST['templates'] as & $template ) {
+				if ( ! isset( $template['content'] ) ) {
+					return;
+				}
+
+				$template['content'] = stripslashes( $template['content'] );
+			}
+
+			wp_send_json_success( $this->handle_ajax_request( 'update_templates', $_POST ) );
+		} );
+>>>>>>> dist
 	}
 
 	/**
@@ -186,6 +212,7 @@ class Manager {
 	 *
 	 * Retrieve all the templates from all the registered sources.
 	 *
+<<<<<<< HEAD
 	 * @param array $filter_sources
 	 *
 	 * @return array
@@ -198,6 +225,17 @@ class Manager {
 				continue;
 			}
 
+=======
+	 * @since 1.0.0
+	 * @access public
+	 *
+	 * @return array Templates array.
+	 */
+	public function get_templates() {
+		$templates = [];
+
+		foreach ( $this->get_registered_sources() as $source ) {
+>>>>>>> dist
 			$templates = array_merge( $templates, $source->get_items() );
 		}
 
@@ -222,10 +260,15 @@ class Manager {
 		// Ensure all document are registered.
 		Plugin::$instance->documents->get_document_types();
 
+<<<<<<< HEAD
 		$filter_sources = ! empty( $args['filter_sources'] ) ? $args['filter_sources'] : [];
 
 		return [
 			'templates' => $this->get_templates( $filter_sources ),
+=======
+		return [
+			'templates' => $this->get_templates(),
+>>>>>>> dist
 			'config' => $library_data['types_data'],
 		];
 	}
@@ -450,6 +493,7 @@ class Manager {
 	 * @return mixed Whether the export succeeded or failed.
 	 */
 	public function import_template( array $data ) {
+<<<<<<< HEAD
 		// Imported templates can be either JSON files, or Zip files containing multiple JSON files
 		$upload_result = Plugin::$instance->uploads_manager->handle_elementor_upload( $data, [ 'zip', 'json' ] );
 
@@ -461,6 +505,22 @@ class Manager {
 		$source_local = $this->get_source( 'local' );
 
 		return $source_local->import_template( $upload_result['name'], $upload_result['tmp_name'] );
+=======
+		/** @var Source_Local $source */
+		$file_content = base64_decode( $data['fileData'] );
+
+		$tmp_file = tmpfile();
+
+		fwrite( $tmp_file, $file_content );
+
+		$source = $this->get_source( 'local' );
+
+		$result = $source->import_template( $data['fileName'], stream_get_meta_data( $tmp_file )['uri'] );
+
+		fclose( $tmp_file );
+
+		return $result;
+>>>>>>> dist
 	}
 
 	/**
@@ -534,7 +594,11 @@ class Manager {
 			$editor_post_id = absint( $data['editor_post_id'] );
 
 			if ( ! get_post( $editor_post_id ) ) {
+<<<<<<< HEAD
 				throw new \Exception( esc_html__( 'Post not found.', 'elementor' ) );
+=======
+				throw new \Exception( __( 'Post not found.', 'elementor' ) );
+>>>>>>> dist
 			}
 
 			Plugin::$instance->db->switch_to_post( $editor_post_id );

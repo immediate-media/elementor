@@ -90,6 +90,7 @@ class Module extends BaseApp {
 		}
 
 		/**
+<<<<<<< HEAD
 		 * Admin bar settings in the frontend.
 		 *
 		 * Register admin_bar config to parse later in the frontend and add to the admin bar with JS.
@@ -101,6 +102,15 @@ class Module extends BaseApp {
 		$settings = apply_filters( 'elementor/frontend/admin_bar/settings', $settings );
 
 		return $settings;
+=======
+		 * Register admin_bar config to parse later in the frontend and add to the admin bar with JS
+		 *
+		 * @param array $settings the admin_bar config
+		 *
+		 * @since 3.0.0
+		 */
+		return apply_filters( 'elementor/frontend/admin_bar/settings', $settings );
+>>>>>>> dist
 	}
 
 	/**
@@ -120,7 +130,11 @@ class Module extends BaseApp {
 
 		return [
 			'id' => 'elementor_edit_page',
+<<<<<<< HEAD
 			'title' => esc_html__( 'Edit with Elementor', 'elementor' ),
+=======
+			'title' => __( 'Edit with Elementor', 'elementor' ),
+>>>>>>> dist
 			'href' => $href,
 			'children' => array_map( function ( $document ) {
 				return [

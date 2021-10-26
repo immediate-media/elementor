@@ -77,6 +77,7 @@ class Compatibility_Tag_Report extends Base {
 			$this->plugins_to_check
 		);
 
+<<<<<<< HEAD
 		return [
 			'value' => $compatibility_status,
 		];
@@ -102,6 +103,13 @@ class Compatibility_Tag_Report extends Base {
 		);
 
 		$compatibility_status = $this->get_raw_from_compatibility_status( $compatibility_status );
+=======
+		if ( 'html' === $this->_properties['format'] ) {
+			$compatibility_status = $this->get_html_from_compatibility_status( $compatibility_status );
+		} elseif ( 'raw' === $this->_properties['format'] ) {
+			$compatibility_status = $this->get_raw_from_compatibility_status( $compatibility_status );
+		}
+>>>>>>> dist
 
 		return [
 			'value' => $compatibility_status,

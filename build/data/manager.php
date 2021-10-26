@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> dist
 namespace Elementor\Data;
 
 use Elementor\Core\Base\Module as BaseModule;

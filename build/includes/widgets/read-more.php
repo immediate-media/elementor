@@ -38,7 +38,11 @@ class Widget_Read_More extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Read More', 'elementor' );
+=======
+		return __( 'Read More', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -81,6 +85,7 @@ class Widget_Read_More extends Widget_Base {
 		$this->start_controls_section(
 			'section_title',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Read More', 'elementor' ),
 			]
 		);
@@ -97,16 +102,27 @@ class Widget_Read_More extends Widget_Base {
 		 * @param string $default_link_text The link text in the "Read More" widget. Default is "Continue reading".
 		 */
 		$default_link_text = apply_filters( 'elementor/widgets/read_more/default_link_text', $default_link_text );
+=======
+				'label' => __( 'Read More', 'elementor' ),
+			]
+		);
+
+		$default_link_text = apply_filters( 'elementor/widgets/read_more/default_link_text', __( 'Continue reading', 'elementor' ) );
+>>>>>>> dist
 
 		$this->add_control(
 			'theme_support',
 			[
 				'type' => Controls_Manager::RAW_HTML,
+<<<<<<< HEAD
 				'raw' => sprintf(
 					/* translators: %s: The `the_content` function. */
 					esc_html__( 'Note: This widget only affects themes that use `%s` in archive pages.', 'elementor' ),
 					'the_content'
 				),
+=======
+				'raw' => sprintf( __( 'Note: This widget only affects themes that use `%s` in archive pages.', 'elementor' ), 'the_content' ),
+>>>>>>> dist
 				'content_classes' => 'elementor-panel-alert elementor-panel-alert-warning',
 			]
 		);
@@ -114,7 +130,11 @@ class Widget_Read_More extends Widget_Base {
 		$this->add_control(
 			'link_text',
 			[
+<<<<<<< HEAD
 				'label' => esc_html__( 'Read More Text', 'elementor' ),
+=======
+				'label' => __( 'Read More Text', 'elementor' ),
+>>>>>>> dist
 				'placeholder' => $default_link_text,
 				'default' => $default_link_text,
 			]
@@ -131,7 +151,11 @@ class Widget_Read_More extends Widget_Base {
 	 * @access protected
 	 */
 	protected function render() {
+<<<<<<< HEAD
 		printf( '<!--more %s-->', wp_kses_post( $this->get_settings_for_display( 'link_text' ) ) );
+=======
+		printf( '<!--more %s-->', $this->get_settings_for_display( 'link_text' ) );
+>>>>>>> dist
 	}
 
 	/**

@@ -1,6 +1,11 @@
 <?php
 namespace Elementor;
 
+<<<<<<< HEAD
+=======
+use Elementor\Core\Settings\Page\Manager;
+
+>>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -17,16 +22,24 @@ class Utils {
 
 	const DEPRECATION_RANGE = 0.4;
 
+<<<<<<< HEAD
 	const EDITOR_BREAK_LINES_OPTION_KEY = 'elementor_editor_break_lines';
 
+=======
+>>>>>>> dist
 	/**
 	 * A list of safe tage for `validate_html_tag` method.
 	 */
 	const ALLOWED_HTML_WRAPPER_TAGS = [
+<<<<<<< HEAD
 		'a',
 		'article',
 		'aside',
 		'button',
+=======
+		'article',
+		'aside',
+>>>>>>> dist
 		'div',
 		'footer',
 		'h1',
@@ -43,6 +56,7 @@ class Utils {
 		'span',
 	];
 
+<<<<<<< HEAD
 	const EXTENDED_ALLOWED_HTML_TAGS = [
 		'iframe' => [
 			'iframe' => [
@@ -87,6 +101,25 @@ class Utils {
 			],
 		],
 	];
+=======
+	/**
+	 * Is ajax.
+	 *
+	 * Whether the current request is a WordPress ajax request.
+	 *
+	 * @since 1.0.0
+	 * @deprecated 2.6.0 Use `wp_doing_ajax()` instead.
+	 * @access public
+	 * @static
+	 *
+	 * @return bool True if it's a WordPress ajax request, false otherwise.
+	 */
+	public static function is_ajax() {
+		 _deprecated_function( __METHOD__, '2.6.0', 'wp_doing_ajax()' );
+
+		return wp_doing_ajax();
+	}
+>>>>>>> dist
 
 	/**
 	 * Is WP CLI.
@@ -164,12 +197,20 @@ class Utils {
 		$to = trim( $to );
 
 		if ( $from === $to ) {
+<<<<<<< HEAD
 			throw new \Exception( esc_html__( 'The `from` and `to` URL\'s must be different', 'elementor' ) );
+=======
+			throw new \Exception( __( 'The `from` and `to` URL\'s must be different', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		$is_valid_urls = ( filter_var( $from, FILTER_VALIDATE_URL ) && filter_var( $to, FILTER_VALIDATE_URL ) );
 		if ( ! $is_valid_urls ) {
+<<<<<<< HEAD
 			throw new \Exception( esc_html__( 'The `from` and `to` URL\'s must be valid URL\'s', 'elementor' ) );
+=======
+			throw new \Exception( __( 'The `from` and `to` URL\'s must be valid URL\'s', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		global $wpdb;
@@ -181,8 +222,23 @@ class Utils {
 			"WHERE `meta_key` = '_elementor_data' AND `meta_value` LIKE '[%' ;" ); // meta_value LIKE '[%' are json formatted
 		// @codingStandardsIgnoreEnd
 
+<<<<<<< HEAD
 		if ( false === $rows_affected ) {
 			throw new \Exception( esc_html__( 'An error occurred', 'elementor' ) );
+=======
+		$second_rows_affected = $wpdb->query(
+			"UPDATE {$wpdb->postmeta} " .
+			$wpdb->prepare( 'SET `meta_value` = REPLACE(`meta_value`, %s, %s) ', $from, $to ) .
+			'WHERE `meta_key` = \'' . Manager::META_KEY . '\''
+		);
+
+		if ( $second_rows_affected ) {
+			$rows_affected += $second_rows_affected;
+		}
+
+		if ( false === $rows_affected ) {
+			throw new \Exception( __( 'An error occurred', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		// Allow externals to replace-urls, when they have to.
@@ -191,7 +247,11 @@ class Utils {
 		Plugin::$instance->files_manager->clear_cache();
 
 		return sprintf(
+<<<<<<< HEAD
 			/* translators: %d: Number of rows. */
+=======
+			/* translators: %d: Number of rows */
+>>>>>>> dist
 			_n( '%d row affected.', '%d rows affected.', $rows_affected, 'elementor' ),
 			$rows_affected
 		);
@@ -382,7 +442,10 @@ class Utils {
 	 *
 	 * @since 1.9.0
 	 * @access public
+<<<<<<< HEAD
 	 * @deprecated 3.3.0
+=======
+>>>>>>> dist
 	 * @static
 	 *
 	 * @param string $post_type Optional. Post type slug. Default is 'page'.
@@ -391,9 +454,26 @@ class Utils {
 	 * @return string A URL for creating new post using Elementor.
 	 */
 	public static function get_create_new_post_url( $post_type = 'page', $template_type = null ) {
+<<<<<<< HEAD
 		Plugin::$instance->modules_manager->get_modules( 'dev-tools' )->deprecation->deprecated_function( __FUNCTION__, '3.3.0', 'Plugin::$instance->documents->get_create_new_post_url()' );
 
 		return Plugin::$instance->documents->get_create_new_post_url( $post_type, $template_type );
+=======
+		$query_args = [
+			'action' => 'elementor_new_post',
+			'post_type' => $post_type,
+		];
+
+		if ( $template_type ) {
+			$query_args['template_type'] = $template_type;
+		}
+
+		$new_post_url = add_query_arg( $query_args, admin_url( 'edit.php' ) );
+
+		$new_post_url = add_query_arg( '_wpnonce', wp_create_nonce( 'elementor_action_new_post' ), $new_post_url );
+
+		return $new_post_url;
+>>>>>>> dist
 	}
 
 	/**
@@ -485,6 +565,7 @@ class Utils {
 		return implode( ' ', $rendered_attributes );
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Safe print html attributes
 	 *
@@ -507,15 +588,28 @@ class Utils {
 		 *
 		 * This hook can be used to change the intial viewport meta tag set by Elementor
 		 * and replace it with a different viewport tag.
+=======
+	public static function get_meta_viewport( $context = '' ) {
+		$meta_tag = '<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />';
+		/**
+		 * Viewport meta tag.
+		 *
+		 * Filters the Elementor preview URL.
+>>>>>>> dist
 		 *
 		 * @since 2.5.0
 		 *
 		 * @param string $meta_tag Viewport meta tag.
+<<<<<<< HEAD
 		 * @param string $context  Page context.
 		 */
 		$meta_tag = apply_filters( 'elementor/template/viewport_tag', $meta_tag, $context );
 
 		return $meta_tag;
+=======
+		 */
+		return apply_filters( 'elementor/template/viewport_tag', $meta_tag, $context );
+>>>>>>> dist
 	}
 
 	/**
@@ -529,7 +623,11 @@ class Utils {
 	public static function print_js_config( $handle, $js_var, $config ) {
 		$config = wp_json_encode( $config );
 
+<<<<<<< HEAD
 		if ( get_option( self::EDITOR_BREAK_LINES_OPTION_KEY ) ) {
+=======
+		if ( get_option( 'elementor_editor_break_lines' ) ) {
+>>>>>>> dist
 			// Add new lines to avoid memory limits in some hosting servers that handles the buffer output according to new line characters
 			$config = str_replace( '}},"', '}},' . PHP_EOL . '"', $config );
 		}
@@ -549,7 +647,11 @@ class Utils {
 		$alias_version_as_float = (float) $alias_version[0];
 
 		if ( round( $current_version_as_float - $alias_version_as_float, 1 ) >= self::DEPRECATION_RANGE ) {
+<<<<<<< HEAD
 			_deprecated_file( $item, $version, $replacement ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
+			_deprecated_file( $item, $version, $replacement );
+>>>>>>> dist
 		}
 	}
 
@@ -701,6 +803,7 @@ class Utils {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Safe print a validated HTML tag.
 	 *
 	 * @param string $tag
@@ -718,6 +821,8 @@ class Utils {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * Get recently edited posts query.
 	 *
 	 * Returns `WP_Query` of the recent edited posts.
@@ -729,7 +834,10 @@ class Utils {
 	 */
 	public static function get_recently_edited_posts_query( $args = [] ) {
 		$args = wp_parse_args( $args, [
+<<<<<<< HEAD
 			'no_found_rows' => true,
+=======
+>>>>>>> dist
 			'post_type' => 'any',
 			'post_status' => [ 'publish', 'draft' ],
 			'posts_per_page' => '3',
@@ -740,6 +848,7 @@ class Utils {
 
 		return new \WP_Query( $args );
 	}
+<<<<<<< HEAD
 
 	public static function print_wp_kses_extended( $string, array $tags ) {
 		$allowed_html = wp_kses_allowed_html( 'post' );
@@ -755,4 +864,6 @@ class Utils {
 
 		echo wp_kses( $string, $allowed_html );
 	}
+=======
+>>>>>>> dist
 }

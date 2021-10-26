@@ -4,7 +4,11 @@
  * Description: The Elementor Website Builder has it all: drag and drop page builder, pixel perfect design, mobile responsive editing, and more. Get started now!
  * Plugin URI: https://elementor.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: Elementor.com
+<<<<<<< HEAD
  * Version: 3.4.6-20211026.0948
+=======
+ * Version: 3.2.4-20210610.1631
+>>>>>>> dist
  * Author URI: https://elementor.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
  *
  * Text Domain: elementor
@@ -27,7 +31,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+<<<<<<< HEAD
 define( 'ELEMENTOR_VERSION', '3.4.6-20211026.0948' );
+=======
+define( 'ELEMENTOR_VERSION', '3.2.4-20210610.1631' );
+>>>>>>> dist
 define( 'ELEMENTOR_PREVIOUS_STABLE_VERSION', '3.1.4' );
 
 define( 'ELEMENTOR__FILE__', __FILE__ );
@@ -77,7 +85,11 @@ function elementor_load_plugin_textdomain() {
  * @return void
  */
 function elementor_fail_php_version() {
+<<<<<<< HEAD
 	/* translators: %s: PHP version. */
+=======
+	/* translators: %s: PHP version */
+>>>>>>> dist
 	$message = sprintf( esc_html__( 'Elementor requires PHP version %s+, plugin is currently NOT RUNNING.', 'elementor' ), '5.6' );
 	$html_message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
 	echo wp_kses_post( $html_message );
@@ -93,7 +105,11 @@ function elementor_fail_php_version() {
  * @return void
  */
 function elementor_fail_wp_version() {
+<<<<<<< HEAD
 	/* translators: %s: WordPress version. */
+=======
+	/* translators: %s: WordPress version */
+>>>>>>> dist
 	$message = sprintf( esc_html__( 'Elementor requires WordPress version %s+. Because you are using an earlier version, the plugin is currently NOT RUNNING.', 'elementor' ), '5.2' );
 	$html_message = sprintf( '<div class="error">%s</div>', wpautop( $message ) );
 	echo wp_kses_post( $html_message );

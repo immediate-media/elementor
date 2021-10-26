@@ -85,7 +85,11 @@ class WordPress extends Base {
 
 		if ( $memory_limit_bytes < $min_recommended_bytes ) {
 			$result['recommendation'] = sprintf(
+<<<<<<< HEAD
 				/* translators: 1: Minimum recommended_memory, 2: WordPress wp-config memory documentation. */
+=======
+				/* translators: 1: Minimum recommended_memory, 2: Codex URL */
+>>>>>>> dist
 				_x( 'We recommend setting memory to at least %1$s. For more information, read about <a href="%2$s">how to Increase memory allocated to PHP</a>.', 'System Info', 'elementor' ),
 				$min_recommended_memory,
 				'https://go.elementor.com/wordpress-wp-config-memory/'

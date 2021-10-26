@@ -2,8 +2,11 @@
 
 namespace Elementor\Core\Common\Modules\Finder;
 
+<<<<<<< HEAD
 use Elementor\Plugin;
 
+=======
+>>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -36,6 +39,7 @@ class Categories_Manager {
 	 * @access public
 	 * @param string        $category_name
 	 * @param Base_Category $category
+<<<<<<< HEAD
 	 *
 	 * @deprecated 3.5.0 Use `$this->register()` instead.
 	 */
@@ -71,6 +75,11 @@ class Categories_Manager {
 		}
 
 		$this->categories[ $finder_category_name ] = $finder_category_instance;
+=======
+	 */
+	public function add_category( $category_name, Base_Category $category ) {
+		$this->categories[ $category_name ] = $category;
+>>>>>>> dist
 	}
 
 	/**
@@ -109,7 +118,11 @@ class Categories_Manager {
 		foreach ( $this->categories_list as $category_name ) {
 			$class_name = __NAMESPACE__ . '\Categories\\' . $category_name;
 
+<<<<<<< HEAD
 			$this->register( new $class_name() );
+=======
+			$this->add_category( $category_name, new $class_name() );
+>>>>>>> dist
 		}
 
 		/**
@@ -120,6 +133,7 @@ class Categories_Manager {
 		 * This hook should be used to add your own Finder categories.
 		 *
 		 * @since 2.3.0
+<<<<<<< HEAD
 		 * @deprecated 3.5.0 Use `elementor/finder/categories/register` hook instead.
 		 *
 		 * @param Categories_Manager $this.
@@ -146,5 +160,11 @@ class Categories_Manager {
 		 * @param Categories_Manager $this Finder Categories manager.
 		 */
 		do_action( 'elementor/finder/categories/register', $this );
+=======
+		 *
+		 * @param Categories_Manager $this.
+		 */
+		do_action( 'elementor/finder/categories/init', $this );
+>>>>>>> dist
 	}
 }

@@ -59,7 +59,11 @@ class Control_Heading extends Base_UI_Control {
 	public function content_template() {
 		?>
 		<div class="elementor-control-field">
+<<<<<<< HEAD
 			<h3 class="elementor-control-title">{{{ data.label }}}</h3>
+=======
+			<h3 class="elementor-control-title">{{ data.label }}</h3>
+>>>>>>> dist
 		</div>
 		<?php
 	}

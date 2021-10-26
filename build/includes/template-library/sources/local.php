@@ -3,13 +3,19 @@ namespace Elementor\TemplateLibrary;
 
 use Elementor\Core\Base\Document;
 use Elementor\Core\Editor\Editor;
+<<<<<<< HEAD
 use Elementor\Core\Files\File_Types\Zip;
+=======
+>>>>>>> dist
 use Elementor\DB;
 use Elementor\Core\Settings\Manager as SettingsManager;
 use Elementor\Core\Settings\Page\Model;
 use Elementor\Modules\Library\Documents\Library_Document;
 use Elementor\Plugin;
+<<<<<<< HEAD
 use Elementor\Utils;
+=======
+>>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -198,7 +204,11 @@ class Source_Local extends Source_Base {
 	 * @return string The local template title.
 	 */
 	public function get_title() {
+<<<<<<< HEAD
 		return esc_html__( 'Local', 'elementor' );
+=======
+		return __( 'Local', 'elementor' );
+>>>>>>> dist
 	}
 
 	/**
@@ -280,6 +290,7 @@ class Source_Local extends Source_Base {
 		 */
 		$args = apply_filters( 'elementor/template_library/sources/local/register_taxonomy_args', $args );
 
+<<<<<<< HEAD
 		$cpts_to_associate = [ self::CPT ];
 
 		/**
@@ -292,6 +303,9 @@ class Source_Local extends Source_Base {
 		 * @param array $cpts_to_associate Custom post types. Default is `elementor_library` post type.
 		 */
 		$cpts_to_associate = apply_filters( 'elementor/template_library/sources/local/register_taxonomy_cpts', $cpts_to_associate );
+=======
+		$cpts_to_associate = apply_filters( 'elementor/template_library/sources/local/register_taxonomy_cpts', [ self::CPT ] );
+>>>>>>> dist
 
 		register_taxonomy( self::TAXONOMY_TYPE_SLUG, $cpts_to_associate, $args );
 
@@ -374,7 +388,11 @@ class Source_Local extends Source_Base {
 	}
 
 	public function admin_menu() {
+<<<<<<< HEAD
 		add_submenu_page( self::ADMIN_MENU_SLUG, '', esc_html__( 'Saved Templates', 'elementor' ), Editor::EDITING_CAPABILITY, self::get_admin_url( true ) );
+=======
+		add_submenu_page( self::ADMIN_MENU_SLUG, '', __( 'Saved Templates', 'elementor' ), Editor::EDITING_CAPABILITY, self::get_admin_url( true ) );
+>>>>>>> dist
 	}
 
 	public function admin_title( $admin_title, $title ) {
@@ -461,11 +479,19 @@ class Source_Local extends Source_Base {
 	 */
 	public function save_item( $template_data ) {
 		if ( ! current_user_can( $this->post_type_object->cap->edit_posts ) ) {
+<<<<<<< HEAD
 			return new \WP_Error( 'save_error', esc_html__( 'Access denied.', 'elementor' ) );
 		}
 
 		$defaults = [
 			'title' => esc_html__( '(no title)', 'elementor' ),
+=======
+			return new \WP_Error( 'save_error', __( 'Access denied.', 'elementor' ) );
+		}
+
+		$defaults = [
+			'title' => __( '(no title)', 'elementor' ),
+>>>>>>> dist
 			'page_settings' => [],
 			'status' => current_user_can( 'publish_posts' ) ? 'publish' : 'pending',
 		];
@@ -540,13 +566,21 @@ class Source_Local extends Source_Base {
 	 */
 	public function update_item( $new_data ) {
 		if ( ! current_user_can( $this->post_type_object->cap->edit_post, $new_data['id'] ) ) {
+<<<<<<< HEAD
 			return new \WP_Error( 'save_error', esc_html__( 'Access denied.', 'elementor' ) );
+=======
+			return new \WP_Error( 'save_error', __( 'Access denied.', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		$document = Plugin::$instance->documents->get( $new_data['id'] );
 
 		if ( ! $document ) {
+<<<<<<< HEAD
 			return new \WP_Error( 'save_error', esc_html__( 'Template not exist.', 'elementor' ) );
+=======
+			return new \WP_Error( 'save_error', __( 'Template not exist.', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		$document->save( [
@@ -682,7 +716,11 @@ class Source_Local extends Source_Base {
 	 */
 	public function delete_template( $template_id ) {
 		if ( ! current_user_can( $this->post_type_object->cap->delete_post, $template_id ) ) {
+<<<<<<< HEAD
 			return new \WP_Error( 'template_error', esc_html__( 'Access denied.', 'elementor' ) );
+=======
+			return new \WP_Error( 'template_error', __( 'Access denied.', 'elementor' ) );
+>>>>>>> dist
 		}
 
 		return wp_delete_post( $template_id, true );
@@ -715,8 +753,12 @@ class Source_Local extends Source_Base {
 		flush();
 
 		// Output file contents.
+<<<<<<< HEAD
 		// PHPCS - Export widget json
 		echo $file_data['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
+		echo $file_data['content'];
+>>>>>>> dist
 
 		die;
 	}
@@ -800,6 +842,47 @@ class Source_Local extends Source_Base {
 	}
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Find temporary files.
+	 *
+	 * Recursively finds a list of temporary files from the extracted zip file.
+	 *
+	 * Example return data:
+	 *
+	 * [
+	 *  0 => '/www/wp-content/uploads/elementor/tmp/5eb3a7a411d44/templates/block-2-col-marble-title.json',
+	 *  1 => '/www/wp-content/uploads/elementor/tmp/5eb3a7a411d44/templates/block-2-col-text-and-photo.json',
+	 * ]
+	 *
+	 * @since 2.9.8
+	 * @access private
+	 *
+	 * @param string $temp_path - The temporary file path to scan for template files
+	 *
+	 * @return array An array of temporary files on the filesystem
+	 */
+	private function find_temp_files( $temp_path ) {
+
+		$file_names = [];
+
+		$possible_file_names = array_diff( scandir( $temp_path ), [ '.', '..' ] );
+
+		// Find nested files in the unzipped path. This happens for example when the user imports a Template Kit.
+		foreach ( $possible_file_names as $possible_file_name ) {
+			$full_possible_file_name = $temp_path . '/' . $possible_file_name;
+			if ( is_dir( $full_possible_file_name ) ) {
+				$file_names = $file_names + $this->find_temp_files( $full_possible_file_name );
+			} else {
+				$file_names[] = $full_possible_file_name;
+			}
+		}
+
+		return $file_names;
+	}
+
+	/**
+>>>>>>> dist
 	 * Import local template.
 	 *
 	 * Import template from a file.
@@ -809,6 +892,10 @@ class Source_Local extends Source_Base {
 	 *
 	 * @param string $name - The file name
 	 * @param string $path - The file path
+<<<<<<< HEAD
+=======
+	 *
+>>>>>>> dist
 	 * @return \WP_Error|array An array of items on success, 'WP_Error' on failure.
 	 */
 	public function import_template( $name, $path ) {
@@ -818,6 +905,7 @@ class Source_Local extends Source_Base {
 
 		$items = [];
 
+<<<<<<< HEAD
 		// If the import file is a Zip file with potentially multiple JSON files
 		if ( 'zip' === pathinfo( $name, PATHINFO_EXTENSION ) ) {
 			$extracted_files = Plugin::$instance->uploads_manager->extract_and_validate_zip( $path );
@@ -837,12 +925,56 @@ class Source_Local extends Source_Base {
 				if ( is_wp_error( $import_result ) ) {
 					Plugin::$instance->uploads_manager->remove_file_or_dir( $import_result );
 
+=======
+		$file_extension = pathinfo( $name, PATHINFO_EXTENSION );
+
+		if ( 'zip' === $file_extension ) {
+			if ( ! class_exists( '\ZipArchive' ) ) {
+				return new \WP_Error( 'zip_error', 'PHP Zip extension not loaded' );
+			}
+
+			$zip = new \ZipArchive();
+
+			$wp_upload_dir = wp_upload_dir();
+
+			$temp_path = $wp_upload_dir['basedir'] . '/' . self::TEMP_FILES_DIR . '/' . uniqid();
+
+			$zip->open( $path );
+
+			$valid_entries = [];
+
+			// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			for ( $i = 0; $i < $zip->numFiles; $i++ ) {
+				$zipped_file_name = $zip->getNameIndex( $i );
+				$zipped_extension = pathinfo( $zipped_file_name, PATHINFO_EXTENSION );
+				// Template Kit zip files contain a `manifest.json` file, this is not a valid Elementor template so ensure we skip it.
+				if ( 'json' === $zipped_extension && 'manifest.json' !== $zipped_file_name ) {
+					$valid_entries[] = $zipped_file_name;
+				}
+			}
+
+			if ( ! empty( $valid_entries ) ) {
+				$zip->extractTo( $temp_path, $valid_entries );
+			}
+
+			$zip->close();
+
+			$file_names = $this->find_temp_files( $temp_path );
+
+			foreach ( $file_names as $full_file_name ) {
+				$import_result = $this->import_single_template( $full_file_name );
+
+				unlink( $full_file_name );
+
+				if ( is_wp_error( $import_result ) ) {
+>>>>>>> dist
 					return $import_result;
 				}
 
 				$items[] = $import_result;
 			}
 
+<<<<<<< HEAD
 			// Delete the temporary extraction directory, since it's now not necessary.
 			Plugin::$instance->uploads_manager->remove_file_or_dir( $extracted_files['extraction_directory'] );
 		} else {
@@ -852,6 +984,13 @@ class Source_Local extends Source_Base {
 			if ( is_wp_error( $import_result ) ) {
 				Plugin::$instance->uploads_manager->remove_file_or_dir( $import_result );
 
+=======
+			rmdir( $temp_path );
+		} else {
+			$import_result = $this->import_single_template( $path );
+
+			if ( is_wp_error( $import_result ) ) {
+>>>>>>> dist
 				return $import_result;
 			}
 
@@ -879,7 +1018,11 @@ class Source_Local extends Source_Base {
 	public function post_row_actions( $actions, \WP_Post $post ) {
 		if ( self::is_base_templates_screen() ) {
 			if ( $this->is_template_supports_export( $post->ID ) ) {
+<<<<<<< HEAD
 				$actions['export-template'] = sprintf( '<a href="%1$s">%2$s</a>', $this->get_export_link( $post->ID ), esc_html__( 'Export Template', 'elementor' ) );
+=======
+				$actions['export-template'] = sprintf( '<a href="%1$s">%2$s</a>', $this->get_export_link( $post->ID ), __( 'Export Template', 'elementor' ) );
+>>>>>>> dist
 			}
 		}
 
@@ -907,6 +1050,7 @@ class Source_Local extends Source_Base {
 		$ajax = Plugin::$instance->common->get_component( 'ajax' );
 		?>
 		<div id="elementor-hidden-area">
+<<<<<<< HEAD
 			<a id="elementor-import-template-trigger" class="page-title-action"><?php echo esc_html__( 'Import Templates', 'elementor' ); ?></a>
 			<div id="elementor-import-template-area">
 				<div id="elementor-import-template-title"><?php echo esc_html__( 'Choose an Elementor template JSON file or a .zip archive of Elementor templates, and add them to the list of templates available in your library.', 'elementor' ); ?></div>
@@ -914,6 +1058,15 @@ class Source_Local extends Source_Base {
 					<input type="hidden" name="action" value="elementor_library_direct_actions">
 					<input type="hidden" name="library_action" value="direct_import_template">
 					<input type="hidden" name="_nonce" value="<?php Utils::print_unescaped_internal_string( $ajax->create_nonce() ); ?>">
+=======
+			<a id="elementor-import-template-trigger" class="page-title-action"><?php echo __( 'Import Templates', 'elementor' ); ?></a>
+			<div id="elementor-import-template-area">
+				<div id="elementor-import-template-title"><?php echo __( 'Choose an Elementor template JSON file or a .zip archive of Elementor templates, and add them to the list of templates available in your library.', 'elementor' ); ?></div>
+				<form id="elementor-import-template-form" method="post" action="<?php echo admin_url( 'admin-ajax.php' ); ?>" enctype="multipart/form-data">
+					<input type="hidden" name="action" value="elementor_library_direct_actions">
+					<input type="hidden" name="library_action" value="direct_import_template">
+					<input type="hidden" name="_nonce" value="<?php echo $ajax->create_nonce(); ?>">
+>>>>>>> dist
 					<fieldset id="elementor-import-template-form-inputs">
 						<input type="file" name="file" accept=".json,application/json,.zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed" required>
 						<input type="submit" class="button" value="<?php echo esc_attr__( 'Import Now', 'elementor' ); ?>">
@@ -1094,7 +1247,11 @@ class Source_Local extends Source_Base {
 	 * @return array An array of the available bulk actions.
 	 */
 	public function admin_add_bulk_export_action( $actions ) {
+<<<<<<< HEAD
 		$actions[ self::BULK_EXPORT_ACTION ] = esc_html__( 'Export', 'elementor' );
+=======
+		$actions[ self::BULK_EXPORT_ACTION ] = __( 'Export', 'elementor' );
+>>>>>>> dist
 
 		return $actions;
 	}
@@ -1118,8 +1275,12 @@ class Source_Local extends Source_Base {
 			$result = $this->export_multiple_templates( $post_ids );
 
 			// If you reach this line, the export failed
+<<<<<<< HEAD
 			// PHPCS - Not user input.
 			wp_die( $result->get_error_message() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
+			wp_die( $result->get_error_message() );
+>>>>>>> dist
 		}
 	}
 
@@ -1172,6 +1333,7 @@ class Source_Local extends Source_Base {
 
 		?>
 		<div id="elementor-template-library-tabs-wrapper" class="nav-tab-wrapper">
+<<<<<<< HEAD
 			<a class="nav-tab<?php echo esc_attr( $active_class ); ?>" href="<?php echo esc_url( $baseurl ); ?>">
 				<?php
 				$all_title = $this->get_library_title();
@@ -1179,6 +1341,15 @@ class Source_Local extends Source_Base {
 					$all_title = esc_html__( 'All', 'elementor' );
 				}
 				Utils::print_unescaped_internal_string( $all_title ); ?>
+=======
+			<a class="nav-tab<?php echo $active_class; ?>" href="<?php echo $baseurl; ?>">
+				<?php
+				$all_title = $this->get_library_title();
+				if ( ! $all_title ) {
+					$all_title = __( 'All', 'elementor' );
+				}
+				echo $all_title; ?>
+>>>>>>> dist
 			</a>
 			<?php
 			foreach ( $doc_types as $type => $class_name ) :
@@ -1188,9 +1359,16 @@ class Source_Local extends Source_Base {
 					$active_class = ' nav-tab-active';
 				}
 
+<<<<<<< HEAD
 				$type_url = esc_url( add_query_arg( self::TAXONOMY_TYPE_SLUG, $type, $baseurl ) );
 				$type_label = $this->get_template_label_by_type( $type );
 				Utils::print_unescaped_internal_string( "<a class='nav-tab{$active_class}' href='{$type_url}'>{$type_label}</a>" );
+=======
+				$type_url = add_query_arg( self::TAXONOMY_TYPE_SLUG, $type, $baseurl );
+				$type_label = $this->get_template_label_by_type( $type );
+
+				echo "<a class='nav-tab{$active_class}' href='{$type_url}'>{$type_label}</a>";
+>>>>>>> dist
 			endforeach;
 			?>
 		</div>
@@ -1270,11 +1448,19 @@ class Source_Local extends Source_Base {
 		$args = wp_parse_args( $args, [
 			'additional_inline_style' => '',
 			'href' => '',
+<<<<<<< HEAD
 			'description' => esc_html__( 'Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow.', 'elementor' ),
 		] );
 		$inline_style .= $args['additional_inline_style'];
 		?>
 		<style type="text/css"><?php Utils::print_unescaped_internal_string( $inline_style ); ?></style>
+=======
+			'description' => __( 'Add templates and reuse them across your website. Easily export and import them to any other project, for an optimized workflow.', 'elementor' ),
+		] );
+		$inline_style .= $args['additional_inline_style'];
+		?>
+		<style type="text/css"><?php echo $inline_style; ?></style>
+>>>>>>> dist
 		<div class="elementor-template_library-blank_state">
 			<?php $this->print_blank_state_template( $current_type_label, $args['href'], $args['description'] ); ?>
 		</div>
@@ -1303,6 +1489,7 @@ class Source_Local extends Source_Base {
 				<h2>
 					<?php
 					/* translators: %s: Template type label. */
+<<<<<<< HEAD
 					printf( esc_html__( 'Create Your First %s', 'elementor' ), esc_html( $current_type_label ) );
 					?>
 				</h2>
@@ -1311,6 +1498,16 @@ class Source_Local extends Source_Base {
 					<?php
 					/* translators: %s: Template type label. */
 					printf( esc_html__( 'Add New %s', 'elementor' ), esc_html( $current_type_label ) );
+=======
+					printf( __( 'Create Your First %s', 'elementor' ), $current_type_label );
+					?>
+				</h2>
+				<p><?php echo $description; ?></p>
+				<a id="elementor-template-library-add-new" class="elementor-button elementor-button-success" href="<?php echo $href; ?>">
+					<?php
+					/* translators: %s: Template type label. */
+					printf( __( 'Add New %s', 'elementor' ), $current_type_label );
+>>>>>>> dist
 					?>
 				</a>
 			</div>
@@ -1336,7 +1533,12 @@ class Source_Local extends Source_Base {
 			'name' => self::TAXONOMY_CATEGORY_SLUG,
 			'selected' => empty( $_GET[ self::TAXONOMY_CATEGORY_SLUG ] ) ? '' : $_GET[ self::TAXONOMY_CATEGORY_SLUG ],
 		);
+<<<<<<< HEAD
 		echo '<label class="screen-reader-text" for="cat">' . esc_html_x( 'Filter by category', 'Template Library', 'elementor' ) . '</label>';
+=======
+
+		echo '<label class="screen-reader-text" for="cat">' . _x( 'Filter by category', 'Template Library', 'elementor' ) . '</label>';
+>>>>>>> dist
 		wp_dropdown_categories( $dropdown_options );
 	}
 
@@ -1348,13 +1550,22 @@ class Source_Local extends Source_Base {
 	 * @since 1.6.0
 	 * @access private
 	 *
+<<<<<<< HEAD
 	 * @param string $file_path File name.
+=======
+	 * @param string $file_name File name.
+>>>>>>> dist
 	 *
 	 * @return \WP_Error|int|array Local template array, or template ID, or
 	 *                             `WP_Error`.
 	 */
+<<<<<<< HEAD
 	private function import_single_template( $file_path ) {
 		$data = json_decode( file_get_contents( $file_path ), true );
+=======
+	private function import_single_template( $file_name ) {
+		$data = json_decode( file_get_contents( $file_name ), true );
+>>>>>>> dist
 
 		if ( empty( $data ) ) {
 			return new \WP_Error( 'file_error', 'Invalid File' );
@@ -1390,9 +1601,12 @@ class Source_Local extends Source_Base {
 			'page_settings' => $page_settings,
 		] );
 
+<<<<<<< HEAD
 		// Remove the temporary file, now that we're done with it.
 		Plugin::$instance->uploads_manager->remove_file_or_dir( $file_path );
 
+=======
+>>>>>>> dist
 		if ( is_wp_error( $template_id ) ) {
 			return $template_id;
 		}
@@ -1566,6 +1780,7 @@ class Source_Local extends Source_Base {
 		}
 
 		add_action( 'template_redirect', [ $this, 'block_template_frontend' ] );
+<<<<<<< HEAD
 
 		// Remove elementor library templates from WP Sitemap
 		add_filter(
@@ -1574,6 +1789,8 @@ class Source_Local extends Source_Base {
 				return $this->remove_elementor_cpt_from_sitemap( $post_types );
 			}
 		);
+=======
+>>>>>>> dist
 	}
 
 	/**
@@ -1602,7 +1819,11 @@ class Source_Local extends Source_Base {
 		$offset = 2;
 
 		$posts_columns = array_slice( $posts_columns, 0, $offset, true ) + [
+<<<<<<< HEAD
 			'elementor_library_type' => esc_html__( 'Type', 'elementor' ),
+=======
+			'elementor_library_type' => __( 'Type', 'elementor' ),
+>>>>>>> dist
 		] + array_slice( $posts_columns, $offset, null, true );
 
 		return $posts_columns;
@@ -1631,9 +1852,15 @@ class Source_Local extends Source_Base {
 
 			if ( $current_tab_group ) {
 				$titles = [
+<<<<<<< HEAD
 					'library' => esc_html__( 'Saved Templates', 'elementor' ),
 					'theme' => esc_html__( 'Theme Builder', 'elementor' ),
 					'popup' => esc_html__( 'Popups', 'elementor' ),
+=======
+					'library' => __( 'Saved Templates', 'elementor' ),
+					'theme' => __( 'Theme Builder', 'elementor' ),
+					'popup' => __( 'Popups', 'elementor' ),
+>>>>>>> dist
 				];
 
 				if ( ! empty( $titles[ $current_tab_group ] ) ) {
@@ -1652,6 +1879,7 @@ class Source_Local extends Source_Base {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * @param array $post_types
 	 *
 	 * @return array
@@ -1663,6 +1891,8 @@ class Source_Local extends Source_Base {
 	}
 
 	/**
+=======
+>>>>>>> dist
 	 * Template library local source constructor.
 	 *
 	 * Initializing the template library local source base by registering custom

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! elementor - v3.4.6 - 26-10-2021 */
+=======
+/*! elementor - v3.2.4 - 10-06-2021 */
+>>>>>>> dist
 @import "//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 :root {
   --color-box-shadow-color: rgba(0, 0, 0, 0.05); }
@@ -113,9 +117,15 @@ Auto-import is designed for CSS that not dependent on the loading order.
   --button-primary-hover-background-color: #33a242;
   --button-primary-active-background-color: #35a945;
   --button-primary-color: #fff;
+<<<<<<< HEAD
   --button-secondary-background-color: #a4afb7;
   --button-secondary-hover-background-color: #96a2ac;
   --button-secondary-active-background-color: #9ba7b0;
+=======
+  --button-secondary-background-color: #c2cbd2;
+  --button-secondary-hover-background-color: #b3bec7;
+  --button-secondary-active-background-color: #b9c3cc;
+>>>>>>> dist
   --button-secondary-color: #fff;
   --button-danger-background-color: #b01b1b;
   --button-danger-hover-background-color: #9a1818;
@@ -147,10 +157,17 @@ Auto-import is designed for CSS that not dependent on the loading order.
     --button-primary-color: #fff;
     --button-primary-hover-background-color: #33a242;
     --button-primary-active-background-color: #35a945;
+<<<<<<< HEAD
     --button-secondary-background-color: #b4b5b7;
     --button-secondary-color: #fff;
     --button-secondary-hover-background-color: #a7a8ab;
     --button-secondary-active-background-color: #acadb0;
+=======
+    --button-secondary-background-color: #64666a;
+    --button-secondary-color: #fff;
+    --button-secondary-hover-background-color: #58595d;
+    --button-secondary-active-background-color: #5d5e62;
+>>>>>>> dist
     --button-cta-background-color: #93003F;
     --button-cta-hover-background-color: #7a0034;
     --button-cta-active-background-color: #840038;
@@ -166,6 +183,7 @@ Auto-import is designed for CSS that not dependent on the loading order.
   .eps-button--contained {
     color: var(--button-color);
     padding: var(--button-padding-y) var(--button-padding-x);
+<<<<<<< HEAD
     background-color: var(--button-background-color, transparent);
     border: 1px solid var(--button-background-color); }
     .eps-button--contained:hover {
@@ -174,6 +192,11 @@ Auto-import is designed for CSS that not dependent on the loading order.
     display: block;
     padding: var(--button-padding-y) var(--button-padding-x);
     border: 1px solid var(--button-background-color); }
+=======
+    background-color: var(--button-background-color, transparent); }
+    .eps-button--contained:hover {
+      color: var(--button-color); }
+>>>>>>> dist
   .eps-button--contained, .eps-button--outlined {
     -webkit-border-radius: 0.1875rem;
             border-radius: 0.1875rem; }
@@ -666,7 +689,11 @@ h6,
     -webkit-box-shadow: 0 4px 10px var(--color-box-shadow-color);
             box-shadow: 0 4px 10px var(--color-box-shadow-color);
     position: relative;
+<<<<<<< HEAD
     z-index: 3;
+=======
+    z-index: 1;
+>>>>>>> dist
     height: 3.125rem;
     padding: 0 1rem; }
   .eps-app__header-buttons {
@@ -738,7 +765,11 @@ h6,
     overflow-y: auto;
     -webkit-box-shadow: 2px 8px 23px 3px var(--color-box-shadow-color);
             box-shadow: 2px 8px 23px 3px var(--color-box-shadow-color);
+<<<<<<< HEAD
     z-index: 4; }
+=======
+    z-index: 2; }
+>>>>>>> dist
   .eps-app__content {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -894,6 +925,7 @@ h6,
   margin-top: 2.75rem;
   margin-bottom: 1rem; }
 
+<<<<<<< HEAD
 .e-app-import {
   --e-app-import-back-to-library-color: #a4afb7; }
   .e-app-import__drop-zone {
@@ -907,6 +939,26 @@ h6,
 
 .eps-theme-dark .e-app-import {
   --e-app-import-back-to-library-color: #b4b5b7; }
+=======
+.e-app-import-process {
+  --e-app-import-process-icon-color: #a4afb7;
+  --e-app-import-process-text-color: #a4afb7; }
+  .e-app-import-process__icon {
+    color: var(--e-app-import-process-icon-color);
+    font-size: 1.85rem;
+    margin-bottom: 2.75rem; }
+  .e-app-import-process__title {
+    margin-bottom: 1.5rem; }
+  .e-app-import-process__text {
+    color: var(--e-app-import-process-text-color); }
+
+.eps-theme-dark .e-app-import-process {
+  --e-app-import-process-icon-color: #b4b5b7;
+  --e-app-import-process-text-color: #b4b5b7; }
+
+.e-app-import__drop-zone {
+  margin-top: 1.25rem; }
+>>>>>>> dist
 
 .e-site-editor__promotion-overlay__link {
   display: -webkit-box;
@@ -931,6 +983,29 @@ h6,
   color: #fff;
   margin-bottom: 1rem; }
 
+<<<<<<< HEAD
+=======
+.e-app-import-export-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  max-width: 700px;
+  margin: 0 auto; }
+  .e-app-import-export-message__content {
+    text-align: center; }
+
+>>>>>>> dist
 .e-app-import-export-wizard-step {
   --e-app-import-export-wizard-step-icon-color: #c2cbd2;
   --e-app-import-export-wizard-step-text-color: #a4afb7;
@@ -938,6 +1013,7 @@ h6,
   height: 100%;
   position: relative;
   text-align: center; }
+<<<<<<< HEAD
   .e-app-import-export-wizard-step__media-container {
     height: 140px;
     margin: 5.5rem 0 2.75rem; }
@@ -946,13 +1022,25 @@ h6,
     font-size: 50px; }
     .e-app-import-export-wizard-step__icon.eicon-loading {
       font-size: 1.85rem; }
+=======
+  .e-app-import-export-wizard-step__image-container {
+    height: 140px;
+    margin: 5.5rem 0 2.75rem; }
+  .e-app-import-export-wizard-step__icon {
+    margin-bottom: 2.75rem;
+    color: var(--e-app-import-export-wizard-step-icon-color);
+    font-size: 50px; }
+>>>>>>> dist
   .e-app-import-export-wizard-step__heading {
     margin-bottom: 1.5rem; }
   .e-app-import-export-wizard-step__description {
     color: var(--e-app-import-export-wizard-step-text-color); }
+<<<<<<< HEAD
   .e-app-import-export-wizard-step__content {
     text-align: initial;
     margin-bottom: 1.25rem; }
+=======
+>>>>>>> dist
   .e-app-import-export-wizard-step__notice {
     display: block;
     position: -webkit-sticky;
@@ -1035,17 +1123,27 @@ h6,
   --card-background-color-hover: #fff;
   --card-box-shadow: 0 4px 10px var(--color-box-shadow-color);
   --card-header-footer-border: 1px solid #f1f3f5;
+<<<<<<< HEAD
   --card-header-footer-active-border: 2px solid #e2e6ea;
+=======
+>>>>>>> dist
   --card-headline-color: #6d7882;
   --card-figure-background-color: #f1f3f5;
   --card-image-overlay-background-color: rgba(0, 0, 0, 0.2); }
 
 .eps-theme-dark {
+<<<<<<< HEAD
   --card-background-color: #404349;
   --card-background-color-hover: rgba(76, 79, 86, 0.8);
   --card-box-shadow: 0 3px 6px var(--color-box-shadow-color);
   --card-header-footer-border: 1px solid #34383c;
   --card-header-footer-active-border: 1px solid #26292C;
+=======
+  --card-background-color: rgba(64, 67, 73, 0.5);
+  --card-background-color-hover: #404349;
+  --card-box-shadow: 0 3px 6px var(--color-box-shadow-color);
+  --card-header-footer-border: 1px solid #34383c;
+>>>>>>> dist
   --card-headline-color: #e0e1e3;
   --card-figure-background-color: #34383c;
   --card-image-overlay-background-color: rgba(52, 56, 60, 0.5); }
@@ -1073,8 +1171,11 @@ h6,
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+<<<<<<< HEAD
     .eps-card__header--padding {
       padding: var(--eps-card-header-padding); }
+=======
+>>>>>>> dist
   .eps-card__headline {
     color: var(--card-headline-color);
     margin-bottom: 0;
@@ -1088,8 +1189,11 @@ h6,
     white-space: nowrap; }
   .eps-card__body {
     padding: 0.625rem 0.625rem; }
+<<<<<<< HEAD
     .eps-card__body--padding {
       padding: var(--eps-card-body-padding); }
+=======
+>>>>>>> dist
   .eps-card__figure {
     background-color: var(--card-figure-background-color);
     position: relative;
@@ -1122,8 +1226,11 @@ h6,
     padding: 0.625rem;
     border-top: var(--card-header-footer-border);
     font-size: 0.6875rem; }
+<<<<<<< HEAD
     .eps-card__footer--padding {
       padding: var(--eps-card-footer-padding); }
+=======
+>>>>>>> dist
   .eps-card:hover {
     background-color: var(--card-background-color-hover); }
 
@@ -1158,7 +1265,11 @@ h6,
     display: block;
     position: absolute;
     top: 0;
+<<<<<<< HEAD
     inset-inline-start: 0;
+=======
+    left: 0;
+>>>>>>> dist
     height: 100%;
     width: var(--menu-item-pointer-width);
     background-color: #58d0f5; }
@@ -1945,7 +2056,12 @@ h6,
   -webkit-border-radius: 0.1875rem;
           border-radius: 0.1875rem;
   -webkit-animation: eps-animation-pop 0.15s cubic-bezier(0.57, 0.53, 0.71, 1.47) forwards;
+<<<<<<< HEAD
           animation: eps-animation-pop 0.15s cubic-bezier(0.57, 0.53, 0.71, 1.47) forwards; }
+=======
+          animation: eps-animation-pop 0.15s cubic-bezier(0.57, 0.53, 0.71, 1.47) forwards;
+  overflow: hidden; }
+>>>>>>> dist
   .eps-modal__overlay {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -1966,6 +2082,7 @@ h6,
   .eps-modal__header {
     font-size: 0.875rem;
     background: var(--eps-modal-header-background-color);
+<<<<<<< HEAD
     height: 2.75rem;
     padding: 0.625rem 1rem;
     -webkit-border-radius: 0.1875rem;
@@ -1973,6 +2090,11 @@ h6,
     .eps-modal__header,
     .eps-modal__header .title {
       color: #fff; }
+=======
+    color: #fff;
+    height: 2.75rem;
+    padding: 0.625rem 1rem; }
+>>>>>>> dist
   .eps-modal__icon {
     -webkit-margin-end: 0.625rem;
             margin-inline-end: 0.625rem; }
@@ -1987,8 +2109,11 @@ h6,
       margin-bottom: 1.875rem; }
     .eps-modal__tip:not(:first-child), .eps-modal .eps-tip:not(:first-child) {
       margin-top: 1.875rem; }
+<<<<<<< HEAD
   .eps-modal__section:not(:first-child) {
     margin-top: 1.875rem; }
+=======
+>>>>>>> dist
   .eps-modal__close-wrapper {
     -webkit-padding-start: 1rem;
             padding-inline-start: 1rem;
@@ -2133,7 +2258,10 @@ h6,
 .eps-list {
   --eps-list-item-separated-border-color: #f1f3f5;
   padding: 0;
+<<<<<<< HEAD
   margin: 0;
+=======
+>>>>>>> dist
   list-style-type: none; }
   .eps-list--padding {
     padding: var(--eps-list-padding); }
@@ -2141,8 +2269,13 @@ h6,
     padding: 0; }
     .eps-list__item--padding {
       padding: var(--eps-list-item-padding); }
+<<<<<<< HEAD
   .eps-list--separated .eps-list__item:not(:last-child) {
     border-bottom: 1px solid var(--eps-list-item-separated-border-color); }
+=======
+    .eps-list--separated .eps-list__item:not(:last-child) {
+      border-bottom: 1px solid var(--eps-list-item-separated-border-color); }
+>>>>>>> dist
 
 .eps-theme-dark .eps-list {
   --eps-list-item-separated-border-color: #34383c; }
@@ -2274,9 +2407,12 @@ h6,
   --checkbox-checked-active-background-color: #44c455;
   --checkbox-indicator-color: #fff; }
 
+<<<<<<< HEAD
 .eps-theme-dark {
   --checkbox-background-color: transparent; }
 
+=======
+>>>>>>> dist
 .eps-checkbox {
   -webkit-appearance: none;
   -webkit-border-radius: 0.1875rem;
@@ -2348,12 +2484,21 @@ h6,
   width: 375px; }
   .eps-dialog__close-button {
     position: absolute;
+<<<<<<< HEAD
     top: -2.75rem;
     right: -2.75rem;
     margin-top: 0.625rem;
     margin-right: 0.625rem;
     z-index: 1040;
     font-size: 1.25rem;
+=======
+    top: 0;
+    right: 0;
+    margin-top: 0.625rem;
+    margin-right: 0.625rem;
+    z-index: 1040;
+    font-size: size(2.5);
+>>>>>>> dist
     color: #fff; }
   .eps-dialog__content {
     padding: 1.5rem 1.875rem 1rem;
@@ -2379,10 +2524,14 @@ h6,
               border-inline-start: 1px solid var(--hr-color); }
 
 .eps-inline-link {
+<<<<<<< HEAD
   color: var(--eps-inline-link-color);
   background-color: initial;
   border: 0;
   padding: 0; }
+=======
+  color: var(--eps-inline-link-color); }
+>>>>>>> dist
   .eps-inline-link--color-primary {
     --eps-inline-link-color: #39b54a; }
   .eps-inline-link--color-secondary {
@@ -2399,6 +2548,7 @@ h6,
     text-decoration: underline; }
   .eps-inline-link--italic {
     font-style: italic; }
+<<<<<<< HEAD
   .eps-inline-link, .eps-inline-link:focus {
     outline: none; }
 
@@ -3221,4 +3371,11 @@ h6,
 
 .eps-theme-dark .e-app-collapse {
   --e-app-collapse-icon-color: #b4b5b7; }
+=======
+
+.e-app-import-export-content-layout {
+  height: 100%;
+  max-width: 1075px;
+  margin: 0 auto; }
+>>>>>>> dist
 /*# sourceMappingURL=app-rtl.css.map */

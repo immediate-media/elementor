@@ -2,7 +2,10 @@
 namespace Elementor\Modules\System_Info\Reporters;
 
 use Elementor\Modules\System_Info\Helpers\Model_Helper;
+<<<<<<< HEAD
 use Elementor\Utils;
+=======
+>>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -67,6 +70,7 @@ abstract class Base {
 		return true;
 	}
 
+<<<<<<< HEAD
 	public function print_html() {
 		foreach ( $this->get_report( 'html' ) as $field ) {
 			$warning_class = ! empty( $field['warning'] ) ? ' class="elementor-warning"' : '';
@@ -109,6 +113,8 @@ abstract class Base {
 		endforeach;
 	}
 
+=======
+>>>>>>> dist
 	/**
 	 * Get report.
 	 *

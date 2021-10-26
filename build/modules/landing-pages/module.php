@@ -41,10 +41,16 @@ class Module extends BaseModule {
 	public static function get_experimental_data() {
 		return [
 			'name' => 'landing-pages',
+<<<<<<< HEAD
 			'title' => esc_html__( 'Landing Pages', 'elementor' ),
 			'description' => esc_html__( 'Adds a new Elementor content type that allows creating beautiful landing pages instantly in a streamlined workflow.', 'elementor' ),
 			'release_status' => Experiments_Manager::RELEASE_STATUS_STABLE,
 			'default' => Experiments_Manager::STATE_ACTIVE,
+=======
+			'title' => __( 'Landing Pages', 'elementor' ),
+			'description' => __( 'Adds a new Elementor content type that allows creating beautiful landing pages instantly in a streamlined workflow.', 'elementor' ),
+			'release_status' => Experiments_Manager::RELEASE_STATUS_BETA,
+>>>>>>> dist
 			'new_site' => [
 				'default_active' => true,
 				'minimum_installation_version' => '3.1.0-beta',
@@ -68,7 +74,10 @@ class Module extends BaseModule {
 
 		// `'posts_per_page' => 1` is because this is only used as an indicator to whether there are any trashed landing pages.
 		$trashed_posts_query = new \WP_Query( [
+<<<<<<< HEAD
 			'no_found_rows' => true,
+=======
+>>>>>>> dist
 			'post_type' => self::CPT,
 			'post_status' => 'trash',
 			'posts_per_page' => 1,
@@ -97,7 +106,10 @@ class Module extends BaseModule {
 
 		// `'posts_per_page' => 1` is because this is only used as an indicator to whether there are any landing pages.
 		$posts_query = new \WP_Query( [
+<<<<<<< HEAD
 			'no_found_rows' => true,
+=======
+>>>>>>> dist
 			'post_type' => self::CPT,
 			'post_status' => 'any',
 			'posts_per_page' => 1,
@@ -146,7 +158,11 @@ class Module extends BaseModule {
 			$landing_page_menu_callback = [ $this, 'print_empty_landing_pages_page' ];
 		}
 
+<<<<<<< HEAD
 		$landing_pages_title = esc_html__( 'Landing Pages', 'elementor' );
+=======
+		$landing_pages_title = __( 'Landing Pages', 'elementor' );
+>>>>>>> dist
 
 		add_submenu_page(
 			Source_Local::ADMIN_MENU_SLUG,
@@ -171,7 +187,11 @@ class Module extends BaseModule {
 	 */
 	private function get_add_new_landing_page_url() {
 		if ( ! $this->new_lp_url ) {
+<<<<<<< HEAD
 			$this->new_lp_url = Plugin::$instance->documents->get_create_new_post_url( self::CPT, self::DOCUMENT_TYPE ) . '#library';
+=======
+			$this->new_lp_url = Utils::get_create_new_post_url( self::CPT, self::DOCUMENT_TYPE ) . '#library';
+>>>>>>> dist
 		}
 		return $this->new_lp_url;
 	}
@@ -193,6 +213,7 @@ class Module extends BaseModule {
 		<div class="e-landing-pages-empty">
 		<?php
 		/** @var Source_Local $source_local */
+<<<<<<< HEAD
 		$source_local->print_blank_state_template( esc_html__( 'Landing Page', 'elementor' ), $this->get_add_new_landing_page_url(), esc_html__( 'Build Effective Landing Pages for your business\' marketing campaigns.', 'elementor' ) );
 
 		if ( ! empty( $trashed_posts ) ) : ?>
@@ -205,6 +226,13 @@ class Module extends BaseModule {
 						'</a>'
 					);
 				?>
+=======
+		$source_local->print_blank_state_template( __( 'Landing Page', 'elementor' ), $this->get_add_new_landing_page_url(), __( 'Build Effective Landing Pages for your business\' marketing campaigns.', 'elementor' ) );
+
+		if ( ! empty( $trashed_posts ) ) : ?>
+			<div class="e-trashed-items">
+				<?php echo sprintf( __( 'Or view <a href="%s">Trashed Items</a>', 'elementor' ), admin_url( 'edit.php?post_status=trash&post_type=' . self::CPT ) ); ?>
+>>>>>>> dist
 			</div>
 		<?php endif; ?>
 		</div>
@@ -258,6 +286,7 @@ class Module extends BaseModule {
 	 */
 	private function register_landing_page_cpt() {
 		$labels = [
+<<<<<<< HEAD
 			'name' => esc_html__( 'Landing Pages', 'elementor' ),
 			'singular_name' => esc_html__( 'Landing Page', 'elementor' ),
 			'add_new' => esc_html__( 'Add New', 'elementor' ),
@@ -271,6 +300,21 @@ class Module extends BaseModule {
 			'not_found_in_trash' => esc_html__( 'No landing pages found in trash', 'elementor' ),
 			'parent_item_colon' => '',
 			'menu_name' => esc_html__( 'Landing Pages', 'elementor' ),
+=======
+			'name' => __( 'Landing Pages', 'elementor' ),
+			'singular_name' => __( 'Landing Page', 'elementor' ),
+			'add_new' => __( 'Add New', 'elementor' ),
+			'add_new_item' => __( 'Add New Landing Page', 'elementor' ),
+			'edit_item' => __( 'Edit Landing Page', 'elementor' ),
+			'new_item' => __( 'New Landing Page', 'elementor' ),
+			'all_items' => __( 'All Landing Pages', 'elementor' ),
+			'view_item' => __( 'View Landing Page', 'elementor' ),
+			'search_items' => __( 'Search Landing Pages', 'elementor' ),
+			'not_found' => __( 'No landing pages found', 'elementor' ),
+			'not_found_in_trash' => __( 'No landing pages found in trash', 'elementor' ),
+			'parent_item_colon' => '',
+			'menu_name' => __( 'Landing Pages', 'elementor' ),
+>>>>>>> dist
 		];
 
 		$args = [
@@ -352,11 +396,15 @@ class Module extends BaseModule {
 			$query->set( 'post_type', $query_post_types );
 
 			// We also need to set the name query var since redirect_guess_404_permalink() relies on it.
+<<<<<<< HEAD
 			add_filter( 'pre_redirect_guess_404_permalink', function( $value ) use ( $query ) {
 				set_query_var( 'name', $query->query['pagename'] );
 
 				return $value;
 			} );
+=======
+			$query->set( 'name', $query->query['pagename'] );
+>>>>>>> dist
 		}
 	}
 
@@ -405,7 +453,10 @@ class Module extends BaseModule {
 
 		// Search for a Landing Page with the same name passed as the 'category name'.
 		$possible_new_query = new \WP_Query( [
+<<<<<<< HEAD
 			'no_found_rows' => true,
+=======
+>>>>>>> dist
 			'post_type' => self::CPT,
 			'name' => $query->query['category_name'],
 		] );

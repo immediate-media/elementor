@@ -1,7 +1,10 @@
 <?php
 namespace Elementor\Core\Kits;
 
+<<<<<<< HEAD
 use Elementor\Core\Base\Document;
+=======
+>>>>>>> dist
 use Elementor\Core\Kits\Controls\Repeater;
 use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
@@ -24,6 +27,7 @@ class Manager {
 	const E_HASH_COMMAND_OPEN_SITE_SETTINGS = 'e:run:panel/global/open';
 
 	public function get_active_id() {
+<<<<<<< HEAD
 		return get_option( self::OPTION_ACTIVE );
 	}
 
@@ -67,6 +71,30 @@ class Manager {
 			'settings' => [],
 			'post_id' => 0,
 		] );
+=======
+		$id = get_option( self::OPTION_ACTIVE );
+
+		$kit_document = Plugin::$instance->documents->get( $id );
+
+		if ( ! $kit_document || ! $kit_document instanceof Kit || 'trash' === $kit_document->get_main_post()->post_status ) {
+			$id = $this->create_default();
+			update_option( self::OPTION_ACTIVE, $id );
+		}
+
+		return $id;
+	}
+
+	public function get_active_kit() {
+		$id = $this->get_active_id();
+
+		return Plugin::$instance->documents->get( $id );
+	}
+
+	public function get_active_kit_for_frontend() {
+		$id = $this->get_active_id();
+
+		return Plugin::$instance->documents->get_doc_for_frontend( $id );
+>>>>>>> dist
 	}
 
 	/**
@@ -119,6 +147,7 @@ class Manager {
 		return $kit->get_id();
 	}
 
+<<<<<<< HEAD
 	public function create_default() {
 		return $this->create( [
 			'post_title' => esc_html__( 'Default Kit', 'elementor' ),
@@ -151,6 +180,10 @@ class Manager {
 		update_option( self::OPTION_ACTIVE, $id );
 
 		return $id;
+=======
+	private function create_default() {
+		return $this->create( [ 'post_title' => __( 'Default Kit', 'elementor' ) ] );
+>>>>>>> dist
 	}
 
 	/**
@@ -287,7 +320,11 @@ class Manager {
 	public function register_controls() {
 		$controls_manager = Plugin::$instance->controls_manager;
 
+<<<<<<< HEAD
 		$controls_manager->register( new Repeater() );
+=======
+		$controls_manager->register_control( Repeater::CONTROL_TYPE, new Repeater() );
+>>>>>>> dist
 	}
 
 	public function is_custom_colors_enabled() {
@@ -335,8 +372,14 @@ class Manager {
 
 		$confirmation_content = ob_get_clean();
 
+<<<<<<< HEAD
 		// PHPCS - the content does not contain user input value.
 		wp_die( new \WP_Error( 'cant_delete_kit', $confirmation_content ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+=======
+		wp_die(
+			new \WP_Error( 'cant_delete_kit', $confirmation_content )
+		);
+>>>>>>> dist
 	}
 
 	/**
@@ -363,8 +406,13 @@ class Manager {
 		if ( $document ) {
 			$admin_bar_config['elementor_edit_page']['children'][] = [
 				'id' => 'elementor_site_settings',
+<<<<<<< HEAD
 				'title' => esc_html__( 'Site Settings', 'elementor' ),
 				'sub_title' => esc_html__( 'Site', 'elementor' ),
+=======
+				'title' => __( 'Site Settings', 'elementor' ),
+				'sub_title' => __( 'Site', 'elementor' ),
+>>>>>>> dist
 				'href' => $document->get_edit_url() . '#' . self::E_HASH_COMMAND_OPEN_SITE_SETTINGS,
 				'class' => 'elementor-site-settings',
 				'parent_class' => 'elementor-second-section',
@@ -380,7 +428,11 @@ class Manager {
 		add_filter( 'elementor/editor/footer', [ $this, 'render_panel_html' ] );
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'frontend_before_enqueue_styles' ], 0 );
 		add_action( 'elementor/preview/enqueue_styles', [ $this, 'preview_enqueue_styles' ], 0 );
+<<<<<<< HEAD
 		add_action( 'elementor/controls/register', [ $this, 'register_controls' ] );
+=======
+		add_action( 'elementor/controls/controls_registered', [ $this, 'register_controls' ] );
+>>>>>>> dist
 
 		add_action( 'wp_trash_post', function ( $post_id ) {
 			$this->before_delete_kit( $post_id );
