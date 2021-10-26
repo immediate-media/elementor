@@ -7,13 +7,16 @@ local-site/
 tmp/
 
 # build outputs
-build/
-assets/css/
-assets/js/
+# build/
+# assets/css/
+# assets/js/
 *.log
-*.map
+# *.map
 
 # build tools lock
+composer.lock
+
+# package.lock
 yarn.lock
 
 # IDE's
