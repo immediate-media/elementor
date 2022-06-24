@@ -1,12 +1,10 @@
 <?php
 namespace Elementor;
 
-<<<<<<< HEAD
+use Elementor\Core\Common\Modules\EventTracker\DB as Events_DB_Manager;
 use Elementor\Core\Experiments\Experiments_Reporter;
 use Elementor\Modules\System_Info\Module as System_Info_Module;
 
-=======
->>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -65,23 +63,16 @@ class Tracker {
 	public static function check_for_settings_optin( $new_value ) {
 		$old_value = get_option( 'elementor_allow_tracking', 'no' );
 		if ( $old_value !== $new_value && 'yes' === $new_value ) {
-<<<<<<< HEAD
 			Plugin::$instance->custom_tasks->add_tasks_requested_to_run( [
 				'opt_in_recalculate_usage',
 				'opt_in_send_tracking_data',
 			] );
-=======
-			self::send_tracking_data( true );
->>>>>>> dist
 		}
 
 		if ( empty( $new_value ) ) {
 			$new_value = 'no';
 		}
-<<<<<<< HEAD
 
-=======
->>>>>>> dist
 		return $new_value;
 	}
 
@@ -149,6 +140,10 @@ class Tracker {
 
 		$params = self::get_tracking_data( empty( $last_send ) );
 
+		// Tracking data is used for System Info reports, and events should not be included in System Info reports,
+		// so it is added here
+		$params['analytics_events'] = self::get_events();
+
 		add_filter( 'https_ssl_verify', '__return_false' );
 
 		wp_safe_remote_post(
@@ -162,6 +157,9 @@ class Tracker {
 				],
 			]
 		);
+
+		// After sending the event tracking data, we reset the events table.
+		Events_DB_Manager::reset_table();
 	}
 
 	/**
@@ -240,20 +238,17 @@ class Tracker {
 	 * @return array The data from system reports.
 	 */
 	private static function get_system_reports_data() {
-<<<<<<< HEAD
 		$reports = Plugin::$instance->system_info->load_reports( System_Info_Module::get_allowed_reports() );
-=======
-		$reports = Plugin::$instance->system_info->load_reports( System_Info\Main::get_allowed_reports() );
->>>>>>> dist
+
+		// The log report should not be sent with the usage data - it is not used and causes bloat.
+		if ( isset( $reports['log'] ) ) {
+			unset( $reports['log'] );
+		}
 
 		$system_reports = [];
 		foreach ( $reports as $report_key => $report_details ) {
 			$system_reports[ $report_key ] = [];
-<<<<<<< HEAD
 			foreach ( $report_details['report']->get_report() as $sub_report_key => $sub_report_details ) {
-=======
-			foreach ( $report_details['report'] as $sub_report_key => $sub_report_details ) {
->>>>>>> dist
 				$system_reports[ $report_key ][ $sub_report_key ] = $sub_report_details['value'];
 			}
 		}
@@ -291,7 +286,6 @@ class Tracker {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get non elementor post usages.
 	 *
 	 * Retrieve the number of posts that not using elementor.
@@ -322,8 +316,6 @@ class Tracker {
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Get posts usage.
 	 *
 	 * Retrieve the number of posts using Elementor.
@@ -351,19 +343,11 @@ class Tracker {
 
 		if ( $results ) {
 			foreach ( $results as $result ) {
-<<<<<<< HEAD
 				$usage[ $result->post_type ][ $result->post_status ] = (int) $result->hits;
-=======
-				$usage[ $result->post_type ][ $result->post_status ] = $result->hits;
->>>>>>> dist
 			}
 		}
 
 		return $usage;
-<<<<<<< HEAD
-=======
-
->>>>>>> dist
 	}
 
 	/**
@@ -403,7 +387,6 @@ class Tracker {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get usage of general settings.
 	 * 'Elementor->Settings->General'.
 	 *
@@ -510,12 +493,27 @@ class Tracker {
 		}
 
 		return $usage;
+	}
 
+	public static function get_events() {
+		global $wpdb;
+		$table_name = $wpdb->prefix . Events_DB_Manager::TABLE_NAME;
+
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+		$results = $wpdb->get_results( "SELECT event_data FROM {$table_name}" );
+
+		$events_data = [];
+
+		foreach ( $results as $event ) {
+			// Results are stored in the database as a JSON string. Since all tracking data is encoded right before
+			// being sent, it is now decoded.
+			$events_data[] = json_decode( $event->event_data, true );
+		}
+
+		return $events_data;
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Get the tracking data
 	 *
 	 * Retrieve tracking data and apply filter
@@ -534,7 +532,6 @@ class Tracker {
 			'email' => get_option( 'admin_email' ),
 			'usages' => [
 				'posts' => self::get_posts_usage(),
-<<<<<<< HEAD
 				'non-elementor-posts' => self::get_non_elementor_posts_usage(),
 				'library' => self::get_library_usage(),
 				'settings' => [
@@ -551,11 +548,6 @@ class Tracker {
 			],
 			'is_first_time' => $is_first_time,
 			'install_time' => Plugin::instance()->get_install_time(),
-=======
-				'library' => self::get_library_usage(),
-			],
-			'is_first_time' => $is_first_time,
->>>>>>> dist
 		];
 
 		/**
@@ -572,7 +564,6 @@ class Tracker {
 
 		return $params;
 	}
-<<<<<<< HEAD
 
 	/**
 	 * @param string $tab_name
@@ -642,6 +633,4 @@ class Tracker {
 
 		return $result;
 	}
-=======
->>>>>>> dist
 }

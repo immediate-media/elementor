@@ -138,7 +138,6 @@ class Group_Control_Image_Size extends Group_Control_Base {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Safe print attachment image HTML.
 	 *
 	 * @uses get_attachment_image_html.
@@ -158,8 +157,6 @@ class Group_Control_Image_Size extends Group_Control_Base {
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Get all image sizes.
 	 *
 	 * Retrieve available image sizes with data like `width`, `height` and `crop`.
@@ -297,11 +294,7 @@ class Group_Control_Image_Size extends Group_Control_Base {
 		$fields['custom_dimension'] = [
 			'label' => _x( 'Image Dimension', 'Image Size Control', 'elementor' ),
 			'type' => Controls_Manager::IMAGE_DIMENSIONS,
-<<<<<<< HEAD
 			'description' => esc_html__( 'You can crop the original image size to any custom size. You can also set a single value for height or width in order to keep the original size ratio.', 'elementor' ),
-=======
-			'description' => __( 'You can crop the original image size to any custom size. You can also set a single value for height or width in order to keep the original size ratio.', 'elementor' ),
->>>>>>> dist
 			'condition' => [
 				'size' => 'custom',
 			],

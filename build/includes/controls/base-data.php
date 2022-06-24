@@ -15,7 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 abstract class Base_Data_Control extends Base_Control {
 
-<<<<<<< HEAD
 	public function __construct() {
 		parent::__construct();
 
@@ -26,8 +25,6 @@ abstract class Base_Data_Control extends Base_Control {
 		}
 	}
 
-=======
->>>>>>> dist
 	/**
 	 * Get data control default value.
 	 *
@@ -134,7 +131,6 @@ abstract class Base_Data_Control extends Base_Control {
 	protected function get_control_uid( $input_type = 'default' ) {
 		return 'elementor-control-' . $input_type . '-{{{ data._cid }}}';
 	}
-<<<<<<< HEAD
 
 	/**
 	 * Safe Print data control unique ID.
@@ -149,6 +145,4 @@ abstract class Base_Data_Control extends Base_Control {
 	protected function print_control_uid( $input_type = 'default' ) {
 		echo esc_attr( $this->get_control_uid( $input_type ) );
 	}
-=======
->>>>>>> dist
 }

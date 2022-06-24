@@ -1,58 +1,89 @@
-exports.wpAdminPage = class wpAdminPage {
-  /**
-   * @param {import('@playwright/test').Page} page
-   */
-  constructor( page ) {
-    this.page = page;
-  }
+const BasePage = require( './base-page.js' );
+const EditorPage = require( './editor-page.js' );
 
-  async goto() {
-    await this.page.goto( '/wp-admin' );
-  }
+/**
+ * This post is used for any tests that need a post, with empty elements.
+ * @type {number}
+ */
+const CLEAN_POST_ID = 1;
 
-  async login() {
-    const loggedIn = await this.page.$( 'text=Dashboard' );
-    if ( loggedIn ) {
-      return;
-    }
-    await this.page.waitForSelector( 'text=Log In' );
-    await this.page.fill( 'input[name="log"]', 'admin' );
-    await this.page.fill( 'input[name="pwd"]', 'password' );
-    await this.page.click( 'text=Log In' );
-    await this.page.waitForSelector( 'text=Dashboard' );
-  }
+module.exports = class WpAdminPage extends BasePage {
+    async gotoDashboard() {
+		await this.page.goto( '/wp-admin' );
+	}
 
-  async openNewPage() {
-    try {
-      await this.page.click( 'text=Create New Page', { timeout: 5000 } );
-    } catch ( err ) {
-      console.error( "Click on Elementor 'Create New Page' button failed" );
-      await this.page.waitForSelector( 'text=Dashboard' );
-      await this.page.click( 'text=Pages' );
-      await Promise.all( [
-        this.page.waitForNavigation( { url: '/wp-admin/post-new.php?post_type=page' } ),
-        this.page.click( 'div[role="main"] >> text=Add New' ),
-      ] );
-      await Promise.all( [
-        this.page.waitForNavigation(),
-        this.skipTutorial(),
-        this.page.click( 'text=← Back to WordPress Editor Edit with Elementor' ),
-      ] );
-    }
-    await this.page.waitForSelector( '#elementor-panel-header-title' );
-  }
+	async login() {
+		await this.gotoDashboard();
 
-  async skipTutorial() {
-    await this.page.waitForTimeout( 1000 );
-    const next = await this.page.$( "text='Next'" );
-    if ( next ) {
-      await this.page.click( '[aria-label="Close dialog"]' );
-    }
-  }
+		const loggedIn = await this.page.$( 'text=Dashboard' );
 
-  async createNewPage() {
-    await this.goto();
-    await this.login();
-    await this.openNewPage();
-  }
+		if ( loggedIn ) {
+			return;
+		}
+
+		await this.page.waitForSelector( 'text=Log In' );
+		await this.page.fill( 'input[name="log"]', this.config.user.username );
+		await this.page.fill( 'input[name="pwd"]', this.config.user.password );
+		await this.page.click( 'text=Log In' );
+		await this.page.waitForSelector( 'text=Dashboard' );
+	}
+
+	async openNewPage() {
+		if ( ! await this.page.$( '"text=Create New Page"' ) ) {
+			await this.gotoDashboard();
+		}
+
+		await this.page.click( 'text="Create New Page"' );
+		await this.waitForPanel();
+
+		return new EditorPage( this.page, this.testInfo );
+	}
+
+	async useElementorCleanPost() {
+		await this.page.goto( `/wp-admin/post.php?post=${ CLEAN_POST_ID }&action=elementor` );
+
+		await this.waitForPanel();
+
+		const editor = new EditorPage( this.page, this.testInfo, CLEAN_POST_ID );
+
+		await this.page.evaluate( () => $e.run( 'document/elements/empty', { force: true } ) );
+
+		return editor;
+	}
+
+	async skipTutorial() {
+		await this.page.waitForTimeout( 1000 );
+		const next = await this.page.$( "text='Next'" );
+
+		if ( next ) {
+			await this.page.click( '[aria-label="Close dialog"]' );
+		}
+	}
+
+	async waitForPanel() {
+		await this.page.waitForSelector( '.elementor-panel-loading', { state: 'detached' } );
+	}
+
+	/**
+	 * Determine which experiments are active / inactive.
+	 *
+	 * TODO: The testing environment isn't clean between tests - Use with caution!
+	 *
+	 * @param {Object} experiments - Experiments settings ( `{ experiment_id: true / false }` );
+	 *
+	 * @return {Promise<void>}
+	 */
+	async setExperiments( experiments = {} ) {
+		await this.page.goto( '/wp-admin/admin.php?page=elementor#tab-experiments' );
+
+		const prefix = 'e-experiment';
+
+		for ( const [ id, state ] of Object.entries( experiments ) ) {
+			const selector = `#${ prefix }-${ id }`;
+
+			await this.page.selectOption( selector, state ? 'active' : 'inactive' );
+		}
+
+		await this.page.click( '#submit' );
+	}
 };

@@ -1,10 +1,7 @@
 <?php
 namespace Elementor;
 
-<<<<<<< HEAD
-=======
-use Elementor\Core\Upgrade\Manager as Upgrades_Manager;
->>>>>>> dist
+use Elementor\Core\Editor\Editor;
 use Elementor\TemplateLibrary\Source_Local;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -76,13 +73,8 @@ class Settings extends Settings_Page {
 		}
 
 		add_menu_page(
-<<<<<<< HEAD
 			esc_html__( 'Elementor', 'elementor' ),
 			esc_html__( 'Elementor', 'elementor' ),
-=======
-			__( 'Elementor', 'elementor' ),
-			__( 'Elementor', 'elementor' ),
->>>>>>> dist
 			'manage_options',
 			self::PAGE_ID,
 			[ $this, 'display_settings_page' ],
@@ -141,7 +133,6 @@ class Settings extends Settings_Page {
 	public function register_pro_menu() {
 		add_submenu_page(
 			self::PAGE_ID,
-<<<<<<< HEAD
 			esc_html__( 'Submissions', 'elementor' ),
 			esc_html__( 'Submissions', 'elementor' ),
 			'manage_options',
@@ -155,10 +146,6 @@ class Settings extends Settings_Page {
 			self::PAGE_ID,
 			esc_html__( 'Custom Fonts', 'elementor' ),
 			esc_html__( 'Custom Fonts', 'elementor' ),
-=======
-			__( 'Custom Fonts', 'elementor' ),
-			__( 'Custom Fonts', 'elementor' ),
->>>>>>> dist
 			'manage_options',
 			'elementor_custom_fonts',
 			[ $this, 'elementor_custom_fonts' ]
@@ -166,13 +153,8 @@ class Settings extends Settings_Page {
 
 		add_submenu_page(
 			self::PAGE_ID,
-<<<<<<< HEAD
 			esc_html__( 'Custom Icons', 'elementor' ),
 			esc_html__( 'Custom Icons', 'elementor' ),
-=======
-			__( 'Custom Icons', 'elementor' ),
-			__( 'Custom Icons', 'elementor' ),
->>>>>>> dist
 			'manage_options',
 			'elementor_custom_icons',
 			[ $this, 'elementor_custom_icons' ]
@@ -180,7 +162,6 @@ class Settings extends Settings_Page {
 
 		add_submenu_page(
 			self::PAGE_ID,
-<<<<<<< HEAD
 			__( 'Custom Code', 'elementor' ),
 			__( 'Custom Code', 'elementor' ),
 			'manage_options',
@@ -194,20 +175,12 @@ class Settings extends Settings_Page {
 			self::PAGE_ID,
 			'',
 			'<span class="dashicons dashicons-star-filled" style="font-size: 17px"></span> ' . esc_html__( 'Go Pro', 'elementor' ),
-=======
-			'',
-			'<span class="dashicons dashicons-star-filled" style="font-size: 17px"></span> ' . __( 'Go Pro', 'elementor' ),
->>>>>>> dist
 			'manage_options',
 			'go_elementor_pro',
 			[ $this, 'handle_external_redirects' ]
 		);
 
-<<<<<<< HEAD
 		add_submenu_page( Source_Local::ADMIN_MENU_SLUG, esc_html__( 'Popups', 'elementor' ), esc_html__( 'Popups', 'elementor' ), 'manage_options', 'popup_templates', [ $this, 'elementor_popups' ] );
-=======
-		add_submenu_page( Source_Local::ADMIN_MENU_SLUG, __( 'Popups', 'elementor' ), __( 'Popups', 'elementor' ), 'manage_options', 'popup_templates', [ $this, 'elementor_popups' ] );
->>>>>>> dist
 	}
 
 	/**
@@ -233,11 +206,7 @@ class Settings extends Settings_Page {
 		add_submenu_page(
 			self::PAGE_ID,
 			'',
-<<<<<<< HEAD
 			esc_html__( 'Get Help', 'elementor' ),
-=======
-			__( 'Get Help', 'elementor' ),
->>>>>>> dist
 			'manage_options',
 			'go_knowledge_base_site',
 			[ $this, 'handle_external_redirects' ]
@@ -280,17 +249,10 @@ class Settings extends Settings_Page {
 	 */
 	public function elementor_getting_started() {
 		if ( User::is_current_user_can_edit_post_type( 'page' ) ) {
-<<<<<<< HEAD
 			$create_new_label = esc_html__( 'Create Your First Page', 'elementor' );
 			$create_new_cpt = 'page';
 		} elseif ( User::is_current_user_can_edit_post_type( 'post' ) ) {
 			$create_new_label = esc_html__( 'Create Your First Post', 'elementor' );
-=======
-			$create_new_label = __( 'Create Your First Page', 'elementor' );
-			$create_new_cpt = 'page';
-		} elseif ( User::is_current_user_can_edit_post_type( 'post' ) ) {
-			$create_new_label = __( 'Create Your First Post', 'elementor' );
->>>>>>> dist
 			$create_new_cpt = 'post';
 		}
 
@@ -303,53 +265,29 @@ class Settings extends Settings_Page {
 							<div class="e-logo-wrapper">
 								<i class="eicon-elementor"></i>
 							</div>
-<<<<<<< HEAD
 							<?php echo esc_html__( 'Getting Started', 'elementor' ); ?>
 						</div>
 						<a class="e-getting-started__skip" href="<?php echo esc_url( admin_url() ); ?>">
 							<i class="eicon-close" aria-hidden="true" title="<?php esc_attr_e( 'Skip', 'elementor' ); ?>"></i>
 							<span class="elementor-screen-only"><?php echo esc_html__( 'Skip', 'elementor' ); ?></span>
-=======
-							<?php echo __( 'Getting Started', 'elementor' ); ?>
-						</div>
-						<a class="e-getting-started__skip" href="<?php echo esc_url( admin_url() ); ?>">
-							<i class="eicon-close" aria-hidden="true" title="<?php esc_attr_e( 'Skip', 'elementor' ); ?>"></i>
-							<span class="elementor-screen-only"><?php echo __( 'Skip', 'elementor' ); ?></span>
->>>>>>> dist
 						</a>
 					</div>
 					<div class="e-getting-started__content">
 						<div class="e-getting-started__content--narrow">
-<<<<<<< HEAD
 							<h2><?php echo esc_html__( 'Welcome to Elementor', 'elementor' ); ?></h2>
 							<p><?php echo esc_html__( 'Get introduced to Elementor by watching our "Getting Started" video series. It will guide you through the steps needed to create your website. Then click to create your first page.', 'elementor' ); ?></p>
 						</div>
 
 						<div class="e-getting-started__video">
 							<iframe width="620" height="350" src="https://www.youtube-nocookie.com/embed/videoseries?v=icTcREd1tAg&amp;list=PLZyp9H25CboE6dhe7MnUxUdp4zU7OsNSe&amp;index=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-=======
-							<h2><?php echo __( 'Welcome to Elementor', 'elementor' ); ?></h2>
-							<p><?php echo __( 'Get introduced to Elementor by watching our "Getting Started" video series. It will guide you through the steps needed to create your website. Then click to create your first page.', 'elementor' ); ?></p>
-						</div>
-
-						<div class="e-getting-started__video">
-							<iframe width="620" height="350" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLZyp9H25CboH8b_wsNyOmstckiOE8aUBg&amp;controls=1&amp;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
->>>>>>> dist
 						</div>
 
 						<div class="e-getting-started__actions e-getting-started__content--narrow">
 							<?php if ( ! empty( $create_new_cpt ) ) : ?>
-<<<<<<< HEAD
 							<a href="<?php echo esc_url( Plugin::$instance->documents->get_create_new_post_url( $create_new_cpt ) ); ?>" class="button button-primary button-hero"><?php echo esc_html( $create_new_label ); ?></a>
 							<?php endif; ?>
 
 							<a href="https://go.elementor.com/getting-started/" target="_blank" class="button button-secondary button-hero"><?php echo esc_html__( 'Watch the Full Guide', 'elementor' ); ?></a>
-=======
-							<a href="<?php echo esc_url( Utils::get_create_new_post_url( $create_new_cpt ) ); ?>" class="button button-primary button-hero"><?php echo esc_html( $create_new_label ); ?></a>
-							<?php endif; ?>
-
-							<a href="https://go.elementor.com/getting-started/" target="_blank" class="button button-secondary button-hero"><?php echo __( 'Watch the Full Guide', 'elementor' ); ?></a>
->>>>>>> dist
 						</div>
 					</div>
 				</div>
@@ -370,19 +308,12 @@ class Settings extends Settings_Page {
 		?>
 		<div class="wrap">
 			<div class="elementor-blank_state">
-<<<<<<< HEAD
 				<?php // PHPCS - No need to escape an SVG image from the Elementor assets/images folder. ?>
 				<img src="<?php echo ELEMENTOR_ASSETS_URL . 'images/go-pro-wp-dashboard.svg'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>" />
 				<h2><?php echo esc_html__( 'Add Your Custom Fonts', 'elementor' ); ?></h2>
 				<p><?php echo esc_html__( 'Custom Fonts allows you to add your self-hosted fonts and use them on your Elementor projects to create a unique brand language.', 'elementor' ); ?></p>
 				<?php // PHPCS - No need to escape a URL. The query arg is sanitized. ?>
 				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="<?php echo Utils::get_pro_link( 'https://elementor.com/pro/?utm_source=wp-custom-fonts&utm_campaign=gopro&utm_medium=wp-dash' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>"><?php echo esc_html__( 'Go Pro', 'elementor' ); ?></a>
-=======
-				<img src="<?php echo ELEMENTOR_ASSETS_URL . 'images/go-pro-wp-dashboard.svg'; ?>" />
-				<h2><?php echo __( 'Add Your Custom Fonts', 'elementor' ); ?></h2>
-				<p><?php echo __( 'Custom Fonts allows you to add your self-hosted fonts and use them on your Elementor projects to create a unique brand language.', 'elementor' ); ?></p>
-				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="<?php echo Utils::get_pro_link( 'https://elementor.com/pro/?utm_source=wp-custom-fonts&utm_campaign=gopro&utm_medium=wp-dash' ); ?>"><?php echo __( 'Go Pro', 'elementor' ); ?></a>
->>>>>>> dist
 			</div>
 		</div><!-- /.wrap -->
 		<?php
@@ -400,18 +331,11 @@ class Settings extends Settings_Page {
 		?>
 		<div class="wrap">
 			<div class="elementor-blank_state">
-<<<<<<< HEAD
 				<img src="<?php Utils::print_unescaped_internal_string( ELEMENTOR_ASSETS_URL . 'images/go-pro-wp-dashboard.svg' ); ?>" />
 				<h2><?php echo esc_html__( 'Add Your Custom Icons', 'elementor' ); ?></h2>
 				<p><?php echo esc_html__( 'Don\'t rely solely on the FontAwesome icons everyone else is using! Differentiate your website and your style with custom icons you can upload from your favorite icons source.', 'elementor' ); ?></p>
 				<?php // PHPCS - No need to escape a URL. The query arg is sanitized. ?>
 				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="<?php echo Utils::get_pro_link( 'https://elementor.com/pro/?utm_source=wp-custom-icons&utm_campaign=gopro&utm_medium=wp-dash' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>"><?php echo esc_html__( 'Go Pro', 'elementor' ); ?></a>
-=======
-				<img src="<?php echo ELEMENTOR_ASSETS_URL . 'images/go-pro-wp-dashboard.svg'; ?>" />
-				<h2><?php echo __( 'Add Your Custom Icons', 'elementor' ); ?></h2>
-				<p><?php echo __( 'Don\'t rely solely on the FontAwesome icons everyone else is using! Differentiate your website and your style with custom icons you can upload from your favorite icons source.', 'elementor' ); ?></p>
-				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="<?php echo Utils::get_pro_link( 'https://elementor.com/pro/?utm_source=wp-custom-icons&utm_campaign=gopro&utm_medium=wp-dash' ); ?>"><?php echo __( 'Go Pro', 'elementor' ); ?></a>
->>>>>>> dist
 			</div>
 		</div><!-- /.wrap -->
 		<?php
@@ -429,7 +353,6 @@ class Settings extends Settings_Page {
 		?>
 		<div class="wrap">
 			<div class="elementor-blank_state">
-<<<<<<< HEAD
 				<img src="<?php Utils::print_unescaped_internal_string( ELEMENTOR_ASSETS_URL . 'images/go-pro-wp-dashboard.svg' ); ?>" />
 				<h2><?php echo esc_html__( 'Get Popup Builder', 'elementor' ); ?></h2>
 				<p><?php echo esc_html__( 'Popup Builder lets you take advantage of all the amazing features in Elementor, so you can build beautiful & highly converting popups. Go pro and start designing your popups today.', 'elementor' ); ?></p>
@@ -456,12 +379,6 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="<?php
 				Utils::print_unescaped_internal_string( Utils::get_pro_link( 'https://go.elementor.com/go-pro-submissions' ) );
 				?>"><?php echo esc_html__( 'Go Pro', 'elementor' ); ?></a>
-=======
-				<img src="<?php echo ELEMENTOR_ASSETS_URL . 'images/go-pro-wp-dashboard.svg'; ?>" />
-				<h2><?php echo __( 'Get Popup Builder', 'elementor' ); ?></h2>
-				<p><?php echo __( 'Popup Builder lets you take advantage of all the amazing features in Elementor, so you can build beautiful & highly converting popups. Go pro and start designing your popups today.', 'elementor' ); ?></p>
-				<a class="elementor-button elementor-button-default elementor-button-go-pro" target="_blank" href="<?php echo Utils::get_pro_link( 'https://elementor.com/popup-builder/?utm_source=popup-templates&utm_campaign=gopro&utm_medium=wp-dash' ); ?>"><?php echo __( 'Go Pro', 'elementor' ); ?></a>
->>>>>>> dist
 			</div>
 		</div><!-- /.wrap -->
 		<?php
@@ -494,11 +411,7 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 	 * @access public
 	 */
 	public function admin_menu_change_name() {
-<<<<<<< HEAD
 		Utils::change_submenu_first_item_label( 'elementor', esc_html__( 'Settings', 'elementor' ) );
-=======
-		Utils::change_submenu_first_item_label( 'elementor', __( 'Settings', 'elementor' ) );
->>>>>>> dist
 	}
 
 	/**
@@ -532,11 +445,7 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 
 		return [
 			self::TAB_GENERAL => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'General', 'elementor' ),
-=======
-				'label' => __( 'General', 'elementor' ),
->>>>>>> dist
 				'sections' => [
 					'general' => [
 						'fields' => [
@@ -548,11 +457,7 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 								'setting_args' => [ $validations_class_name, 'current_time' ],
 							],
 							'cpt_support' => [
-<<<<<<< HEAD
 								'label' => esc_html__( 'Post Types', 'elementor' ),
-=======
-								'label' => __( 'Post Types', 'elementor' ),
->>>>>>> dist
 								'field_args' => [
 									'type' => 'checkbox_list_cpt',
 									'std' => [ 'page', 'post' ],
@@ -561,7 +466,6 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 								'setting_args' => [ $validations_class_name, 'checkbox_list' ],
 							],
 							'disable_color_schemes' => [
-<<<<<<< HEAD
 								'label' => esc_html__( 'Disable Default Colors', 'elementor' ),
 								'field_args' => [
 									'type' => 'checkbox',
@@ -575,72 +479,17 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 									'type' => 'checkbox',
 									'value' => 'yes',
 									'sub_desc' => esc_html__( 'Checking this box will disable Elementor\'s Default Fonts, and make Elementor inherit the fonts from your theme.', 'elementor' ),
-=======
-								'label' => __( 'Disable Default Colors', 'elementor' ),
-								'field_args' => [
-									'type' => 'checkbox',
-									'value' => 'yes',
-									'sub_desc' => __( 'Checking this box will disable Elementor\'s Default Colors, and make Elementor inherit the colors from your theme.', 'elementor' ),
-								],
-							],
-							'disable_typography_schemes' => [
-								'label' => __( 'Disable Default Fonts', 'elementor' ),
-								'field_args' => [
-									'type' => 'checkbox',
-									'value' => 'yes',
-									'sub_desc' => __( 'Checking this box will disable Elementor\'s Default Fonts, and make Elementor inherit the fonts from your theme.', 'elementor' ),
->>>>>>> dist
 								],
 							],
 						],
 					],
 					'usage' => [
-<<<<<<< HEAD
 						'label' => esc_html__( 'Improve Elementor', 'elementor' ),
-=======
-						'label' => __( 'Improve Elementor', 'elementor' ),
->>>>>>> dist
 						'fields' => $this->get_usage_fields(),
 					],
 				],
 			],
-			self::TAB_STYLE => [
-<<<<<<< HEAD
-				'label' => esc_html__( 'Style', 'elementor' ),
-=======
-				'label' => __( 'Style', 'elementor' ),
->>>>>>> dist
-				'sections' => [
-					'style' => [
-						'fields' => [
-							'notice' => [
-<<<<<<< HEAD
-								'label' => esc_html__( 'Looking for the Style settings?', 'elementor' ),
-								'field_args' => [
-									'type' => 'raw_html',
-									'html' => sprintf(
-										/* translators: 1: Bold open tag, 2: Bold close tag */
-										esc_html__( 'The Style settings changed its location and can now be found within Elementor Editor\'s %1$sPanel > Hamburger Menu > Site Settings%2$s.', 'elementor' ),
-										'<strong>',
-										'</strong>'
-									) .
-									'<br>' .
-									esc_html__( 'You can use the Site Settings to make changes and see them live!', 'elementor' ) .
-									sprintf( ' <a target="_blank" href="http://go.elementor.com/panel-layout-settings">%s</a>', esc_html__( 'Learn More', 'elementor' ) ),
-=======
-								'label' => __( 'Looking for the Style settings?', 'elementor' ),
-								'field_args' => [
-									'type' => 'raw_html',
-									'html' => __( 'The Style settings changed its location and can now be found within Elementor Editor\'s <b>Panel > Hamburger Menu > Site Settings</b>.<br>You can use the Site Settings to make changes and see them live!', 'elementor' ) . sprintf( ' <a target="_blank" href="http://go.elementor.com/panel-layout-settings">%s</a>', __( 'Learn More', 'elementor' ) ),
->>>>>>> dist
-								],
-							],
-						],
-					],
-				],
-			],
 			self::TAB_INTEGRATIONS => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Integrations', 'elementor' ),
 				'sections' => [
 					'google_maps' => [
@@ -656,18 +505,6 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 						'fields' => [
 							'google_maps_api_key' => [
 								'label' => esc_html__( 'API Key', 'elementor' ),
-=======
-				'label' => __( 'Integrations', 'elementor' ),
-				'sections' => [
-					'google_maps' => [
-						'label' => __( 'Google Maps Embed API', 'elementor' ),
-						'callback' => function() {
-							printf( __( 'Google Maps Embed API is a free service by Google that allows embedding Google Maps in your site. For more details, visit Google Maps\' <a href="%s" target="_blank">Using API Keys</a> page.', 'elementor' ), esc_url( 'https://developers.google.com/maps/documentation/embed/get-api-key' ) );
-						},
-						'fields' => [
-							'google_maps_api_key' => [
-								'label' => __( 'API Key', 'elementor' ),
->>>>>>> dist
 								'field_args' => [
 									'class' => 'elementor_google_maps_api_key',
 									'type' => 'text',
@@ -678,21 +515,16 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 				],
 			],
 			self::TAB_ADVANCED => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Advanced', 'elementor' ),
-=======
-				'label' => __( 'Advanced', 'elementor' ),
->>>>>>> dist
 				'sections' => [
 					'advanced' => [
 						'fields' => [
 							'css_print_method' => [
-<<<<<<< HEAD
 								'label' => esc_html__( 'CSS Print Method', 'elementor' ),
 								'field_args' => [
 									'class' => 'elementor_css_print_method',
 									'type' => 'select',
-									'std' => 'internal',
+									'std' => 'external',
 									'options' => [
 										'external' => esc_html__( 'External File', 'elementor' ),
 										'internal' => esc_html__( 'Internal Embedding', 'elementor' ),
@@ -714,37 +546,10 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 							],
 							'unfiltered_files_upload' => [
 								'label' => esc_html__( 'Enable Unfiltered File Uploads', 'elementor' ),
-=======
-								'label' => __( 'CSS Print Method', 'elementor' ),
-								'field_args' => [
-									'class' => 'elementor_css_print_method',
-									'type' => 'select',
-									'options' => [
-										'external' => __( 'External File', 'elementor' ),
-										'internal' => __( 'Internal Embedding', 'elementor' ),
-									],
-									'desc' => '<div class="elementor-css-print-method-description" data-value="external" style="display: none">' . __( 'Use external CSS files for all generated stylesheets. Choose this setting for better performance (recommended).', 'elementor' ) . '</div><div class="elementor-css-print-method-description" data-value="internal" style="display: none">' . __( 'Use internal CSS that is embedded in the head of the page. For troubleshooting server configuration conflicts and managing development environments.', 'elementor' ) . '</div>',
-								],
-							],
-							'editor_break_lines' => [
-								'label' => __( 'Switch Editor Loader Method', 'elementor' ),
-								'field_args' => [
-									'type' => 'select',
-									'options' => [
-										'' => __( 'Disable', 'elementor' ),
-										1 => __( 'Enable', 'elementor' ),
-									],
-									'desc' => __( 'For troubleshooting server configuration conflicts.', 'elementor' ),
-								],
-							],
-							'unfiltered_files_upload' => [
-								'label' => __( 'Enable Unfiltered File Uploads', 'elementor' ),
->>>>>>> dist
 								'field_args' => [
 									'type' => 'select',
 									'std' => '',
 									'options' => [
-<<<<<<< HEAD
 										'' => esc_html__( 'Disable', 'elementor' ),
 										'1' => esc_html__( 'Enable', 'elementor' ),
 									],
@@ -753,21 +558,10 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 							],
 							'font_display' => [
 								'label' => esc_html__( 'Google Fonts Load', 'elementor' ),
-=======
-										'' => __( 'Disable', 'elementor' ),
-										1 => __( 'Enable', 'elementor' ),
-									],
-									'desc' => __( 'Please note! Allowing uploads of any files (SVG & JSON included) is a potential security risk.', 'elementor' ) . '<br>' . __( 'Elementor will try to sanitize the unfiltered files, removing potential malicious code and scripts.', 'elementor' ) . '<br>' . __( 'We recommend you only enable this feature if you understand the security risks involved.', 'elementor' ),
-								],
-							],
-							'font_display' => [
-								'label' => __( 'Google Fonts Load', 'elementor' ),
->>>>>>> dist
 								'field_args' => [
 									'type' => 'select',
 									'std' => 'auto',
 									'options' => [
-<<<<<<< HEAD
 										'auto' => esc_html__( 'Default', 'elementor' ),
 										'block' => esc_html__( 'Blocking', 'elementor' ),
 										'swap' => esc_html__( 'Swap', 'elementor' ),
@@ -775,15 +569,6 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 										'optional' => esc_html__( 'Optional', 'elementor' ),
 									],
 									'desc' => esc_html__( 'Font-display property defines how font files are loaded and displayed by the browser.', 'elementor' ) . '<br>' . esc_html__( 'Set the way Google Fonts are being loaded by selecting the font-display property (Default: Auto).', 'elementor' ),
-=======
-										'auto' => __( 'Default', 'elementor' ),
-										'block' => __( 'Blocking', 'elementor' ),
-										'swap' => __( 'Swap', 'elementor' ),
-										'fallback' => __( 'Fallback', 'elementor' ),
-										'optional' => __( 'Optional', 'elementor' ),
-									],
-									'desc' => __( 'Font-display property defines how font files are loaded and displayed by the browser.', 'elementor' ) . '<br>' . __( 'Set the way Google Fonts are being loaded by selecting the font-display property (Default: Auto).', 'elementor' ),
->>>>>>> dist
 								],
 							],
 						],
@@ -804,6 +589,10 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 	 * @return string Settings page title.
 	 */
 	protected function get_page_title() {
+		if ( Plugin::$instance->experiments->is_feature_active( 'admin_menu_rearrangement' ) ) {
+			return __( 'Settings', 'elementor' );
+		}
+
 		return __( 'Elementor', 'elementor' );
 	}
 
@@ -817,6 +606,8 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 			'elementor_custom_fonts',
 			'elementor_custom_icons',
 			'elementor-license',
+			'e-form-submissions',
+			'elementor_custom_custom_code',
 			'popup_templates',
 		];
 
@@ -828,7 +619,6 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Output the content for custom_code page.
 	 */
 	private function elementor_custom_code() {
@@ -845,8 +635,6 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Settings page constructor.
 	 *
 	 * Initializing Elementor "Settings" page.
@@ -858,10 +646,16 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 		parent::__construct();
 
 		add_action( 'admin_init', [ $this, 'on_admin_init' ] );
-		add_action( 'admin_menu', [ $this, 'register_admin_menu' ], 20 );
-		add_action( 'admin_menu', [ $this, 'admin_menu_change_name' ], 200 );
-		add_action( 'admin_menu', [ $this, 'register_pro_menu' ], self::MENU_PRIORITY_GO_PRO );
-		add_action( 'admin_menu', [ $this, 'register_knowledge_base_menu' ], 501 );
+
+		if ( ! Plugin::$instance->experiments->is_feature_active( 'admin_menu_rearrangement' ) ) {
+			add_action( 'admin_menu', [ $this, 'register_admin_menu' ], 20 );
+			add_action( 'admin_menu', [ $this, 'admin_menu_change_name' ], 200 );
+			add_action( 'admin_menu', [ $this, 'register_pro_menu' ], self::MENU_PRIORITY_GO_PRO );
+			add_action( 'admin_menu', [ $this, 'register_knowledge_base_menu' ], 501 );
+
+			add_filter( 'custom_menu_order', '__return_true' );
+			add_filter( 'menu_order', [ $this, 'menu_order' ] );
+		}
 
 		$clear_cache_callback = [ Plugin::$instance->files_manager, 'clear_cache' ];
 
@@ -876,8 +670,5 @@ All within a simple, intuitive place.', 'elementor' ); ?>
 			add_action( "add_option_{$option_name}", $clear_cache_callback );
 			add_action( "update_option_{$option_name}", $clear_cache_callback );
 		}
-
-		add_filter( 'custom_menu_order', '__return_true' );
-		add_filter( 'menu_order', [ $this, 'menu_order' ] );
 	}
 }

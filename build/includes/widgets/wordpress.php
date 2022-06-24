@@ -44,6 +44,10 @@ class Widget_WordPress extends Widget_Base {
 		return $this->get_widget_instance() instanceof \Pojo_Widget_Base;
 	}
 
+	public function hide_on_search() {
+		return Plugin::$instance->experiments->is_feature_active( 'e_hidden_wordpress_widgets' );
+	}
+
 	/**
 	 * Get widget name.
 	 *
@@ -208,10 +212,7 @@ class Widget_WordPress extends Widget_Base {
 		if ( ! empty( $settings['wp'] ) ) {
 			$widget = $this->get_widget_instance();
 			$instance = $widget->update( $settings['wp'], [] );
-<<<<<<< HEAD
 			/** This filter is documented in wp-includes/class-wp-widget.php */
-=======
->>>>>>> dist
 			$settings['wp'] = apply_filters( 'widget_update_callback', $instance, $settings['wp'], [], $widget );
 		}
 
@@ -230,11 +231,7 @@ class Widget_WordPress extends Widget_Base {
 		$this->add_control(
 			'wp',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Form', 'elementor' ),
-=======
-				'label' => __( 'Form', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::WP_WIDGET,
 				'widget' => $this->get_name(),
 				'id_base' => $this->get_widget_instance()->id_base,

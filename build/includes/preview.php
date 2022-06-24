@@ -78,11 +78,7 @@ class Preview extends App {
 				$e = error_get_last();
 				if ( $e ) {
 					echo '<div id="elementor-preview-debug-error"><pre>';
-<<<<<<< HEAD
 					Utils::print_unescaped_internal_string( $e['message'] );
-=======
-					echo $e['message'];
->>>>>>> dist
 					echo '</pre></div>';
 				}
 			} );
@@ -268,12 +264,9 @@ class Preview extends App {
 			wp_enqueue_style( 'editor-preview-legacy' );
 		}
 
-<<<<<<< HEAD
 		// Handle the 'wp audio' in editor preview.
 		wp_enqueue_style( 'wp-mediaelement' );
 
-=======
->>>>>>> dist
 		/**
 		 * Preview enqueue styles.
 		 *
@@ -309,12 +302,9 @@ class Preview extends App {
 			true
 		);
 
-<<<<<<< HEAD
 		// Handle the 'wp audio' in editor preview.
 		wp_enqueue_script( 'wp-mediaelement' );
 
-=======
->>>>>>> dist
 		/**
 		 * Preview enqueue scripts.
 		 *

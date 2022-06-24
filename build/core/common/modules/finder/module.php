@@ -107,7 +107,6 @@ class Module extends BaseModule {
 			$categories_data[ $category_name ] = array_merge( $category->get_settings(), [ 'name' => $category_name ] );
 		}
 
-<<<<<<< HEAD
 		/**
 		 * Finder categories.
 		 *
@@ -118,8 +117,6 @@ class Module extends BaseModule {
 		 *
 		 * @param array $categories_data A list of finder categories.
 		 */
-=======
->>>>>>> dist
 		$categories_data = apply_filters( 'elementor/finder/categories', $categories_data );
 
 		return [

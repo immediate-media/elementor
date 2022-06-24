@@ -85,17 +85,10 @@ class Control_Dimensions extends Control_Base_Units {
 	 */
 	public function content_template() {
 		$dimensions = [
-<<<<<<< HEAD
 			'top' => esc_html__( 'Top', 'elementor' ),
 			'right' => esc_html__( 'Right', 'elementor' ),
 			'bottom' => esc_html__( 'Bottom', 'elementor' ),
 			'left' => esc_html__( 'Left', 'elementor' ),
-=======
-			'top' => __( 'Top', 'elementor' ),
-			'right' => __( 'Right', 'elementor' ),
-			'bottom' => __( 'Bottom', 'elementor' ),
-			'left' => __( 'Left', 'elementor' ),
->>>>>>> dist
 		];
 		?>
 		<div class="elementor-control-field">
@@ -105,7 +98,6 @@ class Control_Dimensions extends Control_Base_Units {
 				<ul class="elementor-control-dimensions">
 					<?php
 					foreach ( $dimensions as $dimension_key => $dimension_title ) :
-<<<<<<< HEAD
 						?>
 						<li class="elementor-control-dimension">
 							<input id="<?php $this->print_control_uid( $dimension_key ); ?>" type="number" data-setting="<?php
@@ -137,44 +129,17 @@ class Control_Dimensions extends Control_Base_Units {
 								// PHPCS - the variable $dimension_title holds an escaped translated value.
 								echo $dimension_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							?></label>
-=======
-						$control_uid = $this->get_control_uid( $dimension_key );
-						?>
-						<li class="elementor-control-dimension">
-							<input id="<?php echo $control_uid; ?>" type="number" data-setting="<?php echo esc_attr( $dimension_key ); ?>"
-								   placeholder="<#
-							   if ( _.isObject( data.placeholder ) ) {
-								if ( ! _.isUndefined( data.placeholder.<?php echo $dimension_key; ?> ) ) {
-									print( data.placeholder.<?php echo $dimension_key; ?> );
-								}
-							   } else {
-								print( data.placeholder );
-							   } #>"
-							<# if ( -1 === _.indexOf( allowed_dimensions, '<?php echo $dimension_key; ?>' ) ) { #>
-								disabled
-								<# } #>
-									/>
-							<label for="<?php echo esc_attr( $control_uid ); ?>" class="elementor-control-dimension-label"><?php echo $dimension_title; ?></label>
->>>>>>> dist
 						</li>
 					<?php endforeach; ?>
 					<li>
 						<button class="elementor-link-dimensions tooltip-target" data-tooltip="<?php echo esc_attr__( 'Link values together', 'elementor' ); ?>">
 							<span class="elementor-linked">
 								<i class="eicon-link" aria-hidden="true"></i>
-<<<<<<< HEAD
 								<span class="elementor-screen-only"><?php echo esc_html__( 'Link values together', 'elementor' ); ?></span>
 							</span>
 							<span class="elementor-unlinked">
 								<i class="eicon-chain-broken" aria-hidden="true"></i>
 								<span class="elementor-screen-only"><?php echo esc_html__( 'Unlinked values', 'elementor' ); ?></span>
-=======
-								<span class="elementor-screen-only"><?php echo __( 'Link values together', 'elementor' ); ?></span>
-							</span>
-							<span class="elementor-unlinked">
-								<i class="eicon-chain-broken" aria-hidden="true"></i>
-								<span class="elementor-screen-only"><?php echo __( 'Unlinked values', 'elementor' ); ?></span>
->>>>>>> dist
 							</span>
 						</button>
 					</li>

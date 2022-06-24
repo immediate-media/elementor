@@ -30,11 +30,7 @@ class WP_Exporter {
 		'status' => false,
 		'offset' => 0,
 		'limit' => -1,
-<<<<<<< HEAD
 		'meta_query' => [], // If specified `meta_key` then will include all post(s) that have this meta_key.
-=======
-		'meta_key' => '', // If specified `meta_key` then will include all post(s) that have this meta_key.
->>>>>>> dist
 	];
 
 	/**
@@ -51,11 +47,7 @@ class WP_Exporter {
 	 * Run export, by requested args.
 	 * Returns XML with exported data.
 	 *
-<<<<<<< HEAD
 	 * @return array
-=======
-	 * @return string
->>>>>>> dist
 	 */
 	public function run() {
 		if ( 'all' !== $this->args['content'] && post_type_exists( $this->args['content'] ) ) {
@@ -72,14 +64,14 @@ class WP_Exporter {
 			$where = $this->wpdb->prepare( "{$this->wpdb->posts}.post_type IN (" . implode( ',', $esses ) . ')', $post_types );// phpcs:ignore
 		}
 
-		if ( $this->args['status'] && ( 'post' === $this->args['content'] || 'page' === $this->args['content'] ) ) {
+		if ( $this->args['status'] && ( 'post' === $this->args['content'] || 'page' === $this->args['content'] || 'nav_menu_item' === $this->args['content'] ) ) {
 			$where .= $this->wpdb->prepare( " AND {$this->wpdb->posts}.post_status = %s", $this->args['status'] );// phpcs:ignore
 		} else {
 			$where .= " AND {$this->wpdb->posts}.post_status != 'auto-draft'";
 		}
 
 		$join = '';
-		if ( $this->args['category'] && 'post' === $this->args['content'] ) {
+		if ( $this->args['category'] && ( 'post' === $this->args['content'] || 'nav_menu_item' === $this->args['content'] ) ) {
 			$term = term_exists( $this->args['category'], 'category' );
 			if ( $term ) {
 				$join = "INNER JOIN {$this->wpdb->term_relationships} ON ({$this->wpdb->posts}.ID = {$this->wpdb->term_relationships}.object_id)";
@@ -106,17 +98,12 @@ class WP_Exporter {
 			$limit = 'LIMIT ' . (int) $this->args['limit'] . ' OFFSET ' . (int) $this->args['offset'];
 		}
 
-<<<<<<< HEAD
 		if ( ! empty( $this->args['meta_query'] ) ) {
-=======
-		if ( ! empty( $this->args['meta_key'] ) ) {
->>>>>>> dist
 			if ( $join ) {
 				$join .= ' ';
 			}
 
 			if ( $where ) {
-<<<<<<< HEAD
 				$where .= ' ';
 			}
 
@@ -128,19 +115,11 @@ class WP_Exporter {
 
 			$join .= $query_clauses['join'];
 			$where .= $query_clauses['where'];
-=======
-				$where .= ' AND ';
-			}
-
-			$join .= "LEFT JOIN {$this->wpdb->postmeta} ON ({$this->wpdb->posts}.ID = {$this->wpdb->postmeta}.post_id)";
-			$where .= $this->wpdb->prepare( "{$this->wpdb->postmeta}.meta_key = %s", $this->args['meta_key'] );// phpcs:ignore
->>>>>>> dist
 		}
 
 		// Grab a snapshot of post IDs, just in case it changes during the export.
 		$post_ids = $this->wpdb->get_col( "SELECT ID FROM {$this->wpdb->posts} $join WHERE $where $limit" );// phpcs:ignore
 
-<<<<<<< HEAD
 		if ( ! empty( $this->args['include_post_featured_image_as_attachment'] ) ) {
 			foreach ( $post_ids as $post_id ) {
 				$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
@@ -151,8 +130,6 @@ class WP_Exporter {
 			}
 		}
 
-=======
->>>>>>> dist
 		/*
 		 * Get the requested terms ready, empty unless posts filtered by category
 		 * or all content.
@@ -195,14 +172,10 @@ class WP_Exporter {
 			unset( $categories, $custom_taxonomies, $custom_terms );
 		}
 
-<<<<<<< HEAD
 		return [
 			'ids' => $post_ids,
 			'xml' => $this->get_xml_export( $post_ids, $cats, $tags, $terms ),
 		];
-=======
-		return $this->get_xml_export( $post_ids, $cats, $tags, $terms );
->>>>>>> dist
 	}
 
 	/**
@@ -600,11 +573,7 @@ class WP_Exporter {
 					$comments  = array_map( 'get_comment', $_comments );
 					foreach ( $comments as $c ) {
 
-<<<<<<< HEAD
 						$result .= $this->indent( 3 ) . '<wp:comment>' . PHP_EOL;
-=======
-						$result .= $result .= $this->indent( 3 ) . '<wp:comment>' . PHP_EOL;
->>>>>>> dist
 
 						$result .= $this->indent( 4 ) . '<wp:comment_id>' . (int) $c->comment_ID . '</wp:comment_id>' . PHP_EOL;
 						$result .= $this->indent( 4 ) . '<wp:comment_author>' . $this->wxr_cdata( $c->comment_author ) . '</wp:comment_author>' . PHP_EOL;
@@ -637,26 +606,15 @@ class WP_Exporter {
 								continue;
 							}
 
-<<<<<<< HEAD
 							$result .= $this->indent( 4 ) . '<wp:commentmeta>' . PHP_EOL;
-=======
-							$result .= $result .= $this->indent( 4 ) . '<wp:commentmeta>' . PHP_EOL;
->>>>>>> dist
 
 							$result .= $this->indent( 5 ) . '<wp:meta_key>' . $this->wxr_cdata( $meta->meta_key ) . '</wp:meta_key>' . PHP_EOL;
 							$result .= $this->indent( 5 ) . '<wp:meta_value>' . $this->wxr_cdata( $meta->meta_key ) . '</wp:meta_value>' . PHP_EOL;
 
-<<<<<<< HEAD
 							$result .= $this->indent( 4 ) . '</wp:commentmeta>' . PHP_EOL;
 						}
 
 						$result .= $this->indent( 3 ) . '</wp:comment>' . PHP_EOL;
-=======
-							$result .= $result .= $this->indent( 4 ) . '</wp:commentmeta>' . PHP_EOL;
-						}
-
-						$result .= $result .= $this->indent( 3 ) . '</wp:comment>' . PHP_EOL;
->>>>>>> dist
 					}
 
 					$result .= $this->indent( 2 ) . '</item>' . PHP_EOL;
@@ -682,12 +640,10 @@ class WP_Exporter {
 
 		foreach ( $nav_menus as $menu ) {
 			$result .= $this->indent( 2 ) . '<wp:term>' . PHP_EOL;
-
 			$result .= $this->indent( 3 ) . '<wp:term_id>' . (int) $menu->term_id . '</wp:term_id>' . PHP_EOL;
 			$result .= $this->indent( 3 ) . '<wp:term_taxonomy>nav_menu</wp:term_taxonomy>' . PHP_EOL;
 			$result .= $this->indent( 3 ) . '<wp:term_slug>' . $this->wxr_cdata( $menu->slug ) . '</wp:term_slug>' . PHP_EOL;
-			$result .= wxr_term_name( $menu );
-
+			$result .= $this->indent( 3 ) . '<wp:term_name>' . $this->wxr_cdata( $menu->name ) . '</wp:term_name>' . PHP_EOL;
 			$result .= $this->indent( 2 ) . '</wp:term>' . PHP_EOL;
 		}
 
@@ -740,7 +696,6 @@ class WP_Exporter {
 		$rss_info_language = get_bloginfo_rss( 'language' );
 		$pub_date = gmdate( 'D, d M Y H:i:s +0000' );
 
-<<<<<<< HEAD
 		$show_page_on_front = 'page' === get_option( 'show_on_front' );
 
 		$page_on_front_xml = '';
@@ -753,8 +708,6 @@ class WP_Exporter {
 			}
 		}
 
-=======
->>>>>>> dist
 		$dynamic = $this->wxr_authors_list( $post_ids ) .
 					$this->wxr_categories_list( $cats ) .
 					$this->wxr_tags_list( $tags ) .
@@ -767,7 +720,7 @@ class WP_Exporter {
 
 		$dynamic .= $rss2_head;
 
-		if ( 'all' === $this->args['content'] ) {
+		if ( 'all' === $this->args['content'] || 'nav_menu_item' === $this->args['content'] ) {
 			$dynamic .= $this->wxr_nav_menu_terms();
 		}
 
@@ -808,11 +761,8 @@ $generator
 		<wp:wxr_version>$wxr_version</wp:wxr_version>
 		<wp:base_site_url>$wxr_site_url</wp:base_site_url>
 		<wp:base_blog_url>$rss_info_url</wp:base_blog_url>
-<<<<<<< HEAD
 		$page_on_front_xml
-=======
->>>>>>> dist
-$dynamic
+		$dynamic
 	</channel>
 </rss>
 EOT;

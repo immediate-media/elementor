@@ -1,11 +1,9 @@
 <?php
 namespace Elementor;
 
-<<<<<<< HEAD
+use Elementor\Core\Page_Assets\Data_Managers\Responsive_Widgets as Responsive_Widgets_Data_Manager;
 use Elementor\Core\Page_Assets\Data_Managers\Widgets_Css as Widgets_Css_Data_Manager;
 
-=======
->>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -22,10 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @abstract
  */
 abstract class Widget_Base extends Element_Base {
-<<<<<<< HEAD
-=======
-
->>>>>>> dist
 	/**
 	 * Whether the widget has content.
 	 *
@@ -40,8 +34,9 @@ abstract class Widget_Base extends Element_Base {
 	 */
 	protected $_has_template_content = true;
 
+	private $is_first_section = true;
+
 	/**
-<<<<<<< HEAD
 	 * Registered Runtime Widgets.
 	 *
 	 * Registering in runtime all widgets that are being used on the page.
@@ -58,9 +53,9 @@ abstract class Widget_Base extends Element_Base {
 
 	private static $widgets_css_data_manager;
 
+	private static $responsive_widgets_data_manager;
+
 	/**
-=======
->>>>>>> dist
 	 * Get element type.
 	 *
 	 * Retrieve the element type, in this case `widget`.
@@ -231,6 +226,19 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
+	 * Hide on search.
+	 *
+	 * Whether to hide the widget on search in the panel or not. By default returns false.
+	 *
+	 * @access public
+	 *
+	 * @return bool Whether to hide the widget when searching for widget or not.
+	 */
+	public function hide_on_search() {
+		return false;
+	}
+
+	/**
 	 * Start widget controls section.
 	 *
 	 * Used to add a new section of controls to the widget. Regular controls and
@@ -248,12 +256,10 @@ abstract class Widget_Base extends Element_Base {
 	public function start_controls_section( $section_id, array $args = [] ) {
 		parent::start_controls_section( $section_id, $args );
 
-		static $is_first_section = true;
-
-		if ( $is_first_section ) {
+		if ( $this->is_first_section ) {
 			$this->register_skin_control();
 
-			$is_first_section = false;
+			$this->is_first_section = false;
 		}
 	}
 
@@ -272,11 +278,7 @@ abstract class Widget_Base extends Element_Base {
 			$skin_options = [];
 
 			if ( $this->_has_template_content ) {
-<<<<<<< HEAD
 				$skin_options[''] = esc_html__( 'Default', 'elementor' );
-=======
-				$skin_options[''] = __( 'Default', 'elementor' );
->>>>>>> dist
 			}
 
 			foreach ( $skins as $skin_id => $skin ) {
@@ -291,11 +293,7 @@ abstract class Widget_Base extends Element_Base {
 				$this->add_control(
 					'_skin',
 					[
-<<<<<<< HEAD
 						'label' => esc_html__( 'Skin', 'elementor' ),
-=======
-						'label' => __( 'Skin', 'elementor' ),
->>>>>>> dist
 						'type' => Controls_Manager::HIDDEN,
 						'default' => $default_value,
 					]
@@ -304,11 +302,7 @@ abstract class Widget_Base extends Element_Base {
 				$this->add_control(
 					'_skin',
 					[
-<<<<<<< HEAD
 						'label' => esc_html__( 'Skin', 'elementor' ),
-=======
-						'label' => __( 'Skin', 'elementor' ),
->>>>>>> dist
 						'type' => Controls_Manager::SELECT,
 						'default' => $default_value,
 						'options' => $skin_options,
@@ -369,6 +363,7 @@ abstract class Widget_Base extends Element_Base {
 			'categories' => $this->get_categories(),
 			'html_wrapper_class' => $this->get_html_wrapper_class(),
 			'show_in_panel' => $this->show_in_panel(),
+			'hide_on_search' => $this->hide_on_search(),
 		];
 
 		$stack = Plugin::$instance->controls_manager->get_element_stack( $this );
@@ -378,7 +373,7 @@ abstract class Widget_Base extends Element_Base {
 			$config['tabs_controls'] = $this->get_tabs_controls();
 		}
 
-		return array_merge( parent::get_initial_config(), $config );
+		return array_replace_recursive( parent::get_initial_config(), $config );
 	}
 
 	/**
@@ -439,7 +434,6 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Safe print parsed text editor.
 	 *
 	 * @uses static::parse_text_editor.
@@ -454,8 +448,6 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Get HTML wrapper class.
 	 *
 	 * Retrieve the widget container class. Can be used to override the
@@ -552,8 +544,17 @@ abstract class Widget_Base extends Element_Base {
 
 		$attributes['data-elementor-open-lightbox'] = 'yes';
 
+		$action_hash_params = [];
+
+		if ( $id ) {
+			$action_hash_params['id'] = $id;
+			$action_hash_params['url'] = wp_get_attachment_url( $id );
+		}
+
 		if ( $group_id ) {
 			$attributes['data-elementor-lightbox-slideshow'] = $group_id;
+
+			$action_hash_params['slideshow'] = $group_id;
 		}
 
 		if ( $id ) {
@@ -567,6 +568,8 @@ abstract class Widget_Base extends Element_Base {
 				$attributes['data-elementor-lightbox-description'] = $lightbox_image_attributes['description'];
 			}
 		}
+
+		$attributes['e-action-hash'] = Plugin::instance()->frontend->create_action_hash( 'lightbox', $action_hash_params );
 
 		$this->add_render_attribute( $element, $attributes, null, $overwrite );
 
@@ -614,7 +617,6 @@ abstract class Widget_Base extends Element_Base {
 		?>
 		<div class="elementor-widget-container">
 			<?php
-<<<<<<< HEAD
 			if ( $this->is_widget_first_render( $this->get_group_name() ) ) {
 				$this->register_runtime_widget( $this->get_group_name() );
 			}
@@ -622,8 +624,6 @@ abstract class Widget_Base extends Element_Base {
 			$this->print_widget_css();
 
 			// get_name
-=======
->>>>>>> dist
 
 			/**
 			 * Render widget content.
@@ -643,13 +643,10 @@ abstract class Widget_Base extends Element_Base {
 		<?php
 	}
 
-<<<<<<< HEAD
 	protected function is_widget_first_render( $widget_name ) {
 		return ! in_array( $widget_name, self::$registered_runtime_widgets, true );
 	}
 
-=======
->>>>>>> dist
 	/**
 	 * Render widget plain content.
 	 *
@@ -754,7 +751,6 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Print a setting content without escaping.
 	 *
 	 * Script tags are allowed on frontend according to the WP theme securing policy.
@@ -775,8 +771,6 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Get default data.
 	 *
 	 * Retrieve the default widget data. Used to reset the data on initialization.
@@ -974,7 +968,6 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
-<<<<<<< HEAD
 	 * Get group name.
 	 *
 	 * Some widgets need to use group names, this method allows you to create them.
@@ -1004,24 +997,16 @@ abstract class Widget_Base extends Element_Base {
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * @param string $plugin_title  Plugin's title
 	 * @param string $since         Plugin version widget was deprecated
 	 * @param string $last          Plugin version in which the widget will be removed
 	 * @param string $replacement   Widget replacement
 	 */
 	protected function deprecated_notice( $plugin_title, $since, $last = '', $replacement = '' ) {
-<<<<<<< HEAD
 		$this->start_controls_section(
 			'Deprecated',
 			[
 				'label' => esc_html__( 'Deprecated', 'elementor' ),
-=======
-		$this->start_controls_section( 'Deprecated',
-			[
-				'label' => __( 'Deprecated', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
@@ -1040,7 +1025,6 @@ abstract class Widget_Base extends Element_Base {
 		$this->end_controls_section();
 
 	}
-<<<<<<< HEAD
 
 	public function register_runtime_widget( $widget_name ) {
 		self::$registered_runtime_widgets[] = $widget_name;
@@ -1049,20 +1033,92 @@ abstract class Widget_Base extends Element_Base {
 	public function get_widget_css_config( $widget_name ) {
 		$direction = is_rtl() ? '-rtl' : '';
 
-		$css_file_path = 'css/widget-' . $widget_name . $direction . '.min.css';
+		$has_custom_breakpoints = $this->is_custom_breakpoints_widget();
+
+		$file_name = 'widget-' . $widget_name . $direction . '.min.css';
+
+		// The URL of the widget's external CSS file that is loaded in case that the CSS content is too large to be printed inline.
+		$file_url = Plugin::$instance->frontend->get_frontend_file_url( $file_name, $has_custom_breakpoints );
+
+		// The local path of the widget's CSS file that is being read and saved in the DB when the CSS content should be printed inline.
+		$file_path = Plugin::$instance->frontend->get_frontend_file_path( $file_name, $has_custom_breakpoints );
 
 		return [
 			'key' => $widget_name,
 			'version' => ELEMENTOR_VERSION,
-			'file_path' => ELEMENTOR_ASSETS_PATH . $css_file_path,
+			'file_path' => $file_path,
 			'data' => [
-				'file_url' => ELEMENTOR_ASSETS_URL . $css_file_path,
+				'file_url' => $file_url,
 			],
 		];
 	}
 
 	public function get_css_config() {
 		return $this->get_widget_css_config( $this->get_group_name() );
+	}
+
+	public function get_responsive_widgets_config() {
+		$responsive_widgets_data_manager = $this->get_responsive_widgets_data_manager();
+
+		return [
+			'key' => $responsive_widgets_data_manager::RESPONSIVE_WIDGETS_DATABASE_KEY,
+			'version' => ELEMENTOR_VERSION,
+			'file_path' => ELEMENTOR_ASSETS_PATH . $responsive_widgets_data_manager::RESPONSIVE_WIDGETS_FILE_PATH,
+		];
+	}
+
+	public function get_responsive_widgets() {
+		$responsive_widgets_data_manager = $this->get_responsive_widgets_data_manager();
+
+		$config = $this->get_responsive_widgets_config();
+
+		return $responsive_widgets_data_manager->get_asset_data_from_config( $config );
+	}
+
+	/**
+	 * Get Responsive Widgets Data Manager.
+	 *
+	 * Retrieve the data manager that handles widgets that are using media queries for custom-breakpoints values.
+	 *
+	 * @since 3.5.0
+	 * @access protected
+	 *
+	 * @return Responsive_Widgets_Data_Manager
+	 */
+	protected function get_responsive_widgets_data_manager() {
+		if ( ! self::$responsive_widgets_data_manager ) {
+			self::$responsive_widgets_data_manager = new Responsive_Widgets_Data_Manager();
+		}
+
+		return self::$responsive_widgets_data_manager;
+	}
+
+	/**
+	 * Is Custom Breakpoints Widget.
+	 *
+	 * Checking if there are active custom-breakpoints and if the widget use them.
+	 *
+	 * @since 3.5.0
+	 * @access protected
+	 *
+	 * @return boolean
+	 */
+	protected function is_custom_breakpoints_widget() {
+		$has_custom_breakpoints = Plugin::$instance->breakpoints->has_custom_breakpoints();
+
+		if ( $has_custom_breakpoints ) {
+			$responsive_widgets = $this->get_responsive_widgets();
+
+			// The $widget_name can also represents a widgets group name, therefore we need to use the current widget name to check if it's responsive widget.
+			$current_widget_name = $this->get_name();
+
+			// If the widget is not implementing custom-breakpoints media queries then it has no custom- css file.
+			if ( ! isset( $responsive_widgets[ $current_widget_name ] ) ) {
+				$has_custom_breakpoints = false;
+			}
+		}
+
+		return $has_custom_breakpoints;
 	}
 
 	private function get_widget_css() {
@@ -1129,6 +1185,4 @@ abstract class Widget_Base extends Element_Base {
 
 		return self::$widgets_css_data_manager;
 	}
-=======
->>>>>>> dist
 }

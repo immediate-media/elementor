@@ -25,15 +25,11 @@ class Tools extends Base_Category {
 	 * @return string
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Tools', 'elementor' );
 	}
 
 	public function get_id() {
 		return 'tools';
-=======
-		return __( 'Tools', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -49,47 +45,42 @@ class Tools extends Base_Category {
 	public function get_category_items( array $options = [] ) {
 		$tools_url = ElementorTools::get_url();
 
-		return [
+		$items = [
 			'tools' => [
-<<<<<<< HEAD
 				'title' => esc_html__( 'Tools', 'elementor' ),
-=======
-				'title' => __( 'Tools', 'elementor' ),
->>>>>>> dist
 				'icon' => 'tools',
 				'url' => $tools_url,
 				'keywords' => [ 'tools', 'regenerate css', 'safe mode', 'debug bar', 'sync library', 'elementor' ],
 			],
 			'replace-url' => [
-<<<<<<< HEAD
 				'title' => esc_html__( 'Replace URL', 'elementor' ),
-=======
-				'title' => __( 'Replace URL', 'elementor' ),
->>>>>>> dist
 				'icon' => 'tools',
 				'url' => $tools_url . '#tab-replace_url',
 				'keywords' => [ 'tools', 'replace url', 'domain', 'elementor' ],
 			],
-			'version-control' => [
-<<<<<<< HEAD
-				'title' => esc_html__( 'Version Control', 'elementor' ),
-=======
-				'title' => __( 'Version Control', 'elementor' ),
->>>>>>> dist
-				'icon' => 'time-line',
-				'url' => $tools_url . '#tab-versions',
-				'keywords' => [ 'tools', 'version', 'control', 'rollback', 'beta', 'elementor' ],
-			],
 			'maintenance-mode' => [
-<<<<<<< HEAD
 				'title' => esc_html__( 'Maintenance Mode', 'elementor' ),
-=======
-				'title' => __( 'Maintenance Mode', 'elementor' ),
->>>>>>> dist
 				'icon' => 'tools',
 				'url' => $tools_url . '#tab-maintenance_mode',
 				'keywords' => [ 'tools', 'maintenance', 'coming soon', 'elementor' ],
 			],
+			'import-export' => [
+				'title' => esc_html__( 'Import Export', 'elementor' ),
+				'icon' => 'import-export',
+				'url' => $tools_url . '#tab-import-export-kit',
+				'keywords' => [ 'tools', 'import export', 'import', 'export', 'kit' ],
+			],
 		];
+
+		if ( ElementorTools::can_user_rollback_versions() ) {
+			$items['version-control'] = [
+				'title' => esc_html__( 'Version Control', 'elementor' ),
+				'icon' => 'time-line',
+				'url' => $tools_url . '#tab-versions',
+				'keywords' => [ 'tools', 'version', 'control', 'rollback', 'beta', 'elementor' ],
+			];
+		}
+
+		return $items;
 	}
 }

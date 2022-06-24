@@ -43,11 +43,7 @@ class Widget_Divider extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Divider', 'elementor' );
-=======
-		return __( 'Divider', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -319,21 +315,12 @@ class Widget_Divider extends Widget_Base {
 	private function get_options_by_groups( $styles, $group = false ) {
 		$groups = [
 			'line' => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Line', 'elementor' ),
 				'options' => [
 					'solid' => esc_html__( 'Solid', 'elementor' ),
 					'double' => esc_html__( 'Double', 'elementor' ),
 					'dotted' => esc_html__( 'Dotted', 'elementor' ),
 					'dashed' => esc_html__( 'Dashed', 'elementor' ),
-=======
-				'label' => __( 'Line', 'elementor' ),
-				'options' => [
-					'solid' => __( 'Solid', 'elementor' ),
-					'double' => __( 'Double', 'elementor' ),
-					'dotted' => __( 'Dotted', 'elementor' ),
-					'dashed' => __( 'Dashed', 'elementor' ),
->>>>>>> dist
 				],
 			],
 		];
@@ -366,22 +353,14 @@ class Widget_Divider extends Widget_Base {
 		$this->start_controls_section(
 			'section_divider',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Divider', 'elementor' ),
-=======
-				'label' => __( 'Divider', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'style',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Style', 'elementor' ),
-=======
-				'label' => __( 'Style', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SELECT,
 				'groups' => array_values( $this->get_options_by_groups( $styles ) ),
 				'render_type' => 'template',
@@ -439,11 +418,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'width',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Width', 'elementor' ),
-=======
-				'label' => __( 'Width', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ '%', 'px' ],
 				'range' => [
@@ -470,7 +445,6 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Alignment', 'elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
@@ -484,21 +458,6 @@ class Widget_Divider extends Widget_Base {
 					],
 					'right' => [
 						'title' => esc_html__( 'Right', 'elementor' ),
-=======
-				'label' => __( 'Alignment', 'elementor' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
-						'title' => __( 'Left', 'elementor' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => __( 'Center', 'elementor' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => __( 'Right', 'elementor' ),
->>>>>>> dist
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -512,16 +471,11 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'look',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Add Element', 'elementor' ),
-=======
-				'label' => __( 'Add Element', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'line',
 				'options' => [
 					'line' => [
-<<<<<<< HEAD
 						'title' => esc_html__( 'None', 'elementor' ),
 						'icon' => 'eicon-ban',
 					],
@@ -531,17 +485,6 @@ class Widget_Divider extends Widget_Base {
 					],
 					'line_icon' => [
 						'title' => esc_html__( 'Icon', 'elementor' ),
-=======
-						'title' => __( 'None', 'elementor' ),
-						'icon' => 'eicon-ban',
-					],
-					'line_text' => [
-						'title' => __( 'Text', 'elementor' ),
-						'icon' => 'eicon-t-letter-bold',
-					],
-					'line_icon' => [
-						'title' => __( 'Icon', 'elementor' ),
->>>>>>> dist
 						'icon' => 'eicon-star',
 					],
 				],
@@ -555,11 +498,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'View', 'elementor' ),
-=======
-				'label' => __( 'View', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -568,20 +507,12 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'text',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text', 'elementor' ),
-=======
-				'label' => __( 'Text', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::TEXT,
 				'condition' => [
 					'look' => 'line_text',
 				],
-<<<<<<< HEAD
 				'default' => esc_html__( 'Divider', 'elementor' ),
-=======
-				'default' => __( 'Divider', 'elementor' ),
->>>>>>> dist
 				'dynamic' => [
 					'active' => true,
 				],
@@ -591,11 +522,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'html_tag',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'HTML Tag', 'elementor' ),
-=======
-				'label' => __( 'HTML Tag', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SELECT,
 				'condition' => [
 					'look' => 'line_text',
@@ -618,11 +545,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'icon',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Icon', 'elementor' ),
-=======
-				'label' => __( 'Icon', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::ICONS,
 				'default' => [
 					'value' => 'fas fa-star',
@@ -639,11 +562,7 @@ class Widget_Divider extends Widget_Base {
 		$this->start_controls_section(
 			'section_divider_style',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Divider', 'elementor' ),
-=======
-				'label' => __( 'Divider', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'style!' => 'none',
@@ -654,11 +573,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => Global_Colors::COLOR_SECONDARY,
@@ -674,11 +589,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'weight',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Weight', 'elementor' ),
-=======
-				'label' => __( 'Weight', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 1,
@@ -703,11 +614,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'pattern_height',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Size', 'elementor' ),
-=======
-				'label' => __( 'Size', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}}' => '--divider-pattern-height: {{SIZE}}{{UNIT}}',
@@ -735,11 +642,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'pattern_size',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Amount', 'elementor' ),
-=======
-				'label' => __( 'Amount', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ '%', 'px' ],
 				'selectors' => [
@@ -771,11 +674,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'gap',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Gap', 'elementor' ),
-=======
-				'label' => __( 'Gap', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 15,
@@ -798,11 +697,7 @@ class Widget_Divider extends Widget_Base {
 		$this->start_controls_section(
 			'section_text_style',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text', 'elementor' ),
-=======
-				'label' => __( 'Text', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'look' => 'line_text',
@@ -813,11 +708,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'text_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'global' => [
 					'default' => Global_Colors::COLOR_SECONDARY,
@@ -842,7 +733,6 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'text_align',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Position', 'elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
@@ -856,21 +746,6 @@ class Widget_Divider extends Widget_Base {
 					],
 					'right' => [
 						'title' => esc_html__( 'Right', 'elementor' ),
-=======
-				'label' => __( 'Position', 'elementor' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
-						'title' => __( 'Left', 'elementor' ),
-						'icon' => 'eicon-h-align-left',
-					],
-					'center' => [
-						'title' => __( 'Center', 'elementor' ),
-						'icon' => 'eicon-h-align-center',
-					],
-					'right' => [
-						'title' => __( 'Right', 'elementor' ),
->>>>>>> dist
 						'icon' => 'eicon-h-align-right',
 					],
 				],
@@ -882,11 +757,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'text_spacing',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Spacing', 'elementor' ),
-=======
-				'label' => __( 'Spacing', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -905,11 +776,7 @@ class Widget_Divider extends Widget_Base {
 		$this->start_controls_section(
 			'section_icon_style',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Icon', 'elementor' ),
-=======
-				'label' => __( 'Icon', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'look' => 'line_icon',
@@ -920,21 +787,12 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'icon_view',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'View', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'options' => [
 					'default' => esc_html__( 'Default', 'elementor' ),
 					'stacked' => esc_html__( 'Stacked', 'elementor' ),
 					'framed' => esc_html__( 'Framed', 'elementor' ),
-=======
-				'label' => __( 'View', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'options' => [
-					'default' => __( 'Default', 'elementor' ),
-					'stacked' => __( 'Stacked', 'elementor' ),
-					'framed' => __( 'Framed', 'elementor' ),
->>>>>>> dist
 				],
 				'default' => 'default',
 				'prefix_class' => 'elementor-view-',
@@ -944,11 +802,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'icon_size',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Size', 'elementor' ),
-=======
-				'label' => __( 'Size', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -965,11 +819,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'icon_padding',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Padding', 'elementor' ),
-=======
-				'label' => __( 'Padding', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-icon' => 'padding: {{SIZE}}{{UNIT}};',
@@ -989,11 +839,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'primary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Primary Color', 'elementor' ),
-=======
-				'label' => __( 'Primary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1010,11 +856,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'secondary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Secondary Color', 'elementor' ),
-=======
-				'label' => __( 'Secondary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -1031,7 +873,6 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'icon_align',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Position', 'elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
@@ -1045,21 +886,6 @@ class Widget_Divider extends Widget_Base {
 					],
 					'right' => [
 						'title' => esc_html__( 'Right', 'elementor' ),
-=======
-				'label' => __( 'Position', 'elementor' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left' => [
-						'title' => __( 'Left', 'elementor' ),
-						'icon' => 'eicon-h-align-left',
-					],
-					'center' => [
-						'title' => __( 'Center', 'elementor' ),
-						'icon' => 'eicon-h-align-center',
-					],
-					'right' => [
-						'title' => __( 'Right', 'elementor' ),
->>>>>>> dist
 						'icon' => 'eicon-h-align-right',
 					],
 				],
@@ -1071,11 +897,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'icon_spacing',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Spacing', 'elementor' ),
-=======
-				'label' => __( 'Spacing', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -1092,11 +914,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_responsive_control(
 			'rotate',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Rotate', 'elementor' ),
-=======
-				'label' => __( 'Rotate', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'deg' ],
 				'default' => [
@@ -1118,11 +936,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'icon_border_width',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Border Width', 'elementor' ),
-=======
-				'label' => __( 'Border Width', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-icon' => 'border-width: {{SIZE}}{{UNIT}}',
@@ -1136,11 +950,7 @@ class Widget_Divider extends Widget_Base {
 		$this->add_control(
 			'border_radius',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Border Radius', 'elementor' ),
-=======
-				'label' => __( 'Border Radius', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -1233,11 +1043,7 @@ class Widget_Divider extends Widget_Base {
 		}
 
 		?>
-<<<<<<< HEAD
 		<div <?php $this->print_render_attribute_string( 'wrapper' ); ?>>
-=======
-		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
->>>>>>> dist
 			<span class="elementor-divider-separator">
 			<?php if ( $has_icon ) : ?>
 				<div class="elementor-icon elementor-divider__element">
@@ -1250,15 +1056,11 @@ class Widget_Divider extends Widget_Base {
 				$this->add_inline_editing_attributes( 'text' );
 				$this->add_render_attribute( 'text', [ 'class' => [ 'elementor-divider__text', 'elementor-divider__element' ] ] );
 				?>
-<<<<<<< HEAD
 				<<?php Utils::print_validated_html_tag( $settings['html_tag'] ); ?> <?php $this->print_render_attribute_string( 'text' ); ?>>
 				<?php
 				// PHPCS - the main text of a widget should not be escaped.
 				echo $settings['text']; // phpcs:ignore WordPress.Security.EscapeOutput ?>
 				</<?php Utils::print_validated_html_tag( $settings['html_tag'] ); ?>>
-=======
-				<<?php echo Utils::validate_html_tag( $settings['html_tag'] ) . ' ' . $this->get_render_attribute_string( 'text' ); ?>><?php echo $settings['text']; ?></<?php echo Utils::validate_html_tag( $settings['html_tag'] ); ?>>
->>>>>>> dist
 			<?php endif; ?>
 			</span>
 		</div>

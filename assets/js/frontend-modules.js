@@ -17,6 +17,45 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
 
+/***/ "../assets/dev/js/editor/utils/is-instanceof.js":
+/*!******************************************************!*\
+  !*** ../assets/dev/js/editor/utils/is-instanceof.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+/**
+ * Some FileAPI objects such as FileList, DataTransferItem and DataTransferItemList has inconsistency with the retrieved
+ * object (from events, etc.) and the actual JavaScript object so a regular instanceof doesn't work. This function can
+ * check whether it's instanceof by using the objects constructor and prototype names.
+ *
+ * @param object
+ * @param constructors
+ * @returns {boolean}
+ */
+var _default = (object, constructors) => {
+  constructors = Array.isArray(constructors) ? constructors : [constructors];
+
+  for (const constructor of constructors) {
+    if (object.constructor.name === constructor.prototype[Symbol.toStringTag]) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+exports["default"] = _default;
+
+/***/ }),
+
 /***/ "../assets/dev/js/frontend/document.js":
 /*!*********************************************!*\
   !*** ../assets/dev/js/frontend/document.js ***!
@@ -512,6 +551,8 @@ exports["default"] = void 0;
 
 var _instanceType = _interopRequireDefault(__webpack_require__(/*! ./instance-type */ "../assets/dev/js/modules/imports/instance-type.js"));
 
+var _isInstanceof = _interopRequireDefault(__webpack_require__(/*! ../../editor/utils/is-instanceof */ "../assets/dev/js/editor/utils/is-instanceof.js"));
+
 class ArgsObject extends _instanceType.default {
   static getInstanceType() {
     return 'ArgsObject';
@@ -585,7 +626,7 @@ class ArgsObject extends _instanceType.default {
   requireArgumentInstance(property, instance, args = this.args) {
     this.requireArgument(property, args);
 
-    if (!(args[property] instanceof instance)) {
+    if (!(args[property] instanceof instance) && !(0, _isInstanceof.default)(args[property], instance)) {
       throw Error(`${property} invalid instance.`);
     }
   }
@@ -604,9 +645,10 @@ class ArgsObject extends _instanceType.default {
 
 
   requireArgumentConstructor(property, type, args = this.args) {
-    this.requireArgument(property, args);
+    this.requireArgument(property, args); // Note: Converting the constructor to string in order to avoid equation issues
+    // due to different memory addresses between iframes (window.Object !== window.top.Object).
 
-    if (args[property].constructor !== type) {
+    if (args[property].constructor.toString() !== type.prototype.constructor.toString()) {
       throw Error(`${property} invalid constructor type.`);
     }
   }
@@ -1055,7 +1097,7 @@ class Scroll {
       threshold: buildThreshholds(obj.sensitivity)
     };
 
-    function handleIntersect(entries, observer) {
+    function handleIntersect(entries) {
       const currentScrollY = entries[0].boundingClientRect.y,
             isInViewport = entries[0].isIntersecting,
             intersectionScrollDirection = currentScrollY < lastScrollY ? 'down' : 'up',

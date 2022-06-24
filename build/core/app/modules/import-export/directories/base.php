@@ -59,11 +59,7 @@ abstract class Base {
 			$parent_name = $this->parent->get_name();
 
 			if ( $parent_name ) {
-<<<<<<< HEAD
 				$parent_name .= '/';
-=======
-				$parent_name .= DIRECTORY_SEPARATOR;
->>>>>>> dist
 			}
 
 			$path = $parent_name . $path;
@@ -111,7 +107,6 @@ abstract class Base {
 
 	/**
 	 * @param array $import_settings
-	 *
 	 * @return array
 	 */
 	protected function import( array $import_settings ) {
@@ -124,7 +119,6 @@ abstract class Base {
 
 	private function register_directories() {
 		$sub_directories = $this->get_default_sub_directories();
-<<<<<<< HEAD
 		$path = $this->get_path();
 
 		/**
@@ -140,9 +134,5 @@ abstract class Base {
 		$sub_directories = apply_filters( "elementor/kit/import-export/directory/{$path}", $sub_directories, $this );
 
 		$this->sub_directories = $sub_directories;
-=======
-
-		$this->sub_directories = apply_filters( 'elementor/kit/import-export/directory/' . $this->get_path(), $sub_directories, $this );
->>>>>>> dist
 	}
 }

@@ -3,8 +3,8 @@
 namespace Elementor\Core\Kits\Documents\Tabs;
 
 use Elementor\Controls_Manager;
-use Elementor\Core\Files\Assets\Files_Upload_Handler;
 use Elementor\Core\Base\Document;
+use Elementor\Core\Files\Uploads_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -17,11 +17,7 @@ class Settings_Site_Identity extends Tab_Base {
 	}
 
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Site Identity', 'elementor' );
-=======
-		return __( 'Site Identity', 'elementor' );
->>>>>>> dist
 	}
 
 	public function get_group() {
@@ -44,7 +40,7 @@ class Settings_Site_Identity extends Tab_Base {
 		$site_icon_src = wp_get_attachment_image_src( $site_icon_id, 'full' );
 
 		// If CANNOT upload svg normally, it will add a custom inline option to force svg upload if requested. (in logo and favicon)
-		$should_include_svg_inline_option = ! Files_Upload_Handler::is_enabled();
+		$should_include_svg_inline_option = ! Uploads_Manager::are_unfiltered_uploads_enabled();
 
 		$this->start_controls_section(
 			'section_' . $this->get_id(),
@@ -58,11 +54,7 @@ class Settings_Site_Identity extends Tab_Base {
 			$this->get_id() . '_refresh_notice',
 			[
 				'type' => Controls_Manager::RAW_HTML,
-<<<<<<< HEAD
 				'raw' => esc_html__( 'Changes will be reflected in the preview only after the page reloads.', 'elementor' ),
-=======
-				'raw' => __( 'Changes will be reflected in the preview only after the page reloads.', 'elementor' ),
->>>>>>> dist
 				'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
 			]
 		);
@@ -70,15 +62,9 @@ class Settings_Site_Identity extends Tab_Base {
 		$this->add_control(
 			'site_name',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Site Name', 'elementor' ),
 				'default' => get_option( 'blogname' ),
 				'placeholder' => esc_html__( 'Choose name', 'elementor' ),
-=======
-				'label' => __( 'Site Name', 'elementor' ),
-				'default' => get_option( 'blogname' ),
-				'placeholder' => __( 'Choose name', 'elementor' ),
->>>>>>> dist
 				'label_block' => true,
 				'export' => false,
 			]
@@ -87,15 +73,9 @@ class Settings_Site_Identity extends Tab_Base {
 		$this->add_control(
 			'site_description',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Site Description', 'elementor' ),
 				'default' => get_option( 'blogdescription' ),
 				'placeholder' => esc_html__( 'Choose description', 'elementor' ),
-=======
-				'label' => __( 'Site Description', 'elementor' ),
-				'default' => get_option( 'blogdescription' ),
-				'placeholder' => __( 'Choose description', 'elementor' ),
->>>>>>> dist
 				'label_block' => true,
 				'export' => false,
 			]
@@ -104,22 +84,14 @@ class Settings_Site_Identity extends Tab_Base {
 		$this->add_control(
 			'site_logo',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Site Logo', 'elementor' ),
-=======
-				'label' => __( 'Site Logo', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::MEDIA,
 				'should_include_svg_inline_option' => $should_include_svg_inline_option,
 				'default' => [
 					'id' => $custom_logo_id,
 					'url' => $custom_logo_src ? $custom_logo_src[0] : '',
 				],
-<<<<<<< HEAD
 				'description' => esc_html__( 'Suggested image dimensions: 350 × 100 pixels.', 'elementor' ),
-=======
-				'description' => __( 'Suggested image dimensions: 350 × 100 pixels.', 'elementor' ),
->>>>>>> dist
 				'export' => false,
 			]
 		);
@@ -127,22 +99,14 @@ class Settings_Site_Identity extends Tab_Base {
 		$this->add_control(
 			'site_favicon',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Site Favicon', 'elementor' ),
-=======
-				'label' => __( 'Site Favicon', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::MEDIA,
 				'should_include_svg_inline_option' => $should_include_svg_inline_option,
 				'default' => [
 					'id' => $site_icon_id,
 					'url' => $site_icon_src ? $site_icon_src[0] : '',
 				],
-<<<<<<< HEAD
 				'description' => esc_html__( 'Suggested favicon dimensions: 512 × 512 pixels.', 'elementor' ),
-=======
-				'description' => __( 'Suggested favicon dimensions: 512 × 512 pixels.', 'elementor' ),
->>>>>>> dist
 				'export' => false,
 			]
 		);

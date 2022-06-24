@@ -161,6 +161,16 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 
 /***/ }),
 
+/***/ "../node_modules/@babel/runtime-corejs2/core-js/symbol/to-string-tag.js":
+/*!******************************************************************************!*\
+  !*** ../node_modules/@babel/runtime-corejs2/core-js/symbol/to-string-tag.js ***!
+  \******************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/symbol/to-string-tag */ "../node_modules/core-js/library/fn/symbol/to-string-tag.js");
+
+/***/ }),
+
 /***/ "../node_modules/@babel/runtime-corejs2/helpers/arrayLikeToArray.js":
 /*!**************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/arrayLikeToArray.js ***!
@@ -2025,7 +2035,7 @@ BaseSettingsModel = Backbone.Model.extend({
 
     attributes = this.parseGlobalSettings(attributes, controls);
     jQuery.each(controls, function (controlKey, control) {
-      if (elementor.helpers.isActiveControl(control, attributes)) {
+      if (elementor.helpers.isActiveControl(control, attributes, controls)) {
         activeControls[controlKey] = control;
       }
     });
@@ -2408,6 +2418,69 @@ var _default = /*#__PURE__*/function (_elementorModules$Mod) {
   }]);
   return _default;
 }(elementorModules.Module);
+
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "../assets/dev/js/editor/utils/is-instanceof.js":
+/*!******************************************************!*\
+  !*** ../assets/dev/js/editor/utils/is-instanceof.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports["default"] = void 0;
+
+__webpack_require__(/*! core-js/modules/es6.function.name.js */ "../node_modules/core-js/modules/es6.function.name.js");
+
+var _createForOfIteratorHelper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createForOfIteratorHelper */ "../node_modules/@babel/runtime-corejs2/helpers/createForOfIteratorHelper.js"));
+
+var _isArray = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "../node_modules/@babel/runtime-corejs2/core-js/array/is-array.js"));
+
+var _toStringTag = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/to-string-tag */ "../node_modules/@babel/runtime-corejs2/core-js/symbol/to-string-tag.js"));
+
+/**
+ * Some FileAPI objects such as FileList, DataTransferItem and DataTransferItemList has inconsistency with the retrieved
+ * object (from events, etc.) and the actual JavaScript object so a regular instanceof doesn't work. This function can
+ * check whether it's instanceof by using the objects constructor and prototype names.
+ *
+ * @param object
+ * @param constructors
+ * @returns {boolean}
+ */
+var _default = function _default(object, constructors) {
+  constructors = (0, _isArray.default)(constructors) ? constructors : [constructors];
+
+  var _iterator = (0, _createForOfIteratorHelper2.default)(constructors),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var _constructor = _step.value;
+
+      if (object.constructor.name === _constructor.prototype[_toStringTag.default]) {
+        return true;
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  return false;
+};
 
 exports["default"] = _default;
 
@@ -2844,6 +2917,10 @@ _Object$defineProperty(exports, "__esModule", {
 
 exports["default"] = void 0;
 
+__webpack_require__(/*! core-js/modules/es6.object.to-string.js */ "../node_modules/core-js/modules/es6.object.to-string.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.to-string.js */ "../node_modules/core-js/modules/es6.regexp.to-string.js");
+
 var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "../node_modules/@babel/runtime-corejs2/helpers/typeof.js"));
 
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
@@ -2855,6 +2932,8 @@ var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
 var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
 
 var _instanceType = _interopRequireDefault(__webpack_require__(/*! ./instance-type */ "../assets/dev/js/modules/imports/instance-type.js"));
+
+var _isInstanceof = _interopRequireDefault(__webpack_require__(/*! ../../editor/utils/is-instanceof */ "../assets/dev/js/editor/utils/is-instanceof.js"));
 
 var ArgsObject = /*#__PURE__*/function (_InstanceType) {
   (0, _inherits2.default)(ArgsObject, _InstanceType);
@@ -2940,7 +3019,7 @@ var ArgsObject = /*#__PURE__*/function (_InstanceType) {
       var args = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.args;
       this.requireArgument(property, args);
 
-      if (!(args[property] instanceof instance)) {
+      if (!(args[property] instanceof instance) && !(0, _isInstanceof.default)(args[property], instance)) {
         throw Error("".concat(property, " invalid instance."));
       }
     }
@@ -2961,9 +3040,10 @@ var ArgsObject = /*#__PURE__*/function (_InstanceType) {
     key: "requireArgumentConstructor",
     value: function requireArgumentConstructor(property, type) {
       var args = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.args;
-      this.requireArgument(property, args);
+      this.requireArgument(property, args); // Note: Converting the constructor to string in order to avoid equation issues
+      // due to different memory addresses between iframes (window.Object !== window.top.Object).
 
-      if (args[property].constructor !== type) {
+      if (args[property].constructor.toString() !== type.prototype.constructor.toString()) {
         throw Error("".concat(property, " invalid constructor type."));
       }
     }
@@ -3294,6 +3374,18 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules
 __webpack_require__(/*! ../../modules/es6.string.iterator */ "../node_modules/core-js/library/modules/es6.string.iterator.js");
 __webpack_require__(/*! ../../modules/web.dom.iterable */ "../node_modules/core-js/library/modules/web.dom.iterable.js");
 module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ "../node_modules/core-js/library/modules/_wks-ext.js").f('iterator');
+
+
+/***/ }),
+
+/***/ "../node_modules/core-js/library/fn/symbol/to-string-tag.js":
+/*!******************************************************************!*\
+  !*** ../node_modules/core-js/library/fn/symbol/to-string-tag.js ***!
+  \******************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+__webpack_require__(/*! ../../modules/es6.object.to-string */ "../node_modules/core-js/library/modules/es6.object.to-string.js");
+module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ "../node_modules/core-js/library/modules/_wks-ext.js").f('toStringTag');
 
 
 /***/ }),

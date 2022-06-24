@@ -39,11 +39,7 @@ class Widget_Social_Icons extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Social Icons', 'elementor' );
-=======
-		return __( 'Social Icons', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -86,11 +82,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->start_controls_section(
 			'section_social_icon',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Social Icons', 'elementor' ),
-=======
-				'label' => __( 'Social Icons', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
@@ -99,11 +91,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$repeater->add_control(
 			'social_icon',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Icon', 'elementor' ),
-=======
-				'label' => __( 'Icon', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'social',
 				'default' => [
@@ -179,11 +167,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$repeater->add_control(
 			'link',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Link', 'elementor' ),
-=======
-				'label' => __( 'Link', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::URL,
 				'default' => [
 					'is_external' => 'true',
@@ -191,32 +175,19 @@ class Widget_Social_Icons extends Widget_Base {
 				'dynamic' => [
 					'active' => true,
 				],
-<<<<<<< HEAD
 				'placeholder' => esc_html__( 'https://your-link.com', 'elementor' ),
-=======
-				'placeholder' => __( 'https://your-link.com', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$repeater->add_control(
 			'item_icon_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'default',
 				'options' => [
 					'default' => esc_html__( 'Official Color', 'elementor' ),
 					'custom' => esc_html__( 'Custom', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'default',
-				'options' => [
-					'default' => __( 'Official Color', 'elementor' ),
-					'custom' => __( 'Custom', 'elementor' ),
->>>>>>> dist
 				],
 			]
 		);
@@ -224,11 +195,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$repeater->add_control(
 			'item_icon_primary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Primary Color', 'elementor' ),
-=======
-				'label' => __( 'Primary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'item_icon_color' => 'custom',
@@ -242,11 +209,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$repeater->add_control(
 			'item_icon_secondary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Secondary Color', 'elementor' ),
-=======
-				'label' => __( 'Secondary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'item_icon_color' => 'custom',
@@ -261,11 +224,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'social_icon_list',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Social Icons', 'elementor' ),
-=======
-				'label' => __( 'Social Icons', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
@@ -295,7 +254,6 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'shape',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Shape', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'rounded',
@@ -303,15 +261,6 @@ class Widget_Social_Icons extends Widget_Base {
 					'rounded' => esc_html__( 'Rounded', 'elementor' ),
 					'square' => esc_html__( 'Square', 'elementor' ),
 					'circle' => esc_html__( 'Circle', 'elementor' ),
-=======
-				'label' => __( 'Shape', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'rounded',
-				'options' => [
-					'rounded' => __( 'Rounded', 'elementor' ),
-					'square' => __( 'Square', 'elementor' ),
-					'circle' => __( 'Circle', 'elementor' ),
->>>>>>> dist
 				],
 				'prefix_class' => 'elementor-shape-',
 			]
@@ -320,19 +269,11 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Columns', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '0',
 				'options' => [
 					'0' => esc_html__( 'Auto', 'elementor' ),
-=======
-				'label' => __( 'Columns', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '0',
-				'options' => [
-					'0' => __( 'Auto', 'elementor' ),
->>>>>>> dist
 					'1' => '1',
 					'2' => '2',
 					'3' => '3',
@@ -353,7 +294,6 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Alignment', 'elementor' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
@@ -371,25 +311,6 @@ class Widget_Social_Icons extends Widget_Base {
 					],
 				],
 				'prefix_class' => 'e-grid-align%s-',
-=======
-				'label' => __( 'Alignment', 'elementor' ),
-				'type' => Controls_Manager::CHOOSE,
-				'options' => [
-					'left'    => [
-						'title' => __( 'Left', 'elementor' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => __( 'Center', 'elementor' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => __( 'Right', 'elementor' ),
-						'icon' => 'eicon-text-align-right',
-					],
-				],
-				'prefix_class' => 'e-grid-align-',
->>>>>>> dist
 				'default' => 'center',
 				'selectors' => [
 					'{{WRAPPER}} .elementor-widget-container' => 'text-align: {{VALUE}}',
@@ -400,11 +321,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'View', 'elementor' ),
-=======
-				'label' => __( 'View', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]
@@ -415,11 +332,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->start_controls_section(
 			'section_social_style',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Icon', 'elementor' ),
-=======
-				'label' => __( 'Icon', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -427,21 +340,12 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'icon_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'default',
 				'options' => [
 					'default' => esc_html__( 'Official Color', 'elementor' ),
 					'custom' => esc_html__( 'Custom', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'default',
-				'options' => [
-					'default' => __( 'Official Color', 'elementor' ),
-					'custom' => __( 'Custom', 'elementor' ),
->>>>>>> dist
 				],
 			]
 		);
@@ -449,11 +353,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'icon_primary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Primary Color', 'elementor' ),
-=======
-				'label' => __( 'Primary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'icon_color' => 'custom',
@@ -467,11 +367,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'icon_secondary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Secondary Color', 'elementor' ),
-=======
-				'label' => __( 'Secondary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'condition' => [
 					'icon_color' => 'custom',
@@ -486,11 +382,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_responsive_control(
 			'icon_size',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Size', 'elementor' ),
-=======
-				'label' => __( 'Size', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -507,11 +399,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_responsive_control(
 			'icon_padding',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Padding', 'elementor' ),
-=======
-				'label' => __( 'Padding', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-social-icon' => '--icon-padding: {{SIZE}}{{UNIT}}',
@@ -537,11 +425,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_responsive_control(
 			'icon_spacing',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Spacing', 'elementor' ),
-=======
-				'label' => __( 'Spacing', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -561,11 +445,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_responsive_control(
 			'row_gap',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Rows Gap', 'elementor' ),
-=======
-				'label' => __( 'Rows Gap', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0,
@@ -588,11 +468,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'border_radius',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Border Radius', 'elementor' ),
-=======
-				'label' => __( 'Border Radius', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -606,11 +482,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->start_controls_section(
 			'section_social_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Icon Hover', 'elementor' ),
-=======
-				'label' => __( 'Icon Hover', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -618,11 +490,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'hover_primary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Primary Color', 'elementor' ),
-=======
-				'label' => __( 'Primary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -637,11 +505,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'hover_secondary_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Secondary Color', 'elementor' ),
-=======
-				'label' => __( 'Secondary Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -657,11 +521,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'hover_border_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Border Color', 'elementor' ),
-=======
-				'label' => __( 'Border Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -676,11 +536,7 @@ class Widget_Social_Icons extends Widget_Base {
 		$this->add_control(
 			'hover_animation',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Hover Animation', 'elementor' ),
-=======
-				'label' => __( 'Hover Animation', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -754,15 +610,9 @@ class Widget_Social_Icons extends Widget_Base {
 				$this->add_link_attributes( $link_key, $item['link'] );
 
 				?>
-<<<<<<< HEAD
 				<span class="elementor-grid-item">
 					<a <?php $this->print_render_attribute_string( $link_key ); ?>>
 						<span class="elementor-screen-only"><?php echo esc_html( ucwords( $social ) ); ?></span>
-=======
-				<div class="elementor-grid-item">
-					<a <?php echo $this->get_render_attribute_string( $link_key ); ?>>
-						<span class="elementor-screen-only"><?php echo ucwords( $social ); ?></span>
->>>>>>> dist
 						<?php
 						if ( $is_new || $migrated ) {
 							Icons_Manager::render_icon( $item['social_icon'] );
@@ -770,11 +620,7 @@ class Widget_Social_Icons extends Widget_Base {
 							<i class="<?php echo esc_attr( $item['social'] ); ?>"></i>
 						<?php } ?>
 					</a>
-<<<<<<< HEAD
 				</span>
-=======
-				</div>
->>>>>>> dist
 			<?php } ?>
 		</div>
 		<?php
@@ -797,11 +643,7 @@ class Widget_Social_Icons extends Widget_Base {
 					migrated = elementor.helpers.isIconMigrated( item, 'social_icon' );
 					social = elementor.helpers.getSocialNetworkNameFromIcon( item.social_icon, item.social, false, migrated );
 				#>
-<<<<<<< HEAD
 				<span class="elementor-grid-item">
-=======
-				<div class="elementor-grid-item">
->>>>>>> dist
 					<a class="elementor-icon elementor-social-icon elementor-social-icon-{{ social }} elementor-animation-{{ settings.hover_animation }} elementor-repeater-item-{{item._id}}" href="{{ link }}">
 						<span class="elementor-screen-only">{{{ social }}}</span>
 						<#
@@ -813,11 +655,7 @@ class Widget_Social_Icons extends Widget_Base {
 							<# }
 						#>
 					</a>
-<<<<<<< HEAD
 				</span>
-=======
-				</div>
->>>>>>> dist
 			<# } ); #>
 		</div>
 		<?php

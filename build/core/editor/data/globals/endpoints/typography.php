@@ -8,13 +8,10 @@ class Typography extends Base {
 		return 'typography';
 	}
 
-<<<<<<< HEAD
 	public function get_format() {
 		return 'globals/typography/{id}';
 	}
 
-=======
->>>>>>> dist
 	protected function get_kit_items() {
 		$result = [];
 

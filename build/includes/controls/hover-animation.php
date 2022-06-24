@@ -85,7 +85,6 @@ class Control_Hover_Animation extends Base_Data_Control {
 			];
 
 			$additional_animations = [];
-<<<<<<< HEAD
 
 			/**
 			 * Hover animations.
@@ -101,16 +100,6 @@ class Control_Hover_Animation extends Base_Data_Control {
 			 */
 			$additional_animations = apply_filters( 'elementor/controls/hover_animations/additional_animations', $additional_animations );
 
-=======
-			/**
-			 * Element hover animations list.
-			 *
-			 * @since 2.4.0
-			 *
-			 * @param array $additional_animations Additional Animations array.
-			 */
-			$additional_animations = apply_filters( 'elementor/controls/hover_animations/additional_animations', $additional_animations );
->>>>>>> dist
 			self::$_animations = array_merge( self::$_animations, $additional_animations );
 		}
 
@@ -128,7 +117,6 @@ class Control_Hover_Animation extends Base_Data_Control {
 	 * @access public
 	 */
 	public function content_template() {
-<<<<<<< HEAD
 		?>
 		<div class="elementor-control-field">
 			<label for="<?php $this->print_control_uid(); ?>" class="elementor-control-title">{{{ data.label }}}</label>
@@ -137,17 +125,6 @@ class Control_Hover_Animation extends Base_Data_Control {
 					<option value=""><?php echo esc_html__( 'None', 'elementor' ); ?></option>
 					<?php foreach ( self::get_animations() as $animation_name => $animation_title ) : ?>
 						<option value="<?php Utils::print_unescaped_internal_string( $animation_name ); ?>"><?php Utils::print_unescaped_internal_string( $animation_title ); ?></option>
-=======
-		$control_uid = $this->get_control_uid();
-		?>
-		<div class="elementor-control-field">
-			<label for="<?php echo $control_uid; ?>" class="elementor-control-title">{{{ data.label }}}</label>
-			<div class="elementor-control-input-wrapper">
-				<select id="<?php echo $control_uid; ?>" data-setting="{{ data.name }}">
-					<option value=""><?php echo __( 'None', 'elementor' ); ?></option>
-					<?php foreach ( self::get_animations() as $animation_name => $animation_title ) : ?>
-						<option value="<?php echo $animation_name; ?>"><?php echo $animation_title; ?></option>
->>>>>>> dist
 					<?php endforeach; ?>
 				</select>
 			</div>
@@ -174,7 +151,6 @@ class Control_Hover_Animation extends Base_Data_Control {
 			'label_block' => true,
 		];
 	}
-<<<<<<< HEAD
 
 	public static function get_assets( $setting ) {
 		if ( ! $setting || 'none' === $setting ) {
@@ -185,6 +161,4 @@ class Control_Hover_Animation extends Base_Data_Control {
 			'styles' => [ 'e-animations' ],
 		];
 	}
-=======
->>>>>>> dist
 }

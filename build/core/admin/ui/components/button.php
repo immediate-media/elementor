@@ -31,11 +31,7 @@ class Button extends Base_Object {
 		$attributes = [];
 
 		if ( ! empty( $options['icon'] ) ) {
-<<<<<<< HEAD
 			$icon = '<i class="' . esc_attr( $options['icon'] ) . '"></i>';
-=======
-			$icon = '<i class="' . $options['icon'] . '"></i>';
->>>>>>> dist
 		}
 
 		$classes = $options['classes'];
@@ -53,11 +49,7 @@ class Button extends Base_Object {
 		}
 
 		if ( ! empty( $options['before'] ) ) {
-<<<<<<< HEAD
 			$before = '<span>' . wp_kses_post( $options['before'] ) . '</span>';
-=======
-			$before = '<span>' . $options['before'] . '</span>';
->>>>>>> dist
 		}
 
 		if ( ! empty( $options['url'] ) ) {
@@ -74,11 +66,7 @@ class Button extends Base_Object {
 		$html .= '<span>' . sanitize_text_field( $options['text'] ) . '</span>';
 		$html .= '</' . $html_tag . '>';
 
-<<<<<<< HEAD
 		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-=======
-		echo $html;
->>>>>>> dist
 	}
 
 	/**

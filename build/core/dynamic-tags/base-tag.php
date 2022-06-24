@@ -85,7 +85,7 @@ abstract class Base_Tag extends Controls_Stack {
 	 * @access public
 	 */
 	public function get_editor_config() {
-		 ob_start();
+		ob_start();
 
 		$this->print_panel_template();
 
@@ -168,11 +168,7 @@ abstract class Base_Tag extends Controls_Stack {
 		Plugin::$instance->controls_manager->open_stack( $this );
 
 		$this->start_controls_section( 'settings', [
-<<<<<<< HEAD
 			'label' => esc_html__( 'Settings', 'elementor' ),
-=======
-			'label' => __( 'Settings', 'elementor' ),
->>>>>>> dist
 		] );
 
 		if ( $this->has_own_method( '_register_controls' ) ) {

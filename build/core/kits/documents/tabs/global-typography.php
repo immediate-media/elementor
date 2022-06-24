@@ -25,11 +25,7 @@ class Global_Typography extends Tab_Base {
 	}
 
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Global Fonts', 'elementor' );
-=======
-		return __( 'Global Fonts', 'elementor' );
->>>>>>> dist
 	}
 
 	public function get_group() {
@@ -48,11 +44,7 @@ class Global_Typography extends Tab_Base {
 		$this->start_controls_section(
 			'section_text_style',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Global Fonts', 'elementor' ),
-=======
-				'label' => __( 'Global Fonts', 'elementor' ),
->>>>>>> dist
 				'tab' => $this->get_id(),
 			]
 		);
@@ -128,49 +120,41 @@ class Global_Typography extends Tab_Base {
 		$default_typography = [
 			[
 				'_id' => 'primary',
-<<<<<<< HEAD
 				'title' => esc_html__( 'Primary', 'elementor' ),
-=======
-				'title' => __( 'Primary', 'elementor' ),
->>>>>>> dist
 				$typography_key => 'custom',
 				$font_family_key => 'Roboto',
 				$font_weight_key => '600',
 			],
 			[
 				'_id' => 'secondary',
-<<<<<<< HEAD
 				'title' => esc_html__( 'Secondary', 'elementor' ),
-=======
-				'title' => __( 'Secondary', 'elementor' ),
->>>>>>> dist
 				$typography_key => 'custom',
 				$font_family_key => 'Roboto Slab',
 				$font_weight_key => '400',
 			],
 			[
 				'_id' => 'text',
-<<<<<<< HEAD
 				'title' => esc_html__( 'Text', 'elementor' ),
-=======
-				'title' => __( 'Text', 'elementor' ),
->>>>>>> dist
 				$typography_key => 'custom',
 				$font_family_key => 'Roboto',
 				$font_weight_key => '400',
 			],
 			[
 				'_id' => 'accent',
-<<<<<<< HEAD
 				'title' => esc_html__( 'Accent', 'elementor' ),
-=======
-				'title' => __( 'Accent', 'elementor' ),
->>>>>>> dist
 				$typography_key => 'custom',
 				$font_family_key => 'Roboto',
 				$font_weight_key => '500',
 			],
 		];
+
+		$this->add_control(
+			'heading_system_typography',
+			[
+				'type' => Controls_Manager::HEADING,
+				'label' => esc_html__( 'System Fonts', 'elementor' ),
+			]
+		);
 
 		$this->add_control(
 			'system_typography',
@@ -182,6 +166,15 @@ class Global_Typography extends Tab_Base {
 					'add' => false,
 					'remove' => false,
 				],
+				'separator' => 'after',
+			]
+		);
+
+		$this->add_control(
+			'heading_custom_typography',
+			[
+				'type' => Controls_Manager::HEADING,
+				'label' => esc_html__( 'Custom Fonts', 'elementor' ),
 			]
 		);
 
@@ -196,17 +189,10 @@ class Global_Typography extends Tab_Base {
 		$this->add_control(
 			'default_generic_fonts',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Fallback Font Family', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'Sans-serif',
 				'description' => esc_html__( 'The list of fonts used if the chosen font is not available.', 'elementor' ),
-=======
-				'label' => __( 'Fallback Font Family', 'elementor' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => 'Sans-serif',
-				'description' => __( 'The list of fonts used if the chosen font is not available.', 'elementor' ),
->>>>>>> dist
 				'label_block' => true,
 				'separator' => 'before',
 			]

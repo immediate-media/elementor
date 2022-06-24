@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/*! elementor - v3.4.6 - 26-10-2021 */
-=======
-/*! elementor - v3.2.4 - 10-06-2021 */
->>>>>>> dist
+/*! elementor - v3.6.6 - 24-06-2022 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -10,12 +6,6 @@
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_a-function.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (it) {
@@ -30,12 +20,6 @@ module.exports = function (it) {
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/modules/_add-to-unscopables.js ***!
   \**************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 22.1.3.31 Array.prototype[@@unscopables]
@@ -53,12 +37,6 @@ module.exports = function (key) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_an-object.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/modules/_is-object.js");
@@ -74,12 +52,6 @@ module.exports = function (it) {
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/_array-methods.js ***!
   \*********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 13:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 0 -> Array#forEach
@@ -134,12 +106,6 @@ module.exports = function (TYPE, $create) {
 /*!*********************************************************************!*\
   !*** ../node_modules/core-js/modules/_array-species-constructor.js ***!
   \*********************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/modules/_is-object.js");
@@ -166,12 +132,6 @@ module.exports = function (original) {
 /*!****************************************************************!*\
   !*** ../node_modules/core-js/modules/_array-species-create.js ***!
   \****************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
@@ -188,12 +148,6 @@ module.exports = function (original, length) {
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_cof.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 var toString = {}.toString;
@@ -209,12 +163,6 @@ module.exports = function (it) {
 /*!************************************************!*\
   !*** ../node_modules/core-js/modules/_core.js ***!
   \************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:11-25 */
->>>>>>> dist
 /***/ ((module) => {
 
 var core = module.exports = { version: '2.6.12' };
@@ -227,12 +175,6 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_ctx.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // optional / simple context binding
@@ -263,12 +205,6 @@ module.exports = function (fn, that, length) {
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_defined.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -284,12 +220,6 @@ module.exports = function (it) {
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/modules/_descriptors.js ***!
   \*******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Thank's IE8 for his funny defineProperty
@@ -304,12 +234,6 @@ module.exports = !__webpack_require__(/*! ./_fails */ "../node_modules/core-js/m
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_dom-create.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/modules/_is-object.js");
@@ -327,12 +251,6 @@ module.exports = function (it) {
 /*!**************************************************!*\
   !*** ../node_modules/core-js/modules/_export.js ***!
   \**************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 43:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "../node_modules/core-js/modules/_global.js");
@@ -386,12 +304,6 @@ module.exports = $export;
 /*!*************************************************!*\
   !*** ../node_modules/core-js/modules/_fails.js ***!
   \*************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (exec) {
@@ -409,12 +321,6 @@ module.exports = function (exec) {
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/modules/_function-to-string.js ***!
   \**************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! ./_shared */ "../node_modules/core-js/modules/_shared.js")('native-function-to-string', Function.toString);
@@ -426,12 +332,6 @@ module.exports = __webpack_require__(/*! ./_shared */ "../node_modules/core-js/m
 /*!**************************************************!*\
   !*** ../node_modules/core-js/modules/_global.js ***!
   \**************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:13-27 */
->>>>>>> dist
 /***/ ((module) => {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -448,12 +348,6 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_has.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -468,12 +362,6 @@ module.exports = function (it, key) {
 /*!************************************************!*\
   !*** ../node_modules/core-js/modules/_hide.js ***!
   \************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var dP = __webpack_require__(/*! ./_object-dp */ "../node_modules/core-js/modules/_object-dp.js");
@@ -492,12 +380,6 @@ module.exports = __webpack_require__(/*! ./_descriptors */ "../node_modules/core
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/modules/_ie8-dom-define.js ***!
   \**********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = !__webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/modules/_descriptors.js") && !__webpack_require__(/*! ./_fails */ "../node_modules/core-js/modules/_fails.js")(function () {
@@ -511,12 +393,6 @@ module.exports = !__webpack_require__(/*! ./_descriptors */ "../node_modules/cor
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_iobject.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -533,12 +409,6 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 /*!****************************************************!*\
   !*** ../node_modules/core-js/modules/_is-array.js ***!
   \****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.2.2 IsArray(argument)
@@ -554,12 +424,6 @@ module.exports = Array.isArray || function isArray(arg) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_is-object.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (it) {
@@ -573,12 +437,6 @@ module.exports = function (it) {
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_library.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = false;
@@ -590,13 +448,6 @@ module.exports = false;
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_object-dp.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/core-js/modules/_an-object.js");
@@ -623,12 +474,6 @@ exports.f = __webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/m
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/_property-desc.js ***!
   \*********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (bitmap, value) {
@@ -647,12 +492,6 @@ module.exports = function (bitmap, value) {
 /*!****************************************************!*\
   !*** ../node_modules/core-js/modules/_redefine.js ***!
   \****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 13:1-15 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "../node_modules/core-js/modules/_global.js");
@@ -694,12 +533,6 @@ __webpack_require__(/*! ./_core */ "../node_modules/core-js/modules/_core.js").i
 /*!**************************************************!*\
   !*** ../node_modules/core-js/modules/_shared.js ***!
   \**************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:1-15 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var core = __webpack_require__(/*! ./_core */ "../node_modules/core-js/modules/_core.js");
@@ -722,12 +555,6 @@ var store = global[SHARED] || (global[SHARED] = {});
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_to-integer.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 // 7.1.4 ToInteger
@@ -744,12 +571,6 @@ module.exports = function (it) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_to-length.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.15 ToLength
@@ -766,12 +587,6 @@ module.exports = function (it) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_to-object.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.13 ToObject(argument)
@@ -787,12 +602,6 @@ module.exports = function (it) {
 /*!********************************************************!*\
   !*** ../node_modules/core-js/modules/_to-primitive.js ***!
   \********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -815,12 +624,6 @@ module.exports = function (it, S) {
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_uid.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 var id = 0;
@@ -836,12 +639,6 @@ module.exports = function (key) {
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_wks.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 6:15-29 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var store = __webpack_require__(/*! ./_shared */ "../node_modules/core-js/modules/_shared.js")('wks');
@@ -863,11 +660,6 @@ $exports.store = store;
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/es6.array.find.js ***!
   \*********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -893,12 +685,6 @@ __webpack_require__(/*! ./_add-to-unscopables */ "../node_modules/core-js/module
 /*!**************************!*\
   !*** external "wp.i18n" ***!
   \**************************/
-<<<<<<< HEAD
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module */
->>>>>>> dist
 /***/ ((module) => {
 
 "use strict";
@@ -914,14 +700,9 @@ module.exports = wp.i18n;
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-<<<<<<< HEAD
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
-=======
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
->>>>>>> dist
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
@@ -938,21 +719,13 @@ module.exports = wp.i18n;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-<<<<<<< HEAD
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-=======
->>>>>>> dist
 (() => {
 "use strict";
 /*!*******************************************!*\
   !*** ../assets/dev/js/admin/gutenberg.js ***!
   \*******************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /* provided dependency */ var __ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n")["__"];
 
 

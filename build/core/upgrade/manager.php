@@ -33,19 +33,11 @@ class Manager extends DB_Upgrades_Manager {
 	}
 
 	public function get_plugin_label() {
-<<<<<<< HEAD
 		return esc_html__( 'Elementor', 'elementor' );
 	}
 
 	public function get_updater_label() {
 		return esc_html__( 'Elementor Data Updater', 'elementor' );
-=======
-		return __( 'Elementor', 'elementor' );
-	}
-
-	public function get_updater_label() {
-		return __( 'Elementor Data Updater', 'elementor' );
->>>>>>> dist
 	}
 
 	public function get_new_version() {
@@ -67,7 +59,11 @@ class Manager extends DB_Upgrades_Manager {
 	public static function install_compare( $version, $operator ) {
 		$installs_history = self::get_installs_history();
 
-		return version_compare( key( $installs_history ), $version, $operator );
+		return version_compare(
+			key( $installs_history ),
+			$version ? $version : '0.0.0', // when no version assigned
+			$operator
+		);
 	}
 
 	protected function update_db_version() {

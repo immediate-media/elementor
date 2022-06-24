@@ -3,10 +3,7 @@
 namespace Elementor\Core\Common\Modules\Finder;
 
 use Elementor\Core\Base\Base_Object;
-<<<<<<< HEAD
 use Elementor\Plugin;
-=======
->>>>>>> dist
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -31,7 +28,6 @@ abstract class Base_Category extends Base_Object {
 	abstract public function get_title();
 
 	/**
-<<<<<<< HEAD
 	 * Get a unique category ID.
 	 *
 	 * TODO: Make abstract.
@@ -52,8 +48,6 @@ abstract class Base_Category extends Base_Object {
 	}
 
 	/**
-=======
->>>>>>> dist
 	 * Get category items.
 	 *
 	 * @since 2.3.0

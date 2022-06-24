@@ -1,11 +1,8 @@
 <?php
 namespace Elementor\Modules\System_Info\Reporters;
 
-<<<<<<< HEAD
 use Elementor\Plugin;
 
-=======
->>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -18,11 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-<<<<<<< HEAD
 class Plugins extends Base_Plugin {
-=======
-class Plugins extends Base {
->>>>>>> dist
 
 	/**
 	 * Active plugins.
@@ -48,17 +41,7 @@ class Plugins extends Base {
 	 */
 	private function get_plugins() {
 		if ( ! $this->plugins ) {
-<<<<<<< HEAD
 			$this->plugins = Plugin::$instance->wp->get_active_plugins()->all();
-=======
-			// Ensure get_plugins function is loaded
-			if ( ! function_exists( 'get_plugins' ) ) {
-				include ABSPATH . '/wp-admin/includes/plugin.php';
-			}
-
-			$active_plugins = get_option( 'active_plugins' );
-			$this->plugins  = array_intersect_key( get_plugins(), array_flip( $active_plugins ) );
->>>>>>> dist
 		}
 
 		return $this->plugins;

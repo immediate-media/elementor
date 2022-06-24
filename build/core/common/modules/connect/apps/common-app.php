@@ -6,10 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 abstract class Common_App extends Base_User_App {
-<<<<<<< HEAD
 	const OPTION_CONNECT_COMMON_DATA_KEY = self::OPTION_NAME_PREFIX . 'common_data';
-=======
->>>>>>> dist
 
 	protected static $common_data = null;
 
@@ -36,13 +33,10 @@ abstract class Common_App extends Base_User_App {
 
 		$this->data = & self::$common_data;
 	}
-<<<<<<< HEAD
 
 	public function action_reset() {
 		delete_user_option( get_current_user_id(), static::OPTION_CONNECT_COMMON_DATA_KEY );
 
 		parent::action_reset();
 	}
-=======
->>>>>>> dist
 }

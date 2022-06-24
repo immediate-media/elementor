@@ -21,11 +21,7 @@ class Settings_Layout extends Tab_Base {
 	}
 
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Layout', 'elementor' );
-=======
-		return __( 'Layout', 'elementor' );
->>>>>>> dist
 	}
 
 	public function get_group() {
@@ -48,11 +44,7 @@ class Settings_Layout extends Tab_Base {
 		$this->start_controls_section(
 			'section_' . $this->get_id(),
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Layout Settings', 'elementor' ),
-=======
-				'label' => __( 'Layout Settings', 'elementor' ),
->>>>>>> dist
 				'tab' => $this->get_id(),
 			]
 		);
@@ -60,11 +52,7 @@ class Settings_Layout extends Tab_Base {
 		$this->add_responsive_control(
 			'container_width',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Content Width', 'elementor' ) . ' (px)',
-=======
-				'label' => __( 'Content Width', 'elementor' ) . ' (px)',
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '1140',
@@ -82,25 +70,24 @@ class Settings_Layout extends Tab_Base {
 						'step' => 10,
 					],
 				],
-<<<<<<< HEAD
 				'description' => esc_html__( 'Sets the default width of the content area (Default: 1140)', 'elementor' ),
-=======
-				'description' => __( 'Sets the default width of the content area (Default: 1140)', 'elementor' ),
->>>>>>> dist
 				'selectors' => [
 					'.elementor-section.elementor-section-boxed > .elementor-container' => 'max-width: {{SIZE}}{{UNIT}}',
+					'.e-container' => '--container-max-width: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
 
+		$is_container_active = Plugin::instance()->experiments->is_feature_active( 'container' );
+
+		$widgets_space_label = $is_container_active
+			? esc_html__( 'Elements Gap', 'elementor' )
+			: esc_html__( 'Widgets Space', 'elementor' );
+
 		$this->add_control(
 			'space_between_widgets',
 			[
-<<<<<<< HEAD
-				'label' => esc_html__( 'Widgets Space', 'elementor' ) . ' (px)',
-=======
-				'label' => __( 'Widgets Space', 'elementor' ) . ' (px)',
->>>>>>> dist
+				'label' => $widgets_space_label . ' (px)',
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 20,
@@ -111,14 +98,13 @@ class Settings_Layout extends Tab_Base {
 						'max' => 40,
 					],
 				],
-				'placeholder' => '20',
-<<<<<<< HEAD
+				'placeholder' => [
+					'size' => '20',
+				],
 				'description' => esc_html__( 'Sets the default space between widgets (Default: 20)', 'elementor' ),
-=======
-				'description' => __( 'Sets the default space between widgets (Default: 20)', 'elementor' ),
->>>>>>> dist
 				'selectors' => [
 					'.elementor-widget:not(:last-child)' => 'margin-bottom: {{SIZE}}{{UNIT}}',
+					'.elementor-element' => '--widgets-spacing: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
@@ -126,19 +112,11 @@ class Settings_Layout extends Tab_Base {
 		$this->add_control(
 			'page_title_selector',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Page Title Selector', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'h1.entry-title',
 				'placeholder' => 'h1.entry-title',
 				'description' => esc_html__( 'Elementor lets you hide the page title. This works for themes that have "h1.entry-title" selector. If your theme\'s selector is different, please enter it above.', 'elementor' ),
-=======
-				'label' => __( 'Page Title Selector', 'elementor' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => 'h1.entry-title',
-				'placeholder' => 'h1.entry-title',
-				'description' => __( 'Elementor lets you hide the page title. This works for themes that have "h1.entry-title" selector. If your theme\'s selector is different, please enter it above.', 'elementor' ),
->>>>>>> dist
 				'label_block' => true,
 				'selectors' => [
 					// Hack to convert the value into a CSS selector.
@@ -150,17 +128,10 @@ class Settings_Layout extends Tab_Base {
 		$this->add_control(
 			'stretched_section_container',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Stretched Section Fit To', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'placeholder' => 'body',
 				'description' => esc_html__( 'Enter parent element selector to which stretched sections will fit to (e.g. #primary / .wrapper / main etc). Leave blank to fit to page width.', 'elementor' ),
-=======
-				'label' => __( 'Stretched Section Fit To', 'elementor' ),
-				'type' => Controls_Manager::TEXT,
-				'placeholder' => 'body',
-				'description' => __( 'Enter parent element selector to which stretched sections will fit to (e.g. #primary / .wrapper / main etc). Leave blank to fit to page width.', 'elementor' ),
->>>>>>> dist
 				'label_block' => true,
 				'frontend_available' => true,
 			]
@@ -176,17 +147,10 @@ class Settings_Layout extends Tab_Base {
 		unset( $page_templates[ PageTemplatesModule::TEMPLATE_THEME ] );
 
 		$page_template_control_options = [
-<<<<<<< HEAD
 			'label' => esc_html__( 'Default Page Layout', 'elementor' ),
 			'options' => [
 				// This is here because the "Theme" string is different than the default option's string.
 				'default' => esc_html__( 'Theme', 'elementor' ),
-=======
-			'label' => __( 'Default Page Layout', 'elementor' ),
-			'options' => [
-				// This is here because the "Theme" string is different than the default option's string.
-				'default' => __( 'Theme', 'elementor' ),
->>>>>>> dist
 			] + $page_templates,
 		];
 
@@ -197,11 +161,7 @@ class Settings_Layout extends Tab_Base {
 		$this->start_controls_section(
 			'section_breakpoints',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Breakpoints', 'elementor' ),
-=======
-				'label' => __( 'Breakpoints', 'elementor' ),
->>>>>>> dist
 				'tab' => $this->get_id(),
 			]
 		);
@@ -213,7 +173,6 @@ class Settings_Layout extends Tab_Base {
 			$options[ $prefix . $breakpoint_key ] = $breakpoint['label'];
 		}
 
-<<<<<<< HEAD
 		if ( Plugin::$instance->experiments->is_feature_active( 'additional_custom_breakpoints' ) ) {
 			$active_breakpoints_control_type = Controls_Manager::SELECT2;
 		} else {
@@ -226,14 +185,6 @@ class Settings_Layout extends Tab_Base {
 				'label' => esc_html__( 'Active Breakpoints', 'elementor' ),
 				'type' => $active_breakpoints_control_type,
 				'description' => esc_html__( 'Mobile and Tablet options cannot be deleted.', 'elementor' ),
-=======
-		$this->add_control(
-			self::ACTIVE_BREAKPOINTS_CONTROL_ID,
-			[
-				'label' => __( 'Active Breakpoints', 'elementor' ),
-				'type' => Controls_Manager::HIDDEN,
-				'description' => __( 'Mobile and Tablet options cannot be deleted.', 'elementor' ),
->>>>>>> dist
 				'options' => $options,
 				'default' => [
 					$prefix . $breakpoint_key_mobile,
@@ -328,14 +279,11 @@ class Settings_Layout extends Tab_Base {
 		$default_breakpoints_config = Breakpoints_Manager::get_default_config();
 		$prefix = Breakpoints_Manager::BREAKPOINT_SETTING_PREFIX;
 
-<<<<<<< HEAD
 		// If the ACB experiment is inactive, only add the mobile and tablet controls.
 		if ( ! Plugin::$instance->experiments->is_feature_active( 'additional_custom_breakpoints' ) ) {
 			$default_breakpoints_config = array_intersect_key( $default_breakpoints_config, array_flip( [ Breakpoints_Manager::BREAKPOINT_KEY_MOBILE, Breakpoints_Manager::BREAKPOINT_KEY_TABLET ] ) );
 		}
 
-=======
->>>>>>> dist
 		// Add a control for each of the **default** breakpoints.
 		foreach ( $default_breakpoints_config as $breakpoint_key => $default_breakpoint_config ) {
 			$this->add_control(
@@ -356,7 +304,6 @@ class Settings_Layout extends Tab_Base {
 			);
 
 			$control_config = [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Breakpoint', 'elementor' ) . ' (px)',
 				'type' => Controls_Manager::NUMBER,
 				'placeholder' => $default_breakpoint_config['default_value'],
@@ -366,12 +313,6 @@ class Settings_Layout extends Tab_Base {
 						'breakpointName' => $breakpoint_key,
 					],
 				],
-=======
-				'label' => __( 'Breakpoint', 'elementor' ) . ' (px)',
-				'type' => Controls_Manager::NUMBER,
-				'placeholder' => $default_breakpoint_config['default_value'],
-				'frontend_available' => true,
->>>>>>> dist
 				'conditions' => [
 					'terms' => [
 						[
@@ -383,7 +324,6 @@ class Settings_Layout extends Tab_Base {
 				],
 			];
 
-<<<<<<< HEAD
 			if ( Breakpoints_Manager::BREAKPOINT_KEY_WIDESCREEN === $breakpoint_key ) {
 				$control_config['description'] = esc_html__(
 					'Widescreen breakpoint settings will apply from the selected value and up.',
@@ -391,8 +331,6 @@ class Settings_Layout extends Tab_Base {
 				);
 			}
 
-=======
->>>>>>> dist
 			// Add the breakpoint Control itself.
 			$this->add_control( $prefix . $breakpoint_key, $control_config );
 		}

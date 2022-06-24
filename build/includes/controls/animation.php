@@ -114,7 +114,6 @@ class Control_Animation extends Base_Data_Control {
 			],
 		];
 
-<<<<<<< HEAD
 		$additional_animations = [];
 
 		/**
@@ -130,16 +129,6 @@ class Control_Animation extends Base_Data_Control {
 		 * @param array $additional_animations Additional animations array.
 		 */
 		$additional_animations = apply_filters( 'elementor/controls/animations/additional_animations', $additional_animations );
-=======
-		/**
-		 * Element appearance animations list.
-		 *
-		 * @since 2.4.0
-		 *
-		 * @param array $additional_animations Additional Animations array.
-		 */
-		$additional_animations = apply_filters( 'elementor/controls/animations/additional_animations', [] );
->>>>>>> dist
 
 		return array_merge( $animations, $additional_animations );
 	}
@@ -155,7 +144,6 @@ class Control_Animation extends Base_Data_Control {
 	 * @access public
 	 */
 	public function content_template() {
-<<<<<<< HEAD
 		?>
 		<div class="elementor-control-field">
 			<label for="<?php $this->print_control_uid(); ?>" class="elementor-control-title">{{{ data.label }}}</label>
@@ -167,20 +155,6 @@ class Control_Animation extends Base_Data_Control {
 						<optgroup label="<?php echo esc_attr( $animations_group_name ); ?>">
 							<?php foreach ( $animations_group as $animation_name => $animation_title ) : ?>
 								<option value="<?php echo esc_attr( $animation_name ); ?>"><?php echo esc_html( $animation_title ); ?></option>
-=======
-		$control_uid = $this->get_control_uid();
-		?>
-		<div class="elementor-control-field">
-			<label for="<?php echo $control_uid; ?>" class="elementor-control-title">{{{ data.label }}}</label>
-			<div class="elementor-control-input-wrapper">
-				<select id="<?php echo $control_uid; ?>" data-setting="{{ data.name }}">
-					<option value=""><?php echo __( 'Default', 'elementor' ); ?></option>
-					<option value="none"><?php echo __( 'None', 'elementor' ); ?></option>
-					<?php foreach ( static::get_animations() as $animations_group_name => $animations_group ) : ?>
-						<optgroup label="<?php echo $animations_group_name; ?>">
-							<?php foreach ( $animations_group as $animation_name => $animation_title ) : ?>
-								<option value="<?php echo $animation_name; ?>"><?php echo $animation_title; ?></option>
->>>>>>> dist
 							<?php endforeach; ?>
 						</optgroup>
 					<?php endforeach; ?>
@@ -192,7 +166,6 @@ class Control_Animation extends Base_Data_Control {
 		<# } #>
 		<?php
 	}
-<<<<<<< HEAD
 
 	public static function get_assets( $setting ) {
 		if ( ! $setting || 'none' === $setting ) {
@@ -203,6 +176,4 @@ class Control_Animation extends Base_Data_Control {
 			'styles' => [ 'e-animations' ],
 		];
 	}
-=======
->>>>>>> dist
 }

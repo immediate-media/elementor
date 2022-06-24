@@ -1,11 +1,8 @@
 <?php
 namespace Elementor;
 
-<<<<<<< HEAD
 use Elementor\Core\Kits\Manager;
 
-=======
->>>>>>> dist
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -38,7 +35,6 @@ class Maintenance {
 		flush_rewrite_rules();
 
 		if ( is_multisite() && $network_wide ) {
-<<<<<<< HEAD
 			static::create_default_kit(
 				get_sites( [ 'fields' => 'ids' ] )
 			);
@@ -48,11 +44,6 @@ class Maintenance {
 
 		static::create_default_kit();
 
-=======
-			return;
-		}
-
->>>>>>> dist
 		set_transient( 'elementor_activation_redirect', true, MINUTE_IN_SECONDS );
 	}
 
@@ -83,7 +74,6 @@ class Maintenance {
 	public static function init() {
 		register_activation_hook( ELEMENTOR_PLUGIN_BASE, [ __CLASS__, 'activation' ] );
 		register_uninstall_hook( ELEMENTOR_PLUGIN_BASE, [ __CLASS__, 'uninstall' ] );
-<<<<<<< HEAD
 
 		add_action( 'wpmu_new_blog', function ( $site_id ) {
 			if ( ! is_plugin_active_for_network( ELEMENTOR_PLUGIN_BASE ) ) {
@@ -111,7 +101,5 @@ class Maintenance {
 		}
 
 		Manager::create_default_kit();
-=======
->>>>>>> dist
 	}
 }

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/*! elementor - v3.4.6 - 26-10-2021 */
-=======
-/*! elementor - v3.2.4 - 10-06-2021 */
->>>>>>> dist
+/*! elementor - v3.6.6 - 24-06-2022 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -10,18 +6,9 @@
 /*!********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
   \********************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "../node_modules/core-js/library/fn/array/from.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/from.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/from.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -29,44 +16,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "../no
 /*!************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
   \************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "../node_modules/core-js/library/fn/array/is-array.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js");
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/core-js/get-iterator.js":
-/*!**********************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/core-js/get-iterator.js ***!
-  \**********************************************************************/
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/get-iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js");
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/core-js/is-iterable.js":
-/*!*********************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/core-js/is-iterable.js ***!
-  \*********************************************************************/
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/is-iterable.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/is-iterable.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -74,18 +26,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "../n
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
   \***********************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "../node_modules/core-js/library/fn/object/create.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/create.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/create.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -93,18 +36,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/create */ "..
 /*!********************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js ***!
   \********************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/define-property */ "../node_modules/core-js/library/fn/object/define-property.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/define-property.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/define-property */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/define-property.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -112,18 +46,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /*!************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/entries.js ***!
   \************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/entries */ "../node_modules/core-js/library/fn/object/entries.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/entries.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/entries */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/entries.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -131,18 +56,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/entries */ ".
 /*!********************************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js ***!
   \********************************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "../node_modules/core-js/library/fn/object/get-own-property-descriptor.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-own-property-descriptor.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-own-property-descriptor.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -150,18 +66,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 /*!*********************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js ***!
   \*********************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "../node_modules/core-js/library/fn/object/get-prototype-of.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-prototype-of.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype-of */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-prototype-of.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -169,18 +76,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype
 /*!*********************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js ***!
   \*********************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "../node_modules/core-js/library/fn/object/set-prototype-of.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/set-prototype-of.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/set-prototype-of.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -188,18 +86,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype
 /*!***************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js ***!
   \***************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/reflect/construct */ "../node_modules/core-js/library/fn/reflect/construct.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/construct.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/reflect/construct */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/construct.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -207,18 +96,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/reflect/construct */
 /*!*********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/reflect/get.js ***!
   \*********************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/reflect/get */ "../node_modules/core-js/library/fn/reflect/get.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/get.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/reflect/get */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/get.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -226,18 +106,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/reflect/get */ "../n
 /*!****************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/symbol.js ***!
   \****************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "../node_modules/core-js/library/fn/symbol/index.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/index.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/index.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -245,18 +116,9 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "../node_m
 /*!*************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js ***!
   \*************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "../node_modules/core-js/library/fn/symbol/iterator.js");
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/iterator.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/iterator.js");
->>>>>>> dist
 
 /***/ }),
 
@@ -264,12 +126,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "
 /*!**************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/arrayLikeToArray.js ***!
   \**************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 11:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 function _arrayLikeToArray(arr, len) {
@@ -283,10 +139,7 @@ function _arrayLikeToArray(arr, len) {
 }
 
 module.exports = _arrayLikeToArray;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -294,12 +147,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/arrayWithHoles.js ***!
   \************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 7:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Array$isArray = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "../node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
@@ -309,10 +156,7 @@ function _arrayWithHoles(arr) {
 }
 
 module.exports = _arrayWithHoles;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -320,12 +164,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!*******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js ***!
   \*******************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 9:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 function _assertThisInitialized(self) {
@@ -337,10 +175,7 @@ function _assertThisInitialized(self) {
 }
 
 module.exports = _assertThisInitialized;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -348,12 +183,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js ***!
   \************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 7:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 function _classCallCheck(instance, Constructor) {
@@ -363,10 +192,7 @@ function _classCallCheck(instance, Constructor) {
 }
 
 module.exports = _classCallCheck;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -374,12 +200,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!*********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/createClass.js ***!
   \*********************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 20:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
@@ -402,10 +222,7 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -413,29 +230,15 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!*********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/createSuper.js ***!
   \*********************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 26:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Reflect$construct = __webpack_require__(/*! @babel/runtime-corejs2/core-js/reflect/construct */ "../node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js");
 
-<<<<<<< HEAD
 var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
 
 var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct.js */ "../node_modules/@babel/runtime-corejs2/helpers/isNativeReflectConstruct.js");
 
 var possibleConstructorReturn = __webpack_require__(/*! ./possibleConstructorReturn.js */ "../node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
-=======
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
-
-var isNativeReflectConstruct = __webpack_require__(/*! ./isNativeReflectConstruct */ "../node_modules/@babel/runtime-corejs2/helpers/isNativeReflectConstruct.js");
-
-var possibleConstructorReturn = __webpack_require__(/*! ./possibleConstructorReturn */ "../node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js");
->>>>>>> dist
 
 function _createSuper(Derived) {
   var hasNativeReflectConstruct = isNativeReflectConstruct();
@@ -455,10 +258,7 @@ function _createSuper(Derived) {
 }
 
 module.exports = _createSuper;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -466,7 +266,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!*************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/get.js ***!
   \*************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Reflect$get = __webpack_require__(/*! @babel/runtime-corejs2/core-js/reflect/get */ "../node_modules/@babel/runtime-corejs2/core-js/reflect/get.js");
@@ -474,28 +273,11 @@ var _Reflect$get = __webpack_require__(/*! @babel/runtime-corejs2/core-js/reflec
 var _Object$getOwnPropertyDescriptor = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptor */ "../node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
 
 var superPropBase = __webpack_require__(/*! ./superPropBase.js */ "../node_modules/@babel/runtime-corejs2/helpers/superPropBase.js");
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 9:4-18 */
-/*! CommonJS bailout: module.exports is used directly at 11:4-18 */
-/*! CommonJS bailout: module.exports is used directly at 28:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _Object$getOwnPropertyDescriptor = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-descriptor */ "../node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js");
-
-var _Reflect$get = __webpack_require__(/*! @babel/runtime-corejs2/core-js/reflect/get */ "../node_modules/@babel/runtime-corejs2/core-js/reflect/get.js");
-
-var superPropBase = __webpack_require__(/*! ./superPropBase */ "../node_modules/@babel/runtime-corejs2/helpers/superPropBase.js");
->>>>>>> dist
 
 function _get(target, property, receiver) {
   if (typeof Reflect !== "undefined" && _Reflect$get) {
     module.exports = _get = _Reflect$get;
-<<<<<<< HEAD
     module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
   } else {
     module.exports = _get = function _get(target, property, receiver) {
       var base = superPropBase(target, property);
@@ -509,21 +291,15 @@ function _get(target, property, receiver) {
 
       return desc.value;
     };
-<<<<<<< HEAD
 
     module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
   }
 
   return _get(target, property, receiver || target);
 }
 
 module.exports = _get;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -531,41 +307,22 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js ***!
   \************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Object$setPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/set-prototype-of */ "../node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
 
 var _Object$getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-prototype-of */ "../node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
 
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:2-16 */
-/*! CommonJS bailout: module.exports is used directly at 12:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _Object$getPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-prototype-of */ "../node_modules/@babel/runtime-corejs2/core-js/object/get-prototype-of.js");
-
-var _Object$setPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/set-prototype-of */ "../node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
-
->>>>>>> dist
 function _getPrototypeOf(o) {
   module.exports = _getPrototypeOf = _Object$setPrototypeOf ? _Object$getPrototypeOf : function _getPrototypeOf(o) {
     return o.__proto__ || _Object$getPrototypeOf(o);
   };
-<<<<<<< HEAD
   module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
   return _getPrototypeOf(o);
 }
 
 module.exports = _getPrototypeOf;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -573,21 +330,11 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!******************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/inherits.js ***!
   \******************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 20:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Object$create = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/create */ "../node_modules/@babel/runtime-corejs2/core-js/object/create.js");
 
-<<<<<<< HEAD
 var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf.js */ "../node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js");
-=======
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js");
->>>>>>> dist
 
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
@@ -605,10 +352,7 @@ function _inherits(subClass, superClass) {
 }
 
 module.exports = _inherits;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -616,12 +360,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!*******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js ***!
   \*******************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 7:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 function _interopRequireDefault(obj) {
@@ -631,10 +369,7 @@ function _interopRequireDefault(obj) {
 }
 
 module.exports = _interopRequireDefault;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -642,12 +377,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!**********************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/isNativeReflectConstruct.js ***!
   \**********************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 16:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Reflect$construct = __webpack_require__(/*! @babel/runtime-corejs2/core-js/reflect/construct */ "../node_modules/@babel/runtime-corejs2/core-js/reflect/construct.js");
@@ -658,11 +387,7 @@ function _isNativeReflectConstruct() {
   if (typeof Proxy === "function") return true;
 
   try {
-<<<<<<< HEAD
     Boolean.prototype.valueOf.call(_Reflect$construct(Boolean, [], function () {}));
-=======
-    Date.prototype.toString.call(_Reflect$construct(Date, [], function () {}));
->>>>>>> dist
     return true;
   } catch (e) {
     return false;
@@ -670,10 +395,7 @@ function _isNativeReflectConstruct() {
 }
 
 module.exports = _isNativeReflectConstruct;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -681,7 +403,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!******************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/iterableToArrayLimit.js ***!
   \******************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Symbol = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "../node_modules/@babel/runtime-corejs2/core-js/symbol.js");
@@ -700,28 +421,6 @@ function _iterableToArrayLimit(arr, i) {
 
   try {
     for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 34:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _getIterator = __webpack_require__(/*! @babel/runtime-corejs2/core-js/get-iterator */ "../node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
-
-var _isIterable = __webpack_require__(/*! @babel/runtime-corejs2/core-js/is-iterable */ "../node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
-
-var _Symbol = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "../node_modules/@babel/runtime-corejs2/core-js/symbol.js");
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof _Symbol === "undefined" || !_isIterable(Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = _getIterator(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
->>>>>>> dist
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -741,10 +440,7 @@ function _iterableToArrayLimit(arr, i) {
 }
 
 module.exports = _iterableToArrayLimit;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -752,12 +448,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!*************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/nonIterableRest.js ***!
   \*************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 function _nonIterableRest() {
@@ -765,10 +455,7 @@ function _nonIterableRest() {
 }
 
 module.exports = _nonIterableRest;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -776,41 +463,24 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!***********************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/possibleConstructorReturn.js ***!
   \***********************************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _typeof = __webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "../node_modules/@babel/runtime-corejs2/helpers/typeof.js")["default"];
 
 var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized.js */ "../node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js");
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 13:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _typeof = __webpack_require__(/*! @babel/runtime-corejs2/helpers/typeof */ "../node_modules/@babel/runtime-corejs2/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "../node_modules/@babel/runtime-corejs2/helpers/assertThisInitialized.js");
->>>>>>> dist
 
 function _possibleConstructorReturn(self, call) {
   if (call && (_typeof(call) === "object" || typeof call === "function")) {
     return call;
-<<<<<<< HEAD
   } else if (call !== void 0) {
     throw new TypeError("Derived constructors may only return object or undefined");
-=======
->>>>>>> dist
   }
 
   return assertThisInitialized(self);
 }
 
 module.exports = _possibleConstructorReturn;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -818,13 +488,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/setPrototypeOf.js ***!
   \************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:2-16 */
-/*! CommonJS bailout: module.exports is used directly at 12:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Object$setPrototypeOf = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/set-prototype-of */ "../node_modules/@babel/runtime-corejs2/core-js/object/set-prototype-of.js");
@@ -835,18 +498,12 @@ function _setPrototypeOf(o, p) {
     return o;
   };
 
-<<<<<<< HEAD
   module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
   return _setPrototypeOf(o, p);
 }
 
 module.exports = _setPrototypeOf;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -854,7 +511,6 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/slicedToArray.js ***!
   \***********************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles.js */ "../node_modules/@babel/runtime-corejs2/helpers/arrayWithHoles.js");
@@ -864,30 +520,13 @@ var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit.js */ 
 var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray.js */ "../node_modules/@babel/runtime-corejs2/helpers/unsupportedIterableToArray.js");
 
 var nonIterableRest = __webpack_require__(/*! ./nonIterableRest.js */ "../node_modules/@babel/runtime-corejs2/helpers/nonIterableRest.js");
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 13:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "../node_modules/@babel/runtime-corejs2/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "../node_modules/@babel/runtime-corejs2/helpers/iterableToArrayLimit.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray */ "../node_modules/@babel/runtime-corejs2/helpers/unsupportedIterableToArray.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "../node_modules/@babel/runtime-corejs2/helpers/nonIterableRest.js");
->>>>>>> dist
 
 function _slicedToArray(arr, i) {
   return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
 }
 
 module.exports = _slicedToArray;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -895,18 +534,9 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!***********************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/superPropBase.js ***!
   \***********************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf.js */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 12:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js");
->>>>>>> dist
 
 function _superPropBase(object, property) {
   while (!Object.prototype.hasOwnProperty.call(object, property)) {
@@ -918,10 +548,7 @@ function _superPropBase(object, property) {
 }
 
 module.exports = _superPropBase;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -929,26 +556,12 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!****************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/typeof.js ***!
   \****************************************************************/
-<<<<<<< HEAD
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Symbol = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "../node_modules/@babel/runtime-corejs2/core-js/symbol.js");
 
 var _Symbol$iterator = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/iterator */ "../node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js");
 
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 9:4-18 */
-/*! CommonJS bailout: module.exports is used directly at 13:4-18 */
-/*! CommonJS bailout: module.exports is used directly at 21:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var _Symbol$iterator = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol/iterator */ "../node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js");
-
-var _Symbol = __webpack_require__(/*! @babel/runtime-corejs2/core-js/symbol */ "../node_modules/@babel/runtime-corejs2/core-js/symbol.js");
-
->>>>>>> dist
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -956,30 +569,21 @@ function _typeof(obj) {
     module.exports = _typeof = function _typeof(obj) {
       return typeof obj;
     };
-<<<<<<< HEAD
 
     module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
   } else {
     module.exports = _typeof = function _typeof(obj) {
       return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : typeof obj;
     };
-<<<<<<< HEAD
 
     module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
   }
 
   return _typeof(obj);
 }
 
 module.exports = _typeof;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-=======
->>>>>>> dist
 
 /***/ }),
 
@@ -987,21 +591,11 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /*!************************************************************************************!*\
   !*** ../node_modules/@babel/runtime-corejs2/helpers/unsupportedIterableToArray.js ***!
   \************************************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 14:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var _Array$from = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/from */ "../node_modules/@babel/runtime-corejs2/core-js/array/from.js");
 
-<<<<<<< HEAD
 var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray.js */ "../node_modules/@babel/runtime-corejs2/helpers/arrayLikeToArray.js");
-=======
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray */ "../node_modules/@babel/runtime-corejs2/helpers/arrayLikeToArray.js");
->>>>>>> dist
 
 function _unsupportedIterableToArray(o, minLen) {
   if (!o) return;
@@ -1013,102 +607,7 @@ function _unsupportedIterableToArray(o, minLen) {
 }
 
 module.exports = _unsupportedIterableToArray;
-<<<<<<< HEAD
 module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-
-/***/ "../assets/dev/js/admin/admin-menu.js":
-/*!********************************************!*\
-  !*** ../assets/dev/js/admin/admin-menu.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports["default"] = void 0;
-
-__webpack_require__(/*! core-js/modules/es6.string.includes.js */ "../node_modules/core-js/modules/es6.string.includes.js");
-
-__webpack_require__(/*! core-js/modules/es7.array.includes.js */ "../node_modules/core-js/modules/es7.array.includes.js");
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _get2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/get */ "../node_modules/@babel/runtime-corejs2/helpers/get.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "../node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
-
-var AdminMenuHandler = /*#__PURE__*/function (_elementorModules$Vie) {
-  (0, _inherits2.default)(AdminMenuHandler, _elementorModules$Vie);
-
-  var _super = (0, _createSuper2.default)(AdminMenuHandler);
-
-  function AdminMenuHandler() {
-    (0, _classCallCheck2.default)(this, AdminMenuHandler);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(AdminMenuHandler, [{
-    key: "getDefaultElements",
-    value: function getDefaultElements() {
-      var settings = this.getSettings();
-      return {
-        $adminPageMenuLink: jQuery("a[href=\"".concat(settings.path, "\"]"))
-      };
-    } // This method highlights the currently visited submenu item for the slug provided as an argument to this handler.
-    // This method also accepts a jQuery instance of a custom submenu item to highlight. If provided, the provided
-    // item will be the one highlighted.
-
-  }, {
-    key: "highlightSubMenuItem",
-    value: function highlightSubMenuItem() {
-      var $element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-      var $submenuItem = $element || this.elements.$adminPageMenuLink;
-      $submenuItem.addClass('current'); // Need to add the 'current' class to the link element's parent `<li>` element as well.
-
-      $submenuItem.parent().addClass('current');
-    }
-  }, {
-    key: "highlightTopLevelMenuItem",
-    value: function highlightTopLevelMenuItem($elementToHighlight) {
-      var $elementToRemove = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-      var activeClasses = 'wp-has-current-submenu wp-menu-open current';
-      $elementToHighlight.parent().addClass(activeClasses).removeClass('wp-not-current-submenu');
-
-      if ($elementToRemove) {
-        $elementToRemove.removeClass(activeClasses);
-      }
-    }
-  }, {
-    key: "onInit",
-    value: function onInit() {
-      (0, _get2.default)((0, _getPrototypeOf2.default)(AdminMenuHandler.prototype), "onInit", this).call(this);
-      var settings = this.getSettings();
-
-      if (window.location.href.includes(settings.path)) {
-        this.highlightSubMenuItem();
-      }
-    }
-  }]);
-  return AdminMenuHandler;
-}(elementorModules.ViewModule);
-
-exports["default"] = AdminMenuHandler;
 
 /***/ }),
 
@@ -1197,6 +696,210 @@ module.exports = elementorModules.ViewModule.extend({
     elementorCommon.elements.$window.on('elementor/admin/init', this.onAdminInit);
   }
 });
+
+/***/ }),
+
+/***/ "../assets/dev/js/admin/menu-handler.js":
+/*!**********************************************!*\
+  !*** ../assets/dev/js/admin/menu-handler.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports["default"] = void 0;
+
+__webpack_require__(/*! core-js/modules/es6.string.includes.js */ "../node_modules/core-js/modules/es6.string.includes.js");
+
+__webpack_require__(/*! core-js/modules/es7.array.includes.js */ "../node_modules/core-js/modules/es7.array.includes.js");
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
+
+var _get2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/get */ "../node_modules/@babel/runtime-corejs2/helpers/get.js"));
+
+var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js"));
+
+var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "../node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
+
+var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
+
+var MenuHandler = /*#__PURE__*/function (_elementorModules$Vie) {
+  (0, _inherits2.default)(MenuHandler, _elementorModules$Vie);
+
+  var _super = (0, _createSuper2.default)(MenuHandler);
+
+  function MenuHandler() {
+    (0, _classCallCheck2.default)(this, MenuHandler);
+    return _super.apply(this, arguments);
+  }
+
+  (0, _createClass2.default)(MenuHandler, [{
+    key: "getDefaultSettings",
+    value: function getDefaultSettings() {
+      return {
+        selectors: {
+          currentSubmenuItems: '#adminmenu .current'
+        }
+      };
+    }
+  }, {
+    key: "getDefaultElements",
+    value: function getDefaultElements() {
+      var settings = this.getSettings();
+      return {
+        $currentSubmenuItems: jQuery(settings.selectors.currentSubmenuItems),
+        $adminPageMenuLink: jQuery("a[href=\"".concat(settings.path, "\"]"))
+      };
+    } // This method highlights the currently visited submenu item for the slug provided as an argument to this handler.
+    // This method also accepts a jQuery instance of a custom submenu item to highlight. If provided, the provided
+    // item will be the one highlighted.
+
+  }, {
+    key: "highlightSubMenuItem",
+    value: function highlightSubMenuItem() {
+      var $element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+      var $submenuItem = $element || this.elements.$adminPageMenuLink;
+
+      if (this.elements.$currentSubmenuItems.length) {
+        this.elements.$currentSubmenuItems.removeClass('current');
+      }
+
+      $submenuItem.addClass('current'); // Need to add the 'current' class to the link element's parent `<li>` element as well.
+
+      $submenuItem.parent().addClass('current');
+    }
+  }, {
+    key: "highlightTopLevelMenuItem",
+    value: function highlightTopLevelMenuItem($elementToHighlight) {
+      var $elementToRemove = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var activeClasses = 'wp-has-current-submenu wp-menu-open current';
+      $elementToHighlight.parent().addClass(activeClasses).removeClass('wp-not-current-submenu');
+
+      if ($elementToRemove) {
+        $elementToRemove.removeClass(activeClasses);
+      }
+    }
+  }, {
+    key: "onInit",
+    value: function onInit() {
+      (0, _get2.default)((0, _getPrototypeOf2.default)(MenuHandler.prototype), "onInit", this).call(this);
+      var settings = this.getSettings();
+
+      if (window.location.href.includes(settings.path)) {
+        this.highlightSubMenuItem();
+      }
+    }
+  }]);
+  return MenuHandler;
+}(elementorModules.ViewModule);
+
+exports["default"] = MenuHandler;
+
+/***/ }),
+
+/***/ "../assets/dev/js/editor/utils/files-upload-handler.js":
+/*!*************************************************************!*\
+  !*** ../assets/dev/js/editor/utils/files-upload-handler.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+/* provided dependency */ var __ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n")["__"];
+
+
+var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
+
+_Object$defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports["default"] = void 0;
+
+__webpack_require__(/*! core-js/modules/es7.array.includes.js */ "../node_modules/core-js/modules/es7.array.includes.js");
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
+
+var FilesUploadHandler = /*#__PURE__*/function () {
+  function FilesUploadHandler() {
+    (0, _classCallCheck2.default)(this, FilesUploadHandler);
+  }
+
+  (0, _createClass2.default)(FilesUploadHandler, null, [{
+    key: "isUploadEnabled",
+    value: function isUploadEnabled(mediaType) {
+      var unfilteredFilesTypes = ['svg', 'application/json'];
+
+      if (!unfilteredFilesTypes.includes(mediaType)) {
+        return true;
+      }
+
+      return elementorCommon.config.filesUpload.unfilteredFiles;
+    }
+  }, {
+    key: "setUploadTypeCaller",
+    value: function setUploadTypeCaller(frame) {
+      frame.uploader.uploader.param('uploadTypeCaller', 'elementor-wp-media-upload');
+    }
+  }, {
+    key: "getUnfilteredFilesNotEnabledDialog",
+    value: function getUnfilteredFilesNotEnabledDialog(callback) {
+      var onConfirm = function onConfirm() {
+        elementorCommon.ajax.addRequest('enable_unfiltered_files_upload', {}, true);
+        elementorCommon.config.filesUpload.unfilteredFiles = true;
+        callback();
+      };
+
+      return elementor.helpers.getSimpleDialog('e-enable-unfiltered-files-dialog', __('Enable Unfiltered File Uploads', 'elementor'), __('Before you enable unfiltered files upload, note that such files include a security risk. Elementor does run a process to remove possible malicious code, but there is still risk involved when using such files.', 'elementor'), __('Enable', 'elementor'), onConfirm);
+    }
+  }, {
+    key: "getUnfilteredFilesNotEnabledImportTemplateDialog",
+    value: function getUnfilteredFilesNotEnabledImportTemplateDialog(callback) {
+      return elementorCommon.dialogsManager.createWidget('confirm', {
+        id: 'e-enable-unfiltered-files-dialog-import-template',
+        headerMessage: __('Enable Unfiltered File Uploads', 'elementor'),
+        message: __('Before you enable unfiltered files upload, note that such files include a security risk. Elementor does run a process to remove possible malicious code, but there is still risk involved when using such files.', 'elementor') + '<br /><br />' + __('If you do not enable uploading unfiltered files, any SVG or JSON (including lottie) files used in the uploaded template will not be imported.', 'elementor'),
+        position: {
+          my: 'center center',
+          at: 'center center'
+        },
+        strings: {
+          confirm: __('Enable and Import', 'elementor'),
+          cancel: __('Import Without Enabling', 'elementor')
+        },
+        onConfirm: function onConfirm() {
+          elementorCommon.ajax.addRequest('enable_unfiltered_files_upload', {
+            success: function success() {
+              // This utility is used in both the admin and the Editor.
+              elementorCommon.config.filesUpload.unfilteredFiles = true;
+              callback();
+            }
+          }, true);
+        },
+        onCancel: function onCancel() {
+          return callback();
+        }
+      });
+    }
+  }]);
+  return FilesUploadHandler;
+}();
+
+exports["default"] = FilesUploadHandler;
 
 /***/ }),
 
@@ -1355,6 +1058,8 @@ _Object$defineProperty(exports, "__esModule", {
 
 exports["default"] = void 0;
 
+__webpack_require__(/*! core-js/modules/es6.array.find.js */ "../node_modules/core-js/modules/es6.array.find.js");
+
 var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
 
 var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
@@ -1383,7 +1088,7 @@ var ExperimentsModule = /*#__PURE__*/function (_elementorModules$Vie) {
       return {
         selectors: {
           experimentIndicators: '.e-experiment__title__indicator',
-          experimentForm: '#elementor-settings-form[action="options.php#tab-experiments"]',
+          experimentForm: '#elementor-settings-form',
           experimentSelects: '.e-experiment__select',
           experimentsButtons: '.e-experiment__button'
         }
@@ -1407,18 +1112,16 @@ var ExperimentsModule = /*#__PURE__*/function (_elementorModules$Vie) {
     value: function bindEvents() {
       var _this = this;
 
-      this.elements.$experimentForm.on('submit', function (event) {
-        return _this.onSettingsSubmit(event);
+      this.elements.$experimentsButtons.on('click', function (event) {
+        return _this.onExperimentsButtonsClick(event);
       });
     }
   }, {
-    key: "onSettingsSubmit",
-    value: function onSettingsSubmit(event) {
-      var submitButton = jQuery(event.originalEvent.submitter);
-
-      if (submitButton.is(this.elements.$experimentsButtons)) {
-        this.elements.$experimentSelects.val(submitButton.val());
-      }
+    key: "onExperimentsButtonsClick",
+    value: function onExperimentsButtonsClick(event) {
+      var submitButton = jQuery(event.currentTarget);
+      this.elements.$experimentSelects.val(submitButton.val());
+      this.elements.$experimentForm.find('#submit').trigger('click');
     }
   }, {
     key: "addTipsy",
@@ -1498,7 +1201,7 @@ var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
 
 var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
 
-var _adminMenu = _interopRequireDefault(__webpack_require__(/*! elementor-admin/admin-menu */ "../assets/dev/js/admin/admin-menu.js"));
+var _menuHandler = _interopRequireDefault(__webpack_require__(/*! elementor-admin/menu-handler */ "../assets/dev/js/admin/menu-handler.js"));
 
 var LandingPagesHandler = /*#__PURE__*/function (_AdminMenuHandler) {
   (0, _inherits2.default)(LandingPagesHandler, _AdminMenuHandler);
@@ -1558,7 +1261,7 @@ var LandingPagesHandler = /*#__PURE__*/function (_AdminMenuHandler) {
     }
   }]);
   return LandingPagesHandler;
-}(_adminMenu.default);
+}(_menuHandler.default);
 
 exports["default"] = LandingPagesHandler;
 
@@ -1646,710 +1349,10 @@ exports["default"] = _default;
 __webpack_require__(/*! ../../modules/es6.string.iterator */ "../node_modules/core-js/library/modules/es6.string.iterator.js");
 __webpack_require__(/*! ../../modules/es6.array.from */ "../node_modules/core-js/library/modules/es6.array.from.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Array.from;
-=======
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/from.js":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/from.js ***!
-  \********************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.string.iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js");
-__webpack_require__(/*! ../../modules/es6.array.from */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.from.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Array.from;
 
 
 /***/ }),
 
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js":
-/*!************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/array/is-array.js ***!
-  \************************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.array.is-array */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.is-array.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Array.isArray;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js":
-/*!**********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/get-iterator.js ***!
-  \**********************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js .__esModule */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../modules/web.dom.iterable */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js");
-module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js");
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/is-iterable.js":
-/*!*********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/is-iterable.js ***!
-  \*********************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.is-iterable.js .__esModule */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.is-iterable.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../modules/web.dom.iterable */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/web.dom.iterable.js");
-__webpack_require__(/*! ../modules/es6.string.iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js");
-module.exports = __webpack_require__(/*! ../modules/core.is-iterable */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.is-iterable.js");
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/create.js":
-/*!***********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/create.js ***!
-  \***********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.object.create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.create.js");
-var $Object = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Object;
-module.exports = function create(P, D) {
-  return $Object.create(P, D);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/define-property.js":
-/*!********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/define-property.js ***!
-  \********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.object.define-property */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.define-property.js");
-var $Object = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Object;
-module.exports = function defineProperty(it, key, desc) {
-  return $Object.defineProperty(it, key, desc);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/entries.js":
-/*!************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/entries.js ***!
-  \************************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es7.object.entries */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.object.entries.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Object.entries;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-own-property-descriptor.js":
-/*!********************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-own-property-descriptor.js ***!
-  \********************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.object.get-own-property-descriptor */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.get-own-property-descriptor.js");
-var $Object = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Object;
-module.exports = function getOwnPropertyDescriptor(it, key) {
-  return $Object.getOwnPropertyDescriptor(it, key);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-prototype-of.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/get-prototype-of.js ***!
-  \*********************************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.object.get-prototype-of */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.get-prototype-of.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Object.getPrototypeOf;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/set-prototype-of.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/object/set-prototype-of.js ***!
-  \*********************************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.set-prototype-of.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Object.setPrototypeOf;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/construct.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/construct.js ***!
-  \***************************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.reflect.construct */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.reflect.construct.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Reflect.construct;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/get.js":
-/*!*********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/reflect/get.js ***!
-  \*********************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.reflect.get */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.reflect.get.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Reflect.get;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/index.js":
-/*!**********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/index.js ***!
-  \**********************************************************************************************/
-/*! dynamic exports */
-/*! export __esModule [maybe provided (runtime-defined)] [no usage info] [provision prevents renaming (no use info)] */
-/*! other exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.symbol */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.symbol.js");
-__webpack_require__(/*! ../../modules/es6.object.to-string */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.to-string.js");
-__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.symbol.async-iterator.js");
-__webpack_require__(/*! ../../modules/es7.symbol.observable */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.symbol.observable.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").Symbol;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/iterator.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/fn/symbol/iterator.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ../../modules/es6.string.iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js");
-__webpack_require__(/*! ../../modules/web.dom.iterable */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/web.dom.iterable.js");
-module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-ext.js").f('iterator');
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_a-function.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_a-function.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = function (it) {
-  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
-  return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_add-to-unscopables.js":
-/*!**********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_add-to-unscopables.js ***!
-  \**********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = function () { /* empty */ };
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-module.exports = function (it) {
-  if (!isObject(it)) throw TypeError(it + ' is not an object!');
-  return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_array-includes.js":
-/*!******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_array-includes.js ***!
-  \******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// false -> Array#indexOf
-// true  -> Array#includes
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var toLength = __webpack_require__(/*! ./_to-length */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-length.js");
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-absolute-index.js");
-module.exports = function (IS_INCLUDES) {
-  return function ($this, el, fromIndex) {
-    var O = toIObject($this);
-    var length = toLength(O.length);
-    var index = toAbsoluteIndex(fromIndex, length);
-    var value;
-    // Array#includes uses SameValueZero equality algorithm
-    // eslint-disable-next-line no-self-compare
-    if (IS_INCLUDES && el != el) while (length > index) {
-      value = O[index++];
-      // eslint-disable-next-line no-self-compare
-      if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
-    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
-      if (O[index] === el) return IS_INCLUDES || index || 0;
-    } return !IS_INCLUDES && -1;
-  };
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_bind.js":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_bind.js ***!
-  \********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 16:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var aFunction = __webpack_require__(/*! ./_a-function */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_a-function.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var invoke = __webpack_require__(/*! ./_invoke */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_invoke.js");
-var arraySlice = [].slice;
-var factories = {};
-
-var construct = function (F, len, args) {
-  if (!(len in factories)) {
-    for (var n = [], i = 0; i < len; i++) n[i] = 'a[' + i + ']';
-    // eslint-disable-next-line no-new-func
-    factories[len] = Function('F,a', 'return new F(' + n.join(',') + ')');
-  } return factories[len](F, args);
-};
-
-module.exports = Function.bind || function bind(that /* , ...args */) {
-  var fn = aFunction(this);
-  var partArgs = arraySlice.call(arguments, 1);
-  var bound = function (/* args... */) {
-    var args = partArgs.concat(arraySlice.call(arguments));
-    return this instanceof bound ? construct(fn, args.length, args) : invoke(fn, args, that);
-  };
-  if (isObject(fn.prototype)) bound.prototype = fn.prototype;
-  return bound;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_classof.js":
-/*!***********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_classof.js ***!
-  \***********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 14:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(/*! ./_cof */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_cof.js");
-var TAG = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('toStringTag');
-// ES3 wrong here
-var ARG = cof(function () { return arguments; }()) == 'Arguments';
-
-// fallback for IE11 Script Access Denied error
-var tryGet = function (it, key) {
-  try {
-    return it[key];
-  } catch (e) { /* empty */ }
-};
-
-module.exports = function (it) {
-  var O, T, B;
-  return it === undefined ? 'Undefined' : it === null ? 'Null'
-    // @@toStringTag case
-    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
-    // builtinTag case
-    : ARG ? cof(O)
-    // ES3 arguments fallback
-    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_cof.js":
-/*!*******************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_cof.js ***!
-  \*******************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module) => {
-
-var toString = {}.toString;
-
-module.exports = function (it) {
-  return toString.call(it).slice(8, -1);
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js ***!
-  \********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:11-25 */
-/***/ ((module) => {
-
-var core = module.exports = { version: '2.6.11' };
-if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_create-property.js":
-/*!*******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_create-property.js ***!
-  \*******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var $defineProperty = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js");
-var createDesc = __webpack_require__(/*! ./_property-desc */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js");
-
-module.exports = function (object, index, value) {
-  if (index in object) $defineProperty.f(object, index, createDesc(0, value));
-  else object[index] = value;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ctx.js":
-/*!*******************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ctx.js ***!
-  \*******************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// optional / simple context binding
-var aFunction = __webpack_require__(/*! ./_a-function */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_a-function.js");
-module.exports = function (fn, that, length) {
-  aFunction(fn);
-  if (that === undefined) return fn;
-  switch (length) {
-    case 1: return function (a) {
-      return fn.call(that, a);
-    };
-    case 2: return function (a, b) {
-      return fn.call(that, a, b);
-    };
-    case 3: return function (a, b, c) {
-      return fn.call(that, a, b, c);
-    };
-  }
-  return function (/* ...args */) {
-    return fn.apply(that, arguments);
-  };
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_defined.js":
-/*!***********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_defined.js ***!
-  \***********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module) => {
-
-// 7.2.1 RequireObjectCoercible(argument)
-module.exports = function (it) {
-  if (it == undefined) throw TypeError("Can't call method on  " + it);
-  return it;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js ***!
-  \***************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(/*! ./_fails */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js")(function () {
-  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_dom-create.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_dom-create.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var document = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js").document;
-// typeof document.createElement is 'object' in old IE
-var is = isObject(document) && isObject(document.createElement);
-module.exports = function (it) {
-  return is ? document.createElement(it) : {};
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-bug-keys.js":
-/*!*****************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-bug-keys.js ***!
-  \*****************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module) => {
-
-// IE 8- don't enum bug keys
-module.exports = (
-  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-).split(',');
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-keys.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-keys.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(/*! ./_object-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js");
-var gOPS = __webpack_require__(/*! ./_object-gops */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gops.js");
-var pIE = __webpack_require__(/*! ./_object-pie */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js");
-module.exports = function (it) {
-  var result = getKeys(it);
-  var getSymbols = gOPS.f;
-  if (getSymbols) {
-    var symbols = getSymbols(it);
-    var isEnum = pIE.f;
-    var i = 0;
-    var key;
-    while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);
-  } return result;
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js":
-/*!**********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js ***!
-  \**********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 62:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js");
-var core = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js");
-var ctx = __webpack_require__(/*! ./_ctx */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ctx.js");
-var hide = __webpack_require__(/*! ./_hide */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js");
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var PROTOTYPE = 'prototype';
-
-var $export = function (type, name, source) {
-  var IS_FORCED = type & $export.F;
-  var IS_GLOBAL = type & $export.G;
-  var IS_STATIC = type & $export.S;
-  var IS_PROTO = type & $export.P;
-  var IS_BIND = type & $export.B;
-  var IS_WRAP = type & $export.W;
-  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
-  var expProto = exports[PROTOTYPE];
-  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
-  var key, own, out;
-  if (IS_GLOBAL) source = name;
-  for (key in source) {
-    // contains in native
-    own = !IS_FORCED && target && target[key] !== undefined;
-    if (own && has(exports, key)) continue;
-    // export native or passed
-    out = own ? target[key] : source[key];
-    // prevent global pollution for namespaces
-    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-    // bind timers to global for call from export context
-    : IS_BIND && own ? ctx(out, global)
-    // wrap global constructors for prevent change them in library
-    : IS_WRAP && target[key] == out ? (function (C) {
-      var F = function (a, b, c) {
-        if (this instanceof C) {
-          switch (arguments.length) {
-            case 0: return new C();
-            case 1: return new C(a);
-            case 2: return new C(a, b);
-          } return new C(a, b, c);
-        } return C.apply(this, arguments);
-      };
-      F[PROTOTYPE] = C[PROTOTYPE];
-      return F;
-    // make static versions for prototype methods
-    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
-    if (IS_PROTO) {
-      (exports.virtual || (exports.virtual = {}))[key] = out;
-      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
-      if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
-    }
-  }
-};
-// type bitmap
-$export.F = 1;   // forced
-$export.G = 2;   // global
-$export.S = 4;   // static
-$export.P = 8;   // proto
-$export.B = 16;  // bind
-$export.W = 32;  // wrap
-$export.U = 64;  // safe
-$export.R = 128; // real proto method for `library`
-module.exports = $export;
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js":
-/*!*********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js ***!
-  \*********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = function (exec) {
-  try {
-    return !!exec();
-  } catch (e) {
-    return true;
-  }
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js":
-/*!**********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js ***!
-  \**********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:13-27 */
-/***/ ((module) => {
-
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self
-  // eslint-disable-next-line no-new-func
-  : Function('return this')();
-if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
->>>>>>> dist
-
-
-/***/ }),
-
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/array/is-array.js":
 /*!************************************************************!*\
   !*** ../node_modules/core-js/library/fn/array/is-array.js ***!
@@ -2358,26 +1361,10 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 __webpack_require__(/*! ../../modules/es6.array.is-array */ "../node_modules/core-js/library/modules/es6.array.is-array.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Array.isArray;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js":
-/*!*******************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js ***!
-  \*******************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module) => {
-
-var hasOwnProperty = {}.hasOwnProperty;
-module.exports = function (it, key) {
-  return hasOwnProperty.call(it, key);
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/object/create.js":
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/create.js ***!
@@ -2388,30 +1375,11 @@ __webpack_require__(/*! ../../modules/es6.object.create */ "../node_modules/core
 var $Object = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Object;
 module.exports = function create(P, D) {
   return $Object.create(P, D);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js ***!
-  \********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var dP = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js");
-var createDesc = __webpack_require__(/*! ./_property-desc */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js");
-module.exports = __webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js") ? function (object, key, value) {
-  return dP.f(object, key, createDesc(1, value));
-} : function (object, key, value) {
-  object[key] = value;
-  return object;
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/object/define-property.js":
 /*!********************************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/define-property.js ***!
@@ -2423,24 +1391,10 @@ var $Object = __webpack_require__(/*! ../../modules/_core */ "../node_modules/co
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_html.js":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_html.js ***!
-  \********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var document = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js").document;
-module.exports = document && document.documentElement;
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/object/entries.js":
 /*!************************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/entries.js ***!
@@ -2449,25 +1403,10 @@ module.exports = document && document.documentElement;
 
 __webpack_require__(/*! ../../modules/es7.object.entries */ "../node_modules/core-js/library/modules/es7.object.entries.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Object.entries;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ie8-dom-define.js":
-/*!******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ie8-dom-define.js ***!
-  \******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = !__webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js") && !__webpack_require__(/*! ./_fails */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js")(function () {
-  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_dom-create.js")('div'), 'a', { get: function () { return 7; } }).a != 7;
-});
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/object/get-own-property-descriptor.js":
 /*!********************************************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/get-own-property-descriptor.js ***!
@@ -2478,38 +1417,11 @@ __webpack_require__(/*! ../../modules/es6.object.get-own-property-descriptor */ 
 var $Object = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Object;
 module.exports = function getOwnPropertyDescriptor(it, key) {
   return $Object.getOwnPropertyDescriptor(it, key);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_invoke.js":
-/*!**********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_invoke.js ***!
-  \**********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
-/***/ ((module) => {
-
-// fast apply, http://jsperf.lnkit.com/fast-apply/5
-module.exports = function (fn, args, that) {
-  var un = that === undefined;
-  switch (args.length) {
-    case 0: return un ? fn()
-                      : fn.call(that);
-    case 1: return un ? fn(args[0])
-                      : fn.call(that, args[0]);
-    case 2: return un ? fn(args[0], args[1])
-                      : fn.call(that, args[0], args[1]);
-    case 3: return un ? fn(args[0], args[1], args[2])
-                      : fn.call(that, args[0], args[1], args[2]);
-    case 4: return un ? fn(args[0], args[1], args[2], args[3])
-                      : fn.call(that, args[0], args[1], args[2], args[3]);
-  } return fn.apply(that, args);
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/object/get-prototype-of.js":
 /*!*********************************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/get-prototype-of.js ***!
@@ -2542,28 +1454,10 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules
 
 __webpack_require__(/*! ../../modules/es6.reflect.construct */ "../node_modules/core-js/library/modules/es6.reflect.construct.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Reflect.construct;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iobject.js":
-/*!***********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iobject.js ***!
-  \***********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(/*! ./_cof */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_cof.js");
-// eslint-disable-next-line no-prototype-builtins
-module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
-  return cof(it) == 'String' ? it.split('') : Object(it);
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/reflect/get.js":
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/library/fn/reflect/get.js ***!
@@ -2587,30 +1481,10 @@ __webpack_require__(/*! ../../modules/es6.object.to-string */ "../node_modules/c
 __webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ "../node_modules/core-js/library/modules/es7.symbol.async-iterator.js");
 __webpack_require__(/*! ../../modules/es7.symbol.observable */ "../node_modules/core-js/library/modules/es7.symbol.observable.js");
 module.exports = __webpack_require__(/*! ../../modules/_core */ "../node_modules/core-js/library/modules/_core.js").Symbol;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array-iter.js":
-/*!*****************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array-iter.js ***!
-  \*****************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// check on default Array iterator
-var Iterators = __webpack_require__(/*! ./_iterators */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js");
-var ITERATOR = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('iterator');
-var ArrayProto = Array.prototype;
-
-module.exports = function (it) {
-  return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/fn/symbol/iterator.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/fn/symbol/iterator.js ***!
@@ -2620,27 +1494,10 @@ module.exports = function (it) {
 __webpack_require__(/*! ../../modules/es6.string.iterator */ "../node_modules/core-js/library/modules/es6.string.iterator.js");
 __webpack_require__(/*! ../../modules/web.dom.iterable */ "../node_modules/core-js/library/modules/web.dom.iterable.js");
 module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ "../node_modules/core-js/library/modules/_wks-ext.js").f('iterator');
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array.js":
-/*!************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array.js ***!
-  \************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 7.2.2 IsArray(argument)
-var cof = __webpack_require__(/*! ./_cof */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_cof.js");
-module.exports = Array.isArray || function isArray(arg) {
-  return cof(arg) == 'Array';
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_a-function.js":
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_a-function.js ***!
@@ -2650,25 +1507,11 @@ module.exports = Array.isArray || function isArray(arg) {
 module.exports = function (it) {
   if (typeof it != 'function') throw TypeError(it + ' is not a function!');
   return it;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = function (it) {
-  return typeof it === 'object' ? it !== null : typeof it === 'function';
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_add-to-unscopables.js":
 /*!**********************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_add-to-unscopables.js ***!
@@ -2676,34 +1519,10 @@ module.exports = function (it) {
 /***/ ((module) => {
 
 module.exports = function () { /* empty */ };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-call.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-call.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// call something on iterator step with safe closing on error
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-module.exports = function (iterator, fn, value, entries) {
-  try {
-    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
-  // 7.4.6 IteratorClose(iterator, completion)
-  } catch (e) {
-    var ret = iterator['return'];
-    if (ret !== undefined) anObject(ret.call(iterator));
-    throw e;
-  }
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_an-object.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_an-object.js ***!
@@ -2747,54 +1566,19 @@ module.exports = function (IS_INCLUDES) {
       if (O[index] === el) return IS_INCLUDES || index || 0;
     } return !IS_INCLUDES && -1;
   };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-create.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-create.js ***!
-  \***************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 10:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var create = __webpack_require__(/*! ./_object-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js");
-var descriptor = __webpack_require__(/*! ./_property-desc */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js");
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-to-string-tag.js");
-var IteratorPrototype = {};
-
-// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(/*! ./_hide */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js")(IteratorPrototype, __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('iterator'), function () { return this; });
-
-module.exports = function (Constructor, NAME, next) {
-  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
-  setToStringTag(Constructor, NAME + ' Iterator');
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_bind.js":
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_bind.js ***!
   \********************************************************/
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-define.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-define.js ***!
-  \***************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 18:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
-<<<<<<< HEAD
 var aFunction = __webpack_require__(/*! ./_a-function */ "../node_modules/core-js/library/modules/_a-function.js");
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/library/modules/_is-object.js");
 var invoke = __webpack_require__(/*! ./_invoke */ "../node_modules/core-js/library/modules/_invoke.js");
@@ -2818,81 +1602,11 @@ module.exports = Function.bind || function bind(that /* , ...args */) {
   };
   if (isObject(fn.prototype)) bound.prototype = fn.prototype;
   return bound;
-=======
-var LIBRARY = __webpack_require__(/*! ./_library */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js");
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var redefine = __webpack_require__(/*! ./_redefine */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_redefine.js");
-var hide = __webpack_require__(/*! ./_hide */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js");
-var Iterators = __webpack_require__(/*! ./_iterators */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js");
-var $iterCreate = __webpack_require__(/*! ./_iter-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-create.js");
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-to-string-tag.js");
-var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gpo.js");
-var ITERATOR = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('iterator');
-var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
-var FF_ITERATOR = '@@iterator';
-var KEYS = 'keys';
-var VALUES = 'values';
-
-var returnThis = function () { return this; };
-
-module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
-  $iterCreate(Constructor, NAME, next);
-  var getMethod = function (kind) {
-    if (!BUGGY && kind in proto) return proto[kind];
-    switch (kind) {
-      case KEYS: return function keys() { return new Constructor(this, kind); };
-      case VALUES: return function values() { return new Constructor(this, kind); };
-    } return function entries() { return new Constructor(this, kind); };
-  };
-  var TAG = NAME + ' Iterator';
-  var DEF_VALUES = DEFAULT == VALUES;
-  var VALUES_BUG = false;
-  var proto = Base.prototype;
-  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
-  var $default = $native || getMethod(DEFAULT);
-  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
-  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
-  var methods, key, IteratorPrototype;
-  // Fix native
-  if ($anyNative) {
-    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
-    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
-      // Set @@toStringTag to native iterators
-      setToStringTag(IteratorPrototype, TAG, true);
-      // fix for some old engines
-      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
-    }
-  }
-  // fix Array#{values, @@iterator}.name in V8 / FF
-  if (DEF_VALUES && $native && $native.name !== VALUES) {
-    VALUES_BUG = true;
-    $default = function values() { return $native.call(this); };
-  }
-  // Define iterator
-  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
-    hide(proto, ITERATOR, $default);
-  }
-  // Plug for library
-  Iterators[NAME] = $default;
-  Iterators[TAG] = returnThis;
-  if (DEFAULT) {
-    methods = {
-      values: DEF_VALUES ? $default : getMethod(VALUES),
-      keys: IS_SET ? $default : getMethod(KEYS),
-      entries: $entries
-    };
-    if (FORCED) for (key in methods) {
-      if (!(key in proto)) redefine(proto, key, methods[key]);
-    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
-  }
-  return methods;
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_classof.js":
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_classof.js ***!
@@ -2921,44 +1635,11 @@ module.exports = function (it) {
     : ARG ? cof(O)
     // ES3 arguments fallback
     : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-detect.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-detect.js ***!
-  \***************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 11:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var ITERATOR = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('iterator');
-var SAFE_CLOSING = false;
-
-try {
-  var riter = [7][ITERATOR]();
-  riter['return'] = function () { SAFE_CLOSING = true; };
-  // eslint-disable-next-line no-throw-literal
-  Array.from(riter, function () { throw 2; });
-} catch (e) { /* empty */ }
-
-module.exports = function (exec, skipClosing) {
-  if (!skipClosing && !SAFE_CLOSING) return false;
-  var safe = false;
-  try {
-    var arr = [7];
-    var iter = arr[ITERATOR]();
-    iter.next = function () { return { done: safe = true }; };
-    arr[ITERATOR] = function () { return iter; };
-    exec(arr);
-  } catch (e) { /* empty */ }
-  return safe;
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_cof.js":
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/library/modules/_cof.js ***!
@@ -2969,25 +1650,11 @@ var toString = {}.toString;
 
 module.exports = function (it) {
   return toString.call(it).slice(8, -1);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-step.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-step.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = function (done, value) {
-  return { value: value, done: !!done };
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_core.js":
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_core.js ***!
@@ -2996,23 +1663,10 @@ module.exports = function (done, value) {
 
 var core = module.exports = { version: '2.6.12' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = {};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_create-property.js":
 /*!*******************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_create-property.js ***!
@@ -3028,23 +1682,10 @@ module.exports = function (object, index, value) {
   if (index in object) $defineProperty.f(object, index, createDesc(0, value));
   else object[index] = value;
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js":
-/*!***********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js ***!
-  \***********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = true;
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_ctx.js":
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/library/modules/_ctx.js ***!
@@ -3086,75 +1727,10 @@ module.exports = function (it) {
   if (it == undefined) throw TypeError("Can't call method on  " + it);
   return it;
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_meta.js":
-/*!********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_meta.js ***!
-  \********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 47:11-25 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var META = __webpack_require__(/*! ./_uid */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_uid.js")('meta');
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var setDesc = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js").f;
-var id = 0;
-var isExtensible = Object.isExtensible || function () {
-  return true;
-};
-var FREEZE = !__webpack_require__(/*! ./_fails */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js")(function () {
-  return isExtensible(Object.preventExtensions({}));
-});
-var setMeta = function (it) {
-  setDesc(it, META, { value: {
-    i: 'O' + ++id, // object ID
-    w: {}          // weak collections IDs
-  } });
-};
-var fastKey = function (it, create) {
-  // return primitive with prefix
-  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
-  if (!has(it, META)) {
-    // can't set metadata to uncaught frozen object
-    if (!isExtensible(it)) return 'F';
-    // not necessary to add metadata
-    if (!create) return 'E';
-    // add missing metadata
-    setMeta(it);
-  // return object ID
-  } return it[META].i;
-};
-var getWeak = function (it, create) {
-  if (!has(it, META)) {
-    // can't set metadata to uncaught frozen object
-    if (!isExtensible(it)) return true;
-    // not necessary to add metadata
-    if (!create) return false;
-    // add missing metadata
-    setMeta(it);
-  // return hash weak collections IDs
-  } return it[META].w;
-};
-// add metadata on freeze-family methods calling
-var onFreeze = function (it) {
-  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
-  return it;
-};
-var meta = module.exports = {
-  KEY: META,
-  NEED: false,
-  fastKey: fastKey,
-  getWeak: getWeak,
-  onFreeze: onFreeze
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_descriptors.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_descriptors.js ***!
@@ -3181,63 +1757,11 @@ var document = __webpack_require__(/*! ./_global */ "../node_modules/core-js/lib
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
   return is ? document.createElement(it) : {};
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js":
-/*!*****************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js ***!
-  \*****************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 31:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var dPs = __webpack_require__(/*! ./_object-dps */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dps.js");
-var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-bug-keys.js");
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared-key.js")('IE_PROTO');
-var Empty = function () { /* empty */ };
-var PROTOTYPE = 'prototype';
-
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
-var createDict = function () {
-  // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(/*! ./_dom-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_dom-create.js")('iframe');
-  var i = enumBugKeys.length;
-  var lt = '<';
-  var gt = '>';
-  var iframeDocument;
-  iframe.style.display = 'none';
-  __webpack_require__(/*! ./_html */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_html.js").appendChild(iframe);
-  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-  // createDict = iframe.contentWindow.Object;
-  // html.removeChild(iframe);
-  iframeDocument = iframe.contentWindow.document;
-  iframeDocument.open();
-  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-  iframeDocument.close();
-  createDict = iframeDocument.F;
-  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
-  return createDict();
-};
-
-module.exports = Object.create || function create(O, Properties) {
-  var result;
-  if (O !== null) {
-    Empty[PROTOTYPE] = anObject(O);
-    result = new Empty();
-    Empty[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
-    result[IE_PROTO] = O;
-  } else result = createDict();
-  return Properties === undefined ? result : dPs(result, Properties);
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_enum-bug-keys.js":
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_enum-bug-keys.js ***!
@@ -3248,39 +1772,10 @@ module.exports = Object.create || function create(O, Properties) {
 module.exports = (
   'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
 ).split(',');
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js ***!
-  \*************************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ie8-dom-define.js");
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-primitive.js");
-var dP = Object.defineProperty;
-
-exports.f = __webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js") ? Object.defineProperty : function defineProperty(O, P, Attributes) {
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if (IE8_DOM_DEFINE) try {
-    return dP(O, P, Attributes);
-  } catch (e) { /* empty */ }
-  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
-  if ('value' in Attributes) O[P] = Attributes.value;
-  return O;
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_enum-keys.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_enum-keys.js ***!
@@ -3301,35 +1796,11 @@ module.exports = function (it) {
     var key;
     while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);
   } return result;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dps.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dps.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var dP = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var getKeys = __webpack_require__(/*! ./_object-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js");
-
-module.exports = __webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js") ? Object.defineProperties : function defineProperties(O, Properties) {
-  anObject(O);
-  var keys = getKeys(Properties);
-  var length = keys.length;
-  var i = 0;
-  var P;
-  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
-  return O;
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_export.js":
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_export.js ***!
@@ -3398,39 +1869,10 @@ $export.W = 32;  // wrap
 $export.U = 64;  // safe
 $export.R = 128; // real proto method for `library`
 module.exports = $export;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js ***!
-  \***************************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var pIE = __webpack_require__(/*! ./_object-pie */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js");
-var createDesc = __webpack_require__(/*! ./_property-desc */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js");
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-primitive.js");
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ie8-dom-define.js");
-var gOPD = Object.getOwnPropertyDescriptor;
-
-exports.f = __webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js") ? gOPD : function getOwnPropertyDescriptor(O, P) {
-  O = toIObject(O);
-  P = toPrimitive(P, true);
-  if (IE8_DOM_DEFINE) try {
-    return gOPD(O, P);
-  } catch (e) { /* empty */ }
-  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_fails.js":
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_fails.js ***!
@@ -3460,63 +1902,10 @@ var global = module.exports = typeof window != 'undefined' && window.Math == Mat
   // eslint-disable-next-line no-new-func
   : Function('return this')();
 if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn-ext.js":
-/*!*******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn-ext.js ***!
-  \*******************************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, module */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var gOPN = __webpack_require__(/*! ./_object-gopn */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn.js").f;
-var toString = {}.toString;
-
-var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-  ? Object.getOwnPropertyNames(window) : [];
-
-var getWindowNames = function (it) {
-  try {
-    return gOPN(it);
-  } catch (e) {
-    return windowNames.slice();
-  }
-};
-
-module.exports.f = function getOwnPropertyNames(it) {
-  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
-};
 
 
 /***/ }),
 
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn.js ***!
-  \***************************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__ */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys-internal.js");
-var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-bug-keys.js").concat('length', 'prototype');
-
-exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
-  return $keys(O, hiddenKeys);
-};
->>>>>>> dist
-
-
-/***/ }),
-
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_has.js":
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/library/modules/_has.js ***!
@@ -3527,24 +1916,10 @@ var hasOwnProperty = {}.hasOwnProperty;
 module.exports = function (it, key) {
   return hasOwnProperty.call(it, key);
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gops.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gops.js ***!
-  \***************************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__ */
-/***/ ((__unused_webpack_module, exports) => {
-
-exports.f = Object.getOwnPropertySymbols;
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_hide.js":
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_hide.js ***!
@@ -3558,35 +1933,11 @@ module.exports = __webpack_require__(/*! ./_descriptors */ "../node_modules/core
 } : function (object, key, value) {
   object[key] = value;
   return object;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gpo.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gpo.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 7:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var toObject = __webpack_require__(/*! ./_to-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js");
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared-key.js")('IE_PROTO');
-var ObjectProto = Object.prototype;
-
-module.exports = Object.getPrototypeOf || function (O) {
-  O = toObject(O);
-  if (has(O, IE_PROTO)) return O[IE_PROTO];
-  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
-    return O.constructor.prototype;
-  } return O instanceof Object ? ObjectProto : null;
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_html.js":
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_html.js ***!
@@ -3595,39 +1946,10 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 var document = __webpack_require__(/*! ./_global */ "../node_modules/core-js/library/modules/_global.js").document;
 module.exports = document && document.documentElement;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys-internal.js":
-/*!************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys-internal.js ***!
-  \************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_array-includes.js")(false);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared-key.js")('IE_PROTO');
-
-module.exports = function (object, names) {
-  var O = toIObject(object);
-  var i = 0;
-  var result = [];
-  var key;
-  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
-  // Don't enum bug & hidden keys
-  while (names.length > i) if (has(O, key = names[i++])) {
-    ~arrayIndexOf(result, key) || result.push(key);
-  }
-  return result;
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_ie8-dom-define.js":
 /*!******************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_ie8-dom-define.js ***!
@@ -3637,29 +1959,10 @@ module.exports = function (object, names) {
 module.exports = !__webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/library/modules/_descriptors.js") && !__webpack_require__(/*! ./_fails */ "../node_modules/core-js/library/modules/_fails.js")(function () {
   return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ "../node_modules/core-js/library/modules/_dom-create.js")('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js":
-/*!***************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js ***!
-  \***************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys-internal.js");
-var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-bug-keys.js");
-
-module.exports = Object.keys || function keys(O) {
-  return $keys(O, enumBugKeys);
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_invoke.js":
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_invoke.js ***!
@@ -3682,24 +1985,10 @@ module.exports = function (fn, args, that) {
                       : fn.call(that, args[0], args[1], args[2], args[3]);
   } return fn.apply(that, args);
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js ***!
-  \**************************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__ */
-/***/ ((__unused_webpack_module, exports) => {
-
-exports.f = {}.propertyIsEnumerable;
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iobject.js":
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iobject.js ***!
@@ -3711,32 +2000,11 @@ var cof = __webpack_require__(/*! ./_cof */ "../node_modules/core-js/library/mod
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-sap.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-sap.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// most Object methods by ES6 should accept primitives
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var core = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js");
-var fails = __webpack_require__(/*! ./_fails */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js");
-module.exports = function (KEY, exec) {
-  var fn = (core.Object || {})[KEY] || Object[KEY];
-  var exp = {};
-  exp[KEY] = exec(fn);
-  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_is-array-iter.js":
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_is-array-iter.js ***!
@@ -3750,43 +2018,11 @@ var ArrayProto = Array.prototype;
 
 module.exports = function (it) {
   return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-to-array.js":
-/*!*******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-to-array.js ***!
-  \*******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js");
-var getKeys = __webpack_require__(/*! ./_object-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js");
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var isEnum = __webpack_require__(/*! ./_object-pie */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js").f;
-module.exports = function (isEntries) {
-  return function (it) {
-    var O = toIObject(it);
-    var keys = getKeys(O);
-    var length = keys.length;
-    var i = 0;
-    var result = [];
-    var key;
-    while (length > i) {
-      key = keys[i++];
-      if (!DESCRIPTORS || isEnum.call(O, key)) {
-        result.push(isEntries ? [key, O[key]] : O[key]);
-      }
-    }
-    return result;
-  };
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_is-array.js":
 /*!************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_is-array.js ***!
@@ -3797,30 +2033,11 @@ module.exports = function (isEntries) {
 var cof = __webpack_require__(/*! ./_cof */ "../node_modules/core-js/library/modules/_cof.js");
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js":
-/*!*****************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js ***!
-  \*****************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
-/***/ ((module) => {
-
-module.exports = function (bitmap, value) {
-  return {
-    enumerable: !(bitmap & 1),
-    configurable: !(bitmap & 2),
-    writable: !(bitmap & 4),
-    value: value
-  };
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_is-object.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_is-object.js ***!
@@ -3830,23 +2047,10 @@ module.exports = function (bitmap, value) {
 module.exports = function (it) {
   return typeof it === 'object' ? it !== null : typeof it === 'function';
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_redefine.js":
-/*!************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_redefine.js ***!
-  \************************************************************************************************/
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js */
-/*! runtime requirements: module, __webpack_require__ */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__(/*! ./_hide */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js");
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iter-call.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iter-call.js ***!
@@ -3864,47 +2068,11 @@ module.exports = function (iterator, fn, value, entries) {
     if (ret !== undefined) anObject(ret.call(iterator));
     throw e;
   }
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-proto.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-proto.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 9:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// Works with __proto__ only. Old v8 can't work with null proto objects.
-/* eslint-disable no-proto */
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var check = function (O, proto) {
-  anObject(O);
-  if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
-};
-module.exports = {
-  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
-    function (test, buggy, set) {
-      try {
-        set = __webpack_require__(/*! ./_ctx */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ctx.js")(Function.call, __webpack_require__(/*! ./_object-gopd */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js").f(Object.prototype, '__proto__').set, 2);
-        set(test, []);
-        buggy = !(test instanceof Array);
-      } catch (e) { buggy = true; }
-      return function setPrototypeOf(O, proto) {
-        check(O, proto);
-        if (buggy) O.__proto__ = proto;
-        else set(O, proto);
-        return O;
-      };
-    }({}, false) : undefined),
-  check: check
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iter-create.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iter-create.js ***!
@@ -3924,47 +2092,11 @@ __webpack_require__(/*! ./_hide */ "../node_modules/core-js/library/modules/_hid
 module.exports = function (Constructor, NAME, next) {
   Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
   setToStringTag(Constructor, NAME + ' Iterator');
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-to-string-tag.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-to-string-tag.js ***!
-  \*********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var def = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js").f;
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var TAG = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('toStringTag');
-
-module.exports = function (it, tag, stat) {
-  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
 };
 
 
 /***/ }),
 
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared-key.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared-key.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var shared = __webpack_require__(/*! ./_shared */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared.js")('keys');
-var uid = __webpack_require__(/*! ./_uid */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_uid.js");
-module.exports = function (key) {
-  return shared[key] || (shared[key] = uid(key));
->>>>>>> dist
-};
-
-
-/***/ }),
-
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iter-define.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iter-define.js ***!
@@ -4040,64 +2172,11 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
     } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
   }
   return methods;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared.js":
-/*!**********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared.js ***!
-  \**********************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:1-15 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var core = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js");
-var global = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js");
-var SHARED = '__core-js_shared__';
-var store = global[SHARED] || (global[SHARED] = {});
-
-(module.exports = function (key, value) {
-  return store[key] || (store[key] = value !== undefined ? value : {});
-})('versions', []).push({
-  version: core.version,
-  mode: __webpack_require__(/*! ./_library */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js") ? 'pure' : 'global',
-  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_string-at.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_string-at.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toInteger = __webpack_require__(/*! ./_to-integer */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-integer.js");
-var defined = __webpack_require__(/*! ./_defined */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_defined.js");
-// true  -> String#at
-// false -> String#codePointAt
-module.exports = function (TO_STRING) {
-  return function (that, pos) {
-    var s = String(defined(that));
-    var i = toInteger(pos);
-    var l = s.length;
-    var a, b;
-    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
-    a = s.charCodeAt(i);
-    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-      ? TO_STRING ? s.charAt(i) : a
-      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
-  };
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iter-detect.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iter-detect.js ***!
@@ -4126,29 +2205,10 @@ module.exports = function (exec, skipClosing) {
   } catch (e) { /* empty */ }
   return safe;
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-absolute-index.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-absolute-index.js ***!
-  \*********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var toInteger = __webpack_require__(/*! ./_to-integer */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-integer.js");
-var max = Math.max;
-var min = Math.min;
-module.exports = function (index, length) {
-  index = toInteger(index);
-  return index < 0 ? max(index + length, 0) : min(index, length);
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iter-step.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iter-step.js ***!
@@ -4157,28 +2217,11 @@ module.exports = function (index, length) {
 
 module.exports = function (done, value) {
   return { value: value, done: !!done };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-integer.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-integer.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module) => {
-
-// 7.1.4 ToInteger
-var ceil = Math.ceil;
-var floor = Math.floor;
-module.exports = function (it) {
-  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_iterators.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_iterators.js ***!
@@ -4186,28 +2229,10 @@ module.exports = function (it) {
 /***/ ((module) => {
 
 module.exports = {};
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(/*! ./_iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iobject.js");
-var defined = __webpack_require__(/*! ./_defined */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_defined.js");
-module.exports = function (it) {
-  return IObject(defined(it));
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_library.js":
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_library.js ***!
@@ -4215,28 +2240,10 @@ module.exports = function (it) {
 /***/ ((module) => {
 
 module.exports = true;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-length.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-length.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 7.1.15 ToLength
-var toInteger = __webpack_require__(/*! ./_to-integer */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-integer.js");
-var min = Math.min;
-module.exports = function (it) {
-  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_meta.js":
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_meta.js ***!
@@ -4295,27 +2302,11 @@ var meta = module.exports = {
   fastKey: fastKey,
   getWeak: getWeak,
   onFreeze: onFreeze
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 7.1.13 ToObject(argument)
-var defined = __webpack_require__(/*! ./_defined */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_defined.js");
-module.exports = function (it) {
-  return Object(defined(it));
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-create.js":
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-create.js ***!
@@ -4362,34 +2353,11 @@ module.exports = Object.create || function create(O, Properties) {
     result[IE_PROTO] = O;
   } else result = createDict();
   return Properties === undefined ? result : dPs(result, Properties);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-primitive.js":
-/*!****************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-primitive.js ***!
-  \****************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-// and the second argument - flag - preferred type is a string
-module.exports = function (it, S) {
-  if (!isObject(it)) return it;
-  var fn, val;
-  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
-  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-  throw TypeError("Can't convert object to primitive value");
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-dp.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-dp.js ***!
@@ -4411,27 +2379,11 @@ exports.f = __webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/l
   if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
   if ('value' in Attributes) O[P] = Attributes.value;
   return O;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_uid.js":
-/*!*******************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_uid.js ***!
-  \*******************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module) => {
-
-var id = 0;
-var px = Math.random();
-module.exports = function (key) {
-  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-dps.js":
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-dps.js ***!
@@ -4450,31 +2402,11 @@ module.exports = __webpack_require__(/*! ./_descriptors */ "../node_modules/core
   var P;
   while (length > i) dP.f(O, P = keys[i++], Properties[P]);
   return O;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-define.js":
-/*!**************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-define.js ***!
-  \**************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var global = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js");
-var core = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js");
-var LIBRARY = __webpack_require__(/*! ./_library */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js");
-var wksExt = __webpack_require__(/*! ./_wks-ext */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-ext.js");
-var defineProperty = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js").f;
-module.exports = function (name) {
-  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
-  if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-gopd.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gopd.js ***!
@@ -4497,25 +2429,10 @@ exports.f = __webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/l
   } catch (e) { /* empty */ }
   if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-ext.js":
-/*!***********************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-ext.js ***!
-  \***********************************************************************************************/
-/*! default exports */
-/*! export f [provided] [no usage info] [provision prevents renaming (no use info)] -> ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js */
-/*!   exports [maybe provided (runtime-defined)] [no usage info] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-exports.f = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js");
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-gopn-ext.js":
 /*!*******************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gopn-ext.js ***!
@@ -4541,33 +2458,10 @@ var getWindowNames = function (it) {
 module.exports.f = function getOwnPropertyNames(it) {
   return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js":
-/*!*******************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js ***!
-  \*******************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 6:15-29 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var store = __webpack_require__(/*! ./_shared */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared.js")('wks');
-var uid = __webpack_require__(/*! ./_uid */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_uid.js");
-var Symbol = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js").Symbol;
-var USE_SYMBOL = typeof Symbol == 'function';
-
-var $exports = module.exports = function (name) {
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-};
-
-$exports.store = store;
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-gopn.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gopn.js ***!
@@ -4580,30 +2474,11 @@ var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ "../node_modules/co
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator-method.js":
-/*!***************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator-method.js ***!
-  \***************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var classof = __webpack_require__(/*! ./_classof */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_classof.js");
-var ITERATOR = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('iterator');
-var Iterators = __webpack_require__(/*! ./_iterators */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js");
-module.exports = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").getIteratorMethod = function (it) {
-  if (it != undefined) return it[ITERATOR]
-    || it['@@iterator']
-    || Iterators[classof(it)];
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-gops.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gops.js ***!
@@ -4611,29 +2486,10 @@ module.exports = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runt
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.f = Object.getOwnPropertySymbols;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js":
-/*!********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator.js ***!
-  \********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var get = __webpack_require__(/*! ./core.get-iterator-method */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator-method.js");
-module.exports = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").getIterator = function (it) {
-  var iterFn = get(it);
-  if (typeof iterFn != 'function') throw TypeError(it + ' is not iterable!');
-  return anObject(iterFn.call(it));
-};
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-gpo.js":
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gpo.js ***!
@@ -4652,32 +2508,11 @@ module.exports = Object.getPrototypeOf || function (O) {
   if (typeof O.constructor == 'function' && O instanceof O.constructor) {
     return O.constructor.prototype;
   } return O instanceof Object ? ObjectProto : null;
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.is-iterable.js":
-/*!*******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.is-iterable.js ***!
-  \*******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var classof = __webpack_require__(/*! ./_classof */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_classof.js");
-var ITERATOR = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('iterator');
-var Iterators = __webpack_require__(/*! ./_iterators */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js");
-module.exports = __webpack_require__(/*! ./_core */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js").isIterable = function (it) {
-  var O = Object(it);
-  return O[ITERATOR] !== undefined
-    || '@@iterator' in O
-    // eslint-disable-next-line no-prototype-builtins
-    || Iterators.hasOwnProperty(classof(O));
->>>>>>> dist
 };
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_object-keys-internal.js":
 /*!************************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-keys-internal.js ***!
@@ -4780,59 +2615,10 @@ module.exports = function (isEntries) {
     return result;
   };
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.from.js":
-/*!*****************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.from.js ***!
-  \*****************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var ctx = __webpack_require__(/*! ./_ctx */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_ctx.js");
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var toObject = __webpack_require__(/*! ./_to-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js");
-var call = __webpack_require__(/*! ./_iter-call */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-call.js");
-var isArrayIter = __webpack_require__(/*! ./_is-array-iter */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array-iter.js");
-var toLength = __webpack_require__(/*! ./_to-length */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-length.js");
-var createProperty = __webpack_require__(/*! ./_create-property */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_create-property.js");
-var getIterFn = __webpack_require__(/*! ./core.get-iterator-method */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/core.get-iterator-method.js");
-
-$export($export.S + $export.F * !__webpack_require__(/*! ./_iter-detect */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-detect.js")(function (iter) { Array.from(iter); }), 'Array', {
-  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
-  from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
-    var O = toObject(arrayLike);
-    var C = typeof this == 'function' ? this : Array;
-    var aLen = arguments.length;
-    var mapfn = aLen > 1 ? arguments[1] : undefined;
-    var mapping = mapfn !== undefined;
-    var index = 0;
-    var iterFn = getIterFn(O);
-    var length, result, step, iterator;
-    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
-    // if object isn't iterable or it's array with default iterator - use simple case
-    if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
-      for (iterator = iterFn.call(O), result = new C(); !(step = iterator.next()).done; index++) {
-        createProperty(result, index, mapping ? call(iterator, mapfn, [step.value, index], true) : step.value);
-      }
-    } else {
-      length = toLength(O.length);
-      for (result = new C(length); length > index; index++) {
-        createProperty(result, index, mapping ? mapfn(O[index], index) : O[index]);
-      }
-    }
-    result.length = index;
-    return result;
-  }
-});
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_property-desc.js":
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_property-desc.js ***!
@@ -4847,25 +2633,10 @@ module.exports = function (bitmap, value) {
     value: value
   };
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.is-array.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.is-array.js ***!
-  \*********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-
-$export($export.S, 'Array', { isArray: __webpack_require__(/*! ./_is-array */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array.js") });
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_redefine.js":
 /*!************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_redefine.js ***!
@@ -4908,57 +2679,10 @@ module.exports = {
     }({}, false) : undefined),
   check: check
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.iterator.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.iterator.js ***!
-  \*********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 11:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_add-to-unscopables.js");
-var step = __webpack_require__(/*! ./_iter-step */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-step.js");
-var Iterators = __webpack_require__(/*! ./_iterators */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js");
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-
-// 22.1.3.4 Array.prototype.entries()
-// 22.1.3.13 Array.prototype.keys()
-// 22.1.3.29 Array.prototype.values()
-// 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(/*! ./_iter-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-define.js")(Array, 'Array', function (iterated, kind) {
-  this._t = toIObject(iterated); // target
-  this._i = 0;                   // next index
-  this._k = kind;                // kind
-// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
-}, function () {
-  var O = this._t;
-  var kind = this._k;
-  var index = this._i++;
-  if (!O || index >= O.length) {
-    this._t = undefined;
-    return step(1);
-  }
-  if (kind == 'keys') return step(0, index);
-  if (kind == 'values') return step(0, O[index]);
-  return step(0, [index, O[index]]);
-}, 'values');
-
-// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
-Iterators.Arguments = Iterators.Array;
-
-addToUnscopables('keys');
-addToUnscopables('values');
-addToUnscopables('entries');
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_set-to-string-tag.js":
 /*!*********************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_set-to-string-tag.js ***!
@@ -4972,24 +2696,10 @@ var TAG = __webpack_require__(/*! ./_wks */ "../node_modules/core-js/library/mod
 module.exports = function (it, tag, stat) {
   if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.create.js":
-/*!********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.create.js ***!
-  \********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js") });
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_shared-key.js":
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_shared-key.js ***!
@@ -5001,24 +2711,10 @@ var uid = __webpack_require__(/*! ./_uid */ "../node_modules/core-js/library/mod
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.define-property.js":
-/*!*****************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.define-property.js ***!
-  \*****************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js"), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js").f });
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_shared.js":
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_shared.js ***!
@@ -5036,30 +2732,11 @@ var store = global[SHARED] || (global[SHARED] = {});
   version: core.version,
   mode: __webpack_require__(/*! ./_library */ "../node_modules/core-js/library/modules/_library.js") ? 'pure' : 'global',
   copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.get-own-property-descriptor.js":
-/*!*****************************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.get-own-property-descriptor.js ***!
-  \*****************************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var $getOwnPropertyDescriptor = __webpack_require__(/*! ./_object-gopd */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js").f;
-
-__webpack_require__(/*! ./_object-sap */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-sap.js")('getOwnPropertyDescriptor', function () {
-  return function getOwnPropertyDescriptor(it, key) {
-    return $getOwnPropertyDescriptor(toIObject(it), key);
-  };
->>>>>>> dist
 });
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_string-at.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_string-at.js ***!
@@ -5100,30 +2777,10 @@ module.exports = function (index, length) {
   index = toInteger(index);
   return index < 0 ? max(index + length, 0) : min(index, length);
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.get-prototype-of.js":
-/*!******************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.get-prototype-of.js ***!
-  \******************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// 19.1.2.9 Object.getPrototypeOf(O)
-var toObject = __webpack_require__(/*! ./_to-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js");
-var $getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gpo.js");
-
-__webpack_require__(/*! ./_object-sap */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-sap.js")('getPrototypeOf', function () {
-  return function getPrototypeOf(it) {
-    return $getPrototypeOf(toObject(it));
-  };
-});
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_to-integer.js":
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_to-integer.js ***!
@@ -5136,24 +2793,10 @@ var floor = Math.floor;
 module.exports = function (it) {
   return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.set-prototype-of.js":
-/*!******************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.set-prototype-of.js ***!
-  \******************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-proto */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-proto.js").set });
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_to-iobject.js":
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_to-iobject.js ***!
@@ -5166,21 +2809,10 @@ var defined = __webpack_require__(/*! ./_defined */ "../node_modules/core-js/lib
 module.exports = function (it) {
   return IObject(defined(it));
 };
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.to-string.js":
-/*!***********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.object.to-string.js ***!
-  \***********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
-/***/ (() => {
-
->>>>>>> dist
 
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/_to-length.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_to-length.js ***!
@@ -5537,35 +3169,6 @@ var NEW_TARGET_BUG = fails(function () {
 var ARGS_BUG = !fails(function () {
   rConstruct(function () { /* empty */ });
 });
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.reflect.construct.js":
-/*!************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.reflect.construct.js ***!
-  \************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var create = __webpack_require__(/*! ./_object-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js");
-var aFunction = __webpack_require__(/*! ./_a-function */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_a-function.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var fails = __webpack_require__(/*! ./_fails */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js");
-var bind = __webpack_require__(/*! ./_bind */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_bind.js");
-var rConstruct = (__webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js").Reflect || {}).construct;
-
-// MS Edge supports only 2 arguments and argumentsList argument is optional
-// FF Nightly sets third argument as `new.target`, but does not create `this` from it
-var NEW_TARGET_BUG = fails(function () {
-  function F() { /* empty */ }
-  return !(rConstruct(function () { /* empty */ }, [], F) instanceof F);
-});
-var ARGS_BUG = !fails(function () {
-  rConstruct(function () { /* empty */ });
-});
->>>>>>> dist
 
 $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
   construct: function construct(Target, args /* , newTarget */) {
@@ -5598,7 +3201,6 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/es6.reflect.get.js":
 /*!******************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.reflect.get.js ***!
@@ -5612,23 +3214,6 @@ var has = __webpack_require__(/*! ./_has */ "../node_modules/core-js/library/mod
 var $export = __webpack_require__(/*! ./_export */ "../node_modules/core-js/library/modules/_export.js");
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/library/modules/_is-object.js");
 var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/core-js/library/modules/_an-object.js");
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.reflect.get.js":
-/*!******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.reflect.get.js ***!
-  \******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// 26.1.6 Reflect.get(target, propertyKey [, receiver])
-var gOPD = __webpack_require__(/*! ./_object-gopd */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js");
-var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gpo.js");
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
->>>>>>> dist
 
 function get(target, propertyKey /* , receiver */) {
   var receiver = arguments.length < 3 ? target : arguments[2];
@@ -5647,34 +3232,18 @@ $export($export.S, 'Reflect', { get: get });
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/es6.string.iterator.js":
 /*!**********************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.string.iterator.js ***!
   \**********************************************************************/
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js":
-/*!**********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.string.iterator.js ***!
-  \**********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
-<<<<<<< HEAD
 var $at = __webpack_require__(/*! ./_string-at */ "../node_modules/core-js/library/modules/_string-at.js")(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
 __webpack_require__(/*! ./_iter-define */ "../node_modules/core-js/library/modules/_iter-define.js")(String, 'String', function (iterated) {
-=======
-var $at = __webpack_require__(/*! ./_string-at */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_string-at.js")(true);
-
-// 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(/*! ./_iter-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iter-define.js")(String, 'String', function (iterated) {
->>>>>>> dist
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -5691,25 +3260,15 @@ __webpack_require__(/*! ./_iter-define */ "../node_modules/@babel/runtime-corejs
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/library/modules/es6.symbol.js":
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.symbol.js ***!
   \*************************************************************/
-=======
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.symbol.js":
-/*!*************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.symbol.js ***!
-  \*************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
 // ECMAScript 6 symbols shim
-<<<<<<< HEAD
 var global = __webpack_require__(/*! ./_global */ "../node_modules/core-js/library/modules/_global.js");
 var has = __webpack_require__(/*! ./_has */ "../node_modules/core-js/library/modules/_has.js");
 var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/library/modules/_descriptors.js");
@@ -5737,35 +3296,6 @@ var $GOPD = __webpack_require__(/*! ./_object-gopd */ "../node_modules/core-js/l
 var $GOPS = __webpack_require__(/*! ./_object-gops */ "../node_modules/core-js/library/modules/_object-gops.js");
 var $DP = __webpack_require__(/*! ./_object-dp */ "../node_modules/core-js/library/modules/_object-dp.js");
 var $keys = __webpack_require__(/*! ./_object-keys */ "../node_modules/core-js/library/modules/_object-keys.js");
-=======
-var global = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js");
-var has = __webpack_require__(/*! ./_has */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_has.js");
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_descriptors.js");
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var redefine = __webpack_require__(/*! ./_redefine */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_redefine.js");
-var META = __webpack_require__(/*! ./_meta */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_meta.js").KEY;
-var $fails = __webpack_require__(/*! ./_fails */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_fails.js");
-var shared = __webpack_require__(/*! ./_shared */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_shared.js");
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_set-to-string-tag.js");
-var uid = __webpack_require__(/*! ./_uid */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_uid.js");
-var wks = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js");
-var wksExt = __webpack_require__(/*! ./_wks-ext */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-ext.js");
-var wksDefine = __webpack_require__(/*! ./_wks-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-define.js");
-var enumKeys = __webpack_require__(/*! ./_enum-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_enum-keys.js");
-var isArray = __webpack_require__(/*! ./_is-array */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
-var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
-var toObject = __webpack_require__(/*! ./_to-object */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js");
-var toIObject = __webpack_require__(/*! ./_to-iobject */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-primitive.js");
-var createDesc = __webpack_require__(/*! ./_property-desc */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js");
-var _create = __webpack_require__(/*! ./_object-create */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js");
-var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn-ext.js");
-var $GOPD = __webpack_require__(/*! ./_object-gopd */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js");
-var $GOPS = __webpack_require__(/*! ./_object-gops */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gops.js");
-var $DP = __webpack_require__(/*! ./_object-dp */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js");
-var $keys = __webpack_require__(/*! ./_object-keys */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js");
->>>>>>> dist
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -5888,19 +3418,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-<<<<<<< HEAD
   __webpack_require__(/*! ./_object-gopn */ "../node_modules/core-js/library/modules/_object-gopn.js").f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(/*! ./_object-pie */ "../node_modules/core-js/library/modules/_object-pie.js").f = $propertyIsEnumerable;
   $GOPS.f = $getOwnPropertySymbols;
 
   if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ "../node_modules/core-js/library/modules/_library.js")) {
-=======
-  __webpack_require__(/*! ./_object-gopn */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn.js").f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(/*! ./_object-pie */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js").f = $propertyIsEnumerable;
-  $GOPS.f = $getOwnPropertySymbols;
-
-  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js")) {
->>>>>>> dist
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -5949,7 +3471,6 @@ $export($export.S + $export.F * !USE_NATIVE, 'Object', {
   getOwnPropertySymbols: $getOwnPropertySymbols
 });
 
-<<<<<<< HEAD
 // Chrome 38 and 39 `Object.getOwnPropertySymbols` fails on primitives
 // https://bugs.chromium.org/p/v8/issues/detail?id=3443
 var FAILS_ON_PRIMITIVES = $fails(function () { $GOPS.f(1); });
@@ -6063,665 +3584,6 @@ for (var i = 0; i < DOMIterables.length; i++) {
   Iterators[NAME] = Iterators.Array;
 }
 
-=======
-// Chrome 38 and 39 `Object.getOwnPropertySymbols` fails on primitives
-// https://bugs.chromium.org/p/v8/issues/detail?id=3443
-var FAILS_ON_PRIMITIVES = $fails(function () { $GOPS.f(1); });
-
-$export($export.S + $export.F * FAILS_ON_PRIMITIVES, 'Object', {
-  getOwnPropertySymbols: function getOwnPropertySymbols(it) {
-    return $GOPS.f(toObject(it));
-  }
-});
-
-// 24.3.2 JSON.stringify(value [, replacer [, space]])
-$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
-  var S = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
-  // WebKit converts symbol values to JSON as null
-  // V8 throws on boxed symbols
-  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';
-})), 'JSON', {
-  stringify: function stringify(it) {
-    var args = [it];
-    var i = 1;
-    var replacer, $replacer;
-    while (arguments.length > i) args.push(arguments[i++]);
-    $replacer = replacer = args[1];
-    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
-    if (!isArray(replacer)) replacer = function (key, value) {
-      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
-      if (!isSymbol(value)) return value;
-    };
-    args[1] = replacer;
-    return _stringify.apply($JSON, args);
-  }
-});
-
-// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js")($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-// 19.4.3.5 Symbol.prototype[@@toStringTag]
-setToStringTag($Symbol, 'Symbol');
-// 20.2.1.9 Math[@@toStringTag]
-setToStringTag(Math, 'Math', true);
-// 24.3.3 JSON[@@toStringTag]
-setToStringTag(global.JSON, 'JSON', true);
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.object.entries.js":
-/*!*********************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.object.entries.js ***!
-  \*********************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-// https://github.com/tc39/proposal-object-values-entries
-var $export = __webpack_require__(/*! ./_export */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_export.js");
-var $entries = __webpack_require__(/*! ./_object-to-array */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-to-array.js")(true);
-
-$export($export.S, 'Object', {
-  entries: function entries(it) {
-    return $entries(it);
-  }
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.symbol.async-iterator.js":
-/*!****************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.symbol.async-iterator.js ***!
-  \****************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ./_wks-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-define.js")('asyncIterator');
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.symbol.observable.js":
-/*!************************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es7.symbol.observable.js ***!
-  \************************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ./_wks-define */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks-define.js")('observable');
-
-
-/***/ }),
-
-/***/ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/web.dom.iterable.js":
-/*!*******************************************************************************************************!*\
-  !*** ../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/web.dom.iterable.js ***!
-  \*******************************************************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-__webpack_require__(/*! ./es6.array.iterator */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/es6.array.iterator.js");
-var global = __webpack_require__(/*! ./_global */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_global.js");
-var hide = __webpack_require__(/*! ./_hide */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_hide.js");
-var Iterators = __webpack_require__(/*! ./_iterators */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_iterators.js");
-var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ "../node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_wks.js")('toStringTag');
-
-var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
-  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
-  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
-  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
-  'TextTrackList,TouchList').split(',');
-
-for (var i = 0; i < DOMIterables.length; i++) {
-  var NAME = DOMIterables[i];
-  var Collection = global[NAME];
-  var proto = Collection && Collection.prototype;
-  if (proto && !proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
-  Iterators[NAME] = Iterators.Array;
-}
-
-
-/***/ }),
-
-/***/ "../assets/dev/js/admin/admin-menu.js":
-/*!********************************************!*\
-  !*** ../assets/dev/js/admin/admin-menu.js ***!
-  \********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: exports is used directly at 7:23-30 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = void 0;
-
-__webpack_require__(/*! core-js/modules/es7.array.includes.js */ "../node_modules/core-js/modules/es7.array.includes.js");
-
-__webpack_require__(/*! core-js/modules/es6.string.includes.js */ "../node_modules/core-js/modules/es6.string.includes.js");
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _get2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/get */ "../node_modules/@babel/runtime-corejs2/helpers/get.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "../node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
-
-var AdminMenuHandler = /*#__PURE__*/function (_elementorModules$Vie) {
-  (0, _inherits2.default)(AdminMenuHandler, _elementorModules$Vie);
-
-  var _super = (0, _createSuper2.default)(AdminMenuHandler);
-
-  function AdminMenuHandler() {
-    (0, _classCallCheck2.default)(this, AdminMenuHandler);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(AdminMenuHandler, [{
-    key: "getDefaultElements",
-    value: function getDefaultElements() {
-      var settings = this.getSettings();
-      return {
-        $adminPageMenuLink: jQuery("a[href=\"".concat(settings.path, "\"]"))
-      };
-    } // This method highlights the currently visited submenu item for the slug provided as an argument to this handler.
-    // This method also accepts a jQuery instance of a custom submenu item to highlight. If provided, the provided
-    // item will be the one highlighted.
-
-  }, {
-    key: "highlightSubMenuItem",
-    value: function highlightSubMenuItem() {
-      var $element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-      var $submenuItem = $element || this.elements.$adminPageMenuLink;
-      $submenuItem.addClass('current'); // Need to add the 'current' class to the link element's parent `<li>` element as well.
-
-      $submenuItem.parent().addClass('current');
-    }
-  }, {
-    key: "highlightTopLevelMenuItem",
-    value: function highlightTopLevelMenuItem($elementToHighlight) {
-      var $elementToRemove = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-      var activeClasses = 'wp-has-current-submenu wp-menu-open current';
-      $elementToHighlight.parent().addClass(activeClasses).removeClass('wp-not-current-submenu');
-
-      if ($elementToRemove) {
-        $elementToRemove.removeClass(activeClasses);
-      }
-    }
-  }, {
-    key: "onInit",
-    value: function onInit() {
-      (0, _get2.default)((0, _getPrototypeOf2.default)(AdminMenuHandler.prototype), "onInit", this).call(this);
-      var settings = this.getSettings();
-
-      if (window.location.href.includes(settings.path)) {
-        this.highlightSubMenuItem();
-      }
-    }
-  }]);
-  return AdminMenuHandler;
-}(elementorModules.ViewModule);
-
-exports.default = AdminMenuHandler;
-
-/***/ }),
-
-/***/ "../assets/dev/js/admin/maintenance-mode.js":
-/*!**************************************************!*\
-  !*** ../assets/dev/js/admin/maintenance-mode.js ***!
-  \**************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-__webpack_require__(/*! core-js/modules/es6.array.find.js */ "../node_modules/core-js/modules/es6.array.find.js");
-
-module.exports = elementorModules.ViewModule.extend({
-  getDefaultSettings: function getDefaultSettings() {
-    return {
-      selectors: {
-        modeSelect: '.elementor_maintenance_mode_mode select',
-        maintenanceModeTable: '#tab-maintenance_mode table',
-        maintenanceModeDescriptions: '.elementor-maintenance-mode-description',
-        excludeModeSelect: '.elementor_maintenance_mode_exclude_mode select',
-        excludeRolesArea: '.elementor_maintenance_mode_exclude_roles',
-        templateSelect: '.elementor_maintenance_mode_template_id select',
-        editTemplateButton: '.elementor-edit-template',
-        maintenanceModeError: '.elementor-maintenance-mode-error'
-      },
-      classes: {
-        isEnabled: 'elementor-maintenance-mode-is-enabled'
-      }
-    };
-  },
-  getDefaultElements: function getDefaultElements() {
-    var elements = {},
-        selectors = this.getSettings('selectors');
-    elements.$modeSelect = jQuery(selectors.modeSelect);
-    elements.$maintenanceModeTable = elements.$modeSelect.parents(selectors.maintenanceModeTable);
-    elements.$excludeModeSelect = elements.$maintenanceModeTable.find(selectors.excludeModeSelect);
-    elements.$excludeRolesArea = elements.$maintenanceModeTable.find(selectors.excludeRolesArea);
-    elements.$templateSelect = elements.$maintenanceModeTable.find(selectors.templateSelect);
-    elements.$editTemplateButton = elements.$maintenanceModeTable.find(selectors.editTemplateButton);
-    elements.$maintenanceModeDescriptions = elements.$maintenanceModeTable.find(selectors.maintenanceModeDescriptions);
-    elements.$maintenanceModeError = elements.$maintenanceModeTable.find(selectors.maintenanceModeError);
-    return elements;
-  },
-  handleModeSelectChange: function handleModeSelectChange() {
-    var settings = this.getSettings(),
-        elements = this.elements;
-    elements.$maintenanceModeTable.toggleClass(settings.classes.isEnabled, !!elements.$modeSelect.val());
-    elements.$maintenanceModeDescriptions.hide();
-    elements.$maintenanceModeDescriptions.filter('[data-value="' + elements.$modeSelect.val() + '"]').show();
-  },
-  handleExcludeModeSelectChange: function handleExcludeModeSelectChange() {
-    var elements = this.elements;
-    elements.$excludeRolesArea.toggle('custom' === elements.$excludeModeSelect.val());
-  },
-  handleTemplateSelectChange: function handleTemplateSelectChange() {
-    var elements = this.elements;
-    var templateID = elements.$templateSelect.val();
-
-    if (!templateID) {
-      elements.$editTemplateButton.hide();
-      elements.$maintenanceModeError.show();
-      return;
-    }
-
-    var editUrl = elementorAdmin.config.home_url + '?p=' + templateID + '&elementor';
-    elements.$editTemplateButton.prop('href', editUrl).show();
-    elements.$maintenanceModeError.hide();
-  },
-  bindEvents: function bindEvents() {
-    var elements = this.elements;
-    elements.$modeSelect.on('change', this.handleModeSelectChange.bind(this));
-    elements.$excludeModeSelect.on('change', this.handleExcludeModeSelectChange.bind(this));
-    elements.$templateSelect.on('change', this.handleTemplateSelectChange.bind(this));
-  },
-  onAdminInit: function onAdminInit() {
-    this.handleModeSelectChange();
-    this.handleExcludeModeSelectChange();
-    this.handleTemplateSelectChange();
-  },
-  onInit: function onInit() {
-    elementorModules.ViewModule.prototype.onInit.apply(this, arguments);
-    elementorCommon.elements.$window.on('elementor/admin/init', this.onAdminInit);
-  }
-});
-
-/***/ }),
-
-/***/ "../core/common/assets/js/utils/environment.js":
-/*!*****************************************************!*\
-  !*** ../core/common/assets/js/utils/environment.js ***!
-  \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: exports is used directly at 5:23-30 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = void 0;
-
-__webpack_require__(/*! core-js/modules/es6.regexp.to-string.js */ "../node_modules/core-js/modules/es6.regexp.to-string.js");
-
-__webpack_require__(/*! core-js/modules/es6.object.to-string.js */ "../node_modules/core-js/modules/es6.object.to-string.js");
-
-var matchUserAgent = function matchUserAgent(UserAgentStr) {
-  return userAgent.indexOf(UserAgentStr) >= 0;
-},
-    userAgent = navigator.userAgent,
-    // Solution influenced by https://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
-// Opera 8.0+
-isOpera = !!window.opr && !!opr.addons || !!window.opera || matchUserAgent(' OPR/'),
-    // Firefox 1.0+
-isFirefox = matchUserAgent('Firefox'),
-    // Safari 3.0+ "[object HTMLElementConstructor]"
-isSafari = /^((?!chrome|android).)*safari/i.test(userAgent) || /constructor/i.test(window.HTMLElement) || function (p) {
-  return '[object SafariRemoteNotification]' === p.toString();
-}(!window.safari || typeof safari !== 'undefined' && safari.pushNotification),
-    // Internet Explorer 6-11
-isIE = /Trident|MSIE/.test(userAgent) && (
-/*@cc_on!@*/
- false || !!document.documentMode),
-    // Edge 20+
-isEdge = !isIE && !!window.StyleMedia || matchUserAgent('Edg'),
-    // Google Chrome (Not accurate)
-isChrome = !!window.chrome && matchUserAgent('Chrome') && !(isEdge || isOpera),
-    // Blink engine
-isBlink = matchUserAgent('Chrome') && !!window.CSS,
-    // Apple Webkit engine
-isAppleWebkit = matchUserAgent('AppleWebKit') && !isBlink,
-    environment = {
-  appleWebkit: isAppleWebkit,
-  blink: isBlink,
-  chrome: isChrome,
-  edge: isEdge,
-  firefox: isFirefox,
-  ie: isIE,
-  mac: matchUserAgent('Macintosh'),
-  opera: isOpera,
-  safari: isSafari,
-  webkit: matchUserAgent('AppleWebKit')
-};
-
-var _default = environment;
-exports.default = _default;
-
-/***/ }),
-
-/***/ "../core/experiments/assets/js/admin/module.js":
-/*!*****************************************************!*\
-  !*** ../core/experiments/assets/js/admin/module.js ***!
-  \*****************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: exports is used directly at 7:23-30 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _get2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/get */ "../node_modules/@babel/runtime-corejs2/helpers/get.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "../node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
-
-var ExperimentsModule = /*#__PURE__*/function (_elementorModules$Vie) {
-  (0, _inherits2.default)(ExperimentsModule, _elementorModules$Vie);
-
-  var _super = (0, _createSuper2.default)(ExperimentsModule);
-
-  function ExperimentsModule() {
-    (0, _classCallCheck2.default)(this, ExperimentsModule);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(ExperimentsModule, [{
-    key: "getDefaultSettings",
-    value: function getDefaultSettings() {
-      return {
-        selectors: {
-          experimentIndicators: '.e-experiment__title__indicator'
-        }
-      };
-    }
-  }, {
-    key: "getDefaultElements",
-    value: function getDefaultElements() {
-      return {
-        $experimentIndicators: jQuery(this.getSettings('selectors.experimentIndicators'))
-      };
-    }
-  }, {
-    key: "addTipsy",
-    value: function addTipsy($element) {
-      $element.tipsy({
-        gravity: 's',
-        offset: 8,
-        title: function title() {
-          return this.getAttribute('data-tooltip');
-        }
-      });
-    }
-  }, {
-    key: "addIndicatorsTooltips",
-    value: function addIndicatorsTooltips() {
-      var _this = this;
-
-      this.elements.$experimentIndicators.each(function (index, experimentIndicator) {
-        return _this.addTipsy(jQuery(experimentIndicator));
-      });
-    }
-  }, {
-    key: "onInit",
-    value: function onInit() {
-      var _this2 = this;
-
-      (0, _get2.default)((0, _getPrototypeOf2.default)(ExperimentsModule.prototype), "onInit", this).call(this);
-
-      if (this.elements.$experimentIndicators.length) {
-        import(
-        /* webpackIgnore: true */
-        "".concat(elementorCommon.config.urls.assets, "lib/tipsy/tipsy.min.js?ver=1.0.0")).then(function () {
-          return _this2.addIndicatorsTooltips();
-        });
-      }
-    }
-  }]);
-  return ExperimentsModule;
-}(elementorModules.ViewModule);
-
-exports.default = ExperimentsModule;
-
-/***/ }),
-
-/***/ "../modules/landing-pages/assets/js/admin/landing-pages.js":
-/*!*****************************************************************!*\
-  !*** ../modules/landing-pages/assets/js/admin/landing-pages.js ***!
-  \*****************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: exports is used directly at 7:23-30 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = void 0;
-
-__webpack_require__(/*! core-js/modules/es7.array.includes.js */ "../node_modules/core-js/modules/es7.array.includes.js");
-
-__webpack_require__(/*! core-js/modules/es6.string.includes.js */ "../node_modules/core-js/modules/es6.string.includes.js");
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _get2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/get */ "../node_modules/@babel/runtime-corejs2/helpers/get.js"));
-
-var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/getPrototypeOf */ "../node_modules/@babel/runtime-corejs2/helpers/getPrototypeOf.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "../node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
-
-var _adminMenu = _interopRequireDefault(__webpack_require__(/*! elementor-admin/admin-menu */ "../assets/dev/js/admin/admin-menu.js"));
-
-var LandingPagesHandler = /*#__PURE__*/function (_AdminMenuHandler) {
-  (0, _inherits2.default)(LandingPagesHandler, _AdminMenuHandler);
-
-  var _super = (0, _createSuper2.default)(LandingPagesHandler);
-
-  function LandingPagesHandler() {
-    (0, _classCallCheck2.default)(this, LandingPagesHandler);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(LandingPagesHandler, [{
-    key: "getDefaultSettings",
-    value: function getDefaultSettings() {
-      var pageName = 'e-landing-page',
-          adminMenuSelectors = {
-        // The escaping is done because jQuery requires it for selectors.
-        landingPagesTablePage: 'a[href=\"edit.php?post_type=' + pageName + '\"]',
-        landingPagesAddNewPage: 'a[href=\"edit.php?post_type=elementor_library&page=' + pageName + '\"]'
-      };
-      return {
-        selectors: {
-          addButton: '.page-title-action:first',
-          pagesMenuItemAndLink: '#menu-pages, #menu-pages > a',
-          landingPagesMenuItem: "".concat(adminMenuSelectors.landingPagesTablePage, ", ").concat(adminMenuSelectors.landingPagesAddNewPage),
-          templatesMenuItem: '.menu-icon-elementor_library'
-        }
-      };
-    }
-  }, {
-    key: "getDefaultElements",
-    value: function getDefaultElements() {
-      var selectors = this.getSettings('selectors'),
-          elements = (0, _get2.default)((0, _getPrototypeOf2.default)(LandingPagesHandler.prototype), "getDefaultElements", this).call(this);
-      elements.$landingPagesMenuItem = jQuery(selectors.landingPagesMenuItem);
-      elements.$templatesMenuItem = jQuery(selectors.templatesMenuItem);
-      elements.$pagesMenuItemAndLink = jQuery(selectors.pagesMenuItemAndLink);
-      return elements;
-    }
-  }, {
-    key: "onInit",
-    value: function onInit() {
-      (0, _get2.default)((0, _getPrototypeOf2.default)(LandingPagesHandler.prototype), "onInit", this).call(this);
-      var settings = this.getSettings(),
-          isLandingPagesTablePage = !!window.location.href.includes(settings.paths.landingPagesTablePage),
-          isLandingPagesTrashPage = !!window.location.href.includes(settings.paths.landingPagesTrashPage),
-          isLandingPagesCreateYourFirstPage = !!window.location.href.includes(settings.paths.landingPagesAddNewPage); // If the current page is a Landing Pages Page (the Posts Table page, "Create Your First.." page, or a native
-      // WordPress dashboard page edit screen when using WordPress' Classic Editor).
-
-      if (isLandingPagesTablePage || isLandingPagesTrashPage || isLandingPagesCreateYourFirstPage || settings.isLandingPageAdminEdit) {
-        // Make sure the active admin top level menu item is 'Templates', and not 'Pages'.
-        this.highlightTopLevelMenuItem(this.elements.$templatesMenuItem, this.elements.$pagesMenuItemAndLink);
-        this.highlightSubMenuItem(this.elements.$landingPagesMenuItem); // Overwrite the 'Add New' button at the top of the page to open in Elementor with the library module open.
-
-        jQuery(settings.selectors.addButton).attr('href', elementorAdminConfig.urls.addNewLandingPageUrl);
-      }
-    }
-  }]);
-  return LandingPagesHandler;
-}(_adminMenu.default);
-
-exports.default = LandingPagesHandler;
-
-/***/ }),
-
-/***/ "../modules/landing-pages/assets/js/admin/module.js":
-/*!**********************************************************!*\
-  !*** ../modules/landing-pages/assets/js/admin/module.js ***!
-  \**********************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
-/*! CommonJS bailout: exports is used directly at 7:23-30 */
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime-corejs2/helpers/interopRequireDefault */ "../node_modules/@babel/runtime-corejs2/helpers/interopRequireDefault.js");
-
-var _Object$defineProperty = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/define-property */ "../node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-
-_Object$defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/classCallCheck */ "../node_modules/@babel/runtime-corejs2/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createClass */ "../node_modules/@babel/runtime-corejs2/helpers/createClass.js"));
-
-var _inherits2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/inherits */ "../node_modules/@babel/runtime-corejs2/helpers/inherits.js"));
-
-var _createSuper2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/helpers/createSuper */ "../node_modules/@babel/runtime-corejs2/helpers/createSuper.js"));
-
-var _landingPages = _interopRequireDefault(__webpack_require__(/*! ./landing-pages */ "../modules/landing-pages/assets/js/admin/landing-pages.js"));
-
-var _default = /*#__PURE__*/function (_elementorModules$Mod) {
-  (0, _inherits2.default)(_default, _elementorModules$Mod);
-
-  var _super = (0, _createSuper2.default)(_default);
-
-  function _default() {
-    var _this;
-
-    (0, _classCallCheck2.default)(this, _default);
-    _this = _super.call(this);
-    elementorCommon.elements.$window.on('elementor/admin/init', function () {
-      _this.runHandler();
-    });
-    return _this;
-  }
-
-  (0, _createClass2.default)(_default, [{
-    key: "runHandler",
-    value: function runHandler() {
-      var _elementorAdmin$confi, _elementorAdmin$confi2;
-
-      var pageName = 'e-landing-page',
-          paths = {
-        landingPagesTablePage: 'edit.php?post_type=' + pageName,
-        landingPagesAddNewPage: 'edit.php?post_type=elementor_library&page=' + pageName,
-        landingPagesTrashPage: 'edit.php?post_status=trash&post_type=' + pageName
-      },
-          args = {
-        path: (_elementorAdmin$confi = elementorAdmin.config.landingPages) !== null && _elementorAdmin$confi !== void 0 && _elementorAdmin$confi.landingPagesHasPages ? paths.landingPagesTablePage : paths.landingPagesAddNewPage,
-        isLandingPageAdminEdit: (_elementorAdmin$confi2 = elementorAdmin.config.landingPages) === null || _elementorAdmin$confi2 === void 0 ? void 0 : _elementorAdmin$confi2.isLandingPageAdminEdit,
-        paths: paths
-      }; // This class modifies elements in the WordPress admin that are rendered "wrong" by the WordPress core
-      // and could not be modified in the backend.
-
-      new _landingPages.default(args);
-    }
-  }]);
-  return _default;
-}(elementorModules.Module);
-
-exports.default = _default;
->>>>>>> dist
 
 /***/ }),
 
@@ -6729,12 +3591,6 @@ exports.default = _default;
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_a-function.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (it) {
@@ -6749,12 +3605,6 @@ module.exports = function (it) {
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/modules/_add-to-unscopables.js ***!
   \**************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 22.1.3.31 Array.prototype[@@unscopables]
@@ -6772,12 +3622,6 @@ module.exports = function (key) {
 /*!****************************************************************!*\
   !*** ../node_modules/core-js/modules/_advance-string-index.js ***!
   \****************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -6797,12 +3641,6 @@ module.exports = function (S, index, unicode) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_an-object.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/modules/_is-object.js");
@@ -6818,12 +3656,6 @@ module.exports = function (it) {
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/modules/_array-includes.js ***!
   \**********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // false -> Array#indexOf
@@ -6857,12 +3689,6 @@ module.exports = function (IS_INCLUDES) {
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/_array-methods.js ***!
   \*********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 13:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 0 -> Array#forEach
@@ -6917,12 +3743,6 @@ module.exports = function (TYPE, $create) {
 /*!*********************************************************************!*\
   !*** ../node_modules/core-js/modules/_array-species-constructor.js ***!
   \*********************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/modules/_is-object.js");
@@ -6949,12 +3769,6 @@ module.exports = function (original) {
 /*!****************************************************************!*\
   !*** ../node_modules/core-js/modules/_array-species-create.js ***!
   \****************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
@@ -6971,12 +3785,6 @@ module.exports = function (original, length) {
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_classof.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 14:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
@@ -7010,12 +3818,6 @@ module.exports = function (it) {
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_cof.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 var toString = {}.toString;
@@ -7031,12 +3833,6 @@ module.exports = function (it) {
 /*!************************************************!*\
   !*** ../node_modules/core-js/modules/_core.js ***!
   \************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:11-25 */
->>>>>>> dist
 /***/ ((module) => {
 
 var core = module.exports = { version: '2.6.12' };
@@ -7049,12 +3845,6 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_ctx.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // optional / simple context binding
@@ -7085,12 +3875,6 @@ module.exports = function (fn, that, length) {
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_defined.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -7106,12 +3890,6 @@ module.exports = function (it) {
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/modules/_descriptors.js ***!
   \*******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Thank's IE8 for his funny defineProperty
@@ -7126,12 +3904,6 @@ module.exports = !__webpack_require__(/*! ./_fails */ "../node_modules/core-js/m
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_dom-create.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var isObject = __webpack_require__(/*! ./_is-object */ "../node_modules/core-js/modules/_is-object.js");
@@ -7149,12 +3921,6 @@ module.exports = function (it) {
 /*!**************************************************!*\
   !*** ../node_modules/core-js/modules/_export.js ***!
   \**************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 43:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "../node_modules/core-js/modules/_global.js");
@@ -7208,12 +3974,6 @@ module.exports = $export;
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/modules/_fails-is-regexp.js ***!
   \***********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var MATCH = __webpack_require__(/*! ./_wks */ "../node_modules/core-js/modules/_wks.js")('match');
@@ -7236,12 +3996,6 @@ module.exports = function (KEY) {
 /*!*************************************************!*\
   !*** ../node_modules/core-js/modules/_fails.js ***!
   \*************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (exec) {
@@ -7259,12 +4013,6 @@ module.exports = function (exec) {
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_fix-re-wks.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 34:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -7372,12 +4120,6 @@ module.exports = function (KEY, length, exec) {
 /*!*************************************************!*\
   !*** ../node_modules/core-js/modules/_flags.js ***!
   \*************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -7402,12 +4144,6 @@ module.exports = function () {
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/modules/_function-to-string.js ***!
   \**************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! ./_shared */ "../node_modules/core-js/modules/_shared.js")('native-function-to-string', Function.toString);
@@ -7419,12 +4155,6 @@ module.exports = __webpack_require__(/*! ./_shared */ "../node_modules/core-js/m
 /*!**************************************************!*\
   !*** ../node_modules/core-js/modules/_global.js ***!
   \**************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:13-27 */
->>>>>>> dist
 /***/ ((module) => {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -7441,12 +4171,6 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_has.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -7461,12 +4185,6 @@ module.exports = function (it, key) {
 /*!************************************************!*\
   !*** ../node_modules/core-js/modules/_hide.js ***!
   \************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var dP = __webpack_require__(/*! ./_object-dp */ "../node_modules/core-js/modules/_object-dp.js");
@@ -7481,7 +4199,6 @@ module.exports = __webpack_require__(/*! ./_descriptors */ "../node_modules/core
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/modules/_html.js":
 /*!************************************************!*\
   !*** ../node_modules/core-js/modules/_html.js ***!
@@ -7494,18 +4211,10 @@ module.exports = document && document.documentElement;
 
 /***/ }),
 
-=======
->>>>>>> dist
 /***/ "../node_modules/core-js/modules/_ie8-dom-define.js":
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/modules/_ie8-dom-define.js ***!
   \**********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = !__webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/modules/_descriptors.js") && !__webpack_require__(/*! ./_fails */ "../node_modules/core-js/modules/_fails.js")(function () {
@@ -7519,12 +4228,6 @@ module.exports = !__webpack_require__(/*! ./_descriptors */ "../node_modules/cor
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_iobject.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
@@ -7541,12 +4244,6 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 /*!****************************************************!*\
   !*** ../node_modules/core-js/modules/_is-array.js ***!
   \****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.2.2 IsArray(argument)
@@ -7562,12 +4259,6 @@ module.exports = Array.isArray || function isArray(arg) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_is-object.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (it) {
@@ -7581,12 +4272,6 @@ module.exports = function (it) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_is-regexp.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.2.8 IsRegExp(argument)
@@ -7605,12 +4290,6 @@ module.exports = function (it) {
 /*!***************************************************!*\
   !*** ../node_modules/core-js/modules/_library.js ***!
   \***************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = false;
@@ -7622,13 +4301,6 @@ module.exports = false;
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_object-dp.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! default exports */
-/*! export f [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/core-js/modules/_an-object.js");
@@ -7655,12 +4327,6 @@ exports.f = __webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/m
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/_property-desc.js ***!
   \*********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 1:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 module.exports = function (bitmap, value) {
@@ -7679,12 +4345,6 @@ module.exports = function (bitmap, value) {
 /*!****************************************************!*\
   !*** ../node_modules/core-js/modules/_redefine.js ***!
   \****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 13:1-15 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var global = __webpack_require__(/*! ./_global */ "../node_modules/core-js/modules/_global.js");
@@ -7726,12 +4386,6 @@ __webpack_require__(/*! ./_core */ "../node_modules/core-js/modules/_core.js").i
 /*!****************************************************************!*\
   !*** ../node_modules/core-js/modules/_regexp-exec-abstract.js ***!
   \****************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 8:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -7764,12 +4418,6 @@ module.exports = function (R, S) {
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/modules/_regexp-exec.js ***!
   \*******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 58:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -7835,37 +4483,10 @@ module.exports = patchedExec;
 
 /***/ }),
 
-/***/ "../node_modules/core-js/modules/_same-value.js":
-/*!******************************************************!*\
-  !*** ../node_modules/core-js/modules/_same-value.js ***!
-  \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 2:0-14 */
->>>>>>> dist
-/***/ ((module) => {
-
-// 7.2.9 SameValue(x, y)
-module.exports = Object.is || function is(x, y) {
-  // eslint-disable-next-line no-self-compare
-  return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
-};
-
-
-/***/ }),
-
 /***/ "../node_modules/core-js/modules/_shared.js":
 /*!**************************************************!*\
   !*** ../node_modules/core-js/modules/_shared.js ***!
   \**************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 6:1-15 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var core = __webpack_require__(/*! ./_core */ "../node_modules/core-js/modules/_core.js");
@@ -7884,32 +4505,6 @@ var store = global[SHARED] || (global[SHARED] = {});
 
 /***/ }),
 
-/***/ "../node_modules/core-js/modules/_species-constructor.js":
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/modules/_species-constructor.js ***!
-  \***************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-// 7.3.20 SpeciesConstructor(O, defaultConstructor)
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/core-js/modules/_an-object.js");
-var aFunction = __webpack_require__(/*! ./_a-function */ "../node_modules/core-js/modules/_a-function.js");
-var SPECIES = __webpack_require__(/*! ./_wks */ "../node_modules/core-js/modules/_wks.js")('species');
-module.exports = function (O, D) {
-  var C = anObject(O).constructor;
-  var S;
-  return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
-};
-
-
-/***/ }),
-
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/modules/_strict-method.js":
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/_strict-method.js ***!
@@ -7930,18 +4525,10 @@ module.exports = function (method, arg) {
 
 /***/ }),
 
-=======
->>>>>>> dist
 /***/ "../node_modules/core-js/modules/_string-at.js":
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_string-at.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var toInteger = __webpack_require__(/*! ./_to-integer */ "../node_modules/core-js/modules/_to-integer.js");
@@ -7969,12 +4556,6 @@ module.exports = function (TO_STRING) {
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/modules/_string-context.js ***!
   \**********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // helper for String#{startsWith, endsWith, includes}
@@ -7993,12 +4574,6 @@ module.exports = function (that, searchString, NAME) {
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/modules/_to-absolute-index.js ***!
   \*************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var toInteger = __webpack_require__(/*! ./_to-integer */ "../node_modules/core-js/modules/_to-integer.js");
@@ -8016,12 +4591,6 @@ module.exports = function (index, length) {
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_to-integer.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 // 7.1.4 ToInteger
@@ -8038,12 +4607,6 @@ module.exports = function (it) {
 /*!******************************************************!*\
   !*** ../node_modules/core-js/modules/_to-iobject.js ***!
   \******************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
@@ -8060,12 +4623,6 @@ module.exports = function (it) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_to-length.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 4:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.15 ToLength
@@ -8082,12 +4639,6 @@ module.exports = function (it) {
 /*!*****************************************************!*\
   !*** ../node_modules/core-js/modules/_to-object.js ***!
   \*****************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.13 ToObject(argument)
@@ -8103,12 +4654,6 @@ module.exports = function (it) {
 /*!********************************************************!*\
   !*** ../node_modules/core-js/modules/_to-primitive.js ***!
   \********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module, __webpack_require__ */
-/*! CommonJS bailout: module.exports is used directly at 5:0-14 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -8131,12 +4676,6 @@ module.exports = function (it, S) {
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_uid.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 3:0-14 */
->>>>>>> dist
 /***/ ((module) => {
 
 var id = 0;
@@ -8152,12 +4691,6 @@ module.exports = function (key) {
 /*!***********************************************!*\
   !*** ../node_modules/core-js/modules/_wks.js ***!
   \***********************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__, module */
-/*! CommonJS bailout: module.exports is used directly at 6:15-29 */
->>>>>>> dist
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var store = __webpack_require__(/*! ./_shared */ "../node_modules/core-js/modules/_shared.js")('wks');
@@ -8175,7 +4708,6 @@ $exports.store = store;
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/modules/es6.array.filter.js":
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/modules/es6.array.filter.js ***!
@@ -8197,17 +4729,10 @@ $export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ "..
 
 /***/ }),
 
-=======
->>>>>>> dist
 /***/ "../node_modules/core-js/modules/es6.array.find.js":
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/modules/es6.array.find.js ***!
   \*********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8229,7 +4754,6 @@ __webpack_require__(/*! ./_add-to-unscopables */ "../node_modules/core-js/module
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "../node_modules/core-js/modules/es6.array.slice.js":
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/modules/es6.array.slice.js ***!
@@ -8269,17 +4793,10 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails */ "../node_mod
 
 /***/ }),
 
-=======
->>>>>>> dist
 /***/ "../node_modules/core-js/modules/es6.object.to-string.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/modules/es6.object.to-string.js ***!
   \***************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8301,11 +4818,6 @@ if (test + '' != '[object z]') {
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/modules/es6.regexp.exec.js ***!
   \**********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8326,11 +4838,6 @@ __webpack_require__(/*! ./_export */ "../node_modules/core-js/modules/_export.js
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/modules/es6.regexp.flags.js ***!
   \***********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 // 21.2.5.3 get RegExp.prototype.flags()
@@ -8346,11 +4853,6 @@ if (__webpack_require__(/*! ./_descriptors */ "../node_modules/core-js/modules/_
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/modules/es6.regexp.replace.js ***!
   \*************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8476,212 +4978,10 @@ __webpack_require__(/*! ./_fix-re-wks */ "../node_modules/core-js/modules/_fix-r
 
 /***/ }),
 
-/***/ "../node_modules/core-js/modules/es6.regexp.search.js":
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/modules/es6.regexp.search.js ***!
-  \************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/core-js/modules/_an-object.js");
-var sameValue = __webpack_require__(/*! ./_same-value */ "../node_modules/core-js/modules/_same-value.js");
-var regExpExec = __webpack_require__(/*! ./_regexp-exec-abstract */ "../node_modules/core-js/modules/_regexp-exec-abstract.js");
-
-// @@search logic
-__webpack_require__(/*! ./_fix-re-wks */ "../node_modules/core-js/modules/_fix-re-wks.js")('search', 1, function (defined, SEARCH, $search, maybeCallNative) {
-  return [
-    // `String.prototype.search` method
-    // https://tc39.github.io/ecma262/#sec-string.prototype.search
-    function search(regexp) {
-      var O = defined(this);
-      var fn = regexp == undefined ? undefined : regexp[SEARCH];
-      return fn !== undefined ? fn.call(regexp, O) : new RegExp(regexp)[SEARCH](String(O));
-    },
-    // `RegExp.prototype[@@search]` method
-    // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@search
-    function (regexp) {
-      var res = maybeCallNative($search, regexp, this);
-      if (res.done) return res.value;
-      var rx = anObject(regexp);
-      var S = String(this);
-      var previousLastIndex = rx.lastIndex;
-      if (!sameValue(previousLastIndex, 0)) rx.lastIndex = 0;
-      var result = regExpExec(rx, S);
-      if (!sameValue(rx.lastIndex, previousLastIndex)) rx.lastIndex = previousLastIndex;
-      return result === null ? -1 : result.index;
-    }
-  ];
-});
-
-
-/***/ }),
-
-/***/ "../node_modules/core-js/modules/es6.regexp.split.js":
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/modules/es6.regexp.split.js ***!
-  \***********************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-
-
-var isRegExp = __webpack_require__(/*! ./_is-regexp */ "../node_modules/core-js/modules/_is-regexp.js");
-var anObject = __webpack_require__(/*! ./_an-object */ "../node_modules/core-js/modules/_an-object.js");
-var speciesConstructor = __webpack_require__(/*! ./_species-constructor */ "../node_modules/core-js/modules/_species-constructor.js");
-var advanceStringIndex = __webpack_require__(/*! ./_advance-string-index */ "../node_modules/core-js/modules/_advance-string-index.js");
-var toLength = __webpack_require__(/*! ./_to-length */ "../node_modules/core-js/modules/_to-length.js");
-var callRegExpExec = __webpack_require__(/*! ./_regexp-exec-abstract */ "../node_modules/core-js/modules/_regexp-exec-abstract.js");
-var regexpExec = __webpack_require__(/*! ./_regexp-exec */ "../node_modules/core-js/modules/_regexp-exec.js");
-var fails = __webpack_require__(/*! ./_fails */ "../node_modules/core-js/modules/_fails.js");
-var $min = Math.min;
-var $push = [].push;
-var $SPLIT = 'split';
-var LENGTH = 'length';
-var LAST_INDEX = 'lastIndex';
-var MAX_UINT32 = 0xffffffff;
-
-// babel-minify transpiles RegExp('x', 'y') -> /x/y and it causes SyntaxError
-var SUPPORTS_Y = !fails(function () { RegExp(MAX_UINT32, 'y'); });
-
-// @@split logic
-__webpack_require__(/*! ./_fix-re-wks */ "../node_modules/core-js/modules/_fix-re-wks.js")('split', 2, function (defined, SPLIT, $split, maybeCallNative) {
-  var internalSplit;
-  if (
-    'abbc'[$SPLIT](/(b)*/)[1] == 'c' ||
-    'test'[$SPLIT](/(?:)/, -1)[LENGTH] != 4 ||
-    'ab'[$SPLIT](/(?:ab)*/)[LENGTH] != 2 ||
-    '.'[$SPLIT](/(.?)(.?)/)[LENGTH] != 4 ||
-    '.'[$SPLIT](/()()/)[LENGTH] > 1 ||
-    ''[$SPLIT](/.?/)[LENGTH]
-  ) {
-    // based on es5-shim implementation, need to rework it
-    internalSplit = function (separator, limit) {
-      var string = String(this);
-      if (separator === undefined && limit === 0) return [];
-      // If `separator` is not a regex, use native split
-      if (!isRegExp(separator)) return $split.call(string, separator, limit);
-      var output = [];
-      var flags = (separator.ignoreCase ? 'i' : '') +
-                  (separator.multiline ? 'm' : '') +
-                  (separator.unicode ? 'u' : '') +
-                  (separator.sticky ? 'y' : '');
-      var lastLastIndex = 0;
-      var splitLimit = limit === undefined ? MAX_UINT32 : limit >>> 0;
-      // Make `global` and avoid `lastIndex` issues by working with a copy
-      var separatorCopy = new RegExp(separator.source, flags + 'g');
-      var match, lastIndex, lastLength;
-      while (match = regexpExec.call(separatorCopy, string)) {
-        lastIndex = separatorCopy[LAST_INDEX];
-        if (lastIndex > lastLastIndex) {
-          output.push(string.slice(lastLastIndex, match.index));
-          if (match[LENGTH] > 1 && match.index < string[LENGTH]) $push.apply(output, match.slice(1));
-          lastLength = match[0][LENGTH];
-          lastLastIndex = lastIndex;
-          if (output[LENGTH] >= splitLimit) break;
-        }
-        if (separatorCopy[LAST_INDEX] === match.index) separatorCopy[LAST_INDEX]++; // Avoid an infinite loop
-      }
-      if (lastLastIndex === string[LENGTH]) {
-        if (lastLength || !separatorCopy.test('')) output.push('');
-      } else output.push(string.slice(lastLastIndex));
-      return output[LENGTH] > splitLimit ? output.slice(0, splitLimit) : output;
-    };
-  // Chakra, V8
-  } else if ('0'[$SPLIT](undefined, 0)[LENGTH]) {
-    internalSplit = function (separator, limit) {
-      return separator === undefined && limit === 0 ? [] : $split.call(this, separator, limit);
-    };
-  } else {
-    internalSplit = $split;
-  }
-
-  return [
-    // `String.prototype.split` method
-    // https://tc39.github.io/ecma262/#sec-string.prototype.split
-    function split(separator, limit) {
-      var O = defined(this);
-      var splitter = separator == undefined ? undefined : separator[SPLIT];
-      return splitter !== undefined
-        ? splitter.call(separator, O, limit)
-        : internalSplit.call(String(O), separator, limit);
-    },
-    // `RegExp.prototype[@@split]` method
-    // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@split
-    //
-    // NOTE: This cannot be properly polyfilled in engines that don't support
-    // the 'y' flag.
-    function (regexp, limit) {
-      var res = maybeCallNative(internalSplit, regexp, this, limit, internalSplit !== $split);
-      if (res.done) return res.value;
-
-      var rx = anObject(regexp);
-      var S = String(this);
-      var C = speciesConstructor(rx, RegExp);
-
-      var unicodeMatching = rx.unicode;
-      var flags = (rx.ignoreCase ? 'i' : '') +
-                  (rx.multiline ? 'm' : '') +
-                  (rx.unicode ? 'u' : '') +
-                  (SUPPORTS_Y ? 'y' : 'g');
-
-      // ^(? + rx + ) is needed, in combination with some S slicing, to
-      // simulate the 'y' flag.
-      var splitter = new C(SUPPORTS_Y ? rx : '^(?:' + rx.source + ')', flags);
-      var lim = limit === undefined ? MAX_UINT32 : limit >>> 0;
-      if (lim === 0) return [];
-      if (S.length === 0) return callRegExpExec(splitter, S) === null ? [S] : [];
-      var p = 0;
-      var q = 0;
-      var A = [];
-      while (q < S.length) {
-        splitter.lastIndex = SUPPORTS_Y ? q : 0;
-        var z = callRegExpExec(splitter, SUPPORTS_Y ? S : S.slice(q));
-        var e;
-        if (
-          z === null ||
-          (e = $min(toLength(splitter.lastIndex + (SUPPORTS_Y ? 0 : q)), S.length)) === p
-        ) {
-          q = advanceStringIndex(S, q, unicodeMatching);
-        } else {
-          A.push(S.slice(p, q));
-          if (A.length === lim) return A;
-          for (var i = 1; i <= z.length - 1; i++) {
-            A.push(z[i]);
-            if (A.length === lim) return A;
-          }
-          q = p = e;
-        }
-      }
-      A.push(S.slice(p));
-      return A;
-    }
-  ];
-});
-
-
-/***/ }),
-
 /***/ "../node_modules/core-js/modules/es6.regexp.to-string.js":
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/modules/es6.regexp.to-string.js ***!
   \***************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8718,11 +5018,6 @@ if (__webpack_require__(/*! ./_fails */ "../node_modules/core-js/modules/_fails.
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/modules/es6.string.includes.js ***!
   \**************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8746,11 +5041,6 @@ $export($export.P + $export.F * __webpack_require__(/*! ./_fails-is-regexp */ ".
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/modules/es7.array.includes.js ***!
   \*************************************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
@@ -8774,12 +5064,6 @@ __webpack_require__(/*! ./_add-to-unscopables */ "../node_modules/core-js/module
 /*!**************************!*\
   !*** external "wp.i18n" ***!
   \**************************/
-<<<<<<< HEAD
-=======
-/*! dynamic exports */
-/*! exports [maybe provided (runtime-defined)] [no usage info] */
-/*! runtime requirements: module */
->>>>>>> dist
 /***/ ((module) => {
 
 "use strict";
@@ -8795,14 +5079,9 @@ module.exports = wp.i18n;
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-<<<<<<< HEAD
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
-=======
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
->>>>>>> dist
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
@@ -8819,21 +5098,13 @@ module.exports = wp.i18n;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-<<<<<<< HEAD
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
-=======
->>>>>>> dist
 (() => {
 "use strict";
 /*!***************************************!*\
   !*** ../assets/dev/js/admin/admin.js ***!
   \***************************************/
-<<<<<<< HEAD
-=======
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
->>>>>>> dist
 /* provided dependency */ var __ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n")["__"];
 
 
@@ -8843,27 +5114,13 @@ var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runt
 
 var _entries = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-corejs2/core-js/object/entries */ "../node_modules/@babel/runtime-corejs2/core-js/object/entries.js"));
 
-<<<<<<< HEAD
 __webpack_require__(/*! core-js/modules/es6.array.find.js */ "../node_modules/core-js/modules/es6.array.find.js");
 
 __webpack_require__(/*! core-js/modules/es6.array.filter.js */ "../node_modules/core-js/modules/es6.array.filter.js");
 
-__webpack_require__(/*! core-js/modules/es6.regexp.split.js */ "../node_modules/core-js/modules/es6.regexp.split.js");
-
-__webpack_require__(/*! core-js/modules/es6.regexp.search.js */ "../node_modules/core-js/modules/es6.regexp.search.js");
-
 __webpack_require__(/*! core-js/modules/es6.regexp.replace.js */ "../node_modules/core-js/modules/es6.regexp.replace.js");
 
 __webpack_require__(/*! core-js/modules/es6.array.slice.js */ "../node_modules/core-js/modules/es6.array.slice.js");
-=======
-__webpack_require__(/*! core-js/modules/es6.regexp.replace.js */ "../node_modules/core-js/modules/es6.regexp.replace.js");
-
-__webpack_require__(/*! core-js/modules/es6.regexp.search.js */ "../node_modules/core-js/modules/es6.regexp.search.js");
-
-__webpack_require__(/*! core-js/modules/es6.regexp.split.js */ "../node_modules/core-js/modules/es6.regexp.split.js");
-
-__webpack_require__(/*! core-js/modules/es6.array.find.js */ "../node_modules/core-js/modules/es6.array.find.js");
->>>>>>> dist
 
 var _module = _interopRequireDefault(__webpack_require__(/*! elementor/modules/landing-pages/assets/js/admin/module */ "../modules/landing-pages/assets/js/admin/module.js"));
 
@@ -8871,11 +5128,10 @@ var _module2 = _interopRequireDefault(__webpack_require__(/*! elementor/core/exp
 
 var _environment = _interopRequireDefault(__webpack_require__(/*! ../../../../core/common/assets/js/utils/environment */ "../core/common/assets/js/utils/environment.js"));
 
-<<<<<<< HEAD
 var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/events */ "../assets/dev/js/utils/events.js"));
 
-=======
->>>>>>> dist
+var _filesUploadHandler = _interopRequireDefault(__webpack_require__(/*! ../editor/utils/files-upload-handler */ "../assets/dev/js/editor/utils/files-upload-handler.js"));
+
 (function ($) {
   var ElementorAdmin = elementorModules.ViewModule.extend({
     maintenanceMode: null,
@@ -8889,7 +5145,10 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
         $elementorLoader: $('.elementor-loader'),
         $builderEditor: $('#elementor-editor'),
         $importButton: $('#elementor-import-template-trigger'),
+        $importNowButton: $('#e-import-template-action'),
         $importArea: $('#elementor-import-template-area'),
+        $importForm: $('#elementor-import-template-form'),
+        $importFormFileInput: $('#elementor-import-template-form input[type="file"]'),
         $settingsForm: $('#elementor-settings-form'),
         $settingsTabsWrapper: $('#elementor-settings-tabs-wrapper'),
         $menuGetHelpLink: $('a[href="admin.php?page=go_knowledge_base_site"]'),
@@ -8982,7 +5241,6 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
           $thisButton.removeClass('loading').addClass('success');
         });
       });
-<<<<<<< HEAD
       $('#elementor-recreate-kit-button').on('click', function (event) {
         event.preventDefault();
         var $thisButton = $(this);
@@ -9003,8 +5261,6 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
           }
         });
       });
-=======
->>>>>>> dist
       $('#elementor-replace-url-button').on('click', function (event) {
         event.preventDefault();
         var $this = $(this),
@@ -9044,13 +5300,23 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
           defaultOption: 'confirm',
           onConfirm: function onConfirm() {
             $updateButton.removeClass('error').addClass('loading');
-            $.post(ajaxurl, $updateButton.data()).done(function (response) {
-              $updateButton.removeClass('loading').addClass('success');
-              $('#elementor_upgrade_fa_button').parent().append(response.data.message);
-              var redirectTo = (location.search.split('redirect_to=')[1] || '').split('&')[0];
 
-              if (redirectTo) {
-                location.href = decodeURIComponent(redirectTo);
+            var _$updateButton$data = $updateButton.data(),
+                _nonce = _$updateButton$data._nonce,
+                action = _$updateButton$data.action,
+                redirectUrl = _$updateButton$data.redirectUrl;
+
+            $.post(ajaxurl, {
+              action: action,
+              _nonce: _nonce
+            }).done(function (response) {
+              $updateButton.removeClass('loading').addClass('success');
+              var messageElement = document.createElement('p');
+              messageElement.appendChild(document.createTextNode(response.data.message));
+              $('#elementor_upgrade_fa_button').parent().append(messageElement);
+
+              if (redirectUrl) {
+                location.href = decodeURIComponent(redirectUrl);
                 return;
               }
 
@@ -9143,17 +5409,10 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
     },
     addUserAgentClasses: function addUserAgentClasses() {
       var body = document.querySelector('body');
-<<<<<<< HEAD
       (0, _entries.default)(_environment.default).forEach(function (_ref2) {
         var _ref3 = (0, _slicedToArray2.default)(_ref2, 2),
             key = _ref3[0],
             value = _ref3[1];
-=======
-      (0, _entries.default)(_environment.default).forEach(function (_ref) {
-        var _ref2 = (0, _slicedToArray2.default)(_ref, 2),
-            key = _ref2[0],
-            value = _ref2[1];
->>>>>>> dist
 
         if (!value) {
           return;
@@ -9172,16 +5431,24 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
 
       var self = this,
           $importButton = self.elements.$importButton,
-          $importArea = self.elements.$importArea;
-<<<<<<< HEAD
+          $importArea = self.elements.$importArea,
+          $importNowButton = self.elements.$importNowButton;
       self.elements.$formAnchor = $('.wp-header-end');
-=======
-      self.elements.$formAnchor = $('h1');
->>>>>>> dist
       $('#wpbody-content').find('.page-title-action').last().after($importButton);
       self.elements.$formAnchor.after($importArea);
       $importButton.on('click', function () {
         $('#elementor-import-template-area').toggle();
+      });
+      $importNowButton.on('click', function (event) {
+        if (self.elements.$importFormFileInput[0].files.length && !elementorCommon.config.filesUpload.unfilteredFiles) {
+          event.preventDefault();
+
+          var enableUnfilteredFilesModal = _filesUploadHandler.default.getUnfilteredFilesNotEnabledImportTemplateDialog(function () {
+            self.elements.$importForm.trigger('submit');
+          });
+
+          enableUnfilteredFilesModal.show();
+        }
       });
     },
     initMaintenanceMode: function initMaintenanceMode() {
@@ -9295,12 +5562,8 @@ var _events = _interopRequireDefault(__webpack_require__(/*! elementor-utils/eve
   });
   $(function () {
     window.elementorAdmin = new ElementorAdmin();
-<<<<<<< HEAD
 
     _events.default.dispatch(elementorCommon.elements.$window, 'elementor/admin/init');
-=======
-    elementorCommon.elements.$window.trigger('elementor/admin/init');
->>>>>>> dist
   });
 })(jQuery);
 })();

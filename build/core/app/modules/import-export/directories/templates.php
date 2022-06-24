@@ -2,10 +2,7 @@
 
 namespace Elementor\Core\App\Modules\ImportExport\Directories;
 
-<<<<<<< HEAD
 use Elementor\Core\Base\Document;
-=======
->>>>>>> dist
 use Elementor\Plugin;
 use Elementor\TemplateLibrary\Source_Local;
 
@@ -20,7 +17,6 @@ class Templates extends Base {
 	}
 
 	protected function export() {
-<<<<<<< HEAD
 		$template_types = array_values( Source_Local::get_template_types() );
 
 		$query_args = [
@@ -49,26 +45,6 @@ class Templates extends Base {
 			$this->exporter->add_json_file( $template_id, $template_export_data );
 
 			$manifest_data[ $template_id ] = $template_document->get_export_summary();
-=======
-		$template_local_source = Plugin::$instance->templates_manager->get_source( 'local' );
-
-		$templates = $template_local_source->get_items();
-
-		$manifest_data = [];
-
-		foreach ( $templates as $template ) {
-			$template_document = Plugin::$instance->documents->get( $template['template_id'] );
-
-			$template_export_data = $template_document->get_export_data();
-
-			$this->exporter->add_json_file( $template['template_id'], $template_export_data );
-
-			$manifest_data[ $template['template_id'] ] = [
-				'title' => $template['title'],
-				'doc_type' => $template_document->get_name(),
-				'thumbnail' => $template['thumbnail'],
-			];
->>>>>>> dist
 		}
 
 		return $manifest_data;
@@ -76,11 +52,7 @@ class Templates extends Base {
 
 	protected function import( array $import_settings ) {
 		$result = [
-<<<<<<< HEAD
 			'succeed' => [],
-=======
-			'success' => [],
->>>>>>> dist
 			'failed' => [],
 		];
 
@@ -94,11 +66,7 @@ class Templates extends Base {
 					continue;
 				}
 
-<<<<<<< HEAD
 				$result['succeed'][ $id ] = $import;
-=======
-				$result['success'][] = $import;
->>>>>>> dist
 			} catch ( \Error $error ) {
 				$result['failed'][ $id ] = $error->getMessage();
 			}
@@ -108,11 +76,7 @@ class Templates extends Base {
 	}
 
 	private function import_template( $id, array $template_settings ) {
-<<<<<<< HEAD
 		$template_data = $this->importer->read_json_file( $id );
-=======
-		$template = $this->importer->read_json_file( $id );
->>>>>>> dist
 
 		$doc_type = $template_settings['doc_type'];
 
@@ -129,7 +93,6 @@ class Templates extends Base {
 			return $new_document;
 		}
 
-<<<<<<< HEAD
 		$template_data['import_settings'] = $template_settings;
 		$template_data['id'] = $id;
 
@@ -138,9 +101,6 @@ class Templates extends Base {
 		}
 
 		$new_document->import( $template_data );
-=======
-		$new_document->import( $template );
->>>>>>> dist
 
 		return $new_document->get_main_id();
 	}

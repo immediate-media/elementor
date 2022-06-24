@@ -40,11 +40,7 @@ class Widget_Menu_Anchor extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Menu Anchor', 'elementor' );
-=======
-		return __( 'Menu Anchor', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -87,29 +83,21 @@ class Widget_Menu_Anchor extends Widget_Base {
 		$this->start_controls_section(
 			'section_anchor',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Anchor', 'elementor' ),
-=======
-				'label' => __( 'Anchor', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'anchor',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'The ID of Menu Anchor.', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'placeholder' => esc_html__( 'For Example: About', 'elementor' ),
 				'description' => esc_html__( 'This ID will be the CSS ID you will have to use in your own page, Without #.', 'elementor' ),
-=======
-				'label' => __( 'The ID of Menu Anchor.', 'elementor' ),
-				'type' => Controls_Manager::TEXT,
-				'placeholder' => __( 'For Example: About', 'elementor' ),
-				'description' => __( 'This ID will be the CSS ID you will have to use in your own page, Without #.', 'elementor' ),
->>>>>>> dist
 				'label_block' => true,
+				'dynamic' => [
+					'active' => true,
+				],
 			]
 		);
 
@@ -117,15 +105,11 @@ class Widget_Menu_Anchor extends Widget_Base {
 			'anchor_note',
 			[
 				'type' => Controls_Manager::RAW_HTML,
-<<<<<<< HEAD
 				'raw' => sprintf(
 					/* translators: %s: Accepted chars. */
 					esc_html__( 'Note: The ID link ONLY accepts these chars: %s', 'elementor' ),
 					'`A-Z, a-z, 0-9, _ , -`'
 				),
-=======
-				'raw' => sprintf( __( 'Note: The ID link ONLY accepts these chars: %s', 'elementor' ), '`A-Z, a-z, 0-9, _ , -`' ),
->>>>>>> dist
 				'content_classes' => 'elementor-panel-alert elementor-panel-alert-warning',
 			]
 		);
@@ -150,11 +134,7 @@ class Widget_Menu_Anchor extends Widget_Base {
 
 		$this->add_render_attribute( 'inner', 'class', 'elementor-menu-anchor' );
 		?>
-<<<<<<< HEAD
 		<div <?php $this->print_render_attribute_string( 'inner' ); ?>></div>
-=======
-		<div <?php echo $this->get_render_attribute_string( 'inner' ); ?>></div>
->>>>>>> dist
 		<?php
 	}
 

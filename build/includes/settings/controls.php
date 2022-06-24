@@ -66,7 +66,6 @@ class Settings_Controls {
 			$field['attributes']['class'] = 'regular-text';
 		}
 
-<<<<<<< HEAD
 		?>
 		<input type="<?php echo esc_attr( $field['type'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" name="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo esc_attr( get_option( $field['id'], $field['std'] ) ); ?>" <?php Utils::print_html_attributes( $field['attributes'] ); ?>/>
 		<?php
@@ -76,18 +75,6 @@ class Settings_Controls {
 		?>
 		<?php if ( ! empty( $field['desc'] ) ) : ?>
 			<p class="description"><?php echo wp_kses_post( $field['desc'] ); ?></p>
-=======
-		$attributes = Utils::render_html_attributes( $field['attributes'] );
-		?>
-		<input type="<?php echo esc_attr( $field['type'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" name="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo esc_attr( get_option( $field['id'], $field['std'] ) ); ?>" <?php echo $attributes; ?>/>
-		<?php
-		if ( ! empty( $field['sub_desc'] ) ) :
-			echo $field['sub_desc'];
-		endif;
-		?>
-		<?php if ( ! empty( $field['desc'] ) ) : ?>
-			<p class="description"><?php echo $field['desc']; ?></p>
->>>>>>> dist
 			<?php
 		endif;
 	}
@@ -106,26 +93,15 @@ class Settings_Controls {
 	private static function checkbox( array $field ) {
 		?>
 		<label>
-<<<<<<< HEAD
 			<input type="<?php echo esc_attr( $field['type'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" name="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo esc_attr( $field['value'] ); ?>"<?php checked( $field['value'], get_option( $field['id'], $field['std'] ) ); ?> />
 			<?php
 			if ( ! empty( $field['sub_desc'] ) ) :
 				echo wp_kses_post( $field['sub_desc'] );
-=======
-			<input type="<?php echo esc_attr( $field['type'] ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" name="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo $field['value']; ?>"<?php checked( $field['value'], get_option( $field['id'], $field['std'] ) ); ?> />
-			<?php
-			if ( ! empty( $field['sub_desc'] ) ) :
-				echo $field['sub_desc'];
->>>>>>> dist
 			endif;
 			?>
 		</label>
 		<?php if ( ! empty( $field['desc'] ) ) : ?>
-<<<<<<< HEAD
 			<p class="description"><?php echo wp_kses_post( $field['desc'] ); ?></p>
-=======
-			<p class="description"><?php echo $field['desc']; ?></p>
->>>>>>> dist
 			<?php
 		endif;
 	}
@@ -151,19 +127,11 @@ class Settings_Controls {
 			?>
 			<label>
 				<input type="checkbox" name="<?php echo esc_attr( $field['id'] ); ?>[]" value="<?php echo esc_attr( $option_key ); ?>"<?php checked( in_array( $option_key, $old_value ), true ); ?> />
-<<<<<<< HEAD
 				<?php echo wp_kses_post( $option_value ); ?>
 			</label><br />
 		<?php endforeach; ?>
 		<?php if ( ! empty( $field['desc'] ) ) : ?>
 			<p class="description"><?php echo wp_kses_post( $field['desc'] ); ?></p>
-=======
-				<?php echo $option_value; ?>
-			</label><br />
-		<?php endforeach; ?>
-		<?php if ( ! empty( $field['desc'] ) ) : ?>
-			<p class="description"><?php echo $field['desc']; ?></p>
->>>>>>> dist
 			<?php
 		endif;
 	}
@@ -184,28 +152,16 @@ class Settings_Controls {
 		?>
 		<select name="<?php echo esc_attr( $field['id'] ); ?>">
 			<?php if ( ! empty( $field['show_select'] ) ) : ?>
-<<<<<<< HEAD
 				<option value="">— <?php echo esc_html__( 'Select', 'elementor' ); ?> —</option>
 			<?php endif; ?>
 
 			<?php foreach ( $field['options'] as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>"<?php esc_attr( selected( $value, $old_value ) ); ?>><?php echo esc_html( $label ); ?></option>
-=======
-				<option value="">— <?php echo __( 'Select', 'elementor' ); ?> —</option>
-			<?php endif; ?>
-
-			<?php foreach ( $field['options'] as $value => $label ) : ?>
-				<option value="<?php echo esc_attr( $value ); ?>"<?php selected( $value, $old_value ); ?>><?php echo $label; ?></option>
->>>>>>> dist
 			<?php endforeach; ?>
 		</select>
 
 		<?php if ( ! empty( $field['desc'] ) ) : ?>
-<<<<<<< HEAD
 			<p class="description"><?php echo wp_kses_post( $field['desc'] ); ?></p>
-=======
-			<p class="description"><?php echo $field['desc']; ?></p>
->>>>>>> dist
 			<?php
 		endif;
 	}
@@ -277,11 +233,7 @@ class Settings_Controls {
 		if ( is_multisite() ) {
 			$roles = [
 				'super_admin' => [
-<<<<<<< HEAD
 					'name' => esc_html__( 'Super Admin', 'elementor' ),
-=======
-					'name' => __( 'Super Admin', 'elementor' ),
->>>>>>> dist
 				],
 			] + $roles;
 		}
@@ -313,7 +265,6 @@ class Settings_Controls {
 			return;
 		}
 		?>
-<<<<<<< HEAD
 		<div id="<?php echo esc_attr( $field['id'] ); ?>">
 
 			<?php // PHPCS - This is a Raw HTML control, it is not escaped on purpose. ?>
@@ -325,18 +276,6 @@ class Settings_Controls {
 			?>
 			<?php if ( ! empty( $field['desc'] ) ) : ?>
 				<p class="description"><?php echo wp_kses_post( $field['desc'] ); ?></p>
-=======
-		<div id="<?php echo $field['id']; ?>">
-
-			<div><?php echo $field['html']; ?></div>
-			<?php
-			if ( ! empty( $field['sub_desc'] ) ) :
-				echo $field['sub_desc'];
-			endif;
-			?>
-			<?php if ( ! empty( $field['desc'] ) ) : ?>
-				<p class="description"><?php echo $field['desc']; ?></p>
->>>>>>> dist
 			<?php endif; ?>
 			</div>
 		<?php

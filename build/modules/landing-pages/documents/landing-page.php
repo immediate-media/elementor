@@ -27,13 +27,10 @@ class Landing_Page extends PageBase {
 		return $properties;
 	}
 
-<<<<<<< HEAD
 	public static function get_type() {
 		return Landing_Pages_Module::DOCUMENT_TYPE;
 	}
 
-=======
->>>>>>> dist
 	/**
 	 * @access public
 	 */
@@ -46,7 +43,6 @@ class Landing_Page extends PageBase {
 	 * @static
 	 */
 	public static function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Landing Page', 'elementor' );
 	}
 
@@ -60,9 +56,6 @@ class Landing_Page extends PageBase {
 
 	public static function get_create_url() {
 		return parent::get_create_url() . '#library';
-=======
-		return __( 'Landing Page', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -84,11 +77,7 @@ class Landing_Page extends PageBase {
 			$data['settings']['template'] = Page_Templates_Module::TEMPLATE_CANVAS;
 		}
 
-<<<<<<< HEAD
 		return parent::save( $data );
-=======
-		parent::save( $data );
->>>>>>> dist
 	}
 
 	/**

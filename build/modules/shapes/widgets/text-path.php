@@ -3,16 +3,11 @@
 namespace Elementor\Modules\Shapes\Widgets;
 
 use Elementor\Controls_Manager;
-<<<<<<< HEAD
-use Elementor\Modules\Shapes\Module as Shapes_Module;
-use Elementor\Utils;
-use Elementor\Group_Control_Text_Stroke;
-=======
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Group_Control_Typography;
 use Elementor\Modules\Shapes\Module as Shapes_Module;
 use Elementor\Utils;
->>>>>>> dist
+use Elementor\Group_Control_Text_Stroke;
 use Elementor\Widget_Base;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -52,11 +47,7 @@ class TextPath extends Widget_Base {
 	 *
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Text Path', 'elementor' );
-=======
-		return __( 'Text Path', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -92,11 +83,7 @@ class TextPath extends Widget_Base {
 		$this->start_controls_section(
 			'section_content_text_path',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text Path', 'elementor' ),
-=======
-				'label' => __( 'Text Path', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -104,17 +91,10 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'text',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text', 'elementor' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
 				'default' => esc_html__( 'Add Your Curvy Text Here', 'elementor' ),
-=======
-				'label' => __( 'Text', 'elementor' ),
-				'type' => Controls_Manager::TEXT,
-				'label_block' => true,
-				'default' => __( 'Add Your Curvy Text Here', 'elementor' ),
->>>>>>> dist
 				'frontend_available' => true,
 				'render_type' => 'none',
 				'dynamic' => [
@@ -126,11 +106,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'path',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Path Type', 'elementor' ),
-=======
-				'label' => __( 'Path Type', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SELECT,
 				'options' => Shapes_Module::get_paths(),
 				'default' => 'wave',
@@ -140,11 +116,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'custom_path',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'SVG', 'elementor' ),
-=======
-				'label' => __( 'SVG', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::MEDIA,
 				'media_types' => [
 					'svg',
@@ -155,37 +127,25 @@ class TextPath extends Widget_Base {
 				'dynamic' => [
 					'active' => true,
 				],
-<<<<<<< HEAD
 				'description' => sprintf(
 					/* translators: 1: Link open tag, 2: Link close tag. */
 					esc_html__( 'Want to create custom text paths with SVG? %1$sLearn More%2$s', 'elementor' ),
 					'<a target="_blank" href="https://go.elementor.com/text-path-create-paths/">',
 					'</a>'
 				),
-=======
-				'description' => sprintf( __( 'Want to create custom text paths with SVG? <a target="_blank" href="%s">Learn More</a>', 'elementor' ), 'https://go.elementor.com/text-path-create-paths' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'link',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Link', 'elementor' ),
-=======
-				'label' => __( 'Link', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::URL,
 				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
 				],
-<<<<<<< HEAD
 				'placeholder' => esc_html__( 'Paste URL or type', 'elementor' ),
-=======
-				'placeholder' => __( 'Paste URL or type', 'elementor' ),
->>>>>>> dist
 				'frontend_available' => true,
 			]
 		);
@@ -193,16 +153,11 @@ class TextPath extends Widget_Base {
 		$this->add_responsive_control(
 			'align',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Alignment', 'elementor' ),
-=======
-				'label' => __( 'Alignment', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::CHOOSE,
 				'default' => '',
 				'options' => [
 					'left' => [
-<<<<<<< HEAD
 						'title' => esc_html__( 'Left', 'elementor' ),
 						'icon' => 'eicon-text-align-left',
 					],
@@ -212,17 +167,6 @@ class TextPath extends Widget_Base {
 					],
 					'right' => [
 						'title' => esc_html__( 'Right', 'elementor' ),
-=======
-						'title' => __( 'Left', 'elementor' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => __( 'Center', 'elementor' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => __( 'Right', 'elementor' ),
->>>>>>> dist
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -236,7 +180,6 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'text_path_direction',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text Direction', 'elementor' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
@@ -244,15 +187,6 @@ class TextPath extends Widget_Base {
 					'' => esc_html__( 'Default', 'elementor' ),
 					'rtl' => esc_html__( 'RTL', 'elementor' ),
 					'ltr' => esc_html__( 'LTR', 'elementor' ),
-=======
-				'label' => __( 'Text Direction', 'elementor' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '',
-				'options' => [
-					'' => __( 'Default', 'elementor' ),
-					'rtl' => __( 'RTL', 'elementor' ),
-					'ltr' => __( 'LTR', 'elementor' ),
->>>>>>> dist
 				],
 				'selectors' => [
 					'{{WRAPPER}}' => '--direction: {{VALUE}}',
@@ -264,17 +198,10 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'show_path',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Show Path', 'elementor' ),
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => esc_html__( 'On', 'elementor' ),
 				'label_off' => esc_html__( 'Off', 'elementor' ),
-=======
-				'label' => __( 'Show Path', 'elementor' ),
-				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'On', 'elementor' ),
-				'label_off' => __( 'Off', 'elementor' ),
->>>>>>> dist
 				'return_value' => self::DEFAULT_PATH_FILL,
 				'separator' => 'before',
 				'default' => '',
@@ -297,11 +224,7 @@ class TextPath extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_text_path',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text Path', 'elementor' ),
-=======
-				'label' => __( 'Text Path', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -309,11 +232,7 @@ class TextPath extends Widget_Base {
 		$this->add_responsive_control(
 			'size',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Size', 'elementor' ),
-=======
-				'label' => __( 'Size', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ '%', 'px' ],
 				'range' => [
@@ -349,11 +268,7 @@ class TextPath extends Widget_Base {
 		$this->add_responsive_control(
 			'rotation',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Rotate', 'elementor' ),
-=======
-				'label' => __( 'Rotate', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'deg' ],
 				'range' => [
@@ -381,17 +296,10 @@ class TextPath extends Widget_Base {
 			]
 		);
 
-<<<<<<< HEAD
-		$this->add_group_control(
-			Group_Control_Text_Stroke::get_type(),
-			[
-				'name' => 'text_stroke',
-				'selector' => '{{WRAPPER}} textPath',
-=======
 		$this->add_control(
 			'text_heading',
 			[
-				'label' => __( 'Text', 'elementor' ),
+				'label' => esc_html__( 'Text', 'elementor' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -412,19 +320,29 @@ class TextPath extends Widget_Base {
 						],
 						'size_units' => [ 'px' ],
 					],
+					// Text decoration isn't an inherited property, so it's required to explicitly
+					// target the specific `textPath` element.
+					'text_decoration' => [
+						'selectors' => [
+							'{{WRAPPER}} textPath' => 'text-decoration: {{VALUE}};',
+						],
+					],
 				],
->>>>>>> dist
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Text_Stroke::get_type(),
+			[
+				'name' => 'text_stroke',
+				'selector' => '{{WRAPPER}} textPath',
 			]
 		);
 
 		$this->add_responsive_control(
 			'word_spacing',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Word Spacing', 'elementor' ),
-=======
-				'label' => __( 'Word Spacing', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -455,11 +373,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'start_point',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Starting Point', 'elementor' ),
-=======
-				'label' => __( 'Starting Point', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ '%' ],
 				'range' => [
@@ -486,22 +400,14 @@ class TextPath extends Widget_Base {
 		$this->start_controls_tab(
 			'text_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Normal', 'elementor' ),
-=======
-				'label' => __( 'Normal', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'text_color_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -518,22 +424,14 @@ class TextPath extends Widget_Base {
 		$this->start_controls_tab(
 			'text_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Hover', 'elementor' ),
-=======
-				'label' => __( 'Hover', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'text_color_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -545,11 +443,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'hover_animation',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Hover Animation', 'elementor' ),
-=======
-				'label' => __( 'Hover Animation', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HOVER_ANIMATION,
 			]
 		);
@@ -557,11 +451,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'hover_transition',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Transition Duration', 'elementor' ),
-=======
-				'label' => __( 'Transition Duration', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0.3,
@@ -592,11 +482,7 @@ class TextPath extends Widget_Base {
 		$this->start_controls_section(
 			'section_style_path',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Path', 'elementor' ),
-=======
-				'label' => __( 'Path', 'elementor' ),
->>>>>>> dist
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'show_path!' => '',
@@ -612,22 +498,14 @@ class TextPath extends Widget_Base {
 		$this->start_controls_tab(
 			'path_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Normal', 'elementor' ),
-=======
-				'label' => __( 'Normal', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'path_fill_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -639,11 +517,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_heading_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Stroke', 'elementor' ),
-=======
-				'label' => __( 'Stroke', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -651,11 +525,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_color_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => self::DEFAULT_PATH_FILL,
 				'selectors' => [
@@ -667,11 +537,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_width_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Width', 'elementor' ),
-=======
-				'label' => __( 'Width', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 1,
@@ -698,22 +564,14 @@ class TextPath extends Widget_Base {
 		$this->start_controls_tab(
 			'path_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Hover', 'elementor' ),
-=======
-				'label' => __( 'Hover', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'path_fill_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -725,11 +583,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_heading_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Stroke', 'elementor' ),
-=======
-				'label' => __( 'Stroke', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -737,11 +591,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_color_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Color', 'elementor' ),
-=======
-				'label' => __( 'Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -753,11 +603,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_width_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Width', 'elementor' ),
-=======
-				'label' => __( 'Width', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -779,11 +625,7 @@ class TextPath extends Widget_Base {
 		$this->add_control(
 			'stroke_transition',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Transition Duration', 'elementor' ),
-=======
-				'label' => __( 'Transition Duration', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0.3,
@@ -831,22 +673,20 @@ class TextPath extends Widget_Base {
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 
-		// Get the shape SVG markup.
-		if ( 'custom' !== $settings['path'] ) {
-			$path_svg = Shapes_Module::get_path_svg( $settings['path'] );
-		} else {
-<<<<<<< HEAD
-			$path = get_attached_file( $settings['custom_path']['id'] );
-			$path_svg = Shapes_Module::read_svg( $path );
-=======
-			$url = $settings['custom_path']['url'];
-			// Get the file contents only if it's svg.
-			$path_svg = ( 'svg' === pathinfo( $url, PATHINFO_EXTENSION ) ) ? file_get_contents( $url ) : '';
->>>>>>> dist
-		}
+		// Get the path URL.
+		$path_url = ( 'custom' === $settings['path'] )
+			? wp_get_attachment_url( $settings['custom_path']['id'] )
+			: Shapes_Module::get_path_url( $settings['path'] );
 
-		// Add Text Path text.
-		$this->add_render_attribute( 'text_path', 'class', 'e-text-path' );
+		// Remove the HTTP protocol to prevent Mixed Content error.
+		$path_url = preg_replace( '/^https?:/i', '', $path_url );
+
+		// Add Text Path attributes.
+		$this->add_render_attribute( 'text_path', [
+			'class' => 'e-text-path',
+			'data-text' => esc_attr( $settings['text'] ),
+			'data-url' => esc_url( $path_url ),
+		] );
 
 		// Add hover animation.
 		if ( ! empty( $settings['hover_animation'] ) ) {
@@ -855,14 +695,7 @@ class TextPath extends Widget_Base {
 
 		// Render.
 		?>
-<<<<<<< HEAD
-		<div <?php $this->print_render_attribute_string( 'text_path' ); ?> data-text="<?php echo esc_attr( $settings['text'] ); ?>">
-			<?php Utils::print_wp_kses_extended( $path_svg, [ 'svg' ] ); ?>
-=======
-		<div <?php echo $this->get_render_attribute_string( 'text_path' ); ?>>
-			<?php echo $path_svg; ?>
->>>>>>> dist
-		</div>
+		<div <?php $this->print_render_attribute_string( 'text_path' ); ?>></div>
 		<?php
 	}
 }

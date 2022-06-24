@@ -3,10 +3,7 @@
 namespace Elementor\Core\Kits\Documents\Tabs;
 
 use Elementor\Controls_Manager;
-<<<<<<< HEAD
 use Elementor\Group_Control_Background;
-=======
->>>>>>> dist
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Group_Control_Text_Shadow;
@@ -23,11 +20,7 @@ class Theme_Style_Buttons extends Tab_Base {
 	}
 
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Buttons', 'elementor' );
-=======
-		return __( 'Buttons', 'elementor' );
->>>>>>> dist
 	}
 
 	public function get_group() {
@@ -67,11 +60,7 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->start_controls_section(
 			'section_buttons',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Buttons', 'elementor' ),
-=======
-				'label' => __( 'Buttons', 'elementor' ),
->>>>>>> dist
 				'tab' => $this->get_id(),
 			]
 		);
@@ -81,11 +70,7 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Typography', 'elementor' ),
-=======
-				'label' => __( 'Typography', 'elementor' ),
->>>>>>> dist
 				'name' => 'button_typography',
 				'selector' => $button_selector,
 			]
@@ -104,22 +89,14 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->start_controls_tab(
 			'tab_button_normal',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Normal', 'elementor' ),
-=======
-				'label' => __( 'Normal', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'button_text_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text Color', 'elementor' ),
-=======
-				'label' => __( 'Text Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'dynamic' => [],
 				'selectors' => [
@@ -128,7 +105,6 @@ class Theme_Style_Buttons extends Tab_Base {
 			]
 		);
 
-<<<<<<< HEAD
 		$this->add_group_control(
 			Group_Control_Background::get_type(),
 			[
@@ -146,16 +122,6 @@ class Theme_Style_Buttons extends Tab_Base {
 					'color_b' => [
 						'dynamic' => [],
 					],
-=======
-		$this->add_control(
-			'button_background_color',
-			[
-				'label' => __( 'Background Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
-				'dynamic' => [],
-				'selectors' => [
-					$button_selector => 'background-color: {{VALUE}};',
->>>>>>> dist
 				],
 			]
 		);
@@ -184,11 +150,7 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->add_control(
 			'button_border_radius',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Border Radius', 'elementor' ),
-=======
-				'label' => __( 'Border Radius', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -202,22 +164,14 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->start_controls_tab(
 			'tab_button_hover',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Hover', 'elementor' ),
-=======
-				'label' => __( 'Hover', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_control(
 			'button_hover_text_color',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Text Color', 'elementor' ),
-=======
-				'label' => __( 'Text Color', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::COLOR,
 				'dynamic' => [],
 				'selectors' => [
@@ -226,7 +180,6 @@ class Theme_Style_Buttons extends Tab_Base {
 			]
 		);
 
-<<<<<<< HEAD
 		$this->add_group_control(
 			Group_Control_Background::get_type(),
 			[
@@ -244,16 +197,6 @@ class Theme_Style_Buttons extends Tab_Base {
 					'color_b' => [
 						'dynamic' => [],
 					],
-=======
-		$this->add_control(
-			'button_hover_background_color',
-			[
-				'label' => __( 'Background Color', 'elementor' ),
-				'type' => Controls_Manager::COLOR,
-				'dynamic' => [],
-				'selectors' => [
-					$button_hover_selector => 'background-color: {{VALUE}};',
->>>>>>> dist
 				],
 			]
 		);
@@ -282,11 +225,7 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->add_control(
 			'button_hover_border_radius',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Border Radius', 'elementor' ),
-=======
-				'label' => __( 'Border Radius', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -302,11 +241,7 @@ class Theme_Style_Buttons extends Tab_Base {
 		$this->add_responsive_control(
 			'button_padding',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Padding', 'elementor' ),
-=======
-				'label' => __( 'Padding', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', 'em', '%' ],
 				'selectors' => [

@@ -26,7 +26,6 @@ class Root extends Base {
 		$include_site_settings = in_array( 'settings', $include, true );
 
 		if ( $include_site_settings ) {
-<<<<<<< HEAD
 			$kit_data = $kit->get_export_data();
 
 			$excluded_kit_settings_keys = [
@@ -41,27 +40,18 @@ class Root extends Base {
 			}
 
 			$this->exporter->add_json_file( 'site-settings', $kit_data );
-=======
-			$this->exporter->add_json_file( 'site-settings', $kit->get_export_data() );
->>>>>>> dist
 		}
 
 		$kit_post = $kit->get_post();
 
 		$manifest_data = [
-<<<<<<< HEAD
 			'name' => sanitize_title( $exporter_settings['kitInfo']['title'] ),
 			'title' => $exporter_settings['kitInfo']['title'],
 			'description' => $exporter_settings['kitInfo']['description'],
-=======
-			'name' => sanitize_title( $kit_post->post_title ),
-			'title' => $kit_post->post_title,
->>>>>>> dist
 			'author' => get_the_author_meta( 'display_name', $kit_post->post_author ),
 			'version' => Module::FORMAT_VERSION,
 			'elementor_version' => ELEMENTOR_VERSION,
 			'created' => gmdate( 'Y-m-d H:i:s' ),
-<<<<<<< HEAD
 			'thumbnail' => get_the_post_thumbnail_url( $kit_post ),
 			'site' => get_site_url(),
 		];
@@ -72,21 +62,12 @@ class Root extends Base {
 			unset( $kit_tabs['settings-site-identity'] );
 
 			$manifest_data['site-settings'] = array_keys( $kit_tabs );
-=======
-			'description' => $kit_post->post_excerpt,
-			'thumbnail' => get_the_post_thumbnail_url( $kit_post ),
-		];
-
-		if ( $include_site_settings ) {
-			$manifest_data['site-settings'] = array_keys( $kit->get_tabs() );
->>>>>>> dist
 		}
 
 		return $manifest_data;
 	}
 
 	protected function import( array $import_settings ) {
-<<<<<<< HEAD
 		$include = $this->importer->get_settings( 'include' );
 
 		if ( ! in_array( 'settings', $include, true ) ) {
@@ -115,32 +96,7 @@ class Root extends Base {
 
 		$new_settings = array_replace_recursive( $old_settings, $new_settings );
 
-		$kit->save( [ 'settings' => $new_settings ] );
-=======
-		if ( isset( $import_settings['site-settings'] ) ) {
-			$kit = Plugin::$instance->kits_manager->get_active_kit();
-
-			$old_settings = $kit->get_meta( PageManager::META_KEY );
-
-			if ( ! $old_settings ) {
-				$old_settings = [];
-			}
-
-			$new_settings = $this->importer->read_json_file( 'site-settings' );
-
-			$new_settings = $new_settings['settings'];
-
-			if ( $old_settings ) {
-				$new_settings['custom_colors'] = array_merge( $old_settings['custom_colors'], $new_settings['custom_colors'] );
-
-				$new_settings['custom_typography'] = array_merge( $old_settings['custom_typography'], $new_settings['custom_typography'] );
-			}
-
-			$new_settings = array_replace_recursive( $old_settings, $new_settings );
-
-			$kit->save( [ 'settings' => $new_settings ] );
-		}
->>>>>>> dist
+		Plugin::$instance->kits_manager->create_new_kit( $import_settings['title'], $new_settings );
 	}
 
 	protected function get_default_sub_directories() {
@@ -153,12 +109,20 @@ class Root extends Base {
 		}
 
 		if ( in_array( 'content', $include, true ) ) {
-			$sub_directories[] = new Content( $this->iterator, $this );
-<<<<<<< HEAD
 
-			$sub_directories[] = new WP_Content( $this->iterator, $this );
-=======
->>>>>>> dist
+			$custom_post_types = $this->iterator->get_settings( 'selectedCustomPostTypes' );
+
+			$sub_directories[] = new Content( $this->iterator, $this );
+
+			$sub_directories[] = new WP_Content( $this->iterator, $this, $custom_post_types );
+
+			if ( ! empty( $custom_post_types ) ) {
+				$sub_directories[] = new Custom_Post_Type_Title( $this->iterator, $this, $custom_post_types );
+			}
+		}
+
+		if ( in_array( 'plugins', $include, true ) ) {
+			$sub_directories[] = new Plugins( $this->iterator, $this );
 		}
 
 		return $sub_directories;

@@ -39,11 +39,7 @@ class Widget_Sidebar extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Sidebar', 'elementor' );
-=======
-		return __( 'Sidebar', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -88,15 +84,9 @@ class Widget_Sidebar extends Widget_Base {
 		$options = [];
 
 		if ( ! $wp_registered_sidebars ) {
-<<<<<<< HEAD
 			$options[''] = esc_html__( 'No sidebars were found', 'elementor' );
 		} else {
 			$options[''] = esc_html__( 'Choose Sidebar', 'elementor' );
-=======
-			$options[''] = __( 'No sidebars were found', 'elementor' );
-		} else {
-			$options[''] = __( 'Choose Sidebar', 'elementor' );
->>>>>>> dist
 
 			foreach ( $wp_registered_sidebars as $sidebar_id => $sidebar ) {
 				$options[ $sidebar_id ] = $sidebar['name'];
@@ -109,7 +99,6 @@ class Widget_Sidebar extends Widget_Base {
 		$this->start_controls_section(
 			'section_sidebar',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Sidebar', 'elementor' ),
 			]
 		);
@@ -123,18 +112,6 @@ class Widget_Sidebar extends Widget_Base {
 				'options' => $options,
 			]
 		);
-=======
-				'label' => __( 'Sidebar', 'elementor' ),
-			]
-		);
-
-		$this->add_control( 'sidebar', [
-			'label' => __( 'Choose Sidebar', 'elementor' ),
-			'type' => Controls_Manager::SELECT,
-			'default' => $default_key,
-			'options' => $options,
-		] );
->>>>>>> dist
 
 		$this->end_controls_section();
 	}

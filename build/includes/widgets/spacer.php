@@ -39,11 +39,7 @@ class Widget_Spacer extends Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Spacer', 'elementor' );
-=======
-		return __( 'Spacer', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -102,22 +98,14 @@ class Widget_Spacer extends Widget_Base {
 		$this->start_controls_section(
 			'section_spacer',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Spacer', 'elementor' ),
-=======
-				'label' => __( 'Spacer', 'elementor' ),
->>>>>>> dist
 			]
 		);
 
 		$this->add_responsive_control(
 			'space',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'Space', 'elementor' ),
-=======
-				'label' => __( 'Space', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 50,
@@ -134,7 +122,7 @@ class Widget_Spacer extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-spacer-inner' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .elementor-spacer-inner' => '--spacer-size: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -142,11 +130,7 @@ class Widget_Spacer extends Widget_Base {
 		$this->add_control(
 			'view',
 			[
-<<<<<<< HEAD
 				'label' => esc_html__( 'View', 'elementor' ),
-=======
-				'label' => __( 'View', 'elementor' ),
->>>>>>> dist
 				'type' => Controls_Manager::HIDDEN,
 				'default' => 'traditional',
 			]

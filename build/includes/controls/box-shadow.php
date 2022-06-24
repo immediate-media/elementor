@@ -65,38 +65,22 @@ class Control_Box_Shadow extends Control_Base_Multiple {
 	public function get_sliders() {
 		return [
 			'horizontal' => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Horizontal', 'elementor' ),
-=======
-				'label' => __( 'Horizontal', 'elementor' ),
->>>>>>> dist
 				'min' => -100,
 				'max' => 100,
 			],
 			'vertical' => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Vertical', 'elementor' ),
-=======
-				'label' => __( 'Vertical', 'elementor' ),
->>>>>>> dist
 				'min' => -100,
 				'max' => 100,
 			],
 			'blur' => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Blur', 'elementor' ),
-=======
-				'label' => __( 'Blur', 'elementor' ),
->>>>>>> dist
 				'min' => 0,
 				'max' => 100,
 			],
 			'spread' => [
-<<<<<<< HEAD
 				'label' => esc_html__( 'Spread', 'elementor' ),
-=======
-				'label' => __( 'Spread', 'elementor' ),
->>>>>>> dist
 				'min' => -100,
 				'max' => 100,
 			],
@@ -117,18 +101,13 @@ class Control_Box_Shadow extends Control_Base_Multiple {
 		?>
 		<div class="elementor-shadow-box">
 			<div class="elementor-control-field elementor-color-picker-wrapper">
-<<<<<<< HEAD
 				<label class="elementor-control-title"><?php echo esc_html__( 'Color', 'elementor' ); ?></label>
-=======
-				<label class="elementor-control-title"><?php echo __( 'Color', 'elementor' ); ?></label>
->>>>>>> dist
 				<div class="elementor-control-input-wrapper elementor-control-unit-1">
 					<div class="elementor-color-picker-placeholder"></div>
 				</div>
 			</div>
 			<?php
 			foreach ( $this->get_sliders() as $slider_name => $slider ) :
-<<<<<<< HEAD
 				?>
 				<div class="elementor-shadow-slider elementor-control-type-slider">
 					<label for="<?php $this->print_control_uid( $slider_name ); ?>" class="elementor-control-title"><?php
@@ -139,16 +118,6 @@ class Control_Box_Shadow extends Control_Base_Multiple {
 						<div class="elementor-slider" data-input="<?php echo esc_attr( $slider_name ); ?>"></div>
 						<div class="elementor-slider-input elementor-control-unit-2">
 							<input id="<?php $this->print_control_uid( $slider_name ); ?>" type="number" min="<?php echo esc_attr( $slider['min'] ); ?>" max="<?php echo esc_attr( $slider['max'] ); ?>" data-setting="<?php echo esc_attr( $slider_name ); ?>"/>
-=======
-				$control_uid = $this->get_control_uid( $slider_name );
-				?>
-				<div class="elementor-shadow-slider elementor-control-type-slider">
-					<label for="<?php echo esc_attr( $control_uid ); ?>" class="elementor-control-title"><?php echo $slider['label']; ?></label>
-					<div class="elementor-control-input-wrapper">
-						<div class="elementor-slider" data-input="<?php echo esc_attr( $slider_name ); ?>"></div>
-						<div class="elementor-slider-input elementor-control-unit-2">
-							<input id="<?php echo esc_attr( $control_uid ); ?>" type="number" min="<?php echo esc_attr( $slider['min'] ); ?>" max="<?php echo esc_attr( $slider['max'] ); ?>" data-setting="<?php echo esc_attr( $slider_name ); ?>"/>
->>>>>>> dist
 						</div>
 					</div>
 				</div>

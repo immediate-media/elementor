@@ -198,12 +198,12 @@ class baseTabs extends elementorModules.frontend.handlers.Base {
 
       case 'Home':
         event.preventDefault();
-        $tabs.first().focus();
+        $tabs.first().trigger('focus');
         return;
 
       case 'End':
         event.preventDefault();
-        $tabs.last().focus();
+        $tabs.last().trigger('focus');
         return;
 
       default:
@@ -217,9 +217,9 @@ class baseTabs extends elementorModules.frontend.handlers.Base {
     if (nextTab) {
       nextTab.focus();
     } else if (-1 === tabIndex + direction) {
-      $tabs.last().focus();
+      $tabs.last().trigger('focus');
     } else {
-      $tabs.first().focus();
+      $tabs.first().trigger('focus');
     }
   }
 
@@ -251,7 +251,7 @@ class baseTabs extends elementorModules.frontend.handlers.Base {
       'aria-selected': 'true',
       'aria-expanded': 'true'
     });
-    $requestedContent[settings.showTabFn](animationDuration, () => elementorFrontend.elements.$window.trigger('resize'));
+    $requestedContent[settings.showTabFn](animationDuration, () => elementorFrontend.elements.$window.trigger('elementor-pro/motion-fx/recalc'));
     $requestedContent.removeAttr('hidden');
   }
 
@@ -481,6 +481,13 @@ class ImageCarousel extends elementorModules.frontend.handlers.SwiperBase {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
+      };
+    }
+
+    if ('yes' === elementSettings.lazyload) {
+      swiperOptions.lazy = {
+        loadPrevNext: true,
+        loadPrevNextAmount: 1
       };
     }
 
@@ -796,7 +803,8 @@ class Video extends elementorModules.frontend.handlers.Base {
       selectors: {
         imageOverlay: '.elementor-custom-embed-image-overlay',
         video: '.elementor-video',
-        videoIframe: '.elementor-video-iframe'
+        videoIframe: '.elementor-video-iframe',
+        playIcon: '.elementor-custom-embed-play'
       }
     };
   }
@@ -806,7 +814,8 @@ class Video extends elementorModules.frontend.handlers.Base {
     return {
       $imageOverlay: this.$element.find(selectors.imageOverlay),
       $video: this.$element.find(selectors.video),
-      $videoIframe: this.$element.find(selectors.videoIframe)
+      $videoIframe: this.$element.find(selectors.videoIframe),
+      $playIcon: this.$element.find(selectors.playIcon)
     };
   }
 
@@ -904,6 +913,15 @@ class Video extends elementorModules.frontend.handlers.Base {
 
   bindEvents() {
     this.elements.$imageOverlay.on('click', this.handleVideo.bind(this));
+    this.elements.$playIcon.on('keydown', event => {
+      const playKeys = [13, // Enter key.
+      32 // Space bar key.
+      ];
+
+      if (playKeys.includes(event.keyCode)) {
+        this.handleVideo();
+      }
+    });
   }
 
   onInit() {
@@ -1490,7 +1508,8 @@ module.exports = elementorModules.ViewModule.extend({
           image: options.url,
           index: 0,
           title: options.title,
-          description: options.description
+          description: options.description,
+          hash: options.hash
         }];
         options.slideshow = {
           slides,
@@ -1528,6 +1547,7 @@ module.exports = elementorModules.ViewModule.extend({
         type: 'image',
         id: slideshowID,
         url: element.href,
+        hash: element.getAttribute('e-action-hash'),
         title: element.dataset.elementorLightboxTitle,
         description: element.dataset.elementorLightboxDescription,
         modalOptions: {
@@ -1566,12 +1586,14 @@ module.exports = elementorModules.ViewModule.extend({
       }, options.videoParams);
       $videoElement = $('<video>', videoParams);
     } else {
-      let apiProvider = elementorFrontend.utils.baseVideoLoader;
+      let apiProvider;
 
       if (-1 !== options.url.indexOf('vimeo.com')) {
         apiProvider = elementorFrontend.utils.vimeo;
-      } else if (options.url.match(/^(?:https?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com)/)) {
+      } else if (options.url.match(/^(?:https?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com|youtube-nocookie\.com)/)) {
         apiProvider = elementorFrontend.utils.youtube;
+      } else {
+        return;
       }
 
       $videoElement = $('<iframe>', {
@@ -1631,7 +1653,7 @@ module.exports = elementorModules.ViewModule.extend({
     $.each(socialNetworks, (key, data) => {
       const networkLabel = data.label,
             $link = $('<a>', {
-        href: this.createShareLink(key, itemUrl),
+        href: this.createShareLink(key, itemUrl, $activeSlide.attr('e-action-hash')),
         target: '_blank'
       }).text(networkLabel),
             $socialNetworkIconElement = this.isFontIconSvgExperiment ? $(data.iconElement.element) : $('<i>', {
@@ -1654,17 +1676,13 @@ module.exports = elementorModules.ViewModule.extend({
 
     return $linkList;
   },
-  createShareLink: function (networkName, itemUrl) {
+  createShareLink: function (networkName, itemUrl, hash = null) {
     const options = {};
 
     if ('pinterest' === networkName) {
       options.image = encodeURIComponent(itemUrl);
     } else {
-      const hash = elementorFrontend.utils.urlActions.createActionHash('lightbox', {
-        id: this.id,
-        url: itemUrl
-      });
-      options.url = encodeURIComponent(location.href.replace(/#.*/, '')) + hash;
+      options.url = encodeURIComponent(location.href.replace(/#.*/, '') + hash);
     }
 
     return ShareLink.getNetworkLink(networkName, options);
@@ -1952,6 +1970,10 @@ module.exports = elementorModules.ViewModule.extend({
         $slide.append($zoomContainer);
       }
 
+      if (slide.hash) {
+        $slide.attr('e-action-hash', slide.hash);
+      }
+
       $slidesWrapper.append($slide);
     });
     this.elements.$container = $container;
@@ -2159,7 +2181,7 @@ module.exports = elementorModules.ViewModule.extend({
       if ('youtube' === videoType) {
         this.prepareYTVideo(apiObject, videoID, $videoContainer, $videoWrapper, $playIcon);
       } else if ('vimeo' === videoType) {
-        this.prepareVimeoVideo(apiObject, videoID, $videoContainer, $videoWrapper, $playIcon);
+        this.prepareVimeoVideo(apiObject, videoURL, $videoContainer, $videoWrapper, $playIcon);
       }
     });
     $playIcon.addClass(classes.playing).removeClass(classes.hidden);
@@ -2195,10 +2217,10 @@ module.exports = elementorModules.ViewModule.extend({
       }
     });
   },
-  prepareVimeoVideo: function (Vimeo, videoId, $videoContainer, $videoWrapper, $playIcon) {
+  prepareVimeoVideo: function (Vimeo, videoURL, $videoContainer, $videoWrapper, $playIcon) {
     const classes = this.getSettings('classes'),
           vimeoOptions = {
-      id: videoId,
+      url: videoURL,
       autoplay: true,
       transparent: false,
       playsinline: false
@@ -2246,7 +2268,8 @@ module.exports = elementorModules.ViewModule.extend({
         image: this.href,
         index: slideIndex,
         title: this.dataset.elementorLightboxTitle,
-        description: this.dataset.elementorLightboxDescription
+        description: this.dataset.elementorLightboxDescription,
+        hash: this.getAttribute('e-action-hash')
       };
 
       if (slideVideo) {

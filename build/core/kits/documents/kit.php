@@ -36,20 +36,12 @@ class Kit extends PageBase {
 		return $properties;
 	}
 
-<<<<<<< HEAD
 	public static function get_type() {
-=======
-	public function get_name() {
->>>>>>> dist
 		return 'kit';
 	}
 
 	public static function get_title() {
-<<<<<<< HEAD
 		return esc_html__( 'Kit', 'elementor' );
-=======
-		return __( 'Kit', 'elementor' );
->>>>>>> dist
 	}
 
 	/**
@@ -59,7 +51,6 @@ class Kit extends PageBase {
 		return $this->tabs;
 	}
 
-<<<<<<< HEAD
 	/**
 	 * Retrieve a tab by ID.
 	 *
@@ -71,8 +62,6 @@ class Kit extends PageBase {
 		return self::get_items( $this->get_tabs(), $id );
 	}
 
-=======
->>>>>>> dist
 	protected function get_have_a_look_url() {
 		return '';
 	}
@@ -153,7 +142,6 @@ class Kit extends PageBase {
 	 * @access protected
 	 */
 	protected function register_controls() {
-<<<<<<< HEAD
 		$is_edit_mode = Plugin::$instance->editor->is_edit_mode();
 
 		if ( ! $is_edit_mode ) {
@@ -164,31 +152,21 @@ class Kit extends PageBase {
 			Plugin::$instance->breakpoints->set_responsive_control_duplication_mode( 'on' );
 		}
 
-=======
->>>>>>> dist
 		$this->register_document_controls();
 
 		foreach ( $this->tabs as $tab ) {
 			$tab->register_controls();
 		}
-<<<<<<< HEAD
 
 		if ( ! $is_edit_mode ) {
 			Plugin::$instance->breakpoints->set_responsive_control_duplication_mode( $initial_responsive_controls_duplication_mode );
 		}
-=======
->>>>>>> dist
 	}
 
 	protected function get_post_statuses() {
 		return [
-<<<<<<< HEAD
 			'draft' => sprintf( '%s (%s)', esc_html__( 'Disabled', 'elementor' ), esc_html__( 'Draft', 'elementor' ) ),
 			'publish' => esc_html__( 'Published', 'elementor' ),
-=======
-			'draft' => sprintf( '%s (%s)', __( 'Disabled', 'elementor' ), __( 'Draft', 'elementor' ) ),
-			'publish' => __( 'Published', 'elementor' ),
->>>>>>> dist
 		];
 	}
 
@@ -244,7 +222,6 @@ class Kit extends PageBase {
 			'settings-background' => Tabs\Settings_Background::class,
 			'settings-layout' => Tabs\Settings_Layout::class,
 			'settings-lightbox' => Tabs\Settings_Lightbox::class,
-<<<<<<< HEAD
 		];
 
 		// Add the Page Transitions tab only if the experiment exists.
@@ -255,11 +232,6 @@ class Kit extends PageBase {
 		// Add the Custom CSS tab at last.
 		$tabs['settings-custom-css'] = Tabs\Settings_Custom_CSS::class;
 
-=======
-			'settings-custom-css' => Tabs\Settings_Custom_CSS::class,
-		];
-
->>>>>>> dist
 		foreach ( $tabs as $id => $class ) {
 			$this->register_tab( $id, $class );
 		}
