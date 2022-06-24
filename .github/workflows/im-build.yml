@@ -2,7 +2,7 @@ name: Build-Dist
 
 on:
   push:
-    branches: [ master, build-fix ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -32,17 +32,17 @@ jobs:
           grunt build
           sed -i -E "s/Version: (.*?)/Version: ${PACKAGE_VERSION}-${PLUGIN_VERSION}/g" build/elementor.php
           sed -i -E "s/ELEMENTOR_VERSION', '(.*?)'/ELEMENTOR_VERSION', '${PACKAGE_VERSION}-${PLUGIN_VERSION}'/g" build/elementor.php
-#       - name: Commit Assets
-#         uses: EndBug/add-and-commit@v4
-#         with:
-#           message: "Updating to latest version"
-#           ref: "update/latest"
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.TOKEN }} # Leave this line unchanged
-#       - name: Create PR
-#         uses: thomaseizinger/create-pull-request@master
-#         with:
-#           base: "dist"
-#           head: "update/latest"
-#           title: "Updating to latest version"
-#           github_token: ${{ secrets.TOKEN }}
+      - name: Commit Assets
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: "Updating to latest version"
+          ref: "update/latest"
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }} # Leave this line unchanged
+      - name: Create PR
+        uses: thomaseizinger/create-pull-request@master
+        with:
+          base: "dist"
+          head: "update/latest"
+          title: "Updating to latest version"
+          github_token: ${{ secrets.TOKEN }}
