@@ -7,14 +7,14 @@ vendor/
 local-site/
 tmp/
 
-# build outputs
-build/
-assets/css/
-assets/js/
-assets/lib/swiper/css/swiper*.css
+# # build outputs
+# build/
+# assets/css/
+# assets/js/
+# assets/lib/swiper/css/swiper*.css
 *.log
-*.map
-/templates/
+# *.map
+# /templates/
 
 # build tools lock
 composer.lock
