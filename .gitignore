@@ -17,6 +17,9 @@ assets/lib/swiper/css/swiper*.css
 /templates/
 
 # build tools lock
+composer.lock
+
+# package.lock
 yarn.lock
 
 # IDE's
