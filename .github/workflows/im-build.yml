@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@master
-      - name: Install Node.js 14.x
-        uses: actions/setup-node@v2
+      - name: Install Node.js 18.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 18.x
       - name: Install Dependencies
         run: npm install
       - name: Build Assets
@@ -35,7 +35,7 @@ jobs:
       - name: Commit Assets
         uses: EndBug/add-and-commit@v4
         with:
-          message: "Updating to latest version"
+          message: "Updating to the latest version"
           ref: "update/latest"
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }} # Leave this line unchanged
@@ -44,5 +44,5 @@ jobs:
         with:
           base: "dist"
           head: "update/latest"
-          title: "Updating to latest version"
+          title: "Updating to the latest version"
           github_token: ${{ secrets.TOKEN }}
