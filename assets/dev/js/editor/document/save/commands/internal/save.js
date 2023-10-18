@@ -1,6 +1,4 @@
-import CommandInternalBase from 'elementor-api/modules/command-internal-base';
-
-export class Save extends CommandInternalBase {
+export class Save extends $e.modules.CommandInternalBase {
 	apply( args ) {
 		const { status = 'draft', force = false, onSuccess = null, document = elementor.documents.getCurrent() } = args;
 
@@ -11,6 +9,8 @@ export class Save extends CommandInternalBase {
 		const container = document.container,
 			settings = container.settings.toJSON( { remove: [ 'default' ] } ),
 			oldStatus = container.settings.get( 'post_status' );
+
+		this.addPersistentSettingsToPayload( settings, container );
 
 		// TODO: Remove - Backwards compatibility.
 		elementor.saver.trigger( 'before:save', args )
@@ -35,14 +35,17 @@ export class Save extends CommandInternalBase {
 			currentHistoryId: document.history.currentItem.get( 'id' ),
 		};
 
-		const deferred = elementorCommon.ajax.addRequest( 'save_builder', {
+		const deferred = elementorCommon.ajax.addRequest(
+			'save_builder',
+			{
 				data: {
 					status,
-					elements: elements,
-					settings: settings,
+					elements,
+					settings,
 				},
 				error: ( data ) => this.onSaveError( data, status, document ),
-			} ).then( ( data ) => this.onSaveSuccess( data, successArgs, onSuccess ) );
+			} )
+			.then( ( data ) => this.onSaveSuccess( data, successArgs, onSuccess ) );
 
 		// TODO: Remove - Backwards compatibility
 		elementor.saver.trigger( 'save', args );
@@ -145,12 +148,20 @@ export class Save extends CommandInternalBase {
 		}
 
 		elementor.notifications.showToast( {
-			message: message,
+			message,
 		} );
 	}
 
 	onAfterAjax( document ) {
 		document.editor.isSaving = false;
+	}
+
+	addPersistentSettingsToPayload( settings, container ) {
+		elementor?.config?.persistent_keys?.forEach( ( setting ) => {
+			if ( container.settings.defaults.hasOwnProperty( setting ) && ! settings.hasOwnProperty( setting ) ) {
+				settings[ setting ] = container.settings.defaults[ setting ];
+			}
+		} );
 	}
 }
 

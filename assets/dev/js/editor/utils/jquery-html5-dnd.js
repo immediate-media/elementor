@@ -1,5 +1,7 @@
 /**
  * HTML5 - Drag and Drop
+ *
+ * @param {jQuery} $
  */
 ( function( $ ) {
 	var hasFullDataTransferSupport = function( event ) {
@@ -46,7 +48,7 @@
 		var onDragStart = function( event ) {
 			var groups = settings.groups || [],
 				dataContainer = {
-					groups: groups,
+					groups,
 				};
 
 			if ( hasFullDataTransferSupport( event ) ) {
@@ -203,14 +205,34 @@
 				return;
 			}
 
-			// Fix placeholder placement for Container with `flex-direction: row`.
 			const $currentElement = $( currentElement ),
-				isRowContainer = $currentElement.parents( '.e-container--row' ).length,
-				isFirstInsert = $currentElement.hasClass( 'elementor-first-add' );
+				isGridRowContainer = $currentElement.parents( '.e-grid.e-con--row' ).length,
+				isFirstInsert = $currentElement.hasClass( 'elementor-first-add' ),
+				$parentContainer = $currentElement.closest( '.e-con' ).parent().closest( '.e-con' );
 
+			// Make sure that the previous placeholder is removed before inserting a new one.
+			$parentContainer.find( '.elementor-widget-placeholder' )?.remove();
+
+			// Fix placeholder placement for Grid Container with `grid-auto-flow: row`.
+			if ( isGridRowContainer ) {
+				elementsCache.$placeholder.removeClass( 'e-dragging-left e-dragging-right' );
+			}
+
+			if ( isGridRowContainer && ! isFirstInsert ) {
+				const insertMethod = [ 'bottom', 'right' ].includes( currentSide ) ? 'appendTo' : 'prependTo',
+					gridPlaceHolder = elementsCache.$placeholder.addClass( 'e-dragging-' + currentSide );
+				gridPlaceHolder[ insertMethod ]( currentElement );
+
+				return;
+			}
+
+			// Fix placeholder placement for Flex Container with `flex-direction: row`.
+			const isRowContainer = $currentElement.parents( '.e-con--row' ).length,
+				isInnerContainer = $currentElement.hasClass( 'e-con-inner' );
 			if ( isRowContainer && ! isFirstInsert ) {
-				const insertMethod = [ 'bottom', 'right' ].includes( currentSide ) ? 'after' : 'before';
-				$currentElement[ insertMethod ]( elementsCache.$placeholder );
+				const insertMethod = [ 'bottom', 'right' ].includes( currentSide ) ? 'after' : 'before',
+					$rowTargetElement = isInnerContainer ? $currentElement.closest( '.e-con' ) : $currentElement;
+				$rowTargetElement[ insertMethod ]( elementsCache.$placeholder );
 
 				return;
 			}
@@ -244,11 +266,11 @@
 							if ( -1 !== draggableGroups.groups.indexOf( groupName ) ) {
 								isGroupMatch = true;
 
-								return false; // stops the forEach from extra loops
+								return false; // Stops the forEach from extra loops
 							}
 						} );
-					} catch ( e ) {
-					}
+						// eslint-disable-next-line no-empty
+					} catch ( e ) {}
 				} );
 
 				if ( ! isGroupMatch ) {
@@ -298,7 +320,7 @@
 
 			setSide( event );
 
-			$e.run( 'editor/browser-import/validate', {
+			$e.internal( 'editor/browser-import/validate', {
 				input: event.originalEvent.dataTransfer.items,
 			} ).then( ( importAllowed ) => {
 				isDroppingAllowedState = isDroppingAllowed( event ) || importAllowed;
@@ -440,6 +462,9 @@
 						$.removeData( this, pluginName );
 					}
 
+					return;
+				} else if ( 'destroy' === options ) {
+					// Escape the loop when an element is destroyed before initialisation.
 					return;
 				}
 

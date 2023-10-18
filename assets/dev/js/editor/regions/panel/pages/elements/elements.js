@@ -18,6 +18,7 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 	regions: {
 		elements: '#elementor-panel-elements-wrapper',
 		search: '#elementor-panel-elements-search-area',
+		notice: '#elementor-panel-elements-notice-area',
 	},
 
 	regionViews: {},
@@ -26,7 +27,7 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 
 	categoriesCollection: null,
 
-	initialize: function() {
+	initialize() {
 		this.listenTo( elementor.channels.panelElements, 'element:selected', this.destroy );
 
 		this.initElementsCollection();
@@ -36,7 +37,7 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 		this.initRegionViews();
 	},
 
-	initRegionViews: function() {
+	initRegionViews() {
 		var regionViews = {
 			elements: {
 				region: this.elements,
@@ -58,39 +59,35 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 			},
 		};
 
-		this.regionViews = elementor.hooks.applyFilters( 'panel/elements/regionViews', regionViews );
+		this.regionViews = elementor.hooks.applyFilters( 'panel/elements/regionViews', regionViews, {
+			notice: this.notice,
+			elements: this.elements,
+			search: this.search,
+		} );
 	},
 
-	initElementsCollection: function() {
-		const elementsCollection = new PanelElementsElementsCollection(),
-			isContainerActive = elementorCommon.config.experimentalFeatures.container;
+	initElementsCollection() {
+		const elementsCollection = new PanelElementsElementsCollection();
+
+		// Deprecated widget handling.
+		Object.entries( elementor.widgetsCache ).forEach( ( [ widgetName, widgetData ] ) => {
+			if ( widgetData.deprecation && elementor.widgetsCache[ widgetData.deprecation.replacement ] ) {
+				// Hide the old version.
+				elementor.widgetsCache[ widgetName ].show_in_panel = false;
+			}
+		} );
 
 		// TODO: Change the array from server syntax, and no need each loop for initialize
-		_.each( elementor.widgetsCache, function( widget ) {
+		_.each( elementor.widgetsCache, ( widget ) => {
 			if ( elementor.config.document.panel.widgets_settings[ widget.widget_type ] ) {
 				widget = _.extend( widget, elementor.config.document.panel.widgets_settings[ widget.widget_type ] );
 			}
 
-			if ( ! widget.show_in_panel ) {
+			if ( ! this.shouldAddWidget( widget ) ) {
 				return;
 			}
 
-			// Don't register the `Inner Section` if the Container experiment is enabled.
-			if ( 'inner-section' === widget.name && isContainerActive ) {
-				return;
-			}
-
-			elementsCollection.add( {
-				title: widget.title,
-				elType: widget.elType,
-				categories: widget.categories,
-				keywords: widget.keywords,
-				icon: widget.icon,
-				widgetType: widget.widget_type,
-				custom: widget.custom,
-				editable: widget.editable,
-				hideOnSearch: widget.hide_on_search,
-			} );
+			elementsCollection.add( this.getCollectionItem( widget ) );
 		} );
 
 		jQuery.each( elementor.config.promotionWidgets, ( index, widget ) => {
@@ -103,10 +100,38 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 			} );
 		} );
 
+		if ( elementorCommon.config.experimentalFeatures.container_grid ) {
+			jQuery.each( elementor.config.elementsPresets, ( index, widget ) => {
+				const originalWidget = elementor.widgetsCache[ widget.replacements.custom.originalWidget ],
+					replacements = widget.replacements,
+					presetWidget = this.deepMerge( originalWidget, replacements );
+
+				if ( ! this.shouldAddWidget( presetWidget ) ) {
+					return;
+				}
+
+				elementsCollection.add( this.getCollectionItem( presetWidget ) );
+			} );
+		}
+
 		this.elementsCollection = elementsCollection;
 	},
 
-	initCategoriesCollection: function() {
+	getCollectionItem( item ) {
+		return {
+			title: item.title,
+			elType: item.elType,
+			categories: item.categories,
+			keywords: item.keywords,
+			icon: item.icon,
+			widgetType: item.widget_type,
+			custom: item.custom,
+			editable: item.editable,
+			hideOnSearch: item.hide_on_search,
+		};
+	},
+
+	initCategoriesCollection() {
 		var categories = {};
 
 		this.elementsCollection.each( function( element ) {
@@ -137,9 +162,9 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 				icon: categoryConfig.icon,
 				defaultActive: categoryConfig.active,
 				sort: categoryConfig.sort,
-				hideIfEmpty: undefined !== categoryConfig.hideIfEmpty ?
-					categoryConfig.hideIfEmpty :
-					true,
+				hideIfEmpty: undefined !== categoryConfig.hideIfEmpty
+					? categoryConfig.hideIfEmpty
+					: true,
 				items: categories[ categoryName ],
 			} );
 		} );
@@ -147,49 +172,85 @@ PanelElementsLayoutView = Marionette.LayoutView.extend( {
 		this.categoriesCollection = categoriesCollection;
 	},
 
-	showView: function( viewName ) {
+	shouldAddWidget( widget ) {
+		const isContainerActive = elementorCommon.config.experimentalFeatures.container;
+
+		return widget.show_in_panel && ( 'inner-section' !== widget.name || ! isContainerActive );
+	},
+
+	deepMerge( originalObj, replacementObj ) {
+		const mergedObj = { ...originalObj };
+
+		for ( const key in replacementObj ) {
+			this.deepMergeKey( mergedObj, originalObj, replacementObj, key );
+		}
+
+		return mergedObj;
+	},
+
+	deepMergeKey( mergedObj, originalObj, replacementObj, key ) {
+		if ( ! replacementObj.hasOwnProperty( key ) ) {
+			return;
+		}
+
+		const isMergeableObject = (
+			'object' === typeof replacementObj[ key ] &&
+			null !== replacementObj[ key ] &&
+			originalObj.hasOwnProperty( key ) &&
+			'object' === typeof originalObj[ key ] &&
+			null !== originalObj[ key ]
+		);
+
+		if ( isMergeableObject ) {
+			mergedObj[ key ] = this.deepMerge( originalObj[ key ], replacementObj[ key ] );
+		} else {
+			mergedObj[ key ] = replacementObj[ key ];
+		}
+	},
+
+	showView( viewName ) {
 		var viewDetails = this.regionViews[ viewName ],
 			options = viewDetails.options || {};
 
 		viewDetails.region.show( new viewDetails.view( options ) );
 	},
 
-	clearSearchInput: function() {
+	clearSearchInput() {
 		this.getChildView( 'search' ).clearInput();
 	},
 
-	changeFilter: function( filterValue ) {
+	changeFilter( filterValue ) {
 		elementor.channels.panelElements
 			.reply( 'filter:value', filterValue )
 			.trigger( 'filter:change' );
 	},
 
-	clearFilters: function() {
+	clearFilters() {
 		this.changeFilter( null );
 		this.clearSearchInput();
 	},
 
-	focusSearch: function() {
-		if ( ! elementor.userCan( 'design' ) || ! this.search /* default panel is not elements */ || ! this.search.currentView /* on global elements empty */ ) {
+	focusSearch() {
+		if ( ! elementor.userCan( 'design' ) || ! this.search /* Default panel is not elements */ || ! this.search.currentView /* On global elements empty */ ) {
 			return;
 		}
 
 		this.search.currentView.ui.input.focus();
 	},
 
-	onChildviewChildrenRender: function() {
+	onChildviewChildrenRender() {
 		elementor.getPanelView().updateScrollbar();
 	},
 
-	onChildviewSearchChangeInput: function( child ) {
+	onChildviewSearchChangeInput( child ) {
 		this.changeFilter( child.ui.input.val(), 'search' );
 	},
 
-	onDestroy: function() {
+	onDestroy() {
 		elementor.channels.panelElements.reply( 'filter:value', null );
 	},
 
-	onShow: function() {
+	onShow() {
 		this.showView( 'search' );
 
 		if ( this.options.autoFocusSearch ) {

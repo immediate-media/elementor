@@ -1,0 +1,1 @@
+{"version":3,"file":"editor-loader-v1.js","mappings":";;;;;;;;AAAAA,MAAM,CAACC,SAAS,CAACC,KAAK,CAAC,CAAC,C","sources":["../../core/editor/loader/v1/js/editor-loader-v1.js"],"sourcesContent":["window.elementor.start();\n"],"names":["window","elementor","start"],"sourceRoot":""}

@@ -2,7 +2,7 @@ import { Create } from 'elementor-document/elements/commands';
 
 export default class Helper {
 	static createSectionColumns( containers, columns, options, structure = false ) {
-		containers.forEach( ( /**Container*/ container ) => {
+		containers.forEach( ( /** Container*/ container ) => {
 			for ( let loopIndex = 0; loopIndex < columns; loopIndex++ ) {
 				const model = {
 					id: elementorCommon.helpers.getUniqueId(),
@@ -14,7 +14,7 @@ export default class Helper {
 				/**
 				 * TODO: Try improve performance of using 'document/elements/create` instead of manual create.
 				 */
-				container.view.addChildModel( model );
+				container.view.addElement( model, { edit: false } );
 
 				/**
 				 * Manual history & not using of `$e.run('document/elements/create')`
@@ -39,7 +39,7 @@ export default class Helper {
 			} );
 		} else if ( columns ) {
 			containers.forEach( ( /* Container */ container ) =>
-				container.view.resetLayout()
+				container.view.resetLayout(),
 			);
 
 			// Focus on last container.

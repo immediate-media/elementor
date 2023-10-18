@@ -1,6 +1,5 @@
 import { CREATABLE, DELETABLE, EDITABLE, READABLE } from 'elementor-api/core/data';
 import ComponentBase from 'elementor-api/modules/component-base';
-import CommandData from 'elementor-api/modules/command-data';
 import * as eData from 'elementor/tests/qunit/mock/e-data';
 
 // Test cache module.
@@ -123,24 +122,24 @@ jQuery( () => {
 
 		QUnit.test( 'validateRequestData', ( assert ) => {
 			assert.throws( () => {
-					$e.data.validateRequestData( {} );
-				},
-				new Error( 'component is required.' )
+				$e.data.validateRequestData( {} );
+			},
+			new Error( 'component is required.' ),
 			);
 			assert.throws( () => {
-					$e.data.validateRequestData( {
-						component: {},
-					} );
-				},
-				new Error( 'command is required.' )
+				$e.data.validateRequestData( {
+					component: {},
+				} );
+			},
+			new Error( 'command is required.' ),
 			);
 			assert.throws( () => {
-					$e.data.validateRequestData( {
-						component: {},
-						command: '',
-					} );
-				},
-				new Error( 'endpoint is required.' )
+				$e.data.validateRequestData( {
+					component: {},
+					command: '',
+				} );
+			},
+			new Error( 'endpoint is required.' ),
 			);
 		} );
 
@@ -171,18 +170,18 @@ jQuery( () => {
 			const type = 'some-invalid-type';
 
 			assert.throws( () => $e.data.prepareHeaders( { type } ),
-				new Error( `Invalid type: '${ type }'` )
+				new Error( `Invalid type: '${ type }'` ),
 			);
 		} );
 
 		QUnit.test( 'prepareHeaders(): post without data', ( assert ) => {
 			const requestData = {
-					paramA: 'valueA',
-					type: 'create',
-				};
+				paramA: 'valueA',
+				type: 'create',
+			};
 
 			assert.throws( () => $e.data.prepareHeaders( requestData ),
-				new Error( `Invalid requestData.args.data` )
+				new Error( `Invalid requestData.args.data` ),
 			);
 		} );
 
@@ -222,7 +221,7 @@ jQuery( () => {
 
 					defaultData() {
 						return this.importCommands( {
-							TestCommand: class TestCommand extends CommandData {
+							TestCommand: class TestCommand extends $e.modules.CommandData {
 							},
 						} );
 					}
@@ -263,7 +262,7 @@ jQuery( () => {
 
 					defaultData() {
 						return this.importCommands( {
-							TestCommand: class TestCommand extends CommandData {
+							TestCommand: class TestCommand extends $e.modules.CommandData {
 							},
 						} );
 					}
@@ -303,7 +302,7 @@ jQuery( () => {
 
 					defaultData() {
 						return this.importCommands( {
-							TestCommand: class TestCommand extends CommandData {
+							TestCommand: class TestCommand extends $e.modules.CommandData {
 							},
 						} );
 					}
@@ -340,7 +339,7 @@ jQuery( () => {
 				requestData = {
 					endpoint: $e.data.commandToEndpoint( component.getNamespace(), {} ),
 					command: component.getNamespace(),
-					component: component,
+					component,
 				},
 				someData = {
 					someKey: 'someValue',
@@ -367,7 +366,7 @@ jQuery( () => {
 				requestData = {
 					endpoint: $e.data.commandToEndpoint( component.getNamespace(), args ),
 					command: component.getNamespace(),
-					component: component,
+					component,
 					args,
 				},
 				someData = {

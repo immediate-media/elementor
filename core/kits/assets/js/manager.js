@@ -79,11 +79,11 @@ export default class Manager extends elementorModules.editor.utils.Module {
 	}
 
 	addHeaderBehavior( behaviors ) {
-			behaviors.kit = {
-				behaviorClass: PanelHeaderBehavior,
-			};
+		behaviors.kit = {
+			behaviorClass: PanelHeaderBehavior,
+		};
 
-			return behaviors;
+		return behaviors;
 	}
 
 	addGlobalsBehavior( behaviors, view ) {
@@ -175,8 +175,8 @@ export default class Manager extends elementorModules.editor.utils.Module {
 		}
 
 		const cssParser = new ControlsCSSParser( {
-			id: 'e-global-style',
-		} ),
+				id: 'e-global-style',
+			} ),
 			defaultColorsEnabled = elementor.config.globals.defaults_enabled.colors,
 			defaultTypographyEnabled = elementor.config.globals.defaults_enabled.typography;
 
@@ -219,11 +219,11 @@ export default class Manager extends elementorModules.editor.utils.Module {
 			globalControls.forEach( ( control ) => {
 				cssParser.addControlStyleRules(
 					control,
-					widget.controls, // values
-					widget.controls, // controls
+					widget.controls, // Values
+					widget.controls, // Controls
 					[ '{{WRAPPER}}' ],
 					[ '.elementor-widget-' + widget.widget_type ],
-					globalValues
+					globalValues,
 				);
 			} );
 		} );

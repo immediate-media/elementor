@@ -1,26 +1,30 @@
 module.exports = elementorModules.ViewModule.extend( {
-	getDefaultSettings: function() {
+	getDefaultSettings() {
 		return {
 			element: null,
 			direction: elementorFrontend.config.is_rtl ? 'right' : 'left',
 			selectors: {
 				container: window,
 			},
+			considerScrollbar: false,
+			cssOutput: 'inline',
 		};
 	},
 
-	getDefaultElements: function() {
+	getDefaultElements() {
 		return {
 			$element: jQuery( this.getSettings( 'element' ) ),
 		};
 	},
 
-	stretch: function() {
-		var containerSelector = this.getSettings( 'selectors.container' ),
-			$container;
+	stretch() {
+		const settings = this.getSettings();
+
+		let $container;
 
 		try {
-			$container = jQuery( containerSelector );
+			$container = jQuery( settings.selectors.container );
+			// eslint-disable-next-line no-empty
 		} catch ( e ) {}
 
 		if ( ! $container || ! $container.length ) {
@@ -33,9 +37,10 @@ module.exports = elementorModules.ViewModule.extend( {
 			containerWidth = $container.innerWidth(),
 			elementOffset = $element.offset().left,
 			isFixed = 'fixed' === $element.css( 'position' ),
-			correctOffset = isFixed ? 0 : elementOffset;
+			correctOffset = isFixed ? 0 : elementOffset,
+			isContainerFullScreen = window === $container[ 0 ];
 
-		if ( window !== $container[ 0 ] ) {
+		if ( ! isContainerFullScreen ) {
 			var containerOffset = $container.offset().left;
 
 			if ( isFixed ) {
@@ -46,6 +51,11 @@ module.exports = elementorModules.ViewModule.extend( {
 			}
 		}
 
+		if ( settings.considerScrollbar && isContainerFullScreen ) {
+			const scrollbarWidth = window.innerWidth - containerWidth;
+			correctOffset -= scrollbarWidth;
+		}
+
 		if ( ! isFixed ) {
 			if ( elementorFrontend.config.is_rtl ) {
 				correctOffset = containerWidth - ( $element.outerWidth() + correctOffset );
@@ -54,22 +64,63 @@ module.exports = elementorModules.ViewModule.extend( {
 			correctOffset = -correctOffset;
 		}
 
+		// Consider margin
+		if ( settings.margin ) {
+			correctOffset += settings.margin;
+		}
+
 		var css = {};
 
-		css.width = containerWidth + 'px';
+		let width = containerWidth;
 
-		css[ this.getSettings( 'direction' ) ] = correctOffset + 'px';
+		if ( settings.margin ) {
+			width -= settings.margin * 2;
+		}
+
+		css.width = width + 'px';
+
+		css[ settings.direction ] = correctOffset + 'px';
+
+		if ( 'variables' === settings.cssOutput ) {
+			this.applyCssVariables( $element, css );
+			return;
+		}
 
 		$element.css( css );
 	},
 
-	reset: function() {
-		var css = {};
+	reset() {
+		const css = {},
+			settings = this.getSettings(),
+			$element = this.elements.$element;
+
+		if ( 'variables' === settings.cssOutput ) {
+			this.resetCssVariables( $element );
+			return;
+		}
 
 		css.width = '';
 
-		css[ this.getSettings( 'direction' ) ] = '';
+		css[ settings.direction ] = '';
 
-		this.elements.$element.css( css );
+		$element.css( css );
+	},
+
+	applyCssVariables( $element, css ) {
+		$element.css( '--stretch-width', css.width );
+
+		if ( !! css.left ) {
+			$element.css( '--stretch-left', css.left );
+		} else {
+			$element.css( '--stretch-right', css.right );
+		}
+	},
+
+	resetCssVariables( $element ) {
+		$element.css( {
+			'--stretch-width': '',
+			'--stretch-left': '',
+			'--stretch-right': '',
+		} );
 	},
 } );

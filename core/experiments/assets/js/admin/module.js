@@ -1,3 +1,5 @@
+import ExperimentsMessages from './behaviors/experiments-messages';
+
 export default class ExperimentsModule extends elementorModules.ViewModule {
 	getDefaultSettings() {
 		return {
@@ -23,7 +25,7 @@ export default class ExperimentsModule extends elementorModules.ViewModule {
 
 	bindEvents() {
 		this.elements.$experimentsButtons.on( 'click', ( event ) => this.onExperimentsButtonsClick( event ) );
-    }
+	}
 
 	onExperimentsButtonsClick( event ) {
 		const submitButton = jQuery( event.currentTarget );
@@ -49,11 +51,18 @@ export default class ExperimentsModule extends elementorModules.ViewModule {
 	onInit() {
 		super.onInit();
 
+		this.experimentsDependency = new ExperimentsMessages( {
+			selects: this.elements.$experimentSelects.toArray(),
+			submit: this.elements.$experimentForm.find( '#submit' ).get( 0 ),
+		} );
+
+		this.experimentsDependency.bindEvents();
+
 		if ( this.elements.$experimentIndicators.length ) {
 			import(
 				/* webpackIgnore: true */
-				`${ elementorCommon.config.urls.assets }lib/tipsy/tipsy.min.js?ver=1.0.0`
-				).then( () => this.addIndicatorsTooltips() );
+				`${ elementorCommon.config.urls.assets }lib/tipsy/tipsy.min.js?ver=1.0.0` )
+				.then( () => this.addIndicatorsTooltips() );
 		}
 	}
 }

@@ -1,6 +1,6 @@
 import PanelContent from './panel-content';
 
-module.exports = Marionette.LayoutView.extend( {
+export default Marionette.LayoutView.extend( {
 	id: 'elementor-kit-panel',
 
 	template: '#tmpl-elementor-kit-panel',
@@ -16,7 +16,7 @@ module.exports = Marionette.LayoutView.extend( {
 				model: container.model,
 				controls: container.settings.controls,
 				name: 'kit',
-		};
+			};
 
 		this.showChildView( 'content', new PanelContent( options ) );
 	},

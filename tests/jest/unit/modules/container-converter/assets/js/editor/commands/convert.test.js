@@ -132,6 +132,8 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 	const sectionDefaultSettings = {
 		flex_gap: {
 			size: 10,
+			column: '10',
+			row: '10',
 			unit: 'px',
 		},
 		flex_align_items: 'stretch',
@@ -144,6 +146,8 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 			type: 'section',
 			settings: {
 				setting_that_should_stay: 123,
+				layout: 'boxed',
+				height: 'min-height',
 				content_width: {
 					size: 100,
 					unit: '%',
@@ -187,6 +191,7 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 		const expected = {
 			...sectionDefaultSettings,
 			setting_that_should_stay: 123,
+			content_width: 'boxed',
 			boxed_width: {
 				size: 100,
 				unit: '%',
@@ -213,6 +218,8 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 			},
 			flex_gap: {
 				size: 15,
+				column: '15',
+				row: '15',
 				unit: 'px',
 			},
 			flex_align_items: 'flex-start',
@@ -357,7 +364,7 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 		// Arrange.
 		const section = createContainer( {
 			type: 'section',
-			settings: { },
+			settings: {},
 		} );
 
 		const document = createContainer( {
@@ -382,6 +389,7 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 			type: 'section',
 			isInner: true,
 			settings: {
+				layout: 'boxed',
 				content_width: {
 					size: 100,
 					unit: '%',
@@ -481,14 +489,20 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 			flex_justify_content_mobile: 'flex-end',
 			flex_gap: {
 				size: 10,
+				column: '10',
+				row: '10',
 				unit: 'px',
 			},
 			flex_gap_tablet: {
 				size: 20,
+				column: '20',
+				row: '20',
 				unit: 'px',
 			},
 			flex_gap_mobile: {
 				size: 30,
+				column: '30',
+				row: '30',
 				unit: 'px',
 			},
 			content_width: 'full', // Default setting.
@@ -543,16 +557,16 @@ describe( `$e.run( 'container-converter/convert' )`, () => {
 /**
  * Create a mock Container object.
  *
- * @param {string} type
- * @param {string} widgetType
- * @param {string} id
- * @param {Object} settings
- * @param {Object[]} children
- * @param {Number} index
- * @param {boolean} isInner
- * @param {Object} args
- *
- * @return {Object}
+ * @param {Object}   root0
+ * @param {string}   root0.type
+ * @param {string}   root0.widgetType
+ * @param {string}   root0.id
+ * @param {Object}   root0.settings
+ * @param {Object[]} root0.children
+ * @param {number}   root0.index
+ * @param {boolean}  root0.isInner
+ * @param {Object}   root0.args
+ * @return {Object} container
  */
 function createContainer( { type, widgetType, id, settings = {}, children = [], index = 0, isInner = false, ...args } ) {
 	const container = {
@@ -577,6 +591,7 @@ function createContainer( { type, widgetType, id, settings = {}, children = [], 
 			toJSON: () => ( {
 				elType: type,
 				isInner,
+				settings,
 			} ),
 		},
 		...args,

@@ -41,7 +41,7 @@ export default class Video extends elementorModules.frontend.handlers.Base {
 
 	playVideo() {
 		if ( this.elements.$video.length ) {
-			// this.youtubePlayer exists only for YouTube videos, and its play function is different.
+			// This.youtubePlayer exists only for YouTube videos, and its play function is different.
 			if ( this.youtubePlayer ) {
 				this.youtubePlayer.playVideo();
 			} else {
@@ -65,12 +65,6 @@ export default class Video extends elementorModules.frontend.handlers.Base {
 		const lightbox = await elementorFrontend.utils.lightbox;
 
 		lightbox.setEntranceAnimation( this.getCurrentDeviceSetting( 'lightbox_content_animation' ) );
-	}
-
-	async handleAspectRatio() {
-		const lightbox = await elementorFrontend.utils.lightbox;
-
-		lightbox.setVideoAspectRatio( this.getElementSettings( 'aspect_ratio' ) );
 	}
 
 	async hideLightbox() {
@@ -181,7 +175,7 @@ export default class Video extends elementorModules.frontend.handlers.Base {
 		// to 'On', there might be a conflict with other videos that are loaded WITHOUT privacy mode, such as a
 		// video bBackground in a section. In these cases, to avoid the conflict, a timeout is added to postpone the
 		// initialization of the Youtube API object.
-		if ( ! elementorFrontend.config.experimentalFeatures[ 'e_optimized_assets_loading' ] ) {
+		if ( ! elementorFrontend.config.experimentalFeatures.e_optimized_assets_loading ) {
 			setTimeout( () => {
 				this.apiProvider.onApiReady( ( apiObject ) => this.prepareYTVideo( apiObject ) );
 			}, 0 );
@@ -201,12 +195,6 @@ export default class Video extends elementorModules.frontend.handlers.Base {
 
 		if ( 'lightbox' === propertyName && ! isLightBoxEnabled ) {
 			this.hideLightbox();
-
-			return;
-		}
-
-		if ( 'aspect_ratio' === propertyName && isLightBoxEnabled ) {
-			this.handleAspectRatio();
 		}
 	}
 }
