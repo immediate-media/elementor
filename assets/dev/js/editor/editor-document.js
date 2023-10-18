@@ -1,14 +1,44 @@
-import DocumentComponent from './document/component';
-import DataGlobalsComponent from './data/globals/component';
+import CommandContainerBase from './command-bases/command-container-base';
+import CommandContainerInternalBase from './command-bases/command-container-internal-base';
+import CommandHistoryBase from 'elementor-document/command-bases/command-history-base';
+import CommandHistoryDebounceBase from 'elementor-document/command-bases/command-history-debounce-base';
 
-elementorCommon.elements.$window.on( 'elementor:init-components', () => {
-	// TODO: Move to elementor:init-data-components
-	$e.components.register( new DataGlobalsComponent() );
+$e.modules.editor = {
+	CommandContainerBase,
+	CommandContainerInternalBase,
 
-	$e.components.register( new DocumentComponent() );
+	document: {
+		CommandHistoryBase,
+		CommandHistoryDebounceBase,
+	},
+};
 
-	// TODO: Remove, BC Since 2.9.0.
-	elementor.saver = $e.components.get( 'document/save' );
-} );
+// TODO: Remove, BC.
+$e.modules.document = {
+	/**
+	 * @deprecated since 3.7.0, use `$e.modules.editor.document.CommandHistoryBase` instead.
+	 */
+	get CommandHistory() {
+		elementorDevTools.deprecation.deprecated(
+			'$e.modules.document.CommandHistory',
+			'3.7.0',
+			'$e.modules.editor.document.CommandHistoryBase',
+		);
 
-$e.modules.document = DocumentComponent.getModules();
+		return $e.modules.editor.document.CommandHistoryBase;
+	},
+
+	/**
+	 * @deprecated since 3.7.0, use `$e.modules.editor.document.CommandHistoryDebounceBase` instead.
+	 */
+	get CommandHistoryDebounce() {
+		elementorDevTools.deprecation.deprecated(
+			'$e.modules.CommandHistoryDebounce',
+			'3.7.0',
+			'$e.modules.editor.document.CommandHistoryDebounceBase',
+		);
+
+		return $e.modules.editor.document.CommandHistoryDebounceBase;
+	},
+};
+

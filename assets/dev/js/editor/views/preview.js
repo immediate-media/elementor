@@ -3,17 +3,17 @@ import AddSectionView from './add-section/independent';
 const BaseSectionsContainerView = require( 'elementor-views/base-sections-container' );
 
 const Preview = BaseSectionsContainerView.extend( {
-	initialize: function() {
+	initialize() {
 		this.$childViewContainer = jQuery( '<div>', { class: 'elementor-section-wrap' } );
 
 		BaseSectionsContainerView.prototype.initialize.apply( this, arguments );
 	},
 
-	getChildViewContainer: function() {
+	getChildViewContainer() {
 		return this.$childViewContainer;
 	},
 
-	behaviors: function() {
+	behaviors() {
 		var parentBehaviors = BaseSectionsContainerView.prototype.behaviors.apply( this, arguments ),
 			behaviors = {
 				contextMenu: {
@@ -29,7 +29,7 @@ const Preview = BaseSectionsContainerView.extend( {
 		return elementor.settings.page.getEditedView().getContainer();
 	},
 
-	getContextMenuGroups: function() {
+	getContextMenuGroups() {
 		var hasContent = function() {
 			return elementor.elements.length > 0;
 		};
@@ -70,7 +70,7 @@ const Preview = BaseSectionsContainerView.extend( {
 		];
 	},
 
-	createElementFromModel: function( model, options = {} ) {
+	createElementFromModel( model, options = {} ) {
 		return BaseSectionsContainerView.prototype.createElementFromModel.call(
 			this,
 			model,
@@ -78,10 +78,45 @@ const Preview = BaseSectionsContainerView.extend( {
 		);
 	},
 
-	onRender: function() {
+	addElementFromPanel( options ) {
+		if ( elementor.helpers.maybeDisableWidget() ) {
+			return;
+		}
+
+		const isContainerActive = ! ! elementorCommon.config.experimentalFeatures.container;
+
+		const selectedElement = elementor.channels.panelElements.request( 'element:selected' ),
+			historyId = $e.internal( 'document/history/start-log', {
+				type: 'add',
+				title: elementor.helpers.getModelLabel( selectedElement.model ),
+			} ),
+			containingElement = $e.run( 'document/elements/create', {
+				model: {
+					elType: isContainerActive ? 'container' : 'section',
+				},
+				container: elementor.getPreviewContainer(),
+				columns: 1,
+				options: {
+					at: this.getOption( 'at' ),
+					...options,
+				},
+			} );
+
+		if ( ! isContainerActive ) {
+			// Create the element in column.
+			containingElement.view.children.findByIndex( 0 ).addElementFromPanel( options );
+		} else if ( 'container' !== selectedElement.model.get( 'elType' ) ) {
+			// Create the element in a Container, only if the dragged element is not a Container already.
+			containingElement.view.addElementFromPanel( options );
+		}
+
+		$e.internal( 'document/history/end-log', { id: historyId } );
+	},
+
+	onRender() {
 		let $contentContainer;
 
-		if ( elementorCommon.config.experimentalFeatures[ 'e_dom_optimization' ] ) {
+		if ( elementorCommon.config.experimentalFeatures.e_dom_optimization ) {
 			$contentContainer = this.$el;
 		} else {
 			const $inner = jQuery( '<div>', { class: 'elementor-inner' } );

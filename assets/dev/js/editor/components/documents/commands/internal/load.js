@@ -1,14 +1,13 @@
-import CommandInternalBase from 'elementor-api/modules/command-internal-base';
 import Document from '../../document';
 import Heartbeat from 'elementor-editor-utils/heartbeat';
 
-export class Load extends CommandInternalBase {
+export class Load extends $e.modules.CommandInternalBase {
 	validateArgs( args = {} ) {
 		this.requireArgument( 'config', args );
 	}
 
 	apply( args ) {
-		const { config } = args;
+		const { config, setAsInitial = false, shouldScroll = true } = args;
 
 		if ( elementorCommon.config.experimentalFeatures.additional_custom_breakpoints ) {
 			// When the Responsive Optimization experiment is active, the responsive controls are generated on the
@@ -31,6 +30,10 @@ export class Load extends CommandInternalBase {
 		// Must set current before create a container.
 		elementor.documents.setCurrent( document );
 
+		if ( setAsInitial ) {
+			elementor.documents.setInitialById( document.id );
+		}
+
 		elementor.settings.page = new elementor.settings.modules.page( config.settings );
 
 		document.container = elementor.settings.page.getEditedView().getContainer();
@@ -50,9 +53,20 @@ export class Load extends CommandInternalBase {
 		if ( elementor.loaded ) {
 			// TODO: Find better solution - Fix issue when globals does not render after saving from kit.
 			// The issue is that the css-parser is depends upon cache and cache is not available during this time.
-			return $e.data.get( 'globals/index' ).then( () =>
-				$e.internal( 'editor/documents/attach-preview' )
-			);
+			return $e.data.get( 'globals/index' ).then( () => {
+				if ( setAsInitial ) {
+					// There is no need to attach preview when the iframe is reloaded. It will be triggerred
+					// automatically after the iframe finishes loading (see `EditorBase.onPreviewLoaded()`).
+					elementor.reloadPreview();
+
+					return Promise.resolve();
+				}
+
+				return $e.internal( 'editor/documents/attach-preview', {
+					shouldScroll,
+					selector: args.selector,
+				} );
+			} );
 		}
 
 		return Promise.resolve( document );

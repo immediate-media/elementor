@@ -1,6 +1,6 @@
 const EditorModule = elementorModules.Module.extend( {
 
-	onInit: function() {
+	onInit() {
 		const $window = jQuery( window );
 
 		$window.on( 'elementor:init-components',
@@ -16,25 +16,25 @@ const EditorModule = elementorModules.Module.extend( {
 	},
 
 	// TODO: Delete as soon as possible.
-	getEditorControlView: function( name ) {
+	getEditorControlView( name ) {
 		const editor = elementor.getPanelView().getCurrentPageView();
 
 		return editor.children.findByModelCid( this.getEditorControlModel( name ).cid );
 	},
 
 	// TODO: Delete as soon as possible.
-	getEditorControlModel: function( name ) {
+	getEditorControlModel( name ) {
 		const editor = elementor.getPanelView().getCurrentPageView();
 
-		return editor.collection.findWhere( { name: name } );
+		return editor.collection.findWhere( { name } );
 	},
 
-	onElementorReady: function() {
+	onElementorReady() {
 		this.onElementorInit();
 
 		elementor
-		.on( 'frontend:init', this.onElementorFrontendInit.bind( this ) )
-		.on( 'preview:loaded', this.onElementorPreviewLoaded.bind( this ) );
+			.on( 'frontend:init', this.onElementorFrontendInit.bind( this ) )
+			.on( 'preview:loaded', this.onElementorPreviewLoaded.bind( this ) );
 	},
 } );
 

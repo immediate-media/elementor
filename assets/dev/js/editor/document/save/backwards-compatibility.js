@@ -6,13 +6,13 @@ export default class BackwardsCompatibility extends ComponentBase {
 
 		Object.defineProperty( this, 'autoSaveTimer', {
 			get() {
-				elementorCommon.helpers.softDeprecated( 'elementor.saver.autoSaveTimer', '2.9.0',
+				elementorDevTools.deprecation.deprecated( 'elementor.saver.autoSaveTimer', '2.9.0',
 					"$e.components.get( 'editor/documents' ).autoSaveTimers" );
 				return $e.components.get( 'editor/documents' ).autoSaveTimers;
 			},
 
 			set( value ) {
-				elementorCommon.helpers.softDeprecated( 'elementor.saver.autoSaveTimer', '2.9.0',
+				elementorDevTools.deprecation.deprecated( 'elementor.saver.autoSaveTimer', '2.9.0',
 					"$e.components.get( 'editor/documents' ).autoSaveTimers[ documentId ]" );
 
 				const documentId = elementor.documents.getCurrent();
@@ -24,7 +24,7 @@ export default class BackwardsCompatibility extends ComponentBase {
 		const onOrig = this.on;
 
 		this.on = ( eventName, callback, context ) => {
-			elementorCommon.helpers.softDeprecated( 'elementor.saver.on', '2.9.0',
+			elementorDevTools.deprecation.deprecated( 'elementor.saver.on', '2.9.0',
 				'$e.hooks' );
 
 			onOrig( eventName, callback, context );
@@ -32,79 +32,114 @@ export default class BackwardsCompatibility extends ComponentBase {
 
 		elementor.on( 'document:loaded', () => {
 			if ( elementor.channels.editor._events && elementor.channels.editor._events.saved ) {
-				elementorCommon.helpers.softDeprecated( "elementor.channels.editor.on( 'saved', ... )", '2.9.0',
+				elementorDevTools.deprecation.deprecated( "elementor.channels.editor.on( 'saved', ... )", '2.9.0',
 					'$e.hooks' );
 			}
 		} );
 	}
 
+	/**
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/default' )` instead.
+	 */
 	defaultSave() {
-		elementorCommon.helpers.softDeprecated( 'defaultSave', '2.9.0', "$e.run( 'document/save/default' )" );
+		elementorDevTools.deprecation.deprecated( 'defaultSave()', '2.9.0', "$e.run( 'document/save/default' )" );
 
 		return $e.run( 'document/save/default' );
 	}
 
+	/**
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/discard' )` instead.
+	 */
 	discard() {
-		elementorCommon.helpers.softDeprecated( 'discard', '2.9.0', "$e.run( 'document/save/discard' )" );
+		elementorDevTools.deprecation.deprecated( 'discard()', '2.9.0', "$e.run( 'document/save/discard' )" );
 
 		return $e.run( 'document/save/discard' );
 	}
 
+	/**
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/auto' )` instead.
+	 */
 	doAutoSave() {
-		elementorCommon.helpers.softDeprecated( 'doAutoSave', '2.9.0', "$e.run( 'document/save/auto' )" );
+		elementorDevTools.deprecation.deprecated( 'doAutoSave()', '2.9.0', "$e.run( 'document/save/auto' )" );
 
 		return $e.run( 'document/save/auto' );
 	}
 
+	/**
+	 * @param {*} options
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/publish', { options } )` instead.
+	 */
 	publish( options ) {
-		elementorCommon.helpers.softDeprecated( 'publish', '2.9.0', "$e.run( 'document/save/publish' )" );
+		elementorDevTools.deprecation.deprecated( 'publish( options )', '2.9.0', "$e.run( 'document/save/publish', { options } )" );
 
 		return $e.run( 'document/save/auto', { options } );
 	}
 
+	/**
+	 * @param {*} options
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/auto', { force: true } )` instead.
+	 */
 	saveAutoSave( options ) {
-		elementorCommon.helpers.softDeprecated( 'saveAutoSave', '2.9.0', "$e.run( 'document/save/auto', { force: true } )" );
+		elementorDevTools.deprecation.deprecated( 'saveAutoSave()', '2.9.0', "$e.run( 'document/save/auto', { force: true } )" );
 
 		options.force = true;
 
 		return $e.run( 'document/save/auto', options );
 	}
 
+	/**
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/draft' )` instead.
+	 */
 	saveDraft() {
-		elementorCommon.helpers.softDeprecated( 'saveDraft', '2.9.0', "$e.run( 'document/save/draft' )" );
+		elementorDevTools.deprecation.deprecated( 'saveDraft()', '2.9.0', "$e.run( 'document/save/draft' )" );
 
 		return $e.run( 'document/save/draft' );
 	}
 
+	/**
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/pending' )` instead.
+	 */
 	savePending() {
-		elementorCommon.helpers.softDeprecated( 'savePending', '2.9.0', "$e.run( 'document/save/pending' )" );
+		elementorDevTools.deprecation.deprecated( 'savePending()', '2.9.0', "$e.run( 'document/save/pending' )" );
 
 		return $e.run( 'document/save/pending' );
 	}
 
+	/**
+	 * @param {*} options
+	 * @deprecated since 2.9.0, use `$e.run( 'document/save/update', options )` instead.
+	 */
 	update( options ) {
-		elementorCommon.helpers.softDeprecated( 'update', '2.9.0', "$e.run( 'document/save/update' )" );
+		elementorDevTools.deprecation.deprecated( 'update( options )', '2.9.0', "$e.run( 'document/save/update', options )" );
 
 		return $e.run( 'document/save/update', options );
 	}
 
+	/**
+	 * @deprecated since 2.9.0, use `$e.components.get( 'document/save' ).startAutoSave` instead.
+	 */
 	startTimer() {
-		elementorCommon.helpers.softDeprecated( 'startTimer', '2.9.0',
-			"$e.components.get( 'document/save' ).startAutoSave" );
+		elementorDevTools.deprecation.deprecated( 'startTimer()', '2.9.0', "$e.components.get( 'document/save' ).startAutoSave" );
 
 		throw Error( 'Deprecated' );
 	}
 
+	/**
+	 * @param {*} options
+	 * @deprecated since 2.9.0, use `$e.internal( 'document/save/save', options )` instead.
+	 */
 	saveEditor( options ) {
-		elementorCommon.helpers.softDeprecated( 'saveEditor', '2.9.0',
-			"$e.internal( 'document/save/save' )" );
+		elementorDevTools.deprecation.deprecated( 'saveEditor( options )', '2.9.0', "$e.internal( 'document/save/save', options )" );
 
 		$e.internal( 'document/save/save', options );
 	}
 
+	/**
+	 * @param {*} status
+	 * @deprecated since 2.9.0, use `$e.internal( 'document/save/set-is-modified', { status } )` instead.
+	 */
 	setFlagEditorChange( status ) {
-		elementorCommon.helpers.softDeprecated( 'setFlagEditorChange', '2.9.0',
-			"$e.internal( 'document/save/set-is-modified' )" );
+		elementorDevTools.deprecation.deprecated( 'setFlagEditorChange( status )', '2.9.0', "$e.internal( 'document/save/set-is-modified', { status } )" );
 
 		$e.internal( 'document/save/set-is-modified', { status } );
 	}

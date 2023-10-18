@@ -1,10 +1,10 @@
-/* global jQuery, ElementorGutenbergSettings */
+/* global ElementorGutenbergSettings */
 ( function( $ ) {
 	'use strict';
 
 	var ElementorGutenbergApp = {
 
-		cacheElements: function() {
+		cacheElements() {
 			var self = this;
 
 			self.isElementorMode = ElementorGutenbergSettings.isElementorMode;
@@ -25,18 +25,22 @@
 			} );
 		},
 
-		buildPanel: function() {
+		buildPanel() {
 			var self = this;
 
 			if ( ! self.cache.$gutenberg.find( '#elementor-switch-mode' ).length ) {
 				self.cache.$gutenberg.find( '.edit-post-header-toolbar' ).append( self.cache.$switchMode );
 			}
 
+			if ( this.hasIframe() ) {
+				this.hideIframeContent();
+			}
+
 			if ( ! $( '#elementor-editor' ).length ) {
 				self.cache.$editorPanel = $( $( '#elementor-gutenberg-panel' ).html() );
-				// TODO: `editor-block-list__layout` class for WP < 5.3 support.
-				self.cache.$gurenbergBlockList = self.cache.$gutenberg.find( '.editor-block-list__layout, .editor-post-text-editor, .block-editor-block-list__layout' );
-				self.cache.$gurenbergBlockList.after( self.cache.$editorPanel );
+
+				self.cache.$gurenbergBlockList = self.cache.$gutenberg.find( '.is-desktop-preview' );
+				self.cache.$gurenbergBlockList.append( self.cache.$editorPanel );
 
 				self.cache.$editorPanelButton = self.cache.$editorPanel.find( '#elementor-go-to-edit-page-link' );
 
@@ -63,7 +67,31 @@
 			}
 		},
 
-		bindEvents: function() {
+		// Sometimes Gutenberg uses iframe instead of div.
+		hasIframe() {
+			return !! this.cache.$gutenberg.find( 'iframe[name="editor-canvas"]' ).length;
+		},
+
+		hideIframeContent() {
+			if ( ! this.isElementorMode ) {
+				return;
+			}
+
+			const style = `<style>
+				.editor-post-text-editor,
+				.block-editor-block-list__layout {
+					display: none;
+				}
+
+				body {
+					padding: 0 !important;
+				}
+			</style>`;
+
+			this.cache.$gutenberg.find( 'iframe[name="editor-canvas"]' ).contents().find( 'body' ).append( style );
+		},
+
+		bindEvents() {
 			var self = this;
 
 			self.cache.$switchModeButton.on( 'click', function() {
@@ -76,7 +104,7 @@
 							cancel: __( 'Cancel', 'elementor' ),
 						},
 						defaultOption: 'confirm',
-						onConfirm: function() {
+						onConfirm() {
 							const wpEditor = wp.data.dispatch( 'core/editor' );
 
 							wpEditor.editPost( { gutenberg_elementor_mode: false } );
@@ -93,7 +121,7 @@
 			} );
 		},
 
-		redirectWhenSave: function() {
+		redirectWhenSave() {
 			var self = this;
 
 			setTimeout( function() {
@@ -105,17 +133,17 @@
 			}, 300 );
 		},
 
-		animateLoader: function() {
+		animateLoader() {
 			this.cache.$editorPanelButton.addClass( 'elementor-animate' );
 		},
 
-		toggleStatus: function() {
+		toggleStatus() {
 			jQuery( 'body' )
 				.toggleClass( 'elementor-editor-active', this.isElementorMode )
 				.toggleClass( 'elementor-editor-inactive', ! this.isElementorMode );
 		},
 
-		init: function() {
+		init() {
 			this.cacheElements();
 		},
 	};

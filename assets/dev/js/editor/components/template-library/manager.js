@@ -1,6 +1,6 @@
 import Component from './component';
 
-	var TemplateLibraryCollection = require( 'elementor-templates/collections/templates' ),
+var TemplateLibraryCollection = require( 'elementor-templates/collections/templates' ),
 	TemplateLibraryManager;
 
 TemplateLibraryManager = function() {
@@ -21,7 +21,7 @@ TemplateLibraryManager = function() {
 				description: __( 'Your designs will be available for export and reuse on any page or website', 'elementor' ),
 			},
 			ajaxParams: {
-				success: function( successData ) {
+				success( successData ) {
 					$e.route( 'library/templates/my-templates', {
 						onBefore: () => {
 							if ( templatesCollection ) {
@@ -36,7 +36,7 @@ TemplateLibraryManager = function() {
 						},
 					} );
 				},
-				error: function( errorData ) {
+				error( errorData ) {
 					self.showErrorDialog( errorData );
 				},
 			},
@@ -52,7 +52,7 @@ TemplateLibraryManager = function() {
 		jQuery.each( translationMap, function( type, title ) {
 			var safeData = jQuery.extend( true, {}, data, {
 				saveDialog: {
-					/* translators: %s: Template type. */
+					/* Translators: %s: Template type. */
 					title: sprintf( __( 'Save Your %s to Library', 'elementor' ), title ),
 				},
 			} );
@@ -64,7 +64,7 @@ TemplateLibraryManager = function() {
 	const registerDefaultFilterTerms = function() {
 		filterTerms = {
 			text: {
-				callback: function( value ) {
+				callback( value ) {
 					value = value.toLowerCase();
 
 					if ( this.get( 'title' ).toLowerCase().indexOf( value ) >= 0 ) {
@@ -119,7 +119,7 @@ TemplateLibraryManager = function() {
 					source: templateModel.get( 'source' ),
 					template_id: templateModel.get( 'template_id' ),
 				},
-				success: function( response ) {
+				success( response ) {
 					templatesCollection.remove( templateModel, { silent: true } );
 
 					if ( options.onSuccess ) {
@@ -132,8 +132,13 @@ TemplateLibraryManager = function() {
 		dialog.show();
 	};
 
+	/**
+	 * @param {*}      model - Template model.
+	 * @param {Object} args  - Template arguments.
+	 * @deprecated since 2.8.0, use `$e.run( 'library/insert-template' )` instead.
+	 */
 	this.importTemplate = function( model, args = {} ) {
-		elementorCommon.helpers.softDeprecated( 'importTemplate', '2.8.0',
+		elementorDevTools.deprecation.deprecated( 'importTemplate', '2.8.0',
 			"$e.run( 'library/insert-template' )" );
 
 		args.model = model;
@@ -146,7 +151,7 @@ TemplateLibraryManager = function() {
 
 		_.extend( data, {
 			source: 'local',
-			type: type,
+			type,
 		} );
 
 		if ( templateType.prepareSavedData ) {
@@ -155,7 +160,7 @@ TemplateLibraryManager = function() {
 
 		data.content = JSON.stringify( data.content );
 
-		var ajaxParams = { data: data };
+		var ajaxParams = { data };
 
 		if ( templateType.ajaxParams ) {
 			_.extend( ajaxParams, templateType.ajaxParams );
@@ -168,7 +173,7 @@ TemplateLibraryManager = function() {
 		var options = {
 			unique_id: id,
 			data: {
-				source: source,
+				source,
 				edit_mode: true,
 				display: true,
 				template_id: id,
@@ -187,7 +192,7 @@ TemplateLibraryManager = function() {
 			data: {
 				source: templateModel.get( 'source' ),
 				template_id: templateModel.get( 'template_id' ),
-				favorite: favorite,
+				favorite,
 			},
 		};
 
@@ -213,7 +218,7 @@ TemplateLibraryManager = function() {
 		if ( ! errorDialog ) {
 			errorDialog = elementorCommon.dialogsManager.createWidget( 'alert', {
 				id: 'elementor-template-library-error-dialog',
-				headerMessage: __( 'An error occurred', 'elementor' ),
+				headerMessage: __( 'An error occurred.', 'elementor' ),
 			} );
 		}
 
@@ -247,7 +252,7 @@ TemplateLibraryManager = function() {
 
 		var ajaxOptions = {
 			data: {},
-			success: function( data ) {
+			success( data ) {
 				templatesCollection = new TemplateLibraryCollection( data.templates );
 
 				if ( data.config ) {

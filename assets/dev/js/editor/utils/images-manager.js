@@ -104,14 +104,14 @@ ImagesManager = function() {
 
 	self.getRemoteItems = function() {
 		var requestedItems = [],
-		registeredItemsLength = Object.keys( registeredItems ).length,
+			registeredItemsLength = Object.keys( registeredItems ).length,
 			image,
 			index;
 
 		// It's one item, so we can render it from remote server
 		if ( 0 === registeredItemsLength ) {
 			return;
-			}
+		}
 
 		for ( index in registeredItems ) {
 			image = registeredItems[ index ];
@@ -121,8 +121,8 @@ ImagesManager = function() {
 				isFirstTime = ! cache[ id ] || 0 === Object.keys( cache[ id ] ).length;
 
 			requestedItems.push( {
-				id: id,
-				size: size,
+				id,
+				size,
 				is_first_time: isFirstTime,
 			} );
 		}
@@ -149,7 +149,7 @@ ImagesManager = function() {
 
 					elementor.channels.editor.trigger( 'imagesManager:detailsReceived', data );
 				},
-			}
+			},
 		);
 	};
 
